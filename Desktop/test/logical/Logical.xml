@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="977A4925-1334-57D2-93EF-A18E2C401E59" mainViewID="42771E24-693E-59EF-AFFA-A5F86855E062">
+<createdBy>youta</createdBy>
+<createdTime>2021-03-01 23:38:16 UTC</createdTime>
+<ownerDesignName>test</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
