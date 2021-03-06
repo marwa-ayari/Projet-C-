@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     categories.cpp \
     connexion.cpp \
+    gestion_categories_reclamations.cpp \
     main.cpp \
     mainwindow.cpp \
     reclamations.cpp
@@ -18,10 +19,12 @@ SOURCES += \
 HEADERS += \
     categories.h \
     connexion.h \
+    gestion_categories_reclamations.h \
     mainwindow.h \
     reclamations.h
 
 FORMS += \
+    gestion_categories_reclamations.ui \
     mainwindow.ui
 
 # Default rules for deployment.

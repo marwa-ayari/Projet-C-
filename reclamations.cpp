@@ -60,7 +60,7 @@ bool reclamations::modifier()
     QSqlQuery query;
     //if()
     //{
-        query.prepare("UPDATE RECLAMATIONS set DATE_REC=:date , AVIS=:aviss where (NOM_CATEGORIE=:nom AND ID_CLIENT=:id )"):
+        query.prepare("UPDATE RECLAMATIONS set DATE_REC=:date , AVIS=:aviss where (NOM_CATEGORIE=:nom AND ID_CLIENT=:id )");
             //lezem naamel ntesti ken fama menha la reclamation 9bal manaamel update
             //ou bien tester si une ligne a été mise a joiur ou non
         query.bindValue(":nom", nom_categorie);
