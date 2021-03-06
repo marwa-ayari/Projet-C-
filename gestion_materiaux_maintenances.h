@@ -1,6 +1,7 @@
 #ifndef GESTION_MATERIAUX_MAINTENANCES_H
 #define GESTION_MATERIAUX_MAINTENANCES_H
 #include"materiaux.h"
+#include"maintenances.h"
 #include <QDialog>
 
 namespace Ui {
@@ -28,9 +29,24 @@ private slots:
 
     void on_pushButton_materiel_5_clicked();
 
+    void on_tabWidget_materiel_maintenance_2_currentChanged(int index);
+
+    void on_pushButton_maintenance_clicked();
+
+    void on_tabWidget_maintenance_3_currentChanged(int index);
+
+    void on_pushButton_maintenance_15_clicked();
+
+    void on_pushButton_maintenance_11_clicked();
+
+    void on_pushButton_maintenance_2_clicked();
+
+    void on_pushButton_maintenance_7_clicked();
+
 private:
     Ui::Gestion_materiaux_maintenances *ui;
     Materiaux tmpmateriel;
+    Maintenances tmpmaintenance;
 };
 
 #endif // GESTION_MATERIAUX_MAINTENANCES_H

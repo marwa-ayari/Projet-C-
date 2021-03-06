@@ -14,6 +14,7 @@ SOURCES += \
     gestion_categories_reclamations.cpp \
     gestion_materiaux_maintenances.cpp \
     main.cpp \
+    maintenances.cpp \
     mainwindow.cpp \
     materiaux.cpp \
     reclamations.cpp
@@ -23,6 +24,7 @@ HEADERS += \
     connexion.h \
     gestion_categories_reclamations.h \
     gestion_materiaux_maintenances.h \
+    maintenances.h \
     mainwindow.h \
     materiaux.h \
     reclamations.h

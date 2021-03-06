@@ -100,3 +100,86 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_5_clicked()
                           QObject::tr("Echec ,les champs ne sont pas bien remplis!\n"), QMessageBox::Cancel);
     }
 }
+
+void Gestion_materiaux_maintenances::on_tabWidget_materiel_maintenance_2_currentChanged(int index)
+{
+    ui->comboBox_maintenance_1->setModel(tmpmaintenance.affectation_liste_materiaux());
+
+}
+
+void Gestion_materiaux_maintenances::on_pushButton_maintenance_clicked()
+{
+    QString reference= ui->comboBox_maintenance_1->currentText();
+    QString description= ui->lineEdit_maintenance_6->text();
+    QString date_panne= ui->dateEdit_maintenance->text();
+    float prix=ui->lineEdit_maintenance->text().toFloat();
+    Maintenances maintenance(reference,date_panne,prix,description);
+    if(maintenance.ajouter()) {
+        QMessageBox::information(nullptr, QObject::tr("Ajouter maintenance"),
+                    QObject::tr("Ajout Bien effectué." ), QMessageBox::Cancel);
+        ui->lineEdit_maintenance_6->setText("");
+        ui->lineEdit_maintenance->setText("");
+
+}else{
+        QMessageBox::information(nullptr, QObject::tr("Ajout maintenance"),
+                    QObject::tr("Echec de l'ajout . Cette maintenance existe déja."), QMessageBox::Cancel);
+    }
+}
+
+void Gestion_materiaux_maintenances::on_tabWidget_maintenance_3_currentChanged(int index)
+{
+    ui->tableView_maintenance->setModel(tmpmaintenance.afficher());
+    ui->comboBox_maintenance_2->setModel(tmpmaintenance.liste_Maintenances());
+    ui->comboBox_maintenance_3->setModel(tmpmaintenance.liste_Maintenances());
+
+}
+
+void Gestion_materiaux_maintenances::on_pushButton_maintenance_15_clicked()
+{
+    ui->tableView_maintenance->setModel(tmpmaintenance.tri());
+
+}
+
+void Gestion_materiaux_maintenances::on_pushButton_maintenance_11_clicked()
+{
+    QString recherche =ui->lineEdit_maintenance_5->text();
+    ui->tableView_maintenance->setModel(tmpmaintenance.rechercher(recherche));
+}
+
+void Gestion_materiaux_maintenances::on_pushButton_maintenance_2_clicked()
+{
+    QString reference= ui->comboBox_maintenance_2->currentText();
+    QString description= ui->lineEdit_maintenance_7->text();
+    QString date_panne= ui->dateEdit_maintenance_2->text();
+    float prix=ui->lineEdit_maintenance_3->text().toFloat();
+    Maintenances maintenance(reference,date_panne,prix,description);
+    if(maintenance.modifier())
+    {
+              QMessageBox::information(nullptr, QObject::tr("Modifier une maintenance"),
+                          QObject::tr("Modification effectuée avec succées.\n"), QMessageBox::Cancel);
+
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("Modifier une maintenance"),
+                          QObject::tr("Echec ,les champs ne sont pas bien remplis!\n"), QMessageBox::Cancel);
+    }
+}
+
+void Gestion_materiaux_maintenances::on_pushButton_maintenance_7_clicked()
+{
+    QString refer= ui->comboBox_maintenance_3->currentText();
+    if(tmpmaintenance.supprimer(refer))
+    {
+        QMessageBox::information(nullptr, QObject::tr("Supprimer une maintenance"),
+                    QObject::tr("Suppression avec succés.\n" ), QMessageBox::Cancel);
+        ui->comboBox_maintenance_3->setModel(tmpmaintenance.liste_Maintenances());
+
+    }
+    else
+    { QMessageBox::critical(nullptr, QObject::tr("Suppression d'une maintenance!"),
+                    QObject::tr("echec.\n"
+                                ), QMessageBox::Cancel);
+
+    }
+}
