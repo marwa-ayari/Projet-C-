@@ -12,19 +12,24 @@ SOURCES += \
     categories.cpp \
     connexion.cpp \
     gestion_categories_reclamations.cpp \
+    gestion_materiaux_maintenances.cpp \
     main.cpp \
     mainwindow.cpp \
+    materiaux.cpp \
     reclamations.cpp
 
 HEADERS += \
     categories.h \
     connexion.h \
     gestion_categories_reclamations.h \
+    gestion_materiaux_maintenances.h \
     mainwindow.h \
+    materiaux.h \
     reclamations.h
 
 FORMS += \
     gestion_categories_reclamations.ui \
+    gestion_materiaux_maintenances.ui \
     mainwindow.ui
 
 # Default rules for deployment.

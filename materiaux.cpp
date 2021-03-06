@@ -79,7 +79,7 @@ bool Materiaux::modifier()
 {
     QSqlQuery query;
     QString prix_materiel= QString::number(prix);
-    query.prepare("UPDATE Materiaux set nom='"+nom+"' ,type='"+type+"' ,PRIX= "+prix_materiel+" , date_achat='"+date_achat+"' where reference like '"+reference+"' ");
+    query.prepare("UPDATE Materiaux set nom='"+nom+"' ,type='"+type+"' ,PRIX= "+prix_materiel +" , date_achat='"+date_achat+"' where reference like '"+reference+"' ");
     return    query.exec();
 }
 
