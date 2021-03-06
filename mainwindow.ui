@@ -28,142 +28,7 @@
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>330</y>
-      <width>100</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>stat.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_8">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>430</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Lucida Calligraphy</family>
-      <pointsize>8</pointsize>
-      <weight>50</weight>
-      <italic>true</italic>
-      <bold>false</bold>
-      <underline>false</underline>
-      <strikeout>false</strikeout>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-
-selection-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));</string>
-    </property>
-    <property name="text">
-     <string>Statistiques</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_9">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>370</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Lucida Calligraphy</family>
-      <pointsize>8</pointsize>
-      <weight>50</weight>
-      <italic>true</italic>
-      <bold>false</bold>
-      <underline>false</underline>
-      <strikeout>false</strikeout>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-
-selection-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));</string>
-    </property>
-    <property name="text">
-     <string>Calcul</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>330</y>
-      <width>100</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>calcul.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>330</y>
-      <width>100</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>mailing.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_10">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>430</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Lucida Calligraphy</family>
-      <pointsize>8</pointsize>
-      <weight>50</weight>
-      <italic>true</italic>
-      <bold>false</bold>
-      <underline>false</underline>
-      <strikeout>false</strikeout>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-
-selection-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));</string>
-    </property>
-    <property name="text">
-     <string>Mailing</string>
-    </property>
-   </widget>
-   <widget class="QTabWidget" name="tabWidget_2">
+   <widget class="QTabWidget" name="tabWidget_categorie_reclamation_2">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -185,13 +50,13 @@ selection-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx
      <string notr="true">color: rgb(85, 170, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="widget">
+    <widget class="QWidget" name="categories">
      <attribute name="title">
       <string>Catégories</string>
      </attribute>
-     <widget class="QTabWidget" name="tabWidget_4">
+     <widget class="QTabWidget" name="tabWidget_categorie_4">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -207,13 +72,13 @@ selection-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx
        </font>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
-      <widget class="QWidget" name="tab_8">
+      <widget class="QWidget" name="tab_categorie_8">
        <attribute name="title">
         <string>Ajouter</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_4">
+       <widget class="QGroupBox" name="groupBox_catgorie_4">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -237,7 +102,7 @@ border-color: rgb(170, 0, 255);</string>
         <property name="title">
          <string>                                Ajouter une Catégorie</string>
         </property>
-        <widget class="QLabel" name="label_28">
+        <widget class="QLabel" name="label_categorie_28">
          <property name="geometry">
           <rect>
            <x>190</x>
@@ -256,7 +121,7 @@ border-color: rgb(170, 0, 255);</string>
           <string>Date de fabrication</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_12">
+        <widget class="QLineEdit" name="lineEdit_categorie_12">
          <property name="geometry">
           <rect>
            <x>400</x>
@@ -266,7 +131,7 @@ border-color: rgb(170, 0, 255);</string>
           </rect>
          </property>
         </widget>
-        <widget class="QLabel" name="label_33">
+        <widget class="QLabel" name="label_categorie_33">
          <property name="geometry">
           <rect>
            <x>200</x>
@@ -285,7 +150,7 @@ border-color: rgb(170, 0, 255);</string>
           <string>Nom Catégorie</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_34">
+        <widget class="QLabel" name="label_categorie_34">
          <property name="geometry">
           <rect>
            <x>250</x>
@@ -304,7 +169,7 @@ border-color: rgb(170, 0, 255);</string>
           <string>Prix</string>
          </property>
         </widget>
-        <widget class="QDateEdit" name="dateEdit_7">
+        <widget class="QDateEdit" name="dateEdit_categorie_7">
          <property name="geometry">
           <rect>
            <x>400</x>
@@ -314,7 +179,7 @@ border-color: rgb(170, 0, 255);</string>
           </rect>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="pushButton_categorie_4">
          <property name="geometry">
           <rect>
            <x>310</x>
@@ -339,7 +204,7 @@ color: rgb(74, 0, 111);</string>
           <string>Ajouter</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_13">
+        <widget class="QLineEdit" name="lineEdit_categorie_13">
          <property name="geometry">
           <rect>
            <x>400</x>
@@ -350,7 +215,7 @@ color: rgb(74, 0, 111);</string>
          </property>
         </widget>
        </widget>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label_categorie_2">
         <property name="geometry">
          <rect>
           <x>-20</x>
@@ -366,14 +231,14 @@ color: rgb(74, 0, 111);</string>
          <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
         </property>
        </widget>
-       <zorder>label_2</zorder>
-       <zorder>groupBox_4</zorder>
+       <zorder>label_categorie_2</zorder>
+       <zorder>groupBox_catgorie_4</zorder>
       </widget>
-      <widget class="QWidget" name="tab_9">
+      <widget class="QWidget" name="tab_categorie_9">
        <attribute name="title">
         <string>Afficher</string>
        </attribute>
-       <widget class="QLabel" name="label_36">
+       <widget class="QLabel" name="label_categorie_36">
         <property name="geometry">
          <rect>
           <x>-70</x>
@@ -389,7 +254,7 @@ color: rgb(74, 0, 111);</string>
          <pixmap>../../../../../../Downloads/893983.jpg</pixmap>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_13">
+       <widget class="QPushButton" name="pushButton_categorie_13">
         <property name="geometry">
          <rect>
           <x>440</x>
@@ -428,7 +293,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          </size>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_14">
+       <widget class="QPushButton" name="pushButton_categorie_14">
         <property name="geometry">
          <rect>
           <x>440</x>
@@ -467,7 +332,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          </size>
         </property>
        </widget>
-       <widget class="QTableView" name="tabcatg">
+       <widget class="QTableView" name="tab_categorie">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -477,7 +342,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_17">
+       <widget class="QLineEdit" name="lineEdit_categorie_17">
         <property name="geometry">
          <rect>
           <x>270</x>
@@ -488,11 +353,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_10">
+      <widget class="QWidget" name="tab_categorie_10">
        <attribute name="title">
         <string>Modifier</string>
        </attribute>
-       <widget class="QLabel" name="label_42">
+       <widget class="QLabel" name="label_categorie_42">
         <property name="geometry">
          <rect>
           <x>-20</x>
@@ -508,7 +373,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
         </property>
        </widget>
-       <widget class="QGroupBox" name="groupBox_5">
+       <widget class="QGroupBox" name="groupBox_categorie_5">
         <property name="geometry">
          <rect>
           <x>70</x>
@@ -532,7 +397,7 @@ border-color: rgb(170, 0, 255);</string>
         <property name="title">
          <string>                                Modifier une Catégorie</string>
         </property>
-        <widget class="QLabel" name="label_41">
+        <widget class="QLabel" name="label_categorie_41">
          <property name="geometry">
           <rect>
            <x>150</x>
@@ -551,7 +416,7 @@ border-color: rgb(170, 0, 255);</string>
           <string>Date de fabrication</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_47">
+        <widget class="QLabel" name="label_categorie_47">
          <property name="geometry">
           <rect>
            <x>150</x>
@@ -580,7 +445,7 @@ border-color: rgb(170, 0, 255);</string>
           </rect>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="pushButton_categorie_7">
          <property name="geometry">
           <rect>
            <x>310</x>
@@ -615,7 +480,7 @@ color: rgb(74, 0, 111);</string>
           </rect>
          </property>
         </widget>
-        <widget class="QLabel" name="label_48">
+        <widget class="QLabel" name="label_categorie_48">
          <property name="geometry">
           <rect>
            <x>150</x>
@@ -646,11 +511,11 @@ color: rgb(74, 0, 111);</string>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_11">
+      <widget class="QWidget" name="tab_categorie_11">
        <attribute name="title">
         <string>Supprimer</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_6">
+       <widget class="QGroupBox" name="groupBox_categorie_6">
         <property name="geometry">
          <rect>
           <x>280</x>
@@ -679,7 +544,7 @@ color: rgb(85, 255, 255);
         <property name="title">
          <string>Supprimer une Catégorie</string>
         </property>
-        <widget class="QLabel" name="label_43">
+        <widget class="QLabel" name="label_categorie_43">
          <property name="geometry">
           <rect>
            <x>168</x>
@@ -695,7 +560,7 @@ color: rgb(85, 255, 255);
           <pixmap>macaron.jpg</pixmap>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="pushButton_categorie_6">
          <property name="geometry">
           <rect>
            <x>70</x>
@@ -729,7 +594,7 @@ color: rgb(85, 255, 255);
           </size>
          </property>
         </widget>
-        <widget class="QLabel" name="label_45">
+        <widget class="QLabel" name="label_categorie_45">
          <property name="geometry">
           <rect>
            <x>80</x>
@@ -761,7 +626,7 @@ color: rgb(85, 255, 255);
          </property>
         </widget>
        </widget>
-       <widget class="QLabel" name="label_46">
+       <widget class="QLabel" name="label_categorie_46">
         <property name="geometry">
          <rect>
           <x>-30</x>
@@ -777,16 +642,16 @@ color: rgb(85, 255, 255);
          <pixmap>../../../../../../Downloads/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
         </property>
        </widget>
-       <zorder>label_46</zorder>
-       <zorder>groupBox_6</zorder>
+       <zorder>label_categorie_46</zorder>
+       <zorder>groupBox_categorie_6</zorder>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
+    <widget class="QWidget" name="reclamations">
      <attribute name="title">
       <string>Réclamations</string>
      </attribute>
-     <widget class="QTabWidget" name="tabWidget_3">
+     <widget class="QTabWidget" name="tabWidget_reclamation_3">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -804,11 +669,11 @@ color: rgb(85, 255, 255);
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab_3">
+      <widget class="QWidget" name="tab_reclamation_3">
        <attribute name="title">
         <string>Ajouter</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox">
+       <widget class="QGroupBox" name="groupBox_reclamation">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -832,7 +697,7 @@ color: rgb(85, 255, 255);
         <property name="title">
          <string>Ajouter une réclamation</string>
         </property>
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="label_reclamation_7">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -851,7 +716,7 @@ color: rgb(85, 255, 255);
           <string>ID Catégorie</string>
          </property>
         </widget>
-        <widget class="QDateEdit" name="date_rec">
+        <widget class="QDateEdit" name="date_reclamation">
          <property name="geometry">
           <rect>
            <x>150</x>
@@ -861,17 +726,7 @@ color: rgb(85, 255, 255);
           </rect>
          </property>
         </widget>
-        <widget class="QLineEdit" name="id_c">
-         <property name="geometry">
-          <rect>
-           <x>270</x>
-           <y>90</y>
-           <width>113</width>
-           <height>20</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_9">
+        <widget class="QLabel" name="label_reclamation_9">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -890,7 +745,7 @@ color: rgb(85, 255, 255);
           <string>ID Client</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_11">
+        <widget class="QLabel" name="label_reclamation_11">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -909,7 +764,7 @@ color: rgb(85, 255, 255);
           <string>Date</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="label_reclamation_12">
          <property name="geometry">
           <rect>
            <x>340</x>
@@ -928,7 +783,7 @@ color: rgb(85, 255, 255);
           <string>Avis du Client</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="avis_a">
+        <widget class="QLineEdit" name="avis_reclamation">
          <property name="geometry">
           <rect>
            <x>500</x>
@@ -958,17 +813,8 @@ color: rgb(85, 255, 255);
           </rect>
          </property>
         </widget>
-        <zorder>label_7</zorder>
-        <zorder>date_rec</zorder>
-        <zorder>label_9</zorder>
-        <zorder>label_11</zorder>
-        <zorder>label_12</zorder>
-        <zorder>id_c</zorder>
-        <zorder>avis_a</zorder>
-        <zorder>comboBox_reclamation_1</zorder>
-        <zorder>comboBox_reclamation_2</zorder>
        </widget>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="label_reclamation">
         <property name="geometry">
          <rect>
           <x>-20</x>
@@ -1009,15 +855,15 @@ color: rgb(132, 1, 64);</string>
          <string>Ajouter</string>
         </property>
        </widget>
-       <zorder>label</zorder>
-       <zorder>groupBox</zorder>
+       <zorder>label_reclamation</zorder>
+       <zorder>groupBox_reclamation</zorder>
        <zorder>bouton_ajout_reclamation</zorder>
       </widget>
-      <widget class="QWidget" name="tab_5">
+      <widget class="QWidget" name="tab_reclamation_5">
        <attribute name="title">
         <string>Afficher</string>
        </attribute>
-       <widget class="QLabel" name="label_27">
+       <widget class="QLabel" name="label_reclamation_27">
         <property name="geometry">
          <rect>
           <x>-70</x>
@@ -1111,7 +957,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          </size>
         </property>
        </widget>
-       <widget class="QTableView" name="tabrec">
+       <widget class="QTableView" name="tab_reclamation">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -1121,7 +967,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="rechrec">
+       <widget class="QLineEdit" name="rech_reclamation">
         <property name="geometry">
          <rect>
           <x>320</x>
@@ -1132,11 +978,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_6">
+      <widget class="QWidget" name="tab_reclamation_6">
        <attribute name="title">
         <string>Modifier</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_2">
+       <widget class="QGroupBox" name="groupBox_reclamation_2">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -1160,7 +1006,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <property name="title">
          <string>Modifier une réclamation</string>
         </property>
-        <widget class="QLabel" name="label_22">
+        <widget class="QLabel" name="label_reclamation_22">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -1189,7 +1035,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           </rect>
          </property>
         </widget>
-        <widget class="QLabel" name="label_24">
+        <widget class="QLabel" name="label_reclamation_24">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -1208,7 +1054,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <string>ID Client</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_25">
+        <widget class="QLabel" name="label_reclamation_25">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -1227,7 +1073,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <string>Date</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_26">
+        <widget class="QLabel" name="label_reclamation_26">
          <property name="geometry">
           <rect>
            <x>340</x>
@@ -1302,7 +1148,7 @@ color: rgb(132, 1, 64);</string>
          <string>Modifier</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="label_reclamation_6">
         <property name="geometry">
          <rect>
           <x>-20</x>
@@ -1318,15 +1164,15 @@ color: rgb(132, 1, 64);</string>
          <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
         </property>
        </widget>
-       <zorder>label_6</zorder>
-       <zorder>groupBox_2</zorder>
+       <zorder>label_reclamation_6</zorder>
+       <zorder>groupBox_reclamation_2</zorder>
        <zorder>pushButton_2</zorder>
       </widget>
-      <widget class="QWidget" name="tab_7">
+      <widget class="QWidget" name="tab_reclamation_7">
        <attribute name="title">
         <string>Supprimer</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_3">
+       <widget class="QGroupBox" name="groupBox_reclamation_3">
         <property name="geometry">
          <rect>
           <x>300</x>
@@ -1355,7 +1201,7 @@ color: rgb(85, 255, 255);
         <property name="title">
          <string>Supprimer une réclamation</string>
         </property>
-        <widget class="QLabel" name="label_29">
+        <widget class="QLabel" name="label_reclamation_29">
          <property name="geometry">
           <rect>
            <x>168</x>
@@ -1371,7 +1217,7 @@ color: rgb(85, 255, 255);
           <pixmap>macaron.jpg</pixmap>
          </property>
         </widget>
-        <widget class="QLabel" name="label_30">
+        <widget class="QLabel" name="label_reclamation_30">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -1426,7 +1272,7 @@ color: rgb(85, 255, 255);
           </size>
          </property>
         </widget>
-        <widget class="QLabel" name="label_31">
+        <widget class="QLabel" name="label_reclamation_31">
          <property name="geometry">
           <rect>
            <x>30</x>
@@ -1468,7 +1314,7 @@ color: rgb(85, 255, 255);
          </property>
         </widget>
        </widget>
-       <widget class="QLabel" name="label_35">
+       <widget class="QLabel" name="label_reclamation_35">
         <property name="geometry">
          <rect>
           <x>-51</x>
@@ -1484,19 +1330,12 @@ color: rgb(85, 255, 255);
          <pixmap>../../../../../../Downloads/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
         </property>
        </widget>
-       <zorder>label_35</zorder>
-       <zorder>groupBox_3</zorder>
+       <zorder>label_reclamation_35</zorder>
+       <zorder>groupBox_reclamation_3</zorder>
       </widget>
      </widget>
     </widget>
    </widget>
-   <zorder>label_3</zorder>
-   <zorder>pushButton_8</zorder>
-   <zorder>pushButton_9</zorder>
-   <zorder>pushButton_10</zorder>
-   <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
-   <zorder>tabWidget_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

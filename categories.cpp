@@ -49,13 +49,10 @@ QSqlQueryModel * Categories::afficher()
         return model;
 }
 
-bool Categories::supprimer(QString nom)
+bool Categories::supprimer(QString nom_c)
 {
     QSqlQuery query;
-
-        query.prepare("Delete from CATEGORIES where NOM_CATEGORIE = :nom");
-        query.bindValue(":nom",nom);
-
+    query.prepare("Delete from CATEGORIES where NOM_CATEGORIE ='"+nom_c+"'");
     return    query.exec();
 }
 
@@ -69,7 +66,8 @@ QSqlQueryModel *Categories::rechercher(QString rech)
 bool Categories::modifier()
 {
     QSqlQuery query;
-    query.prepare("UPDATE CATEGORIES set DATE_FAB='"+date_fabrication+"' , PRIX='"+prix+"'  where (NOM_CATEGORIE like '"+nom+"') ");
+    QString prixx= QString::number(prix);
+    query.prepare("UPDATE CATEGORIES set PRIX= "+prixx+" , DATE_FAB='"+date_fabrication+"' where NOM_CATEGORIE like '"+nom+"' ");
     return    query.exec();
 }
 

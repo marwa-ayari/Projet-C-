@@ -17,21 +17,21 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_4_clicked();
+    void on_pushButton_categorie_4_clicked();
 
-    void on_pushButton_6_clicked();
+    void on_pushButton_categorie_6_clicked();
 
-    void on_tabWidget_4_currentChanged(int index);
+    void on_tabWidget_categorie_4_currentChanged(int index);
 
-    void on_pushButton_13_clicked();
+    void on_pushButton_categorie_13_clicked();
 
-    void on_pushButton_14_clicked();
+    void on_pushButton_categorie_14_clicked();
 
-    void on_pushButton_7_clicked();
+    void on_pushButton_categorie_7_clicked();
 
     void on_bouton_ajout_reclamation_clicked();
 
-    void on_tabWidget_3_currentChanged(int index);
+    void on_tabWidget_reclamation_3_currentChanged(int index);
 
     void on_pushButton_3_clicked();
 

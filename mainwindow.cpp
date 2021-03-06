@@ -22,17 +22,17 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_pushButton_categorie_4_clicked()
 {
-    QString nom= ui->lineEdit_12->text();
-    QString date_fab= ui->dateEdit_7->text();
-    float prix=ui->lineEdit_13->text().toFloat();
+    QString nom= ui->lineEdit_categorie_12->text();
+    QString date_fab= ui->dateEdit_categorie_7->text();
+    float prix=ui->lineEdit_categorie_13->text().toFloat();
     Categories catg(nom,date_fab,prix);
     if(catg.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
-        ui->lineEdit_12->setText("");
-        ui->lineEdit_13->setText("");
+        ui->lineEdit_categorie_12->setText("");
+        ui->lineEdit_categorie_13->setText("");
 
 }else{
         QMessageBox::information(nullptr, QObject::tr("ECHEC!!!"),
@@ -42,13 +42,14 @@ void MainWindow::on_pushButton_4_clicked()
 }
 
 
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_pushButton_categorie_6_clicked()
 {
     QString nom= ui->comboBox_categorie_sup->currentText();
     if(tmpcategorie.supprimer(nom))
     {
         QMessageBox::information(nullptr, QObject::tr("Supprimer une categorie"),
                     QObject::tr("Suppression avec succés.\n" ), QMessageBox::Cancel);
+        ui->comboBox_categorie_sup->setModel(tmpcategorie.modifier_aff_id());
     }
     else
     { QMessageBox::critical(nullptr, QObject::tr("Erreur!"),
@@ -58,25 +59,25 @@ void MainWindow::on_pushButton_6_clicked()
     }
 }
 
-void MainWindow::on_tabWidget_4_currentChanged(int index)
+void MainWindow::on_tabWidget_categorie_4_currentChanged(int index)
 {
-    ui->tabcatg->setEnabled(true);
-    ui->tabcatg->setModel(tmpcategorie.afficher());
+    ui->tab_categorie->setEnabled(true);
+    ui->tab_categorie->setModel(tmpcategorie.afficher());
     ui->comboBox_categorie_modifi->setModel(tmpcategorie.modifier_aff_id());
     ui->comboBox_categorie_sup->setModel(tmpcategorie.modifier_aff_id());
 
 }
 
-void MainWindow::on_pushButton_13_clicked()
+void MainWindow::on_pushButton_categorie_13_clicked()
 {
-    QString rech =ui->lineEdit_17->text();
-    ui->tabcatg->setModel(tmpcategorie.rechercher(rech));
+    QString rech =ui->lineEdit_categorie_17->text();
+    ui->tab_categorie->setModel(tmpcategorie.rechercher(rech));
 }
 
 
-void MainWindow::on_pushButton_14_clicked()
+void MainWindow::on_pushButton_categorie_14_clicked()
 {
-    ui->tabcatg->setModel(tmpcategorie.tri());
+    ui->tab_categorie->setModel(tmpcategorie.tri());
 }
 void MainWindow::on_comboBox_categorie_modifi_currentIndexChanged(const QString &arg1)
 {
@@ -97,7 +98,7 @@ void MainWindow::on_comboBox_categorie_modifi_currentIndexChanged(const QString 
 
 }
 
-void MainWindow::on_pushButton_7_clicked()
+void MainWindow::on_pushButton_categorie_7_clicked()
 {
     QString nom= ui->comboBox_categorie_modifi->currentText();
     QString date_fab= ui->dateEdit_categorie_2->text();
@@ -120,14 +121,13 @@ void MainWindow::on_bouton_ajout_reclamation_clicked()
 {
     QString nom_categ= ui->comboBox_reclamation_1->currentText();
     QString id= ui->comboBox_reclamation_2->currentText();
-    QString avis_c= ui->avis_a->text();
-    QString date_rec= ui->date_rec->text();
+    QString avis_c= ui->avis_reclamation->text();
+    QString date_rec= ui->date_reclamation->text();
     reclamations rec(nom_categ,id,date_rec,avis_c);
     if(rec.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n"), QMessageBox::Cancel);
-        ui->id_c->setText("");
-        ui->avis_a->setText("");
+        ui->avis_reclamation->setText("");
 
     } else
     {
@@ -137,10 +137,10 @@ void MainWindow::on_bouton_ajout_reclamation_clicked()
 
 }
 
-void MainWindow::on_tabWidget_3_currentChanged(int index)
+void MainWindow::on_tabWidget_reclamation_3_currentChanged(int index)
 {
-    ui->tabrec->setEnabled(true);
-    ui->tabrec->setModel(tmpreclamation.afficher());
+    ui->tab_reclamation->setEnabled(true);
+    ui->tab_reclamation->setModel(tmpreclamation.afficher());
     ui->comboBox_reclamation_1->setModel(tmpreclamation.affecter_Categorie());
     ui->comboBox_reclamation_2->setModel(tmpreclamation.affecter_Client());
     ui->comboBox_reclamation_3->setModel(tmpreclamation.affecter_Categorie());
@@ -167,13 +167,13 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_pushButton_11_clicked()
 {
-    QString rech =ui->rechrec->text();
-    ui->tabrec->setModel(tmpreclamation.rechercher(rech));
+    QString rech =ui->rech_reclamation->text();
+    ui->tab_reclamation->setModel(tmpreclamation.rechercher(rech));
 }
 
 void MainWindow::on_pushButton_12_clicked()
 {
-    ui->tabrec->setModel(tmpreclamation.tri());
+    ui->tab_reclamation->setModel(tmpreclamation.tri());
 }
 
 
