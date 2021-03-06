@@ -20,6 +20,14 @@ private slots:
 
     void on_tabWidget_4_currentChanged(int index);
 
+    void on_pushButton_materiel_17_clicked();
+
+    void on_pushButton_materiel_13_clicked();
+
+    void on_pushButton_materiel_8_clicked();
+
+    void on_pushButton_materiel_5_clicked();
+
 private:
     Ui::Gestion_materiaux_maintenances *ui;
     Materiaux tmpmateriel;

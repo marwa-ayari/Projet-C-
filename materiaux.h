@@ -28,9 +28,9 @@ public:
     bool ajouter();
     QSqlQueryModel * afficher();
 
+    QSqlQueryModel * liste_materiaux();
     bool supprimer(QString);
     bool modifier();
-    QSqlQueryModel * modifier_aff_reference();
 
 
     QSqlQueryModel * rechercher(QString);

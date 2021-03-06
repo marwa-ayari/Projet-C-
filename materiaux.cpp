@@ -66,4 +66,48 @@ QSqlQueryModel * Materiaux::afficher()
     return model;
 }
 
+bool Materiaux::supprimer(QString refer)
+{
+    QSqlQuery query;
+    query.prepare("Delete from Materiaux where reference ='"+refer+"'");
+    return    query.exec();
+}
+
+
+
+bool Materiaux::modifier()
+{
+    QSqlQuery query;
+    QString prix_materiel= QString::number(prix);
+    query.prepare("UPDATE Materiaux set nom='"+nom+"' ,type='"+type+"' ,PRIX= "+prix_materiel+" , date_achat='"+date_achat+"' where reference like '"+reference+"' ");
+    return    query.exec();
+}
+
+QSqlQueryModel * Materiaux::liste_materiaux()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select reference from Materiaux ");
+
+    return model;
+}
+
+QSqlQueryModel * Materiaux::tri()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from Materiaux ORDER BY date_achat DESC");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Reference"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Type "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Date d'achat desc"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Prix"));
+    return model;
+}
+QSqlQueryModel *Materiaux::rechercher(QString ref)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from Materiaux where reference LIKE '"+ref+"%' ");
+    return model;
+}
 
