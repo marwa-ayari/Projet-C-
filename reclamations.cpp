@@ -58,12 +58,20 @@ bool reclamations::supprimer(QString nom,QString id)
 bool reclamations::modifier()
 {
     QSqlQuery query;
-    query.prepare("UPDATE RECLAMATIONS set NOM_CATEGORIE=:nom ,ID_CLIENT=:id ,DATE_REC=:date , AVIS=:aviss where NOM_CATEGORIE=:nom");
-    query.bindValue(":nom", nom_categorie);
-    query.bindValue(":date", date_rec);
-    query.bindValue(":id", id_client);
-    query.bindValue(":aviss", avis);
-    return    query.exec();
+    //if()
+    //{
+        query.prepare("UPDATE RECLAMATIONS set DATE_REC=:date , AVIS=:aviss where (NOM_CATEGORIE=:nom AND ID_CLIENT=:id )"):
+            //lezem naamel ntesti ken fama menha la reclamation 9bal manaamel update
+            //ou bien tester si une ligne a été mise a joiur ou non
+        query.bindValue(":nom", nom_categorie);
+        query.bindValue(":date", date_rec);
+        query.bindValue(":id", id_client);
+        query.bindValue(":aviss", avis);
+        return    query.exec();
+
+
+
+
 }
 
 QSqlQueryModel * reclamations::rechercher(QString rech)
