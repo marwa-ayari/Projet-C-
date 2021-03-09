@@ -1,4 +1,8 @@
 #include "employes.h"
+#include <QSqlQuery>
+#include <QtDebug>
+
+
 
 Employes::Employes()
 {
@@ -37,5 +41,28 @@ void Employes::setdateemb(QString dateemb){ this->dateemb=dateemb;}
 void Employes::setnom(QString nom){ this->nom=nom;}
 void Employes::setprenom(QString prenom){ this->prenom=prenom;}
 void Employes::setfonction(QString fonction){ this->fonction=fonction;}
+
+bool Employes::ajouter()
+{
+bool test=false;
+
+
+QSqlQuery query;
+QString mat_string=QString::number(matemp);
+query.prepare("INSERT INTO employes (matemp,salaire,dateemb,nom,prenom,fonction) "
+              "VALUES (:matemp, :salaire, :dateemb, :nom ,:prenom ,:fonction)");
+query.bindValue(":matemp", mat_string);
+query.bindValue(":salaire", salaire);
+query.bindValue(":dateemb", dateemb);
+query.bindValue(":nom", nom);
+query.bindValue(":prenom",prenom);
+query.bindValue(":fonction",fonction);
+query.exec();
+
+
+
+return test;
+
+}
 
 

@@ -28,6 +28,7 @@ public:
     void setnom(QString);
     void setprenom(QString);
     void setfonction(QString);
+    bool ajouter();
 
 
 
