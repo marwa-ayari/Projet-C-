@@ -1,6 +1,9 @@
 #ifndef EMPLOYES_H
 #define EMPLOYES_H
-#include<QString>
+
+#include <QString>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
 class Employes
 {

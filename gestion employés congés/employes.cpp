@@ -44,8 +44,6 @@ void Employes::setfonction(QString fonction){ this->fonction=fonction;}
 
 bool Employes::ajouter()
 {
-bool test=false;
-
 
 QSqlQuery query;
 QString mat_string=QString::number(matemp);
@@ -57,11 +55,8 @@ query.bindValue(":dateemb", dateemb);
 query.bindValue(":nom", nom);
 query.bindValue(":prenom",prenom);
 query.bindValue(":fonction",fonction);
-query.exec();
+ return query.exec();
 
-
-
-return test;
 
 }
 
