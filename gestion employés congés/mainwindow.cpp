@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "employes.h"
+#include"gesempcong.h"
 
 
 
@@ -18,19 +19,16 @@ MainWindow::~MainWindow()
 
 
 
-
-
-void MainWindow::on_ajoutemp_clicked()
+void MainWindow::on_pushButton_clicked()
 {
-    int matemp=ui->matricule->text().toInt();
-    float salaire=ui->salaire->text().toInt();
-    QString dateemb=ui->dateemb->text();
-    QString nom=ui->nom->text();
-    QString prenom=ui->prenom->text();
-    QString fonction=ui->fonction->text();
 
-    Employes E(matemp,salaire,dateemb,nom,prenom,fonction);
-
-
-
+gesempcong fenetre;
+fenetre.exec();
 }
+
+
+
+
+
+
+

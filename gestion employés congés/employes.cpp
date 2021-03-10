@@ -1,5 +1,5 @@
 #include "employes.h"
-#include <QSqlQuery>
+
 #include <QtDebug>
 
 
@@ -46,11 +46,12 @@ bool Employes::ajouter()
 {
 
 QSqlQuery query;
-QString mat_string=QString::number(matemp);
+QString mat_string= QString::number(matemp);
+QString salairee= QString::number(salaire);
 query.prepare("INSERT INTO employes (matemp,salaire,dateemb,nom,prenom,fonction) "
               "VALUES (:matemp, :salaire, :dateemb, :nom ,:prenom ,:fonction)");
 query.bindValue(":matemp", mat_string);
-query.bindValue(":salaire", salaire);
+query.bindValue(":salaire", salairee);
 query.bindValue(":dateemb", dateemb);
 query.bindValue(":nom", nom);
 query.bindValue(":prenom",prenom);
@@ -59,5 +60,49 @@ query.bindValue(":fonction",fonction);
 
 
 }
+
+QSqlQueryModel * Employes::afficher()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from employes ");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("matemp"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("salaire"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("dateemb "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("prenom "));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction "));
+
+
+        return model;
+}
+
+bool Employes::supprimer(int matemp)
+{
+    QSqlQuery query;
+    query.prepare("Delete from employes where matemp=:matemp");
+    query.bindValue(0,matemp);
+    return    query.exec();
+}
+
+bool Employes::modifier()
+{
+    QSqlQuery query;
+    QString mat_string= QString::number(matemp);
+    QString salairee= QString::number(salaire);
+    query.prepare("UPDATE employes set salaire='"+salairee+"',dateemb='"+dateemb+"',nom='"+nom+"',prenom='"+prenom+"',fonction='"+fonction+"' where matemp like '"+mat_string+"' ");
+    return    query.exec();
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
