@@ -7,17 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>908</width>
-    <height>501</height>
+    <height>476</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Gestion des matériaux et des maintenances</string>
+   <string>Gestion des matériaux et maintenances</string>
   </property>
   <widget class="QTabWidget" name="tabWidget_materiel_maintenance_2">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>20</y>
+     <y>0</y>
      <width>911</width>
      <height>481</height>
     </rect>
@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(229, 148, 66);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="widget_materiel">
     <attribute name="title">
@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_materiel_8">
       <attribute name="title">
@@ -279,7 +279,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../0.png</pixmap>
+        <pixmap>../../0.png</pixmap>
        </property>
       </widget>
       <zorder>label_materiel_51</zorder>
@@ -302,7 +302,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../00.png</pixmap>
+        <pixmap>../../00.png</pixmap>
        </property>
       </widget>
       <widget class="QTableView" name="tableView_materiel_2">
@@ -345,7 +345,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../tri.png</normaloff>../tri.png</iconset>
+         <normaloff>../../tri.png</normaloff>../../tri.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -357,9 +357,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="pushButton_materiel_13">
        <property name="geometry">
         <rect>
-         <x>530</x>
-         <y>260</y>
-         <width>181</width>
+         <x>560</x>
+         <y>250</y>
+         <width>321</width>
          <height>71</height>
         </rect>
        </property>
@@ -380,11 +380,11 @@ color: rgb(0, 0, 127);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
-        <string>Recherche</string>
+        <string>Recherche par réference</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Sans titre-1.png</normaloff>../Sans titre-1.png</iconset>
+         <normaloff>../../Sans titre-1.png</normaloff>../../Sans titre-1.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -396,8 +396,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QLineEdit" name="lineEdit_materiel">
        <property name="geometry">
         <rect>
-         <x>340</x>
-         <y>270</y>
+         <x>390</x>
+         <y>260</y>
          <width>151</width>
          <height>41</height>
         </rect>
@@ -421,7 +421,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../0.png</pixmap>
+        <pixmap>../../0.png</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_materiel_5">
@@ -671,7 +671,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../traval/maquetteqt/macaron.jpg</pixmap>
+         <pixmap>macaron.jpg</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="label_materiel_53">
@@ -720,7 +720,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../poubelle.png</normaloff>../poubelle.png</iconset>
+          <normaloff>../../poubelle.png</normaloff>../../poubelle.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -753,7 +753,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../s.png</pixmap>
+        <pixmap>../../s.png</pixmap>
        </property>
       </widget>
       <zorder>label_materiel_43</zorder>
@@ -784,7 +784,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="tab_maintenance_3">
       <attribute name="title">
@@ -849,16 +849,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <y>150</y>
           <width>110</width>
           <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_maintenance_2">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>70</y>
-          <width>113</width>
-          <height>20</height>
          </rect>
         </property>
        </widget>
@@ -944,13 +934,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          <string>Ajouter</string>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit_maintenance">
+       <widget class="QLineEdit" name="lineEdit_maintenance_6">
         <property name="geometry">
          <rect>
           <x>610</x>
           <y>70</y>
-          <width>191</width>
-          <height>131</height>
+          <width>161</width>
+          <height>91</height>
          </rect>
         </property>
        </widget>
@@ -968,11 +958,22 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../m.png</pixmap>
+        <pixmap>../../m.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_maintenance_1">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>80</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
        </property>
       </widget>
       <zorder>label_maintenance</zorder>
       <zorder>groupBox_maintenance</zorder>
+      <zorder>comboBox_maintenance_1</zorder>
      </widget>
      <widget class="QWidget" name="tab_maintenance_5">
       <attribute name="title">
@@ -981,9 +982,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
       <widget class="QTableView" name="tableView_maintenance">
        <property name="geometry">
         <rect>
-         <x>30</x>
+         <x>10</x>
          <y>20</y>
-         <width>661</width>
+         <width>511</width>
          <height>201</height>
         </rect>
        </property>
@@ -991,9 +992,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
       <widget class="QPushButton" name="pushButton_maintenance_11">
        <property name="geometry">
         <rect>
-         <x>500</x>
-         <y>280</y>
-         <width>181</width>
+         <x>510</x>
+         <y>290</y>
+         <width>341</width>
          <height>71</height>
         </rect>
        </property>
@@ -1014,11 +1015,11 @@ color: rgb(0, 0, 127);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
-        <string>Recherche</string>
+        <string>Recherche par référence</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../Sans titre-1.png</normaloff>../Sans titre-1.png</iconset>
+         <normaloff>../../Sans titre-1.png</normaloff>../../Sans titre-1.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1030,9 +1031,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="pushButton_maintenance_15">
        <property name="geometry">
         <rect>
-         <x>720</x>
-         <y>60</y>
-         <width>181</width>
+         <x>620</x>
+         <y>80</y>
+         <width>211</width>
          <height>71</height>
         </rect>
        </property>
@@ -1053,11 +1054,11 @@ color: rgb(0, 0, 127);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
-        <string> Tri         </string>
+        <string> Tri par prix</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../tri.png</normaloff>../tri.png</iconset>
+         <normaloff>../../tri.png</normaloff>../../tri.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1079,14 +1080,14 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../00.png</pixmap>
+        <pixmap>../../00.png</pixmap>
        </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_maintenance_5">
        <property name="geometry">
         <rect>
          <x>290</x>
-         <y>290</y>
+         <y>300</y>
          <width>171</width>
          <height>41</height>
         </rect>
@@ -1161,16 +1162,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <y>150</y>
           <width>110</width>
           <height>22</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_maintenance_4">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>70</y>
-          <width>113</width>
-          <height>20</height>
          </rect>
         </property>
        </widget>
@@ -1256,13 +1247,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          <string>Modifier</string>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit_maintenance_2">
+       <widget class="QLineEdit" name="lineEdit_maintenance_7">
         <property name="geometry">
          <rect>
           <x>610</x>
           <y>70</y>
-          <width>191</width>
-          <height>131</height>
+          <width>141</width>
+          <height>91</height>
          </rect>
         </property>
        </widget>
@@ -1280,11 +1271,22 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../m.png</pixmap>
+        <pixmap>../../m.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_maintenance_2">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>80</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
        </property>
       </widget>
       <zorder>label_maintenance_2</zorder>
       <zorder>groupBox_maintenance_2</zorder>
+      <zorder>comboBox_maintenance_2</zorder>
      </widget>
      <widget class="QWidget" name="tab_maintenance_7">
       <attribute name="title">
@@ -1329,7 +1331,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../traval/maquetteqt/macaron.jpg</pixmap>
+         <pixmap>macaron.jpg</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="label_maintenance_31">
@@ -1351,16 +1353,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </property>
         <property name="text">
          <string>Réference matériel</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_maintenance_11">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>130</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_maintenance_7">
@@ -1388,13 +1380,23 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../poubelle.png</normaloff>../poubelle.png</iconset>
+          <normaloff>../../poubelle.png</normaloff>../../poubelle.png</iconset>
         </property>
         <property name="iconSize">
          <size>
           <width>150</width>
           <height>150</height>
          </size>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_maintenance_3">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>140</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
         </property>
        </widget>
       </widget>
@@ -1411,11 +1413,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../s.png</pixmap>
+        <pixmap>../../s.png</pixmap>
        </property>
       </widget>
       <zorder>label_35</zorder>
       <zorder>groupBox_maintenance_3</zorder>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Statistique</string>
+      </attribute>
      </widget>
     </widget>
    </widget>
