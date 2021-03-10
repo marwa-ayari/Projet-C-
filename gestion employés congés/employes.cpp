@@ -96,10 +96,29 @@ bool Employes::modifier()
 
 
 
+QSqlQueryModel *Employes::rechercher(QString rech)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select * from employes where fonction LIKE '"+rech+"%' or dateemb LIKE '"+rech+"%'");
+    return model;
+}
+
+QSqlQueryModel * Employes::tri()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from employes ORDER BY salaire DESC");
 
 
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("matemp"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("salaire"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("dateemb "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("prenom "));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction "));
 
-
+        return model;
+}
 
 
 

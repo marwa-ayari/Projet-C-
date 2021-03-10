@@ -22,11 +22,12 @@ public:
 private slots:
  void on_ajoutemp_clicked();
  void on_tabWidget_employes_currentChanged(int index);
-
-
  void on_suppemp_clicked();
-
  void on_modifemp_clicked();
+
+
+ void on_pushButton_rechercheemp_clicked();
+ void on_triemp_clicked();
 
 private:
     Ui::gesempcong *ui;

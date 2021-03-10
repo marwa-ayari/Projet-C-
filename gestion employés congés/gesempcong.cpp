@@ -57,6 +57,7 @@ void gesempcong::on_tabWidget_employes_currentChanged(int index)
     ui->tableemp->setModel(insemployes.afficher());
 
 
+
 }
 
 
@@ -104,6 +105,14 @@ void gesempcong::on_modifemp_clicked()
     }
 }
 
+void gesempcong::on_pushButton_rechercheemp_clicked()
+{
+       QString rech =ui->rechercheemp->text();
+      ui->tableemp->setModel(insemployes.rechercher(rech));
+}
 
 
-
+void gesempcong::on_triemp_clicked()
+{
+      ui->tableemp->setModel(insemployes.tri());
+}

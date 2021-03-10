@@ -41,6 +41,9 @@ public:
     bool supprimer(int);
     bool modifier();
 
+    QSqlQueryModel * rechercher(QString);
+    QSqlQueryModel *tri();
+
 
 
 

@@ -17,14 +17,14 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>134</x>
-      <y>130</y>
+      <x>50</x>
+      <y>0</y>
       <width>161</width>
       <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>employes_congés</string>
+     <string> Gestion employes_congés</string>
     </property>
    </widget>
   </widget>
