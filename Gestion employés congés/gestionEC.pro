@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    conges.cpp \
     connection.cpp \
     employes.cpp \
     gesempcong.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    conges.h \
     connection.h \
     employes.h \
     gesempcong.h \

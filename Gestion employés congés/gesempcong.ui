@@ -47,7 +47,7 @@
     <widget class="QTabWidget" name="tabWidget_employes">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>0</x>
        <y>0</y>
        <width>811</width>
        <height>471</height>
@@ -178,7 +178,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -187,8 +187,8 @@
       <widget class="QGroupBox" name="groupBox">
        <property name="geometry">
         <rect>
-         <x>-10</x>
-         <y>0</y>
+         <x>10</x>
+         <y>20</y>
          <width>751</width>
          <height>411</height>
         </rect>
@@ -202,7 +202,7 @@
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 97);
+        <string notr="true">color:rgb(200, 0, 150);
 </string>
        </property>
        <property name="title">
@@ -309,22 +309,6 @@
          <string>fonction</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>-100</x>
-          <y>30</y>
-          <width>1091</width>
-          <height>491</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../imagesQT/ajoutempback.jpg</pixmap>
-        </property>
-       </widget>
        <widget class="QPushButton" name="ajoutemp">
         <property name="geometry">
          <rect>
@@ -429,21 +413,25 @@ color: rgb(132, 1, 64);</string>
          </rect>
         </property>
        </widget>
-       <zorder>label_3</zorder>
-       <zorder>label_7</zorder>
-       <zorder>label_9</zorder>
-       <zorder>label_11</zorder>
-       <zorder>label_8</zorder>
-       <zorder>label_13</zorder>
-       <zorder>ajoutemp</zorder>
-       <zorder>label_19</zorder>
-       <zorder>matricule</zorder>
-       <zorder>nom</zorder>
-       <zorder>prenom</zorder>
-       <zorder>dateemb</zorder>
-       <zorder>salaire</zorder>
-       <zorder>fonction</zorder>
       </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>-80</x>
+         <y>0</y>
+         <width>1091</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../imagesQT/74-741363_macaron-background.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_3</zorder>
+      <zorder>groupBox</zorder>
      </widget>
      <widget class="QWidget" name="afficheremp">
       <attribute name="title">
@@ -1302,7 +1290,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <rect>
          <x>570</x>
          <y>0</y>
-         <width>191</width>
+         <width>201</width>
          <height>41</height>
         </rect>
        </property>
@@ -2157,8 +2145,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
+         <x>10</x>
+         <y>20</y>
          <width>851</width>
          <height>401</height>
         </rect>
@@ -2172,7 +2160,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 97);
+        <string notr="true">color:rgb(200, 0, 150);
 </string>
        </property>
        <property name="title">
@@ -2206,9 +2194,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_14">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>100</y>
-          <width>171</width>
+          <x>10</x>
+          <y>40</y>
+          <width>531</width>
           <height>31</height>
          </rect>
         </property>
@@ -2222,7 +2210,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>matricule-employé</string>
+         <string>matricule de l'employé pour modifier ses données</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_15">
@@ -2332,8 +2320,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="mmatricule">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>110</y>
+          <x>90</x>
+          <y>80</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -2389,37 +2377,25 @@ color: rgb(132, 1, 64);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>-40</x>
-          <y>30</y>
-          <width>1091</width>
-          <height>491</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../imagesQT/ajoutempback.jpg</pixmap>
-        </property>
-       </widget>
-       <zorder>label_4</zorder>
-       <zorder>label_12</zorder>
-       <zorder>label_14</zorder>
-       <zorder>label_15</zorder>
-       <zorder>label_16</zorder>
-       <zorder>label_17</zorder>
-       <zorder>label_18</zorder>
-       <zorder>modifemp</zorder>
-       <zorder>mmatricule</zorder>
-       <zorder>msalaire</zorder>
-       <zorder>mdateemb</zorder>
-       <zorder>mnom</zorder>
-       <zorder>mprenom</zorder>
-       <zorder>mfonction</zorder>
       </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1091</width>
+         <height>511</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../imagesQT/74-741363_macaron-background.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_4</zorder>
+      <zorder>groupBox_2</zorder>
      </widget>
      <widget class="QWidget" name="supprimeremp">
       <attribute name="title">
@@ -2565,7 +2541,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
     <attribute name="title">
      <string>congés</string>
     </attribute>
-    <widget class="QTabWidget" name="onglet_aamscong">
+    <widget class="QTabWidget" name="tabWidget_conges">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -2581,7 +2557,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="ajoutercong">
       <attribute name="title">
@@ -2590,8 +2566,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QGroupBox" name="ajouteruncong">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>0</y>
+         <x>20</x>
+         <y>20</y>
          <width>871</width>
          <height>501</height>
         </rect>
@@ -2712,11 +2688,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <string>Date-fin</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_ajouter">
+       <widget class="QPushButton" name="pushButton_ajouterconges">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>300</y>
+          <x>470</x>
+          <y>290</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -2790,7 +2766,7 @@ color: rgb(74, 0, 111);</string>
          </size>
         </property>
        </widget>
-       <widget class="QLineEdit" name="affectemp">
+       <widget class="QLineEdit" name="matemp">
         <property name="geometry">
          <rect>
           <x>410</x>
@@ -2800,23 +2776,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_photo_16">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>30</y>
-          <width>1501</width>
-          <height>861</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../imagesQT/mailingback.jpg</pixmap>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="idc">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -2826,7 +2786,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_8">
+       <widget class="QLineEdit" name="type">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -2836,7 +2796,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_9">
+       <widget class="QLineEdit" name="datedeb">
         <property name="geometry">
          <rect>
           <x>230</x>
@@ -2846,7 +2806,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
+       <widget class="QLineEdit" name="duree">
         <property name="geometry">
          <rect>
           <x>360</x>
@@ -2856,7 +2816,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_11">
+       <widget class="QLineEdit" name="datefin">
         <property name="geometry">
          <rect>
           <x>250</x>
@@ -2866,22 +2826,25 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <zorder>label_photo_16</zorder>
-       <zorder>label_duree</zorder>
-       <zorder>label_id</zorder>
-       <zorder>label_datedeb</zorder>
-       <zorder>label_type</zorder>
-       <zorder>label_datefin</zorder>
-       <zorder>pushButton_ajouter</zorder>
-       <zorder>label_duree_5</zorder>
-       <zorder>pushButton_recherchecong_5</zorder>
-       <zorder>affectemp</zorder>
-       <zorder>lineEdit_7</zorder>
-       <zorder>lineEdit_8</zorder>
-       <zorder>lineEdit_9</zorder>
-       <zorder>lineEdit_10</zorder>
-       <zorder>lineEdit_11</zorder>
       </widget>
+      <widget class="QLabel" name="label_photo_16">
+       <property name="geometry">
+        <rect>
+         <x>-30</x>
+         <y>-60</y>
+         <width>1501</width>
+         <height>931</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../imagesQT/mailingback.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_photo_16</zorder>
+      <zorder>ajouteruncong</zorder>
      </widget>
      <widget class="QWidget" name="affichercong">
       <attribute name="title">
@@ -2903,7 +2866,7 @@ color: rgb(74, 0, 111);</string>
         <pixmap>../imagesQT/2affiches.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_recherchecong_10">
+      <widget class="QPushButton" name="recherchecong">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -3735,12 +3698,12 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_tricong_7">
+      <widget class="QPushButton" name="tricong">
        <property name="geometry">
         <rect>
          <x>550</x>
          <y>0</y>
-         <width>191</width>
+         <width>211</width>
          <height>41</height>
         </rect>
        </property>
@@ -4567,23 +4530,23 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </size>
        </property>
       </widget>
-      <widget class="QTableView" name="tableView">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>60</y>
-         <width>701</width>
-         <height>291</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="edit_recherchecong">
        <property name="geometry">
         <rect>
          <x>240</x>
          <y>0</y>
          <width>141</width>
          <height>41</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tableViewconges">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>70</y>
+         <width>641</width>
+         <height>331</height>
         </rect>
        </property>
       </widget>
@@ -4595,8 +4558,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QGroupBox" name="ajouteruncong_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
+         <x>10</x>
+         <y>10</y>
          <width>871</width>
          <height>501</height>
         </rect>
@@ -4610,7 +4573,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 80, 97);
+        <string notr="true">color: rgb(222, 0, 111);
 </string>
        </property>
        <property name="title">
@@ -4717,10 +4680,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <string>Date-fin</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_ajouter_2">
+       <widget class="QPushButton" name="pushButton_modifierconges">
         <property name="geometry">
          <rect>
-          <x>320</x>
+          <x>470</x>
           <y>300</y>
           <width>101</width>
           <height>31</height>
@@ -4795,7 +4758,7 @@ color: rgb(74, 0, 111);</string>
          </size>
         </property>
        </widget>
-       <widget class="QLineEdit" name="affectemp_2">
+       <widget class="QLineEdit" name="matempm">
         <property name="geometry">
          <rect>
           <x>410</x>
@@ -4805,23 +4768,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_photo_18">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>30</y>
-          <width>1501</width>
-          <height>861</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap>../imagesQT/mailingback.jpg</pixmap>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_12">
+       <widget class="QLineEdit" name="idcm">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -4831,7 +4778,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_13">
+       <widget class="QLineEdit" name="typem">
         <property name="geometry">
          <rect>
           <x>160</x>
@@ -4841,7 +4788,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_14">
+       <widget class="QLineEdit" name="datedebm">
         <property name="geometry">
          <rect>
           <x>230</x>
@@ -4851,7 +4798,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_15">
+       <widget class="QLineEdit" name="dureem">
         <property name="geometry">
          <rect>
           <x>360</x>
@@ -4861,7 +4808,7 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_17">
+       <widget class="QLineEdit" name="datefinm">
         <property name="geometry">
          <rect>
           <x>250</x>
@@ -4871,22 +4818,25 @@ color: rgb(74, 0, 111);</string>
          </rect>
         </property>
        </widget>
-       <zorder>label_photo_18</zorder>
-       <zorder>label_duree_2</zorder>
-       <zorder>label_id_2</zorder>
-       <zorder>label_datedeb_2</zorder>
-       <zorder>label_type_2</zorder>
-       <zorder>label_datefin_2</zorder>
-       <zorder>pushButton_ajouter_2</zorder>
-       <zorder>label_duree_6</zorder>
-       <zorder>pushButton_recherchecong_6</zorder>
-       <zorder>affectemp_2</zorder>
-       <zorder>lineEdit_12</zorder>
-       <zorder>lineEdit_13</zorder>
-       <zorder>lineEdit_14</zorder>
-       <zorder>lineEdit_15</zorder>
-       <zorder>lineEdit_17</zorder>
       </widget>
+      <widget class="QLabel" name="label_photo_18">
+       <property name="geometry">
+        <rect>
+         <x>-330</x>
+         <y>-40</y>
+         <width>1511</width>
+         <height>861</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../imagesQT/mailingback.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_photo_18</zorder>
+      <zorder>ajouteruncong_2</zorder>
      </widget>
      <widget class="QWidget" name="supprimercong">
       <attribute name="title">
@@ -4974,7 +4924,7 @@ color: rgb(0, 255, 127);
          <string>id-congé</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_16">
+       <widget class="QLineEdit" name="suppcong">
         <property name="geometry">
          <rect>
           <x>70</x>
@@ -5000,7 +4950,7 @@ color: rgb(0, 255, 127);
          <pixmap>../Documents/temp/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_recherchecong_2">
+       <widget class="QPushButton" name="pushButton_supprimerconges">
         <property name="geometry">
          <rect>
           <x>70</x>
@@ -5044,8 +4994,8 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba
        <zorder>label_46</zorder>
        <zorder>label_43</zorder>
        <zorder>label_45</zorder>
-       <zorder>lineEdit_16</zorder>
-       <zorder>pushButton_recherchecong_2</zorder>
+       <zorder>suppcong</zorder>
+       <zorder>pushButton_supprimerconges</zorder>
       </widget>
      </widget>
     </widget>

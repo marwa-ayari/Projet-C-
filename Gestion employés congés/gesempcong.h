@@ -2,6 +2,8 @@
 #define GESEMPCONG_H
 
 #include"employes.h"
+
+#include"conges.h"
 #include <QDialog>
 
 
@@ -29,9 +31,24 @@ private slots:
  void on_pushButton_rechercheemp_clicked();
  void on_triemp_clicked();
 
+ void on_pushButton_ajouterconges_clicked();
+
+ void on_pushButton_modifierconges_clicked();
+
+ void on_pushButton_supprimerconges_clicked();
+
+ void on_tabWidget_conges_currentChanged(int index);
+
+
+
+ void on_tricong_clicked();
+
+ void on_recherchecong_clicked();
+
 private:
     Ui::gesempcong *ui;
     Employes insemployes;
+    Conges insconges;
 
 
 
