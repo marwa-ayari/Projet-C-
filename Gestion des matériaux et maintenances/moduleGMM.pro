@@ -1,5 +1,6 @@
 
 QT       += core gui sql
+QT       += core gui charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,14 +16,16 @@ SOURCES += \
     main.cpp \
     maintenances.cpp \
     mainwindow.cpp \
-    materiaux.cpp
+    materiaux.cpp \
+    statistique.cpp
 
 HEADERS += \
     connexion.h \
     gestion_materiaux_maintenances.h \
     maintenances.h \
     mainwindow.h \
-    materiaux.h
+    materiaux.h \
+    statistique.h
 
 FORMS += \
     gestion_materiaux_maintenances.ui \

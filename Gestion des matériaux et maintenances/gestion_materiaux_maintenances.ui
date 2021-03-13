@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>908</width>
-    <height>476</height>
+    <width>937</width>
+    <height>487</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1423,6 +1423,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
       <attribute name="title">
        <string>Statistique</string>
       </attribute>
+      <widget class="QFrame" name="statistique_frame">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>591</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout"/>
+      </widget>
      </widget>
     </widget>
    </widget>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>912</width>
-    <height>529</height>
+    <width>740</width>
+    <height>522</height>
    </rect>
   </property>
   <property name="font">
@@ -28,26 +28,94 @@
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_maher">
+   <widget class="QPushButton" name="seconnecter">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>120</y>
-      <width>321</width>
-      <height>101</height>
+      <x>280</x>
+      <y>230</y>
+      <width>191</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>Gestion des matériaux et maintenances</string>
+     <string>se connecter</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>50</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>nom_utilisateur</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="username">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>50</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>140</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>130</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mot de passe</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="arriereplan">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-110</y>
+      <width>1131</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Macaron SoChoux.jpg</pixmap>
+    </property>
+   </widget>
+   <zorder>arriereplan</zorder>
+   <zorder>seconnecter</zorder>
+   <zorder>label</zorder>
+   <zorder>username</zorder>
+   <zorder>password</zorder>
+   <zorder>label_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>912</width>
+     <width>740</width>
      <height>29</height>
     </rect>
    </property>

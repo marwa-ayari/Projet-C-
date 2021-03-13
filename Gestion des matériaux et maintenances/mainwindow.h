@@ -15,7 +15,7 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_maher_clicked();
+    void on_seconnecter_clicked();
 
 private:
     Ui::MainWindow *ui;

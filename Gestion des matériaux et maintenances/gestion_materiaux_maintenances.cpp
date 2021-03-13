@@ -132,6 +132,9 @@ void Gestion_materiaux_maintenances::on_tabWidget_maintenance_3_currentChanged(i
     ui->comboBox_maintenance_2->setModel(tmpmaintenance.liste_Maintenances());
     ui->comboBox_maintenance_3->setModel(tmpmaintenance.liste_Maintenances());
 
+    QChartView *chartview = new QChartView(tmpstat.afficher_statistique());
+    chartview->setParent(ui->statistique_frame);
+
 }
 
 void Gestion_materiaux_maintenances::on_pushButton_maintenance_15_clicked()

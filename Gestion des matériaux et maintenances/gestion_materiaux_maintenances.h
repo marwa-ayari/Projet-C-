@@ -2,6 +2,8 @@
 #define GESTION_MATERIAUX_MAINTENANCES_H
 #include"materiaux.h"
 #include"maintenances.h"
+#include"statistique.h"
+
 #include <QDialog>
 
 namespace Ui {
@@ -47,6 +49,7 @@ private:
     Ui::Gestion_materiaux_maintenances *ui;
     Materiaux tmpmateriel;
     Maintenances tmpmaintenance;
+    statistique tmpstat;
 };
 
 #endif // GESTION_MATERIAUX_MAINTENANCES_H
