@@ -1,4 +1,5 @@
-QT       += core gui sql
+QT       += core gui sql \
+    quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,16 +11,19 @@ CONFIG += c++11
 
 SOURCES += \
     connection.cpp \
-    employes.cpp \
+    gestion_p_f.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    produit.cpp
 
 HEADERS += \
     connection.h \
-    employes.h \
-    mainwindow.h
+    gestion_p_f.h \
+    mainwindow.h \
+    produit.h
 
 FORMS += \
+    gestion_p_f.ui \
     mainwindow.ui
 
 # Default rules for deployment.
