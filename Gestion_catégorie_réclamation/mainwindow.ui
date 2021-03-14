@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>905</width>
-    <height>503</height>
+    <width>568</width>
+    <height>444</height>
    </rect>
   </property>
   <property name="font">
@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Gestion des Catégories et Réclamations</string>
+   <string>Se connecter</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -28,26 +28,94 @@
    </size>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>90</y>
-      <width>231</width>
-      <height>101</height>
+      <x>140</x>
+      <y>110</y>
+      <width>111</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>module marwa</string>
+     <string>Nom d'utilisateur</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>190</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mot de passe</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>110</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>190</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>270</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connexion</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>-30</x>
+      <y>-90</y>
+      <width>881</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../conn.jpg</pixmap>
+    </property>
+   </widget>
+   <zorder>label_3</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>lineEdit_2</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>905</width>
+     <width>568</width>
      <height>23</height>
     </rect>
    </property>

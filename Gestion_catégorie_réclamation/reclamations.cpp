@@ -51,34 +51,52 @@ QSqlQueryModel * reclamations::afficher()
 
 bool reclamations::supprimer(QString nom,QString id)
 {
-    QSqlQuery query;
-
-        query.prepare("Delete from RECLAMATIONS where ((NOM_CATEGORIE like '"+nom+"')AND (id_client like '"+id+"'))  ");
-    return    query.exec();
-}
-bool reclamations::modifier()
-{
     QSqlQuery query,test;
-    int  fama;
-    test.prepare("select count(*) from reclamations where(id_client like '"+id_client+"' and nom_categorie like '"+nom_categorie+"')");
+    int  fama=0;
+    test.prepare("select count(*) from reclamations where(id_client like '"+id+"' and nom_categorie like '"+nom+"')");
+    if(test.exec())
+    {
     while(test.next())
     {
       fama=test.value(0).toInt();
       if(fama!=0)
       {
-          query.prepare("UPDATE RECLAMATIONS set DATE_REC=:date , AVIS=:aviss where (NOM_CATEGORIE=:nom AND ID_CLIENT=:id )");
-          query.bindValue(":nom", nom_categorie);
-          query.bindValue(":date", date_rec);
-          query.bindValue(":id", id_client);
-          query.bindValue(":aviss", avis);
+          query.prepare("Delete from RECLAMATIONS where ((NOM_CATEGORIE like '"+nom+"')AND (id_client like '"+id+"'))  ");
+
           return    query.exec();
 
-       }else return false;
+      }
     }
-
-
 }
+ return false;
+}
+bool reclamations::modifier()
+{
+    QSqlQuery query,test;
+    int  fama=0;
+    test.prepare("select count(*) from reclamations where(id_client like '"+id_client+"' and nom_categorie like '"+nom_categorie+"')");
+    if(test.exec())
+    {
+    while(test.next())
+    {
+      fama=test.value(0).toInt();
+      if(fama!=0)
+      {
+          query.prepare("UPDATE RECLAMATIONS set DATE_REC='"+date_rec+"' , AVIS='"+avis+"' where (id_client like '"+id_client+"' and nom_categorie like '"+nom_categorie+"')");
 
+          return    query.exec();
+
+      }
+    }
+}
+ return false;
+}
+QSqlQuery reclamations::recuperer_Modification(QString nom,QString id)
+{
+    QSqlQuery query;
+    query.prepare("select * from reclamations where (nom_categorie='"+nom+"' and id_client='"+id+"') ");
+    return query;
+}
 QSqlQueryModel * reclamations::rechercher(QString rech)
 {
     QSqlQueryModel * model= new QSqlQueryModel();
@@ -108,7 +126,7 @@ QSqlQueryModel * reclamations::affecter_Categorie()
 QSqlQueryModel * reclamations::affecter_Client()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
-    model->setQuery("select id_client from clients ");
+    model->setQuery("select matricule from clients ");
 
         return model;
 }

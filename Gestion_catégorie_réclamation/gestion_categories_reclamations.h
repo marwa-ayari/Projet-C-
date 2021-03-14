@@ -31,8 +31,6 @@ private slots:
 
     void on_bouton_ajout_reclamation_clicked();
 
-    void on_tabWidget_reclamation_3_currentChanged(int index);
-
     void on_pushButton_3_clicked();
 
     void on_pushButton_11_clicked();
@@ -44,6 +42,10 @@ private slots:
     void on_comboBox_reclamation_3_currentIndexChanged(const QString &arg1);
 
     void on_pushButton_2_clicked();
+
+    void on_tabWidget_categorie_reclamation_2_currentChanged(int index);
+
+    void on_tabWidget_reclamation_3_currentChanged(int index);
 
 private:
     Ui::Gestion_categories_reclamations *ui;
