@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    son=new QSound("");
+    son->play();
 }
 
 MainWindow::~MainWindow()
@@ -28,4 +30,14 @@ void MainWindow::on_seconnecter_clicked()
 
     }else QMessageBox::critical(nullptr, QObject::tr("Problèmd de sécurité"),
                                 QObject::tr("Vérifiez vos coordonnées."), QMessageBox::Cancel);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    son->play();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    son->stop();
 }
