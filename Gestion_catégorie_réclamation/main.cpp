@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include "connexion.h"
 #include<iostream>
-using namespace std;//tuto git
+using namespace std;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
