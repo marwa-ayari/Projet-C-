@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    son=new QSound("");
+    son=new QSound("C:/Users/dell/Desktop/2eme année/2eme semestre/Projet C++/music.wav");
     son->play();
 }
 
