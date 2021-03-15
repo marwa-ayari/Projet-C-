@@ -82,8 +82,7 @@ void Gestion_categories_reclamations::on_pushButton_categorie_14_clicked()
 void Gestion_categories_reclamations::on_comboBox_categorie_modifi_currentIndexChanged(const QString &arg1)
 {
     QString nom=ui->comboBox_categorie_modifi->currentText();
-    QSqlQuery query;
-    query.prepare("select * from categories where nom_categorie='"+nom+"'");
+    QSqlQuery query=tmpcategorie.recuperer_Modification(nom);
     if(query.exec())
     {
         while(query.next())
@@ -137,18 +136,6 @@ void Gestion_categories_reclamations::on_bouton_ajout_reclamation_clicked()
 
 }
 
-void Gestion_categories_reclamations::on_tabWidget_reclamation_3_currentChanged(int index)
-{
-    ui->tab_reclamation->setEnabled(true);
-    ui->tab_reclamation->setModel(tmpreclamation.afficher());
-    ui->comboBox_reclamation_1->setModel(tmpreclamation.affecter_Categorie());
-    ui->comboBox_reclamation_2->setModel(tmpreclamation.affecter_Client());
-    ui->comboBox_reclamation_3->setModel(tmpreclamation.affecter_Categorie());
-    ui->comboBox_reclamation_4->setModel(tmpreclamation.affecter_Client());
-    ui->comboBox_reclamation_5->setModel(tmpreclamation.affecter_Categorie());
-    ui->comboBox_reclamation_6->setModel(tmpreclamation.affecter_Client());
-}
-
 void Gestion_categories_reclamations::on_pushButton_3_clicked()
 {
     QString nom= ui->comboBox_reclamation_5->currentText();
@@ -160,7 +147,7 @@ void Gestion_categories_reclamations::on_pushButton_3_clicked()
     }
     else
     { QMessageBox::critical(nullptr, QObject::tr("Erreur"),
-                    QObject::tr("Cette réclamation n'existe plus.\n"), QMessageBox::Cancel);
+                    QObject::tr("Cette réclamation n'existe pas ou plus.\n"), QMessageBox::Cancel);
 
     }
 }
@@ -185,8 +172,7 @@ void Gestion_categories_reclamations::on_comboBox_reclamation_3_currentIndexChan
 {
     QString nom=ui->comboBox_reclamation_3->currentText();
     QString id=ui->comboBox_reclamation_4->currentText();
-    QSqlQuery query;
-    query.prepare("select * from reclamations where (nom_categorie='"+nom+"' and id_client='"+id+"') ");
+    QSqlQuery query=tmpreclamation.recuperer_Modification(nom,id);
     if(query.exec())
     {
         while(query.next())
@@ -219,4 +205,22 @@ else
         QMessageBox::critical(nullptr, QObject::tr("Erreur !"),
                           QObject::tr("Cette réclamation n'existe pas.\nVeuillez vérifier le nom de catégorie et le id client."), QMessageBox::Cancel);
     }
+}
+
+void Gestion_categories_reclamations::on_tabWidget_categorie_reclamation_2_currentChanged(int index)
+{
+    ui->tab_reclamation->setEnabled(true);
+    ui->tab_reclamation->setModel(tmpreclamation.afficher());
+    ui->comboBox_reclamation_1->setModel(tmpreclamation.affecter_Categorie());
+    ui->comboBox_reclamation_2->setModel(tmpreclamation.affecter_Client());
+    ui->comboBox_reclamation_3->setModel(tmpreclamation.affecter_Categorie());
+    ui->comboBox_reclamation_4->setModel(tmpreclamation.affecter_Client());
+    ui->comboBox_reclamation_5->setModel(tmpreclamation.affecter_Categorie());
+    ui->comboBox_reclamation_6->setModel(tmpreclamation.affecter_Client());
+}
+
+void Gestion_categories_reclamations::on_tabWidget_reclamation_3_currentChanged(int index)
+{
+    ui->tab_reclamation->setModel(tmpreclamation.afficher());
+
 }

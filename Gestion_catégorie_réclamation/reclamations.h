@@ -27,6 +27,8 @@ public:
 
     bool supprimer(QString,QString);
     bool modifier();
+    QSqlQuery recuperer_Modification(QString,QString);
+
 
     QSqlQueryModel * rechercher(QString);
     QSqlQueryModel *tri();

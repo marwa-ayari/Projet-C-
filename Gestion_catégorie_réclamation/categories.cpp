@@ -28,11 +28,7 @@ bool Categories::ajouter()
 QSqlQuery query;
 QString prixx= QString::number(prix);
 query.prepare("INSERT INTO Categories (NOM_CATEGORIE, DATE_FAB, PRIX) "
-                    "VALUES (:nom, :date_fab, :prix)");
-query.bindValue(":nom", nom);
-query.bindValue(":date_fab", date_fabrication);
-query.bindValue(":prix", prixx);
-
+                    "VALUES ('"+nom+"', '"+date_fabrication+"', "+prixx+")");
 return    query.exec();
 }
 
@@ -79,6 +75,13 @@ QSqlQueryModel * Categories::modifier_aff_id()
 
         return model;
 }
+QSqlQuery Categories::recuperer_Modification(QString nom)
+{
+    QSqlQuery query;
+    query.prepare("select * from categories where nom_categorie='"+nom+"'");
+    return query;
+}
+
 
 QSqlQueryModel * Categories::tri()
 {
