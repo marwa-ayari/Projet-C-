@@ -39,12 +39,8 @@ bool Maintenances::ajouter()
 QSqlQuery query;
 QString prix_reparation= QString::number(prix);
 query.prepare("INSERT INTO Maintenances (reference,description,date_panne,prix) "
-                    "VALUES (:reference,:description,:date_panne,:prix)");
+                    "VALUES ('"+reference+"','"+description+"','"+date_panne+"',"+prix_reparation+")");
 
-query.bindValue(":reference", reference);
-query.bindValue(":prix", prix_reparation);
-query.bindValue(":description", description);
-query.bindValue(":date_panne", date_panne);
 return    query.exec();
 }
 

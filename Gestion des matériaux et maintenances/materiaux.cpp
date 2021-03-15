@@ -43,12 +43,7 @@ bool Materiaux::ajouter()
 QSqlQuery query;
 QString prix_materiel= QString::number(prix);
 query.prepare("INSERT INTO MATERIAUX (reference,nom,type,date_achat,prix) "
-                    "VALUES (:reference,:nom,:type,:date_achat,:prix)");
-query.bindValue(":nom", nom);
-query.bindValue(":reference", reference);
-query.bindValue(":prix", prix_materiel);
-query.bindValue(":type", type);
-query.bindValue(":date_achat", date_achat);
+                    "VALUES ('"+reference+"','"+nom+"','"+type+"','"+date_achat+"',"+prix_materiel+")");
 return    query.exec();
 }
 

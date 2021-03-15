@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>937</width>
-    <height>487</height>
+    <width>907</width>
+    <height>538</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>0</x>
      <y>0</y>
      <width>911</width>
-     <height>481</height>
+     <height>551</height>
     </rect>
    </property>
    <property name="font">
@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(229, 148, 66);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="widget_materiel">
     <attribute name="title">
@@ -47,7 +47,7 @@
        <x>0</x>
        <y>0</y>
        <width>961</width>
-       <height>471</height>
+       <height>531</height>
       </rect>
      </property>
      <property name="font">
@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab_materiel_8">
       <attribute name="title">
@@ -270,9 +270,9 @@
        <property name="geometry">
         <rect>
          <x>-20</x>
-         <y>-20</y>
+         <y>-60</y>
          <width>961</width>
-         <height>471</height>
+         <height>601</height>
         </rect>
        </property>
        <property name="text">
@@ -311,7 +311,7 @@
          <x>20</x>
          <y>10</y>
          <width>651</width>
-         <height>211</height>
+         <height>291</height>
         </rect>
        </property>
       </widget>
@@ -358,7 +358,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <property name="geometry">
         <rect>
          <x>560</x>
-         <y>250</y>
+         <y>350</y>
          <width>321</width>
          <height>71</height>
         </rect>
@@ -397,7 +397,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <property name="geometry">
         <rect>
          <x>390</x>
-         <y>260</y>
+         <y>360</y>
          <width>151</width>
          <height>41</height>
         </rect>
@@ -414,7 +414,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <x>-20</x>
          <y>-30</y>
          <width>961</width>
-         <height>471</height>
+         <height>521</height>
         </rect>
        </property>
        <property name="text">
@@ -774,7 +774,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <x>0</x>
        <y>0</y>
        <width>961</width>
-       <height>471</height>
+       <height>501</height>
       </rect>
      </property>
      <property name="font">
@@ -784,7 +784,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="tab_maintenance_3">
       <attribute name="title">
@@ -951,7 +951,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          <x>-20</x>
          <y>-100</y>
          <width>961</width>
-         <height>511</height>
+         <height>581</height>
         </rect>
        </property>
        <property name="text">
@@ -984,16 +984,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <rect>
          <x>10</x>
          <y>20</y>
-         <width>511</width>
-         <height>201</height>
+         <width>551</width>
+         <height>291</height>
         </rect>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_maintenance_11">
        <property name="geometry">
         <rect>
-         <x>510</x>
-         <y>290</y>
+         <x>540</x>
+         <y>350</y>
          <width>341</width>
          <height>71</height>
         </rect>
@@ -1031,8 +1031,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="pushButton_maintenance_15">
        <property name="geometry">
         <rect>
-         <x>620</x>
-         <y>80</y>
+         <x>600</x>
+         <y>200</y>
          <width>211</width>
          <height>71</height>
         </rect>
@@ -1073,7 +1073,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <x>0</x>
          <y>-10</y>
          <width>981</width>
-         <height>461</height>
+         <height>491</height>
         </rect>
        </property>
        <property name="text">
@@ -1086,8 +1086,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QLineEdit" name="lineEdit_maintenance_5">
        <property name="geometry">
         <rect>
-         <x>290</x>
-         <y>300</y>
+         <x>330</x>
+         <y>370</y>
          <width>171</width>
          <height>41</height>
         </rect>
@@ -1264,7 +1264,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          <x>-20</x>
          <y>-100</y>
          <width>961</width>
-         <height>511</height>
+         <height>571</height>
         </rect>
        </property>
        <property name="text">
@@ -1426,13 +1426,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
       <widget class="QFrame" name="statistique_frame">
        <property name="geometry">
         <rect>
-         <x>60</x>
+         <x>90</x>
          <y>10</y>
-         <width>591</width>
-         <height>361</height>
+         <width>781</width>
+         <height>431</height>
         </rect>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout"/>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>5</number>
+        </property>
+       </layout>
       </widget>
      </widget>
     </widget>
