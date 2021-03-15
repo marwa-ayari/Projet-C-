@@ -32,7 +32,7 @@ border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../../on.png</normaloff>../../../../on.png</iconset>
+     <normaloff>../../../../../../../../../../i/on.png</normaloff>../../../../../../../../../../i/on.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -71,7 +71,7 @@ border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../../off.png</normaloff>../../../../off.png</iconset>
+     <normaloff>../../../../../../../../../../i/off.png</normaloff>../../../../../../../../../../i/off.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -93,7 +93,7 @@ border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../../../../cle git/mac.jpeg</pixmap>
+    <pixmap>../../../../../../../../../../i/mac.jpeg</pixmap>
    </property>
   </widget>
   <zorder>label</zorder>

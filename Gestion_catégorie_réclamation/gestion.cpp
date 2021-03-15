@@ -7,7 +7,8 @@ Gestion::Gestion(QWidget *parent) :
     ui(new Ui::Gestion)
 {
     ui->setupUi(this);
-    son=new QSound("C:/Users/Mr/Desktop/2ème année/2 sem/projet C++/music.wav");
+    son=new QSound("C:/i/music.wav");
+    son->play();
 }
 
 Gestion::~Gestion()
