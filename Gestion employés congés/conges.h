@@ -46,6 +46,8 @@ public:
 
     QSqlQueryModel * modifier_liste_conges();
 
+    QSqlQuery recupererc(QString);
+
 
 
 

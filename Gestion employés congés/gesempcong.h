@@ -7,6 +7,9 @@
 #include <QDialog>
 
 
+#include "smtp.h"
+#include <QtWidgets/QMessageBox>
+#include <QFileDialog>
 
 
 namespace Ui {
@@ -47,17 +50,23 @@ private slots:
 
 
 
-
-
-
  void on_affecterbouton_clicked();
 
  void on_mmatricule_currentIndexChanged(const QString &arg1);
+
+ void on_idcm_currentIndexChanged(const QString &arg1);
+
+
+private slots:
+    void sendMail();
+    void mailSent(QString);
+    void browse();
 
 private:
     Ui::gesempcong *ui;
     Employes insemployes;
     Conges insconges;
+    QStringList files;
 
 
 

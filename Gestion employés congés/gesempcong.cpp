@@ -2,6 +2,7 @@
 #include "ui_gesempcong.h"
 #include "employes.h"
 #include "conges.h"
+#include "smtp.h"
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QMessageBox>
@@ -16,6 +17,45 @@ gesempcong::gesempcong(QWidget *parent) :
     ui(new Ui::gesempcong)
 {
     ui->setupUi(this);
+    connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->exitBtn, SIGNAL(clicked()),this, SLOT(close()));
+    connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+}
+
+void gesempcong::browse()
+{
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void gesempcong::sendMail()
+{
+    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+
+void gesempcong::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
 }
 
 gesempcong::~gesempcong()
@@ -26,12 +66,22 @@ gesempcong::~gesempcong()
 void gesempcong::on_ajoutemp_clicked()
 {
     QString matemp=ui->matricule ->text();
+    ui->matricule->setMaxLength(5);
     QString congeemp="";
     QString dateemb=ui->dateemb->text();
+     ui->dateemb->setMaxLength(20);
     QString nom=ui->nom->text();
+     ui->nom->setMaxLength(15);
     QString prenom=ui->prenom->text();
+    ui->prenom->setMaxLength(15);
     QString fonction=ui->fonction->text();
+
     float salaire=ui->salaire->text().toFloat();
+
+
+
+
+
 
     Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire);
     if(E.ajouter()) {
@@ -141,6 +191,9 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
  QString datedeb=ui->datedeb->text();
  QString datefin=ui->datefin->text();
 
+ QIntValidator *roll=new QIntValidator(1,50);
+
+     ui->duree->setValidator(roll);
 
 
     Conges c(duree,idc,type,datedeb,datefin);
@@ -283,4 +336,26 @@ void gesempcong::on_mmatricule_currentIndexChanged(const QString &arg1)
         QMessageBox::information(nullptr, QObject::tr("Modifier un employé"),
                     QObject::tr("erreur requete.\n"), QMessageBox::Cancel);
     }
+}
+
+void gesempcong::on_idcm_currentIndexChanged(const QString &arg1)
+{ QString idc=ui->idcm->currentText();
+    QSqlQuery query=insconges.recupererc(idc);
+    if(query.exec())
+    {
+        while(query.next())
+        {
+           ui->dureem->setText(query.value(1).toString());
+           ui->typem->setText(query.value(2).toString());
+          ui->datedebm->setText(query.value(3).toString());
+          ui->datefinm->setText(query.value(4).toString());
+
+
+
+        }
+    }else{
+        QMessageBox::information(nullptr, QObject::tr("Modifier un congé"),
+                    QObject::tr("erreur requete.\n"), QMessageBox::Cancel);
+    }
+
 }

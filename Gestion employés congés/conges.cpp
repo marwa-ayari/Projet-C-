@@ -132,6 +132,12 @@ QSqlQueryModel * Conges::modifier_liste_conges()
     return model;
 }
 
+QSqlQuery Conges::recupererc(QString idc)
+{
+    QSqlQuery query;
+    query.prepare("select * from conges where idc='"+idc+"'");
+    return query;
+}
 
 
 
