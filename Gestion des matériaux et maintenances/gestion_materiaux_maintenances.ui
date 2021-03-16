@@ -1426,8 +1426,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
       <widget class="QFrame" name="statistique_frame">
        <property name="geometry">
         <rect>
-         <x>90</x>
-         <y>10</y>
+         <x>110</x>
+         <y>20</y>
          <width>781</width>
          <height>431</height>
         </rect>
