@@ -19,7 +19,7 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>0</x>
      <y>0</y>
      <width>791</width>
      <height>511</height>
@@ -38,7 +38,7 @@
     <string notr="true">color:rgb(0, 167, 167);</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="ongletemp">
     <attribute name="title">
@@ -411,6 +411,19 @@ color: rgb(132, 1, 64);</string>
           <width>113</width>
           <height>20</height>
          </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>10</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>son</string>
         </property>
        </widget>
       </widget>
@@ -2145,7 +2158,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>20</x>
          <y>20</y>
          <width>851</width>
          <height>401</height>
@@ -2722,7 +2735,7 @@ color: rgb(74, 0, 111);</string>
       </font>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="ajoutercong">
       <attribute name="title">
@@ -5047,10 +5060,10 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.6482
     <widget class="QPushButton" name="pushButton_recherchecong_9">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>841</width>
-       <height>471</height>
+       <x>-10</x>
+       <y>-10</y>
+       <width>891</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="palette">
@@ -5876,12 +5889,28 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </size>
      </property>
     </widget>
+    <widget class="QLabel" name="label_photo_5">
+     <property name="geometry">
+      <rect>
+       <x>-70</x>
+       <y>-10</y>
+       <width>2021</width>
+       <height>1031</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../imagesQT/modifcongback.jpg</pixmap>
+     </property>
+    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>70</x>
        <y>70</y>
-       <width>651</width>
+       <width>621</width>
        <height>401</height>
       </rect>
      </property>
@@ -5899,6 +5928,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </property>
         <item row="0" column="0">
          <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Smtp-server:</string>
           </property>
@@ -5913,6 +5953,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Server port:</string>
           </property>
@@ -5927,6 +5978,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Username:</string>
           </property>
@@ -5937,6 +5999,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="3" column="0">
          <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Password:</string>
           </property>
@@ -5954,6 +6027,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="label_10">
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Recipant to:</string>
           </property>
@@ -5964,6 +6048,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_33">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Subject:</string>
           </property>
@@ -5974,6 +6069,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="6" column="0">
          <widget class="QLabel" name="label_34">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Attachment:</string>
           </property>
@@ -5999,6 +6105,17 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </item>
         <item row="7" column="0">
          <widget class="QLabel" name="label_35">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(153, 0, 229)</string>
+          </property>
           <property name="text">
            <string>Message:</string>
           </property>
@@ -6024,20 +6141,47 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </item>
       <item>
        <widget class="QPushButton" name="sendBtn">
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
+color: rgb(74, 0, 111);</string>
+        </property>
         <property name="text">
-         <string>Send</string>
+         <string>send</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="exitBtn">
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
+color: rgb(74, 0, 111);</string>
+        </property>
         <property name="text">
-         <string>Exit</string>
+         <string>exit</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
+    <zorder>label_photo_5</zorder>
+    <zorder>pushButton_recherchecong_9</zorder>
+    <zorder>layoutWidget</zorder>
    </widget>
   </widget>
  </widget>

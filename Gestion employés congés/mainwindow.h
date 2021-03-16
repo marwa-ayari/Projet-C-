@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include<QSound>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,14 +20,23 @@ public:
 
 
 
-
-
-
-
 private slots:
     void on_pushButton_clicked();
 
+
+
+    void on_sonon_clicked();
+
+    void on_sonoff_clicked();
+
+    void on_login_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QSound *son;
+
+
+
+
 };
 #endif // MAINWINDOW_H

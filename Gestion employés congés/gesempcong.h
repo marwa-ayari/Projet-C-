@@ -3,6 +3,7 @@
 
 #include"employes.h"
 
+#include <QPropertyAnimation>
 #include"conges.h"
 #include <QDialog>
 
@@ -67,6 +68,7 @@ private:
     Employes insemployes;
     Conges insconges;
     QStringList files;
+
 
 
 

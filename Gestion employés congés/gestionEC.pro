@@ -1,8 +1,9 @@
 QT       += core gui sql network
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4):  QT += widgets multimedia
 TARGET = smtp
 TEMPLATE = app
+
 
 
 CONFIG += c++11
@@ -40,3 +41,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     Gestionempcong.qml \
     GestionempcongForm.ui.qml
+    music.wav
