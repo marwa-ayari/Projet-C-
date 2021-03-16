@@ -9,40 +9,56 @@ class Employes
 {
 private:
 
-    int matemp;
+
     float salaire;
-    QString dateemb,nom,prenom,fonction;
+    QString matemp,congeemp,dateemb,nom,prenom,fonction;
+
 
 public:
 
     Employes();
-    Employes(int,float,QString,QString,QString,QString);
+    Employes(QString,QString,QString,QString,QString,QString,float);
 
 
 
 
-    int getmatemp();
+   QString getmatemp();
+   QString getcongeemp();
+   QString getdateemb();
+   QString getnom();
+   QString getprenom();
+   QString getfonction();
     float getsalaire();
-    QString getdateemb();
-    QString getnom();
-    QString getprenom();
-    QString getfonction();
 
 
-    void setmatemp(int);
-    void setsalaire(float);
+
+    void setmatemp(QString);
+    void setcongeemp(QString);
     void setdateemb(QString);
     void setnom(QString);
     void setprenom(QString);
     void setfonction(QString);
+    void setsalaire(float);
+
 
     bool ajouter();
     QSqlQueryModel * afficher();
-    bool supprimer(int);
-    bool modifier();
+    bool supprimer(QString);
+    bool modifier(QString);
 
     QSqlQueryModel * rechercher(QString);
     QSqlQueryModel *tri();
+
+    QSqlQueryModel * modifier_liste_employes();
+    QSqlQueryModel *affecter_conge();
+
+    bool affecter(QString);
+
+       QSqlQuery recuperer(QString);
+
+
+
+
 
 
 

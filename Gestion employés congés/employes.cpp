@@ -1,4 +1,7 @@
 #include "employes.h"
+#include "conges.h"
+
+
 
 #include <QtDebug>
 
@@ -6,56 +9,61 @@
 
 Employes::Employes()
 {
-   matemp=0;
-   salaire=0;
+   matemp="";
+   congeemp="";
    dateemb="";
    nom="";
    prenom="";
    fonction="";
+    salaire=0;
 
 
 }
 
-Employes::Employes(int matemp,float salaire,QString dateemb,QString nom ,QString prenom ,QString fonction)
+Employes::Employes(QString matemp,QString congeemp,QString dateemb,QString nom ,QString prenom ,QString fonction,float salaire)
 {
   this->matemp=matemp;
-  this->salaire=salaire;
+  this->congeemp=congeemp;
   this->dateemb=dateemb;
   this->nom=nom;
   this->prenom=prenom;
   this->fonction=fonction;
+  this->salaire=salaire;
 }
 
 
-int Employes::getmatemp(){ return matemp;}
-float Employes::getsalaire(){ return salaire;}
+QString Employes::getmatemp(){ return matemp;}
+QString Employes::getcongeemp(){ return congeemp;}
 QString Employes::getdateemb(){ return dateemb;}
 QString Employes::getnom(){ return nom;}
 QString Employes::getprenom(){ return prenom;}
 QString Employes::getfonction(){ return fonction;}
+float Employes::getsalaire(){ return salaire;}
 
 
-void Employes::setmatemp(int matemp){ this->matemp=matemp;}
-void Employes::setsalaire(float salaire){ this->salaire=salaire;}
+void Employes::setmatemp(QString matemp){this->matemp=matemp;}
+void Employes::setcongeemp(QString congeemp){ this->congeemp=congeemp;}
 void Employes::setdateemb(QString dateemb){ this->dateemb=dateemb;}
 void Employes::setnom(QString nom){ this->nom=nom;}
 void Employes::setprenom(QString prenom){ this->prenom=prenom;}
 void Employes::setfonction(QString fonction){ this->fonction=fonction;}
+void Employes::setsalaire(float salaire){ this->salaire=salaire;}
 
 bool Employes::ajouter()
 {
 
 QSqlQuery query;
-QString mat_string= QString::number(matemp);
+;
 QString salairee= QString::number(salaire);
-query.prepare("INSERT INTO employes (matemp,salaire,dateemb,nom,prenom,fonction) "
-              "VALUES (:matemp, :salaire, :dateemb, :nom ,:prenom ,:fonction)");
-query.bindValue(":matemp", mat_string);
-query.bindValue(":salaire", salairee);
+query.prepare("INSERT INTO employes (matemp,congeemp,dateemb,nom,prenom,fonction,salaire) "
+              "VALUES (:matemp,:congeemp,:dateemb, :nom ,:prenom ,:fonction,:salaire)");
+query.bindValue(":matemp", matemp);
+query.bindValue(":congeemp", congeemp);
 query.bindValue(":dateemb", dateemb);
 query.bindValue(":nom", nom);
 query.bindValue(":prenom",prenom);
 query.bindValue(":fonction",fonction);
+query.bindValue(":salaire", salairee);
  return query.exec();
 
 
@@ -72,12 +80,13 @@ QSqlQueryModel * Employes::afficher()
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom "));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("prenom "));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction "));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("congeemp"));
 
 
         return model;
 }
 
-bool Employes::supprimer(int matemp)
+bool Employes::supprimer(QString matemp)
 {
     QSqlQuery query;
     query.prepare("Delete from employes where matemp=:matemp");
@@ -85,12 +94,21 @@ bool Employes::supprimer(int matemp)
     return    query.exec();
 }
 
-bool Employes::modifier()
+bool Employes::modifier(QString  mat)
 {
     QSqlQuery query;
-    QString mat_string= QString::number(matemp);
+
+
     QString salairee= QString::number(salaire);
-    query.prepare("UPDATE employes set salaire='"+salairee+"',dateemb='"+dateemb+"',nom='"+nom+"',prenom='"+prenom+"',fonction='"+fonction+"' where matemp like '"+mat_string+"' ");
+    query.prepare("UPDATE employes set  congeemp='"+congeemp+"',dateemb='"+dateemb+"',nom='"+nom+"',prenom='"+prenom+"',fonction='"+fonction+"',salaire='"+salairee+"' where matemp like '"+matemp+"' ");
+
+    query.bindValue(":matemp", matemp);
+    query.bindValue(":congeemp", congeemp);
+    query.bindValue(":dateemb", dateemb);
+    query.bindValue(":nom", nom);
+    query.bindValue(":prenom",prenom);
+    query.bindValue(":fonction",fonction);
+    query.bindValue(":salaire", salairee);
     return    query.exec();
 }
 
@@ -116,12 +134,50 @@ QSqlQueryModel * Employes::tri()
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom "));
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("prenom "));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction "));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("congeemp"));
+
+        return model;
+}
+
+
+QSqlQueryModel * Employes::affecter_conge()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select idc from conges ");
+
+        return model;
+}
+
+QSqlQueryModel * Employes::modifier_liste_employes()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select matemp from employes ");
 
         return model;
 }
 
 
 
+bool Employes::affecter(QString)
+{
+    QSqlQuery query;
 
+
+    query.prepare("UPDATE employes set  congeemp='"+congeemp+"' where matemp like '"+matemp+"' ");
+
+
+    query.bindValue(":congeemp", congeemp);
+
+    return    query.exec();
+}
+
+QSqlQuery Employes::recuperer(QString matemp)
+{
+    QSqlQuery query;
+    query.prepare("select * from employes where matemp='"+matemp+"'");
+    return query;
+}
 
 

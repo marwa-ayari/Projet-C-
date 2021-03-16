@@ -10,29 +10,27 @@ class Conges
 {
 private:
 
-    int idc,duree,matem;
-    QString type,datedeb,datefin;
+    int duree;
+    QString idc,type,datedeb,datefin;
 
 public:
 
     Conges();
-    Conges(int,int,int,QString,QString,QString);
+    Conges(int,QString,QString,QString,QString);
 
 
 
-
-    int getidc();
-    int getduree();
-    int getmatem();
+  int getduree();
+    QString getidc();
     QString gettype();
     QString getdatebdeb();
     QString getdatefin();
 
 
 
-    void setidc(int);
     void setduree(int);
-    void setmatem(int);
+
+    void setidc(QString);
     void settype(QString);
     void setdatedeb(QString);
     void setdatefin(QString);
@@ -40,11 +38,13 @@ public:
 
     bool ajouter();
     QSqlQueryModel * afficher();
-    bool supprimer(int);
+    bool supprimer(QString);
     bool modifier();
 
     QSqlQueryModel * rechercher(QString);
     QSqlQueryModel *tri();
+
+    QSqlQueryModel * modifier_liste_conges();
 
 
 

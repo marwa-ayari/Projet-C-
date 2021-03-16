@@ -45,6 +45,15 @@ private slots:
 
  void on_recherchecong_clicked();
 
+
+
+
+
+
+ void on_affecterbouton_clicked();
+
+ void on_mmatricule_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::gesempcong *ui;
     Employes insemployes;
