@@ -1,4 +1,4 @@
-#include "clients_cadeaux.h"
+﻿#include "clients_cadeaux.h"
 #include "ui_clients_cadeaux.h"
 #include"client.h"
 #include"cadeau.h"
@@ -9,6 +9,7 @@
 #include<QPixmap>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
+#include <QMediaPlayer>
 clients_cadeaux::clients_cadeaux(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::clients_cadeaux)
@@ -28,7 +29,7 @@ clients_cadeaux::~clients_cadeaux()
     delete ui;
 }
 void clients_cadeaux::on_pushButton_ajouterCl_2_clicked()
-{
+{ 
     QString nom= ui->lineEdit_nom_ajout_2->text();
     QString prenom= ui->lineEdit_prenom_ajout_2->text();
     QString adresse= ui->lineEdit_adresse_ajout_2->text();
@@ -58,7 +59,7 @@ void clients_cadeaux::on_pushButton_ajouterCl_2_clicked()
 
 
 void clients_cadeaux::on_pushButton_suppCl_2_clicked()
-{
+{ 
     QString matricule= ui->comboBox_suppCl_2->currentText();
 
        if(tmpclient.supprimer1(matricule))
@@ -84,7 +85,7 @@ void clients_cadeaux::on_pushButton_suppCl_2_clicked()
 
 
 void clients_cadeaux::on_pushButton_modifCl_2_clicked()
-{
+{ 
     QString matricule= ui->comboBox_client_2->currentText();
        QString nom= ui->lineEdit_nom_modif_2->text();
        QString prenom= ui->lineEdit_prenom_modif_2->text();
@@ -92,9 +93,8 @@ void clients_cadeaux::on_pushButton_modifCl_2_clicked()
       QString  tel=ui->lineEdit_tel_modif_2->text();
         int  pts=ui->lineEdit_2->text().toInt();
 
-       QString  id_cadeau=ui->comboBox_affecCadeau_2->currentText();
 
-       Client a(matricule,nom,prenom,adresse,tel,pts,id_cadeau);
+       Client a(matricule,nom,prenom,adresse,tel,pts);
        bool test=a.modifier1(matricule);
         if(test)
        {
@@ -127,23 +127,23 @@ void clients_cadeaux::on_tabWidget_2_currentChanged(int index)
      ui->comboBox_suppCl_2->setModel(tmpclient.modifier_liste_matricule());
       ui->comboBox_client_2->setModel(tmpclient.modifier_liste_matricule());
 
-
+ ui->comboBox_Matclient->setModel(tmpclient.modifier_liste_matricule());
 }
 
 void clients_cadeaux::on_pushButton_triCl_2_clicked()
-{
-     ui->tableView_2->setModel(tmpclient.tri());
+{ 
+     ui->tableView_2->setModel(tmpclient.tri_DESC());
 }
 
 void clients_cadeaux::on_pushButton_rechCl_3_clicked()
-{
+{ 
     QString nom_client =ui->lineEdit_rech_nom->text();
       ui->tableView_2->setModel(tmpclient.recherche1(nom_client));
 }
 
 
 void clients_cadeaux::on_pushButton_ajoutCa_2_clicked()
-{
+{ 
     QString categorie=ui->comboBox_2->currentText();
     QString id= ui->lineEdit_categ_ajout_2->text();
       int somme= ui->lineEdit_3->text().toInt();
@@ -167,7 +167,7 @@ void clients_cadeaux::on_pushButton_ajoutCa_2_clicked()
 }
 
 void clients_cadeaux::on_pushButton_suppCa_2_clicked()
-{
+{ 
    QString id= ui->comboBox->currentText();
        if(tmpcadeau.supprimer2(id))
 
@@ -186,12 +186,12 @@ void clients_cadeaux::on_pushButton_suppCa_2_clicked()
 }
 
 void clients_cadeaux::on_pushButton_triCa_2_clicked()
-{
+{ 
      ui->tableView->setModel(tmpcadeau.tri2());
 }
 
 void clients_cadeaux::on_pushButton_rechCa_2_clicked()
-{
+{ 
     QString categorie =ui->lineEdit->text();
       ui->tableView->setModel(tmpcadeau.recherche2(categorie));
 }
@@ -206,7 +206,7 @@ void clients_cadeaux::on_tabWidget_4_currentChanged(int index)
 }
 
 void clients_cadeaux::on_pushButton_modifCa_2_clicked()
-{
+{ 
     QString id= ui->comboBox_Cadeau_2->currentText();
        QString categorie= ui->comboBox_3->currentText();
 
@@ -230,7 +230,7 @@ void clients_cadeaux::on_pushButton_modifCa_2_clicked()
 }
 
 void clients_cadeaux::on_pushButton_statCa_2_clicked()
-{
+{ 
     int res;
             statistiques w(this);
             w.setWindowTitle("Statistiques des cadeaux");
@@ -244,7 +244,7 @@ void clients_cadeaux::on_pushButton_statCa_2_clicked()
 
 
 void clients_cadeaux::on_comboBox_client_2_currentIndexChanged(const QString &arg1)
-{
+{ 
     QString mat=ui->comboBox_client_2->currentText();
 
     QSqlQuery q;
@@ -263,8 +263,90 @@ void clients_cadeaux::on_comboBox_client_2_currentIndexChanged(const QString &ar
 
 
 
-             if(tmpclient.tester_affectation(mat)==0)
-                 ui->comboBox_affecCadeau_2->setModel(tmpclient.affecter_cadeau(mat));
+
+
+
+        }
+
+
+
+}
+}
+
+void clients_cadeaux::on_comboBox_Matclient_currentIndexChanged(const QString &arg1)
+{ 
+    QString mat=ui->comboBox_Matclient->currentText();
+
+    QSqlQuery q;
+       q.prepare("select * from client where matricule LIKE '"+mat+"'" );
+
+    if(q.exec())
+    {
+        while(q.next())
+        {
+
+                ui->comboBox_affecCadeau_2->setModel(tmpclient.affecter_cadeau(mat));
+
+
+
+        }
+}
+}
+void clients_cadeaux::on_pushButton_modifCl_3_clicked()
+{ 
+   QString id= ui->comboBox_Matclient->currentText();
+    QString  id_cadeau=ui->comboBox_affecCadeau_2->currentText();
+int aff=tmpclient.tester_affectation(id);
+   Client a(id_cadeau);
+Cadeau ca;
+Client ca2;
+   bool test=a.modifier2(id);
+    if(test)
+   { if (aff==0)
+        {
+
+bool test_mis_a_jour_nb=ca.mettre_a_jour_nb_exp(id_cadeau);
+bool test_mis_a_jour_pt=ca2.mettre_a_jour_pts(id,id_cadeau);
+if(test_mis_a_jour_pt&&test_mis_a_jour_nb)
+{QMessageBox::information(nullptr, QObject::tr("affecter cadeau "),
+                          QObject::tr("cadeau affecté et mise à jour en cours.\n"), QMessageBox::Cancel);
+
+        }
+else
+{ QMessageBox::critical(nullptr, QObject::tr("affecter un cadeau"),
+                        QObject::tr("pas de mise à jour  !\n"), QMessageBox::Cancel);
+
+        }
+        }
+        else
+        {
+            QMessageBox::critical(nullptr, QObject::tr("affecter un cadeau"),
+                              QObject::tr("Le client sélectionné a déjà gangé un cadeau !\n"), QMessageBox::Cancel);
+}
+
+    }
+   else
+   {
+       QMessageBox::critical(nullptr, QObject::tr("affecter un cadeau"),
+                         QObject::tr("Erreur d'affectation !\n"), QMessageBox::Cancel);
+   }
+
+
+}
+void clients_cadeaux::on_comboBox_Cadeau_2_currentIndexChanged(const QString &arg1)
+{ 
+    QString id=ui->comboBox_Cadeau_2->currentText();
+
+    QSqlQuery q;
+       q.prepare("select * from cadeau where id LIKE '"+id+"'" );
+
+    if(q.exec())
+    {
+        while(q.next())
+        {
+            ui->lineEdit_5->setText(q.value(2).toString());
+            ui->lineEdit_6->setText(q.value(3).toString());
+            ui->comboBox_3->setCurrentText(q.value(1).toString());
 
 
 
@@ -274,4 +356,10 @@ void clients_cadeaux::on_comboBox_client_2_currentIndexChanged(const QString &ar
 
 
 }
+}
+
+void clients_cadeaux::on_pushButton_triCl_3_clicked()
+{
+    
+         ui->tableView_2->setModel(tmpclient.tri_ASC());
 }

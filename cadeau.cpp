@@ -120,3 +120,15 @@ int Cadeau::calculer(QString type) {
 return total;
 
       }
+
+bool Cadeau::mettre_a_jour_nb_exp(QString id)
+{
+    QSqlQuery query;
+    query.prepare("UPDATE cadeau SET nb=(select (nb-1) from cadeau WHERE id=:id ) WHERE id=:id");
+
+
+      query.bindValue(":id",id);
+
+
+    return    query.exec();
+}

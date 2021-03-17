@@ -31,6 +31,11 @@ Client::Client(QString matricule,QString nom,QString prenom,QString adresse,QStr
     this->pts=pts;
 
 }
+Client::Client(QString id_cadeau)
+{
+
+    this->id_cadeau=id_cadeau;
+}
 QString Client::get_nom(){return  nom;}
 QString Client::get_prenom(){return prenom;}
 QString Client::get_adresse(){return adresse;}
@@ -62,7 +67,7 @@ QSqlQuery query;
 QString p= QString::number(pts);
 
 query.prepare("INSERT INTO client ( matricule, nom, prenom, adresse, tel, pts, id_cadeau) "
-                    "VALUES (:matricule, :nom, :prenom, :adresse, :tel, :pts, :id_cadeau)");
+                    "VALUES (:matricule, :nom, :prenom, :adresse, :tel, :pts, :id_cadeau) ");
 query.bindValue(":matricule", matricule);
 query.bindValue(":nom", nom);
 query.bindValue(":prenom", prenom);
@@ -111,13 +116,27 @@ bool Client::modifier1(QString mat)
       QString pt= QString::number(pts);
 
 
-    query.prepare("UPDATE client SET MATRICULE=:matricule,NOM=:nom,PRENOM=:prenom,ADRESSE=:adresse,TEL=:tel,PTS=:pts,id_cadeau=:id_cadeau WHERE matricule=:matricule");
+    query.prepare("UPDATE client SET MATRICULE=:matricule,NOM=:nom,PRENOM=:prenom,ADRESSE=:adresse,TEL=:tel,PTS=:pts WHERE matricule=:matricule");
 
     query.bindValue(":nom",nom);
     query.bindValue(":prenom",prenom);
     query.bindValue(":adresse",adresse);
     query.bindValue(":tel",tel);
      query.bindValue(":pts",pt);
+      query.bindValue(":matricule",mat);
+
+
+    return    query.exec();
+}
+bool Client::modifier2(QString mat)
+{
+    QSqlQuery query;
+
+
+
+    query.prepare("UPDATE client SET id_cadeau=:id_cadeau WHERE matricule=:matricule");
+
+
       query.bindValue(":matricule",mat);
        query.bindValue(":id_cadeau",id_cadeau);
 
@@ -130,7 +149,7 @@ QSqlQueryModel * Client::recherche1(const QString& nom)
        model->setQuery("select * from client where nom LIKE '"+nom+"%'" );
        return model;
 }
-QSqlQueryModel * Client::tri()
+QSqlQueryModel * Client::tri_DESC()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
@@ -145,12 +164,26 @@ QSqlQueryModel * Client::tri()
 
         return model;
 }
+QSqlQueryModel * Client::tri_ASC()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
 
+    model->setQuery("select * from client ORDER BY pts ASC");
+     model->setHeaderData(0, Qt::Horizontal, QObject::tr("MATRICULE"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("ADRESSE"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("TEL"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("PTS"));
+ model->setHeaderData(6, Qt::Horizontal, QObject::tr("id_cadeau"));
+
+        return model;
+}
 QSqlQueryModel * Client::affecter_cadeau(QString mat)
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
-    model->setQuery("select id from cadeau ca NATURAL JOIN client cl where cl.PTS>=ca.SOMME and cl.matricule  LIKE '"+mat+"'  ");
+    model->setQuery("select id from cadeau ca NATURAL JOIN client cl where cl.PTS>=ca.SOMME and cl.matricule  LIKE '"+mat+"'and ca.nb!=0 ");
 
 
         return model;
@@ -169,11 +202,14 @@ int Client::tester_affectation(QString mat)
  return total;
 
 }
-QSqlQueryModel * Client::modifier_liste_id_cadeau()
+bool Client::mettre_a_jour_pts(QString matricule,QString id)
 {
-    QSqlQueryModel * model= new QSqlQueryModel();
+    QSqlQuery query;
+    query.prepare("UPDATE client SET pts=(select (pts-(select somme from cadeau WHERE id = :id)) from client WHERE matricule = :matricule) WHERE matricule=:matricule");
 
-    model->setQuery("select id_cadeau from client  ");
 
-    return model;
+      query.bindValue(":matricule",matricule);
+query.bindValue(":id",id);
+
+    return    query.exec();
 }
