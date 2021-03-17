@@ -12,6 +12,26 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     son = new QSound("../music.wav");
     son->play();
+    son->setLoops(50);
+    setFixedSize(791,511);  //fixe la taille de la fenêtre
+
+    animation = new QPropertyAnimation(ui->login,"geometry");
+    animation->setDuration(20000);
+    animation->setStartValue(ui->login->geometry());
+    animation->setEndValue(QRectF(200,300,70,70));
+
+    QEasingCurve curve;
+    curve.setType(QEasingCurve::OutBounce);
+    animation->setEasingCurve(curve);
+
+    animation->start();
+
+
+
+
+
+
+
 }
 
 MainWindow::~MainWindow()

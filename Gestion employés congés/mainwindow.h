@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include<QSound>
+#include <QPropertyAnimation>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,9 +33,12 @@ private slots:
 
     void on_login_clicked();
 
+signals :
+    void sig();
 private:
     Ui::MainWindow *ui;
     QSound *son;
+    QPropertyAnimation *animation;
 
 
 

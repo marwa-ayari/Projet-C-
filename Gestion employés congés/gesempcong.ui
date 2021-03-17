@@ -178,7 +178,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -411,19 +411,6 @@ color: rgb(132, 1, 64);</string>
           <width>113</width>
           <height>20</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>390</x>
-          <y>10</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>son</string>
         </property>
        </widget>
       </widget>

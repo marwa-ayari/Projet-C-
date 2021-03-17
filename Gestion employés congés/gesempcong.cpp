@@ -20,6 +20,9 @@ gesempcong::gesempcong(QWidget *parent) :
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->exitBtn, SIGNAL(clicked()),this, SLOT(close()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+    setFixedSize(791,511);  //fixe la taille de la fenêtre
+
+
 }
 
 void gesempcong::browse()
