@@ -21,6 +21,9 @@ class gesempcong : public QDialog
 {
     Q_OBJECT
 
+
+
+
 public:
     explicit gesempcong(QWidget *parent = nullptr);
     ~gesempcong();
