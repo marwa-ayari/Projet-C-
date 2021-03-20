@@ -337,12 +337,12 @@ void gesempcong::on_mmatricule_currentIndexChanged(const QString &arg1)
         {
 
 
-           ui->msalaire->setText(query.value(1).toString());
-           ui->mdateemb->setText(query.value(2).toString());
-           ui->mnom->setText(query.value(3).toString());
-           ui->mprenom->setText(query.value(4).toString());
-           ui->mfonction->setText(query.value(5).toString());
-           ui->mconge->setText(query.value(6).toString());
+           ui->mdateemb->setText(query.value(1).toString());
+           ui->mnom->setText(query.value(2).toString());
+           ui->mprenom->setText(query.value(3).toString());
+           ui->mfonction->setText(query.value(4).toString());
+           ui->mconge->setText(query.value(5).toString());
+           ui->msalaire->setText(query.value(6).toString());
 
         }
     }else{

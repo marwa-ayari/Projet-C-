@@ -79,12 +79,12 @@ QSqlQueryModel * Employes::afficher()
 
     model->setQuery("select * from employes ");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("matemp"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("salaire"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("dateemb "));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom "));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("prenom "));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction "));
-    model->setHeaderData(6, Qt::Horizontal, QObject::tr("congeemp"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("dateemb"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("prenom "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("fonction "));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("congeemp "));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("salaire"));
 
 
         return model;
@@ -132,13 +132,15 @@ QSqlQueryModel * Employes::tri()
     model->setQuery("select * from employes ORDER BY salaire DESC");
 
 
+
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("matemp"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("salaire"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("dateemb "));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("nom "));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("prenom "));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("fonction "));
-    model->setHeaderData(6, Qt::Horizontal, QObject::tr("congeemp"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("dateemb"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("nom "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("prenom "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("fonction "));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("congeemp "));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("salaire"));
+
 
         return model;
 }
