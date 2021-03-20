@@ -6,10 +6,10 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 
+
 class Conges
 {
 private:
-
 
     int duree;
     QString idc,type,datedeb,datefin;

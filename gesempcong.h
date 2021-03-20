@@ -8,7 +8,8 @@
 #include <QDialog>
 
 
-
+#include<QSound>
+#include <QPropertyAnimation>
 #include "smtp.h"
 #include <QtWidgets/QMessageBox>
 #include <QFileDialog>
@@ -21,9 +22,6 @@ class gesempcong;
 class gesempcong : public QDialog
 {
     Q_OBJECT
-
-
-
 
 public:
     explicit gesempcong(QWidget *parent = nullptr);
@@ -72,6 +70,8 @@ private:
     Employes insemployes;
     Conges insconges;
     QStringList files;
+    QSound *son;
+    QPropertyAnimation *animation;
 
 
 

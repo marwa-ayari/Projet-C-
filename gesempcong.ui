@@ -178,7 +178,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -312,7 +312,7 @@
        <widget class="QPushButton" name="ajoutemp">
         <property name="geometry">
          <rect>
-          <x>340</x>
+          <x>320</x>
           <y>300</y>
           <width>101</width>
           <height>31</height>

@@ -10,6 +10,8 @@
 #include <QSpinBox>
 #include<QIntValidator>
 #include<QValidator>
+#include<QMediaPlayer>
+
 
 gesempcong::gesempcong(QWidget *parent) :
     QDialog(parent),
@@ -21,6 +23,14 @@ gesempcong::gesempcong(QWidget *parent) :
     connect(ui->exitBtn, SIGNAL(clicked()),this, SLOT(close()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
     setFixedSize(791,511);  //fixe la taille de la fenêtre
+
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("../button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+      ;
+
 
 
 }

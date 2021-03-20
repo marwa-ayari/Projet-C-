@@ -16,15 +16,17 @@ MainWindow::MainWindow(QWidget *parent)
     setFixedSize(791,511);  //fixe la taille de la fenêtre
 
     animation = new QPropertyAnimation(ui->login,"geometry");
-    animation->setDuration(20000);
+    animation->setDuration(3000);
     animation->setStartValue(ui->login->geometry());
     animation->setEndValue(QRectF(200,300,70,70));
+
 
     QEasingCurve curve;
     curve.setType(QEasingCurve::OutBounce);
     animation->setEasingCurve(curve);
-
     animation->start();
+
+
 
 
 

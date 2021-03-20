@@ -5,9 +5,9 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 
+
 class Employes
 {
-
 private:
 
 
