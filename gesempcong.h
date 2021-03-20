@@ -8,6 +8,9 @@
 #include <QDialog>
 
 
+
+
+
 #include<QSound>
 #include <QPropertyAnimation>
 #include "smtp.h"
