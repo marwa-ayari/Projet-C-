@@ -19,6 +19,9 @@ Employes::Employes()
 
 
 
+
+
+
 }
 
 Employes::Employes(QString matemp,QString congeemp,QString dateemb,QString nom ,QString prenom ,QString fonction,float salaire)
