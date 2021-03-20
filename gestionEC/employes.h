@@ -17,6 +17,7 @@ private:
 
 public:
 
+
     Employes();
     Employes(QString,QString,QString,QString,QString,QString,float);
 
