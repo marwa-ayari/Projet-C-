@@ -10,5 +10,8 @@
         <file>rs/retour.png</file>
         <file>rs/trie.png</file>
         <file>rs/search.png</file>
+        <file>rs/enter.png</file>
+        <file>rs/off.png</file>
+        <file>rs/on.png</file>
     </qresource>
 </RCC>

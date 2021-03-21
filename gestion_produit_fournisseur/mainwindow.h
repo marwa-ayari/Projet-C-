@@ -3,6 +3,7 @@
 #include "produit.h"
 #include "fournisseur.h"
 #include <QMainWindow>
+#include <QMediaPlayer>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -77,9 +78,29 @@ private slots:
 
     void on_cherchep_clicked();
 
+
+    void on_pl_clicked();
+
+    void on_pushButton_modf_clicked();
+
+    void on_toolButton_MF_clicked();
+
+    void on_comboBox_mat_currentIndexChanged(const QString &arg1);
+
+    void on_fournisseurtable_activated(const QModelIndex &index);
+
+    void on_frommod_clicked();
+
+    void on_stop_clicked();
+
+    void on_start_clicked();
+
+    void on_horizontalSlider_sliderMoved(int position);
+
 private:
     Ui::MainWindow *ui;
     produit tabproduit;
     fournisseur tabfour;
+    QMediaPlayer* Player;
 };
 #endif // MAINWINDOW_H

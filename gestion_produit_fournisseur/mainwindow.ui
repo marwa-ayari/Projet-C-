@@ -33,17 +33,17 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>1271</width>
-      <height>671</height>
+      <x>0</x>
+      <y>30</y>
+      <width>1281</width>
+      <height>651</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255,0%);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>10</number>
     </property>
     <widget class="QWidget" name="afficherp">
      <widget class="QTableView" name="produit_2">
@@ -106,7 +106,7 @@ background-color: rgb(170, 0, 0);
 border-radius: 30px;</string>
       </property>
       <property name="text">
-       <string>Trie</string>
+       <string>Tri</string>
       </property>
       <property name="icon">
        <iconset resource="rs.qrc">
@@ -389,12 +389,12 @@ background-color: rgb(255, 255, 255);</string>
        <rect>
         <x>730</x>
         <y>290</y>
-        <width>171</width>
+        <width>231</width>
         <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(170, 0, 0);
 border-radius: 30px;</string>
@@ -408,8 +408,8 @@ border-radius: 30px;</string>
       </property>
       <property name="iconSize">
        <size>
-        <width>25</width>
-        <height>25</height>
+        <width>50</width>
+        <height>50</height>
        </size>
       </property>
      </widget>
@@ -1326,7 +1326,7 @@ background-color: rgb(170, 0, 0);
 border-radius: 30px;</string>
       </property>
       <property name="text">
-       <string>Trie</string>
+       <string>Tri</string>
       </property>
       <property name="icon">
        <iconset resource="rs.qrc">
@@ -1468,6 +1468,490 @@ border-radius: 30px;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="loginpage">
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>811</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font:60pt &quot;MV Boli&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Bienvenue :E_Pastry</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="conex">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>540</y>
+        <width>231</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 22pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>160</y>
+        <width>491</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.869, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.36 rgba(28, 17, 145, 255), stop:0.6 rgba(126, 14, 81, 255), stop:0.75 rgba(234, 11, 11, 255), stop:0.79 rgba(244, 70, 5, 255), stop:0.86 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
+alternate-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.869, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.36 rgba(9, 0, 99, 235), stop:0.6 rgba(126, 14, 81, 255), stop:0.75 rgba(234, 11, 11, 233), stop:0.79 rgba(244, 70, 5, 255), stop:0.86 rgba(255, 136, 0, 247), stop:0.935 rgba(239, 236, 55, 240));</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>321</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255,0%);
+font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Veuillez vous connecter :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pwd">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>260</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>150</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:30pt;
+background-color: rgb(255, 255, 255,20%);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Login :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="login">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>160</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>250</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font:30pt;
+color: rgb(255, 255, 255);
+background-color: rgb(255, 255, 255,20%);
+</string>
+       </property>
+       <property name="text">
+        <string>Mot de pass :</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pl">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>380</y>
+         <width>241</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+font: 18pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+       </property>
+       <property name="text">
+        <string>Appuyer ici</string>
+       </property>
+       <property name="icon">
+        <iconset resource="rs.qrc">
+         <normaloff>:/img/rs/enter.png</normaloff>:/img/rs/enter.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>52</width>
+         <height>52</height>
+        </size>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="modiff">
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>140</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>MATRICULE : </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>230</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>NOM : </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_nf">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>250</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>320</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>NUMERO : </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_numf">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>340</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>410</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ADRESSE : </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_ad">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>430</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>500</y>
+        <width>191</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>E_MAIL : </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_mail">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>520</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_modf">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>320</y>
+        <width>251</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+      <property name="icon">
+       <iconset resource="rs.qrc">
+        <normaloff>:/img/rs/update.png</normaloff>:/img/rs/update.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_mat">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>150</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="frommod">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>570</y>
+        <width>81</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="rs.qrc">
+        <normaloff>:/img/rs/retour.png</normaloff>:/img/rs/retour.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QToolButton" name="start">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>0</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+    </property>
+    <property name="text">
+     <string>start</string>
+    </property>
+    <property name="icon">
+     <iconset resource="rs.qrc">
+      <normaloff>:/img/rs/on.png</normaloff>:/img/rs/on.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>false</bool>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="stop">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>0</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+    </property>
+    <property name="text">
+     <string>stop</string>
+    </property>
+    <property name="icon">
+     <iconset resource="rs.qrc">
+      <normaloff>:/img/rs/off.png</normaloff>:/img/rs/off.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>false</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
