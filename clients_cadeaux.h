@@ -3,7 +3,7 @@
 #include"client.h"
 #include"cadeau.h"
 #include <QDialog>
-
+#include <QPropertyAnimation>
 namespace Ui {
 class clients_cadeaux;
 }
@@ -30,8 +30,6 @@ void on_pushButton_rechCl_3_clicked();
 
 
 
-void on_pushButton_ajoutCa_2_clicked();
-
 void on_pushButton_suppCa_2_clicked();
 
 void on_pushButton_triCa_2_clicked();
@@ -48,11 +46,22 @@ void on_pushButton_statCa_2_clicked();
 
 void on_comboBox_client_2_currentIndexChanged(const QString &arg1);
 
+void on_comboBox_Matclient_currentIndexChanged(const QString &arg1);
+
+void on_pushButton_modifCl_3_clicked();
+
+void on_comboBox_Cadeau_2_currentIndexChanged(const QString &arg1);
+
+void on_pushButton_triCl_3_clicked();
+
+void on_pushButton_ajouterCa_3_clicked();
+
 private:
     Ui::clients_cadeaux *ui;
 
        Client tmpclient;
        Cadeau tmpcadeau;
+       QPropertyAnimation *animation;
 };
 
 #endif // CLIENTS_CADEAUX_H
