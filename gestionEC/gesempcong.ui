@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>782</width>
-    <height>511</height>
+    <width>914</width>
+    <height>579</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>791</width>
-     <height>511</height>
+     <width>911</width>
+     <height>581</height>
     </rect>
    </property>
    <property name="font">
@@ -49,8 +49,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>811</width>
-       <height>471</height>
+       <width>921</width>
+       <height>531</height>
       </rect>
      </property>
      <property name="palette">
@@ -178,7 +178,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -187,8 +187,8 @@
       <widget class="QGroupBox" name="groupBox">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>10</y>
+         <x>20</x>
+         <y>20</y>
          <width>751</width>
          <height>411</height>
         </rect>
@@ -366,7 +366,7 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="nom">
         <property name="geometry">
          <rect>
-          <x>480</x>
+          <x>510</x>
           <y>140</y>
           <width>113</width>
           <height>20</height>
@@ -376,8 +376,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="prenom">
         <property name="geometry">
          <rect>
-          <x>490</x>
-          <y>190</y>
+          <x>510</x>
+          <y>200</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -396,7 +396,7 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="salaire">
         <property name="geometry">
          <rect>
-          <x>480</x>
+          <x>510</x>
           <y>90</y>
           <width>113</width>
           <height>20</height>
@@ -440,10 +440,10 @@ color: rgb(132, 1, 64);</string>
       <widget class="QLabel" name="label_photo_8">
        <property name="geometry">
         <rect>
-         <x>-350</x>
-         <y>-60</y>
-         <width>1171</width>
-         <height>491</height>
+         <x>-330</x>
+         <y>-10</y>
+         <width>1441</width>
+         <height>581</height>
         </rect>
        </property>
        <property name="text">
@@ -458,7 +458,7 @@ color: rgb(132, 1, 64);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>421</width>
+         <width>511</width>
          <height>41</height>
         </rect>
        </property>
@@ -1288,9 +1288,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="triemp">
        <property name="geometry">
         <rect>
-         <x>570</x>
+         <x>650</x>
          <y>0</y>
-         <width>201</width>
+         <width>241</width>
          <height>41</height>
         </rect>
        </property>
@@ -2122,15 +2122,15 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <rect>
          <x>30</x>
          <y>60</y>
-         <width>711</width>
-         <height>301</height>
+         <width>841</width>
+         <height>411</height>
         </rect>
        </property>
       </widget>
       <widget class="QLineEdit" name="rechercheemp">
        <property name="geometry">
         <rect>
-         <x>420</x>
+         <x>510</x>
          <y>0</y>
          <width>121</width>
          <height>41</height>
@@ -2444,9 +2444,9 @@ color: rgb(132, 1, 64);</string>
       <widget class="QGroupBox" name="groupBox_3">
        <property name="geometry">
         <rect>
-         <x>180</x>
+         <x>170</x>
          <y>50</y>
-         <width>331</width>
+         <width>541</width>
          <height>391</height>
         </rect>
        </property>
@@ -2486,9 +2486,9 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLabel" name="label_30">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>80</y>
-          <width>231</width>
+          <x>110</x>
+          <y>50</y>
+          <width>361</width>
           <height>71</height>
          </rect>
         </property>
@@ -2512,7 +2512,7 @@ color: rgb(132, 1, 64);</string>
        <widget class="QPushButton" name="suppemp">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>180</x>
           <y>230</y>
           <width>171</width>
           <height>71</height>
@@ -2551,8 +2551,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
        <widget class="QComboBox" name="comboBoxempsup">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>160</y>
+          <x>190</x>
+          <y>130</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -2562,10 +2562,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <widget class="QLabel" name="label_photo_10">
        <property name="geometry">
         <rect>
-         <x>-50</x>
-         <y>0</y>
-         <width>981</width>
-         <height>571</height>
+         <x>-90</x>
+         <y>-30</y>
+         <width>1071</width>
+         <height>671</height>
         </rect>
        </property>
        <property name="text">
@@ -2585,8 +2585,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <widget class="QComboBox" name="comboBoxconges_2">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>70</y>
+         <x>300</x>
+         <y>110</y>
          <width>171</width>
          <height>22</height>
         </rect>
@@ -2595,9 +2595,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <widget class="QLabel" name="label_28">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>70</y>
-         <width>231</width>
+         <x>30</x>
+         <y>100</y>
+         <width>271</width>
          <height>31</height>
         </rect>
        </property>
@@ -2620,8 +2620,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <widget class="QComboBox" name="mmatricule_2">
        <property name="geometry">
         <rect>
-         <x>560</x>
-         <y>130</y>
+         <x>570</x>
+         <y>40</y>
          <width>161</width>
          <height>22</height>
         </rect>
@@ -2631,9 +2631,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>130</y>
+         <y>30</y>
          <width>531</width>
-         <height>31</height>
+         <height>41</height>
         </rect>
        </property>
        <property name="font">
@@ -2655,9 +2655,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <widget class="QLabel" name="label_photo_11">
        <property name="geometry">
         <rect>
-         <x>-20</x>
-         <y>10</y>
-         <width>1291</width>
+         <x>-370</x>
+         <y>0</y>
+         <width>2801</width>
          <height>491</height>
         </rect>
        </property>
@@ -2671,10 +2671,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <widget class="QPushButton" name="affecterbouton">
        <property name="geometry">
         <rect>
-         <x>590</x>
-         <y>260</y>
-         <width>181</width>
-         <height>41</height>
+         <x>340</x>
+         <y>230</y>
+         <width>221</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="font">
@@ -2711,7 +2711,7 @@ color: rgb(74, 0, 111);</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>861</width>
+       <width>911</width>
        <height>541</height>
       </rect>
      </property>
@@ -2763,7 +2763,7 @@ color: rgb(74, 0, 111);</string>
          <rect>
           <x>20</x>
           <y>260</y>
-          <width>261</width>
+          <width>321</width>
           <height>31</height>
          </rect>
         </property>
@@ -2911,9 +2911,9 @@ color: rgb(74, 0, 111);</string>
        <widget class="QLineEdit" name="duree">
         <property name="geometry">
          <rect>
-          <x>270</x>
+          <x>350</x>
           <y>260</y>
-          <width>111</width>
+          <width>131</width>
           <height>21</height>
          </rect>
         </property>
@@ -2957,8 +2957,8 @@ color: rgb(74, 0, 111);</string>
         <rect>
          <x>-300</x>
          <y>-60</y>
-         <width>1131</width>
-         <height>491</height>
+         <width>1211</width>
+         <height>571</height>
         </rect>
        </property>
        <property name="text">
@@ -2973,7 +2973,7 @@ color: rgb(74, 0, 111);</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>241</width>
+         <width>311</width>
          <height>41</height>
         </rect>
        </property>
@@ -3803,7 +3803,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="tricong">
        <property name="geometry">
         <rect>
-         <x>550</x>
+         <x>690</x>
          <y>0</y>
          <width>211</width>
          <height>41</height>
@@ -4635,7 +4635,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QLineEdit" name="edit_recherchecong">
        <property name="geometry">
         <rect>
-         <x>240</x>
+         <x>310</x>
          <y>0</y>
          <width>141</width>
          <height>41</height>
@@ -4647,8 +4647,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <rect>
          <x>50</x>
          <y>70</y>
-         <width>651</width>
-         <height>311</height>
+         <width>821</width>
+         <height>381</height>
         </rect>
        </property>
       </widget>
@@ -4833,7 +4833,7 @@ color: rgb(74, 0, 111);</string>
          <rect>
           <x>20</x>
           <y>30</y>
-          <width>391</width>
+          <width>521</width>
           <height>31</height>
          </rect>
         </property>
@@ -4850,7 +4850,7 @@ color: rgb(74, 0, 111);</string>
        <widget class="QComboBox" name="idcm">
         <property name="geometry">
          <rect>
-          <x>430</x>
+          <x>550</x>
           <y>30</y>
           <width>121</width>
           <height>22</height>
@@ -4900,9 +4900,9 @@ color: rgb(74, 0, 111);</string>
       <widget class="QGroupBox" name="groupBox_6">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>10</y>
-         <width>331</width>
+         <x>240</x>
+         <y>30</y>
+         <width>451</width>
          <height>391</height>
         </rect>
        </property>
@@ -4945,8 +4945,8 @@ color: rgb(0, 255, 127);
        <widget class="QLabel" name="label_45">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>90</y>
+          <x>140</x>
+          <y>50</y>
           <width>171</width>
           <height>51</height>
          </rect>
@@ -4983,8 +4983,8 @@ color: rgb(0, 255, 127);
        <widget class="QPushButton" name="pushButton_supprimerconges">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>210</y>
+          <x>150</x>
+          <y>240</y>
           <width>161</width>
           <height>71</height>
          </rect>
@@ -5024,8 +5024,8 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.6482
        <widget class="QComboBox" name="suppcong">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>140</y>
+          <x>150</x>
+          <y>120</y>
           <width>141</width>
           <height>41</height>
          </rect>
@@ -5897,8 +5897,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <rect>
        <x>70</x>
        <y>70</y>
-       <width>621</width>
-       <height>401</height>
+       <width>791</width>
+       <height>461</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">

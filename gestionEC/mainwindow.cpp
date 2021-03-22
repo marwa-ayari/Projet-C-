@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     son = new QSound("../music.wav");
     son->play();
     son->setLoops(50);
-    setFixedSize(791,511);  //fixe la taille de la fenêtre
+    setFixedSize(914,579);  //fixe la taille de la fenêtre
 
     animation = new QPropertyAnimation(ui->login,"geometry");
     animation->setDuration(8000);
