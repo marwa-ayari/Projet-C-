@@ -37,7 +37,7 @@ void clients_cadeaux::on_pushButton_ajouterCl_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-    ui->pushButton_ajouterCl_2->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+   
 
     QString nom= ui->lineEdit_nom_ajout_2->text();
 
@@ -83,7 +83,7 @@ void clients_cadeaux::on_pushButton_suppCl_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-  ui->pushButton_suppCl_2->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+ 
     QString matricule= ui->comboBox_suppCl_2->currentText();
 
        if(tmpclient.supprimer1(matricule))
@@ -113,7 +113,7 @@ void clients_cadeaux::on_pushButton_modifCl_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-ui->pushButton_modifCl_2->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+
     QString matricule= ui->comboBox_client_2->currentText();
        QString nom= ui->lineEdit_nom_modif_2->text();
        QString prenom= ui->lineEdit_prenom_modif_2->text();
@@ -159,15 +159,7 @@ void clients_cadeaux::on_tabWidget_2_currentChanged(int index)
       ui->comboBox_client_2->setModel(tmpclient.modifier_liste_matricule());
 
  ui->comboBox_Matclient->setModel(tmpclient.modifier_liste_matricule());
- setStyleSheet(" QPushButton {"
-               "border-radius: 5px; "
-               "border: 1.5px solid rgb(91,231,255); "
-               "background-color: red; }"
-               "QPushButton:pressed {"
-               "border: 1.4px solid rgb(73,186,205); }"
-               "QPushButton:hover {"
-               "font-size: 16px;"
-               "transition: 0.9s; }");
+ 
 }
 
 void clients_cadeaux::on_pushButton_triCl_2_clicked()
@@ -175,7 +167,7 @@ void clients_cadeaux::on_pushButton_triCl_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-    ui->pushButton_triCl_2->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+   
      ui->tableView_2->setModel(tmpclient.tri_DESC());
 }
 
@@ -184,7 +176,7 @@ void clients_cadeaux::on_pushButton_rechCl_3_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-       ui->pushButton_rechCl_3->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+     
     QString nom_client =ui->lineEdit_rech_nom->text();
       ui->tableView_2->setModel(tmpclient.recherche1(nom_client));
 }
@@ -197,7 +189,7 @@ void clients_cadeaux::on_pushButton_suppCa_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-       ui->pushButton_suppCa_2->setStyleSheet(QString::fromUtf8("background-color: #ffff00;"));
+     
    QString id= ui->comboBox->currentText();
        if(tmpcadeau.supprimer2(id))
 
@@ -220,7 +212,7 @@ void clients_cadeaux::on_pushButton_triCa_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-       ui->pushButton_triCa_2->setStyleSheet(QString::fromUtf8("background-color: #ffff00;"));
+      
      ui->tableView->setModel(tmpcadeau.tri2());
 }
 
@@ -229,7 +221,7 @@ void clients_cadeaux::on_pushButton_rechCa_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-     ui->pushButton_rechCa_2->setStyleSheet(QString::fromUtf8("background-color: #ffff00;"));
+   
     QString categorie =ui->lineEdit->text();
       ui->tableView->setModel(tmpcadeau.recherche2(categorie));
 }
@@ -242,15 +234,7 @@ void clients_cadeaux::on_tabWidget_4_currentChanged(int index)
     ui->tableView->setModel(tmpcadeau.affiche2());
     ui->comboBox->setModel(tmpcadeau.modifier_liste_id());
      ui->comboBox_Cadeau_2->setModel(tmpcadeau.modifier_liste_id());
-     setStyleSheet(" QPushButton {"
-                   "border-radius: 5px; "
-                   "border: 1.5px solid rgb(91,231,255); "
-                   "background-color: red; }"
-                   "QPushButton:pressed {"
-                   "border: 1.4px solid rgb(73,186,205); }"
-                   "QPushButton:hover {"
-                   "font-size: 16px;"
-                   "transition: 0.9s; }");
+   
 
 }
 
@@ -259,7 +243,7 @@ void clients_cadeaux::on_pushButton_modifCa_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
- ui->pushButton_modifCa_2->setStyleSheet(QString::fromUtf8("background-color: #ffff00;"));
+
     QString id= ui->comboBox_Cadeau_2->currentText();
        QString categorie= ui->comboBox_3->currentText();
 
@@ -287,7 +271,7 @@ void clients_cadeaux::on_pushButton_statCa_2_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-     ui->pushButton_statCa_2->setStyleSheet(QString::fromUtf8("background-color: #ffff00;"));
+   
     int res;
             statistiques w(this);
             w.setWindowTitle("Statistiques des cadeaux");
@@ -360,7 +344,7 @@ void clients_cadeaux::on_pushButton_modifCl_3_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-     ui->pushButton_modifCl_3->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+  
    QString id= ui->comboBox_Matclient->currentText();
     QString  id_cadeau=ui->comboBox_affecCadeau_2->currentText();
 int aff=tmpclient.tester_affectation(id);
@@ -434,7 +418,7 @@ void clients_cadeaux::on_pushButton_triCl_3_clicked()
         player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
         player->setVolume(2000);
         player->play();
-         ui->pushButton_triCl_3->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+         
          ui->tableView_2->setModel(tmpclient.tri_ASC());
 }
 
@@ -444,7 +428,7 @@ void clients_cadeaux::on_pushButton_ajouterCa_3_clicked()
         player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
         player->setVolume(2000);
         player->play();
-        ui->pushButton_ajouterCa_3->setStyleSheet(QString::fromUtf8("background-color: #ffff00;"));
+        
         QString categorie=ui->comboBox_2->currentText();
         QString id= ui->lineEdit_categ_ajout_2->text();
           int somme= ui->lineEdit_3->text().toInt();
