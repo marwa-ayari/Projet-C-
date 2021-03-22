@@ -9,13 +9,11 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-
-
     ui->setupUi(this);
     son = new QSound("../music.wav");
     son->play();
     son->setLoops(50);
-    setFixedSize(914,579);  //fixe la taille de la fenêtre
+    setFixedSize(990,600);  //fixe la taille de la fenêtre
 
     animation = new QPropertyAnimation(ui->login,"geometry");
     animation->setDuration(8000);

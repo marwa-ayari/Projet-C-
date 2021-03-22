@@ -22,7 +22,7 @@ gesempcong::gesempcong(QWidget *parent) :
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->exitBtn, SIGNAL(clicked()),this, SLOT(close()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
-    setFixedSize(914,579);  //fixe la taille de la fenêtre
+    setFixedSize(990,600);  //fixe la taille de la fenêtre
 
     QMediaPlayer *player = new QMediaPlayer;
         player->setMedia(QUrl::fromLocalFile("../button.wav"));
