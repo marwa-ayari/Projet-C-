@@ -42,3 +42,6 @@ DISTFILES += \
     Gestionempcong.qml \
     GestionempcongForm.ui.qml
     music.wav
+
+RESOURCES += \
+    resources.qrc

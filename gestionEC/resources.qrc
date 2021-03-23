@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>resources/1.png</file>
+        <file>resources/2affiches.jpg</file>
+        <file>resources/74-741363_macaron-background.jpg</file>
+        <file>resources/4545.jpg</file>
+        <file>resources/5555.jpg</file>
+        <file>resources/affc7df0f48c4d9d1439422d8e7678a9-1497616638.jpg</file>
+        <file>resources/colorful-french-macarons-background-macaron-macaroons-cakes-206720270.jpg</file>
+        <file>resources/colorful-french-macarons-background-macaron-macaroons-cakes-207926952.jpg</file>
+        <file>resources/colorful-macarons-wallpaper-3554x1999_53.jpg</file>
+        <file>resources/depositphotos_6028572-stock-photo-colorful-macaroons.jpg</file>
+        <file>resources/f6fcx.png</file>
+        <file>resources/french-macarons.jpg</file>
+        <file>resources/images (1).jfif</file>
+        <file>resources/mailingback.jpg</file>
+        <file>resources/ml.png</file>
+        <file>resources/modifcongback.jpg</file>
+        <file>resources/pbs.png</file>
+        <file>resources/sonof.png</file>
+        <file>resources/sonon.png</file>
+        <file>resources/sqc.png</file>
+        <file>resources/suppcongback.jpg</file>
+    </qresource>
+</RCC>

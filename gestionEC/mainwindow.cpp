@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    son = new QSound("../music.wav");
+    son = new QSound("../imagesQT/music.wav");
     son->play();
     son->setLoops(50);
     setFixedSize(990,600);  //fixe la taille de la fenêtre
@@ -43,12 +43,7 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_pushButton_clicked()
-{
 
-gesempcong fenetre;
-fenetre.exec();
-}
 
 void MainWindow::on_login_clicked()
 {

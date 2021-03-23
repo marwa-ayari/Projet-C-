@@ -38,7 +38,7 @@
     <string notr="true">color:rgb(0, 167, 167);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="ongletemp">
     <attribute name="title">
@@ -178,7 +178,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -5065,9 +5065,9 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.6482
     <widget class="QPushButton" name="pushButton_recherchecong_9">
      <property name="geometry">
       <rect>
-       <x>-10</x>
+       <x>-60</x>
        <y>-10</y>
-       <width>961</width>
+       <width>1021</width>
        <height>81</height>
       </rect>
      </property>

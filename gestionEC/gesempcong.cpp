@@ -25,7 +25,7 @@ gesempcong::gesempcong(QWidget *parent) :
     setFixedSize(990,600);  //fixe la taille de la fenêtre
 
     QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("../button.wav"));
+        player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
         player->setVolume(2000);
         player->play();
 
