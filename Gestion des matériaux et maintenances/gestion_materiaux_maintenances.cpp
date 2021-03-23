@@ -26,6 +26,8 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_16_clicked()
     QString date_achat= ui->dateEdit_materiel_7->text();
     float prix=ui->lineEdit_materiel_17->text().toFloat();
     Materiaux materiel(reference,nom,type,date_achat,prix);
+    if(prix>0)
+    {
     if(materiel.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("Ajouter matériel"),
                     QObject::tr("Ajout Bien effectué." ), QMessageBox::Cancel);
@@ -38,7 +40,9 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_16_clicked()
         QMessageBox::information(nullptr, QObject::tr("Ajout matériel"),
                     QObject::tr("Echec de l'ajout . Ce matériel existe déja."), QMessageBox::Cancel);
     }
-
+    }
+    else QMessageBox::information(nullptr, QObject::tr("Ajout matériel"),
+                                  QObject::tr("Vérifiez les champs de saisie."), QMessageBox::Cancel);
 }
 
 void Gestion_materiaux_maintenances::on_tabWidget_4_currentChanged(int index)
@@ -79,7 +83,23 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_8_clicked()
 
     }
 }
+void Gestion_materiaux_maintenances::on_comboBox_materiel_1_currentIndexChanged(const QString &arg1)
+{
+    QString reference= ui->comboBox_materiel_1->currentText();
+    QSqlQuery query=tmpmateriel.recuperer_Modification(reference);
+    if(query.exec())
+    {
+        while(query.next())
+        {
+            ui->lineEdit_materiel_18->setText(query.value(1).toString());
+            ui->lineEdit_materiel_19->setText(query.value(2).toString());
+            ui->lineEdit_materiel_20->setText(query.value(4).toString());
+        }
+    }else  QMessageBox::critical(nullptr, QObject::tr("Modification matériel!"),
+                                 QObject::tr("erreur!"
+                                             ), QMessageBox::Cancel);
 
+}
 void Gestion_materiaux_maintenances::on_pushButton_materiel_5_clicked()
 {
     QString reference= ui->comboBox_materiel_1->currentText();
@@ -88,6 +108,8 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_5_clicked()
     QString date_achat= ui->dateEdit_materiel_8->text();
     float prix=ui->lineEdit_materiel_20->text().toFloat();
     Materiaux materiel(reference,nom,type,date_achat,prix);
+    if(prix>0)
+    {
     if(materiel.modifier())
     {
               QMessageBox::information(nullptr, QObject::tr("Modifier un matériel"),
@@ -99,6 +121,9 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_5_clicked()
         QMessageBox::critical(nullptr, QObject::tr("Modifier un matériel"),
                           QObject::tr("Echec ,les champs ne sont pas bien remplis!\n"), QMessageBox::Cancel);
     }
+    }
+    else QMessageBox::information(nullptr, QObject::tr("Modification matériel"),
+                                  QObject::tr("Vérifiez les champs de saisie."), QMessageBox::Cancel);
 }
 
 void Gestion_materiaux_maintenances::on_tabWidget_materiel_maintenance_2_currentChanged(int index)
@@ -114,6 +139,8 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_clicked()
     QString date_panne= ui->dateEdit_maintenance->text();
     float prix=ui->lineEdit_maintenance->text().toFloat();
     Maintenances maintenance(reference,date_panne,prix,description);
+    if(prix>0)
+    {
     if(maintenance.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("Ajouter maintenance"),
                     QObject::tr("Ajout Bien effectué." ), QMessageBox::Cancel);
@@ -124,6 +151,9 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_clicked()
         QMessageBox::information(nullptr, QObject::tr("Ajout maintenance"),
                     QObject::tr("Echec de l'ajout . Cette maintenance existe déja."), QMessageBox::Cancel);
     }
+    }
+    else QMessageBox::information(nullptr, QObject::tr("Ajout maintenance"),
+                                  QObject::tr("Vérifiez les champs de saisie."), QMessageBox::Cancel);
 }
 
 void Gestion_materiaux_maintenances::on_tabWidget_maintenance_3_currentChanged(int index)
@@ -156,6 +186,8 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_2_clicked()
     QString date_panne= ui->dateEdit_maintenance_2->text();
     float prix=ui->lineEdit_maintenance_3->text().toFloat();
     Maintenances maintenance(reference,date_panne,prix,description);
+    if(prix>0)
+    {
     if(maintenance.modifier())
     {
               QMessageBox::information(nullptr, QObject::tr("Modifier une maintenance"),
@@ -167,8 +199,26 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_2_clicked()
         QMessageBox::critical(nullptr, QObject::tr("Modifier une maintenance"),
                           QObject::tr("Echec ,les champs ne sont pas bien remplis!\n"), QMessageBox::Cancel);
     }
+    }
+    else QMessageBox::information(nullptr, QObject::tr("Modification maintenance"),
+                                  QObject::tr("Vérifiez les champs de saisie."), QMessageBox::Cancel);
 }
+void Gestion_materiaux_maintenances::on_comboBox_maintenance_2_currentTextChanged(const QString &arg1)
+{
+    QString reference= ui->comboBox_maintenance_2->currentText();
+    QSqlQuery query=tmpmaintenance.recuperer_Modification(reference);
+    if(query.exec())
+    {
+        while(query.next())
+        {
+            ui->lineEdit_maintenance_3->setText(query.value(2).toString());
+            ui->lineEdit_maintenance_7->setText(query.value(3).toString());
+        }
+    }else  QMessageBox::critical(nullptr, QObject::tr("Modification maintenance"),
+                                 QObject::tr("erreur!"
+                                             ), QMessageBox::Cancel);
 
+}
 void Gestion_materiaux_maintenances::on_pushButton_maintenance_7_clicked()
 {
     QString refer= ui->comboBox_maintenance_3->currentText();
@@ -186,3 +236,7 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_7_clicked()
 
     }
 }
+
+
+
+

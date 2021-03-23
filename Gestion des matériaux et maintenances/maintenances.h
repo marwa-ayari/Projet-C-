@@ -30,6 +30,8 @@ public:
     QSqlQueryModel * liste_Maintenances();
     bool supprimer(QString);
     bool modifier();
+    QSqlQuery recuperer_Modification(QString);
+
 
 
     QSqlQueryModel * rechercher(QString);

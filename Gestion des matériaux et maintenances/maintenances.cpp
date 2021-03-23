@@ -65,7 +65,12 @@ bool Maintenances::supprimer(QString refer)
 }
 
 
-
+QSqlQuery Maintenances::recuperer_Modification(QString ref)
+{
+    QSqlQuery query;
+    query.prepare("select * from Maintenances where reference ='"+ref+"'");
+    return    query;
+}
 bool Maintenances::modifier()
 {
     QSqlQuery query;

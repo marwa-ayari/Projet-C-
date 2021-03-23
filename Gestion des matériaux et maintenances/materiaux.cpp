@@ -86,6 +86,12 @@ QSqlQueryModel * Materiaux::liste_materiaux()
 
     return model;
 }
+QSqlQuery Materiaux::recuperer_Modification(QString ref)
+{
+    QSqlQuery query;
+    query.prepare("select * from Materiaux where reference ='"+ref+"'");
+    return    query;
+}
 
 QSqlQueryModel * Materiaux::tri()
 {
