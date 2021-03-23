@@ -90,13 +90,14 @@ void gesempcong::on_ajoutemp_clicked()
     QString fonction=ui->fonction->text();
 
     float salaire=ui->salaire->text().toFloat();
+    int age=ui->age->text().toInt();
 
 
 
 
 
 
-    Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire);
+    Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
     if(E.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
@@ -109,6 +110,7 @@ void gesempcong::on_ajoutemp_clicked()
                 ui->prenom->setText("");
                 ui->fonction->setText("");
                 ui->salaire->setText("");
+                ui->age->setText("");
 
 
 }else{
@@ -165,8 +167,13 @@ void gesempcong::on_modifemp_clicked()
     QString nom=ui->mnom->text();
     QString prenom=ui->mprenom->text();
     QString fonction=ui->mfonction->text();
+
+    int age=ui->mage->text().toInt();
+
      float salaire=ui->msalaire->text().toFloat();
-   Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire);
+
+
+   Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
     if(E.modifier(matemp))
     {
               QMessageBox::information(nullptr, QObject::tr("Modifier un employé"),
@@ -343,6 +350,7 @@ void gesempcong::on_mmatricule_currentIndexChanged(const QString &arg1)
            ui->mfonction->setText(query.value(4).toString());
            ui->mconge->setText(query.value(5).toString());
            ui->msalaire->setText(query.value(6).toString());
+           ui->mage->setText(query.value(7).toString());
 
         }
     }else{

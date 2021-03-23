@@ -16,6 +16,7 @@ Employes::Employes()
    prenom="";
    fonction="";
     salaire=0;
+    age=0;
 
 
 
@@ -24,7 +25,7 @@ Employes::Employes()
 
 }
 
-Employes::Employes(QString matemp,QString congeemp,QString dateemb,QString nom ,QString prenom ,QString fonction,float salaire)
+Employes::Employes(QString matemp,QString congeemp,QString dateemb,QString nom ,QString prenom ,QString fonction,float salaire,int age)
 {
   this->matemp=matemp;
   this->congeemp=congeemp;
@@ -33,6 +34,7 @@ Employes::Employes(QString matemp,QString congeemp,QString dateemb,QString nom ,
   this->prenom=prenom;
   this->fonction=fonction;
   this->salaire=salaire;
+    this->age=age;
 }
 
 
@@ -43,6 +45,7 @@ QString Employes::getnom(){ return nom;}
 QString Employes::getprenom(){ return prenom;}
 QString Employes::getfonction(){ return fonction;}
 float Employes::getsalaire(){ return salaire;}
+int Employes::getage(){return age;}
 
 
 void Employes::setmatemp(QString matemp){this->matemp=matemp;}
@@ -52,6 +55,7 @@ void Employes::setnom(QString nom){ this->nom=nom;}
 void Employes::setprenom(QString prenom){ this->prenom=prenom;}
 void Employes::setfonction(QString fonction){ this->fonction=fonction;}
 void Employes::setsalaire(float salaire){ this->salaire=salaire;}
+void Employes::setage(int age){this->age=age;}
 
 bool Employes::ajouter()
 {
@@ -59,8 +63,9 @@ bool Employes::ajouter()
 QSqlQuery query;
 ;
 QString salairee= QString::number(salaire);
-query.prepare("INSERT INTO employes (matemp,congeemp,dateemb,nom,prenom,fonction,salaire) "
-              "VALUES (:matemp,:congeemp,:dateemb, :nom ,:prenom ,:fonction,:salaire)");
+QString agee= QString::number(age);
+query.prepare("INSERT INTO employes (matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age) "
+              "VALUES (:matemp,:congeemp,:dateemb, :nom ,:prenom ,:fonction,:salaire,:age)");
 query.bindValue(":matemp", matemp);
 query.bindValue(":congeemp", congeemp);
 query.bindValue(":dateemb", dateemb);
@@ -68,6 +73,7 @@ query.bindValue(":nom", nom);
 query.bindValue(":prenom",prenom);
 query.bindValue(":fonction",fonction);
 query.bindValue(":salaire", salairee);
+query.bindValue(":age", agee);
  return query.exec();
 
 
@@ -85,6 +91,7 @@ QSqlQueryModel * Employes::afficher()
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("fonction "));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("congeemp "));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("salaire"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("age"));
 
 
         return model;
@@ -104,7 +111,8 @@ bool Employes::modifier(QString  mat)
 
 
     QString salairee= QString::number(salaire);
-    query.prepare("UPDATE employes set  congeemp='"+congeemp+"',dateemb='"+dateemb+"',nom='"+nom+"',prenom='"+prenom+"',fonction='"+fonction+"',salaire='"+salairee+"' where matemp like '"+matemp+"' ");
+    QString agee= QString::number(age);
+    query.prepare("UPDATE employes set  congeemp='"+congeemp+"',dateemb='"+dateemb+"',nom='"+nom+"',prenom='"+prenom+"',fonction='"+fonction+"',salaire='"+salairee+"',age='"+agee+"' where matemp like '"+matemp+"' ");
 
     query.bindValue(":matemp", matemp);
     query.bindValue(":congeemp", congeemp);
@@ -113,6 +121,7 @@ bool Employes::modifier(QString  mat)
     query.bindValue(":prenom",prenom);
     query.bindValue(":fonction",fonction);
     query.bindValue(":salaire", salairee);
+     query.bindValue(":age", agee);
     return    query.exec();
 }
 
@@ -140,6 +149,7 @@ QSqlQueryModel * Employes::tri()
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("fonction "));
     model->setHeaderData(5, Qt::Horizontal, QObject::tr("congeemp "));
     model->setHeaderData(6, Qt::Horizontal, QObject::tr("salaire"));
+    model->setHeaderData(7, Qt::Horizontal, QObject::tr("age"));
 
 
         return model;

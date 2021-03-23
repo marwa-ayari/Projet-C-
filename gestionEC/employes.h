@@ -13,12 +13,13 @@ private:
 
     float salaire;
     QString matemp,congeemp,dateemb,nom,prenom,fonction;
+    int age;
 
 
 public:
 
     Employes();
-    Employes(QString,QString,QString,QString,QString,QString,float);
+    Employes(QString,QString,QString,QString,QString,QString,float,int);
 
 
 
@@ -30,6 +31,7 @@ public:
    QString getprenom();
    QString getfonction();
     float getsalaire();
+    int getage();
 
 
 
@@ -40,6 +42,7 @@ public:
     void setprenom(QString);
     void setfonction(QString);
     void setsalaire(float);
+    void setage(int);
 
 
     bool ajouter();
