@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include<QString>
 #include"gestion.h"
+#include<QMediaPlayer>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -20,6 +21,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
     QString username=ui->lineEdit->text();
     QString password=ui->lineEdit_2->text();
     if((username=="admin")&&(password=="admin"))

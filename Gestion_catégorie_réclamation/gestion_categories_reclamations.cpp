@@ -6,7 +6,7 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QMessageBox>
-
+#include <QMediaPlayer>
 #include<QIntValidator>
 #include<QValidator>
 
@@ -24,6 +24,11 @@ Gestion_categories_reclamations::~Gestion_categories_reclamations()
 
 void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString nom= ui->lineEdit_categorie_12->text();
     QString date_fab= ui->dateEdit_categorie_7->date().toString("yyyy/MM/dd");
     float prix=ui->lineEdit_categorie_13->text().toFloat();
@@ -53,6 +58,11 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
 
 void Gestion_categories_reclamations::on_pushButton_categorie_6_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString nom= ui->comboBox_categorie_sup->currentText();
     if(tmpcategorie.supprimer(nom))
     {
@@ -79,6 +89,11 @@ void Gestion_categories_reclamations::on_tabWidget_categorie_4_currentChanged(in
 
 void Gestion_categories_reclamations::on_pushButton_categorie_13_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString rech =ui->lineEdit_categorie_17->text();
     ui->tab_categorie->setModel(tmpcategorie.rechercher(rech));
 }
@@ -86,6 +101,11 @@ void Gestion_categories_reclamations::on_pushButton_categorie_13_clicked()
 
 void Gestion_categories_reclamations::on_pushButton_categorie_14_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     ui->tab_categorie->setModel(tmpcategorie.tri());
 }
 void Gestion_categories_reclamations::on_comboBox_categorie_modifi_currentIndexChanged(const QString &arg1)
@@ -108,6 +128,11 @@ void Gestion_categories_reclamations::on_comboBox_categorie_modifi_currentIndexC
 
 void Gestion_categories_reclamations::on_pushButton_categorie_7_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString nom= ui->comboBox_categorie_modifi->currentText();
     QString date_fab= ui->dateEdit_categorie_2->date().toString("yyyy/MM/dd");
     float prix=ui->lineEdit_categorie_5->text().toFloat();
@@ -138,6 +163,11 @@ void Gestion_categories_reclamations::on_pushButton_categorie_7_clicked()
 
 void Gestion_categories_reclamations::on_bouton_ajout_reclamation_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString nom_categ= ui->comboBox_reclamation_1->currentText();
     QString id= ui->comboBox_reclamation_2->currentText();
     QString avis_c= ui->avis_reclamation->text();
@@ -165,6 +195,11 @@ void Gestion_categories_reclamations::on_bouton_ajout_reclamation_clicked()
 
 void Gestion_categories_reclamations::on_pushButton_3_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString nom= ui->comboBox_reclamation_5->currentText();
     QString id=ui->comboBox_reclamation_6->currentText();
     if(tmpreclamation.supprimer(nom,id))
@@ -181,12 +216,22 @@ void Gestion_categories_reclamations::on_pushButton_3_clicked()
 
 void Gestion_categories_reclamations::on_pushButton_11_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString rech =ui->rech_reclamation->text();
     ui->tab_reclamation->setModel(tmpreclamation.rechercher(rech));
 }
 
 void Gestion_categories_reclamations::on_pushButton_12_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     ui->tab_reclamation->setModel(tmpreclamation.tri());
 }
 
@@ -211,6 +256,11 @@ void Gestion_categories_reclamations::on_comboBox_reclamation_3_currentIndexChan
 
 void Gestion_categories_reclamations::on_pushButton_2_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
     QString nom= ui->comboBox_reclamation_3->currentText();
     QString id_client= ui->comboBox_reclamation_4->currentText();
     QString avis= ui->LineEdit_reclamation_3->text();
