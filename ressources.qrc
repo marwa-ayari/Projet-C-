@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/ressources">
+        <file>images/background-3837107_1920.jpg</file>
+        <file>images/cake-balls-4139984_1920.jpg</file>
+        <file>images/food-5111644_1920.jpg</file>
+        <file>images/macaron-4701984_1920.jpg</file>
+        <file>images/macaron-4701985_1920.jpg</file>
+        <file>images/macaron-4701986_1920.jpg</file>
+        <file>images/macarons-4818704_1920.jpg</file>
+        <file>images/macarons-5148496_1920.jpg</file>
+        <file>images/macarons-5148503_1920.jpg</file>
+        <file>images/muffins-5271450_1920.jpg</file>
+    </qresource>
+</RCC>
