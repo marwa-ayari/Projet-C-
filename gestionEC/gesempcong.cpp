@@ -78,19 +78,31 @@ gesempcong::~gesempcong()
 
 void gesempcong::on_ajoutemp_clicked()
 {
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+        player->setVolume(2000);
+        player->play();
+          ui->matricule->setMaxLength(5);
     QString matemp=ui->matricule ->text();
-    ui->matricule->setMaxLength(5);
+
     QString congeemp="";
+    ui->dateemb->setMaxLength(20);
     QString dateemb=ui->dateemb->text();
-     ui->dateemb->setMaxLength(20);
+        ui->nom->setMaxLength(15);
     QString nom=ui->nom->text();
-     ui->nom->setMaxLength(15);
-    QString prenom=ui->prenom->text();
     ui->prenom->setMaxLength(15);
+    QString prenom=ui->prenom->text();
+
     QString fonction=ui->fonction->text();
 
-    float salaire=ui->salaire->text().toFloat();
+
+    QIntValidator *rolll=new QIntValidator(1,100);
+        ui->age->setValidator(rolll);
     int age=ui->age->text().toInt();
+
+      float salaire=ui->salaire->text().toFloat();
+
+
 
 
 
@@ -138,7 +150,10 @@ void gesempcong::on_tabWidget_employes_currentChanged(int index)
 
 
 void gesempcong::on_suppemp_clicked()
-{
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
     Employes e1;
     e1.setmatemp(ui->comboBoxempsup->currentText());
     if(e1.supprimer(e1.getmatemp()))
@@ -159,7 +174,10 @@ void gesempcong::on_suppemp_clicked()
 }
 
 void gesempcong::on_modifemp_clicked()
-{
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
 
     QString matemp=ui->mmatricule->currentText();
     QString congeemp=ui->mconge->text();
@@ -188,14 +206,20 @@ void gesempcong::on_modifemp_clicked()
 }
 
 void gesempcong::on_pushButton_rechercheemp_clicked()
-{
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
        QString rech =ui->rechercheemp->text();
       ui->tableemp->setModel(insemployes.rechercher(rech));
 }
 
 
 void gesempcong::on_triemp_clicked()
-{
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
       ui->tableemp->setModel(insemployes.tri());
 }
 
@@ -205,15 +229,26 @@ void gesempcong::on_triemp_clicked()
 
 
 void gesempcong::on_pushButton_ajouterconges_clicked()
-{int duree=ui->duree->text().toInt();
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
+
+    QIntValidator *roll=new QIntValidator(1,50);
+   ui->duree->setValidator(roll);
+    int duree=ui->duree->text().toInt();
+
+ ui->idc->setMaxLength(15);
  QString idc=ui->idc->text();
+
+ ui->type->setMaxLength(15);
  QString type=ui->type->text();
+
+
  QString datedeb=ui->datedeb->text();
  QString datefin=ui->datefin->text();
 
- QIntValidator *roll=new QIntValidator(1,50);
 
-     ui->duree->setValidator(roll);
 
 
     Conges c(duree,idc,type,datedeb,datefin);
@@ -236,7 +271,10 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
 }
 
 void gesempcong::on_pushButton_modifierconges_clicked()
-{
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
     QString idc=ui->idcm->currentText();
     int duree=ui->dureem->text().toInt();
     QString type=ui->typem->text();
@@ -260,7 +298,10 @@ void gesempcong::on_pushButton_modifierconges_clicked()
 }
 
 void gesempcong::on_pushButton_supprimerconges_clicked()
-{
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
 
     Conges c;
     c.setidc(ui->suppcong->currentText());
@@ -294,13 +335,23 @@ void gesempcong::on_tabWidget_conges_currentChanged(int index)
 
 
 void gesempcong::on_recherchecong_clicked()
-{  QString rech =ui->edit_recherchecong->text();
+{ QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
+
+    QString rech =ui->edit_recherchecong->text();
     ui->tableViewconges->setModel(insconges.rechercher(rech));
 
 }
 
 void gesempcong::on_tricong_clicked()
-{ ui->tableViewconges->setModel(insconges.tri());
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
+
+    ui->tableViewconges->setModel(insconges.tri());
 
 }
 
@@ -315,7 +366,10 @@ void gesempcong::on_tricong_clicked()
 
 
 void gesempcong::on_affecterbouton_clicked()
-{
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setVolume(2000);
+    player->play();
 
     Employes e1;
     e1.setmatemp(ui->mmatricule_2->currentText());
@@ -328,7 +382,7 @@ void gesempcong::on_affecterbouton_clicked()
     }
     else
     { QMessageBox::critical(nullptr, QObject::tr("Erreur!"),
-                    QObject::tr("non supprimé.\n"
+                    QObject::tr("non affecté.\n"
                                 ), QMessageBox::Cancel);
 
     }

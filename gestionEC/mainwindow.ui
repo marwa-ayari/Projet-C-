@@ -38,8 +38,8 @@
      <rect>
       <x>70</x>
       <y>60</y>
-      <width>811</width>
-      <height>461</height>
+      <width>871</width>
+      <height>501</height>
      </rect>
     </property>
     <property name="font">
@@ -51,8 +51,11 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(195, 0, 98);
+     <string notr="true">color:rgb(71, 213, 213);
 </string>
     </property>
     <property name="title">
