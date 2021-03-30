@@ -33,6 +33,7 @@ public:
     QSqlQueryModel *recherchep(QString ref);
     QSqlQueryModel *triep();
     QSqlQueryModel * affecter_fournisseur();
+    QSqlQueryModel * mailing();
 
 
 

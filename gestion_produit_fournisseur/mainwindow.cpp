@@ -15,7 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
     connection c;
     bool test=c.database();
@@ -38,7 +39,41 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::browse()
+{
+    files.clear();
 
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void MainWindow::sendMail()
+{
+    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+
+void MainWindow::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
 
 void MainWindow::on_toolButton_clicked()
 {
@@ -356,9 +391,10 @@ void MainWindow::on_toolButton_SF_clicked()
 {
     ui->stackedWidget->setCurrentIndex(9);
     ui->tableView_3->setModel(tabfour.afficherf());
-    QSqlQueryModel *mod= new QSqlQueryModel();
+    ui->comboBox_3->setModel(tabfour.affichercf());
+    /*QSqlQueryModel *mod= new QSqlQueryModel();
     mod->setQuery("select MATRICULE from fournisseur ");
-    ui->comboBox_3->setModel(mod);
+    ui->comboBox_3->setModel(mod);*/
 
 }
 
@@ -370,9 +406,11 @@ void MainWindow::on_toolButton_8_clicked()
 void MainWindow::on_tableView_3_activated(const QModelIndex &index)
 {
     QString val=ui->produit_2->model()->data(index).toString();
-    QSqlQueryModel *mod= new QSqlQueryModel();
-    mod->setQuery("select matricule from fournisseur WHERE matricule ='"+val+"'");
-    ui->comboBox_3->setModel(mod);
+
+   qDebug() << val ;
+    //QSqlQueryModel *mod= new QSqlQueryModel();
+    //mod->setQuery("select MATRICULE from fournisseur WHERE MATRICULE ='"+val+"' ");
+    //ui->comboBox_3->setModel(mod);
 
 
 
@@ -527,7 +565,7 @@ void MainWindow::on_pushButton_modf_clicked()
     else if(x==0)
     {
         fournisseur f(matricule,nom,adresse,email,tel);
-        bool t=f.modifierf();
+        bool t=f.modifierf(matricule);
         if(t)
         {
             QMessageBox::information(nullptr, QObject::tr("fournisseur ajouter"),
@@ -536,7 +574,7 @@ void MainWindow::on_pushButton_modf_clicked()
             ui->lineEdit_numf->clear();
             ui->lineEdit_ad->clear();
             ui->lineEdit_mail->clear();
-            //ui->stackedWidget->setCurrentIndex(0);
+            ui->stackedWidget->setCurrentIndex(6);
         }
         else
         {
@@ -577,12 +615,12 @@ void MainWindow::on_comboBox_mat_currentIndexChanged(const QString &arg1)
 
 void MainWindow::on_fournisseurtable_activated(const QModelIndex &index)
 {
-    ui->stackedWidget->setCurrentIndex(11);
     QString val=ui->fournisseurtable->model()->data(index).toString();
     QSqlQuery q;
     q.prepare("select * from FOURNISSEUR where matricule = '"+val+"'");
     if(q.exec())
     {
+        ui->stackedWidget->setCurrentIndex(11);
         while(q.next())
         {
             ui->comboBox_mat->setCurrentText(q.value(0).toString());
@@ -618,4 +656,16 @@ void MainWindow::on_start_clicked()
 void MainWindow::on_horizontalSlider_sliderMoved(int position)
 {
     Player->setVolume(position);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(12);
+    ui->tableView_mailing->setModel(tabproduit.mailing());
+
+}
+
+void MainWindow::on_frommaling_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }

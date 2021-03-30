@@ -13,5 +13,7 @@
         <file>rs/enter.png</file>
         <file>rs/off.png</file>
         <file>rs/on.png</file>
+        <file>rs/logo.png</file>
+        <file>rs/mailing.png</file>
     </qresource>
 </RCC>

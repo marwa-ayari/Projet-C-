@@ -4,6 +4,9 @@
 #include "fournisseur.h"
 #include <QMainWindow>
 #include <QMediaPlayer>
+#include "smtp.h"
+#include <QtWidgets/QMessageBox>
+#include <QFileDialog>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,6 +20,9 @@ public:
     ~MainWindow();
 
 private slots:
+    void sendMail();
+    void mailSent(QString);
+    void browse();
     void on_toolButton_clicked();
 
     void on_pushButton_clicked();
@@ -97,10 +103,16 @@ private slots:
 
     void on_horizontalSlider_sliderMoved(int position);
 
+    void on_pushButton_2_clicked();
+
+    void on_frommaling_clicked();
+
 private:
     Ui::MainWindow *ui;
     produit tabproduit;
     fournisseur tabfour;
     QMediaPlayer* Player;
+    QStringList files;
+
 };
 #endif // MAINWINDOW_H

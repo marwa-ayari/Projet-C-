@@ -13,13 +13,15 @@ SOURCES += \
     fournisseur.cpp \
     main.cpp \
     mainwindow.cpp \
-    produit.cpp
+    produit.cpp \
+    smtp.cpp
 
 HEADERS += \
     connection.h \
     fournisseur.h \
     mainwindow.h \
-    produit.h
+    produit.h \
+    smtp.h
 
 FORMS += \
     mainwindow.ui

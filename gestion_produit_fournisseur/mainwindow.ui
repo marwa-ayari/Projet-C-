@@ -7,11 +7,21 @@
     <x>0</x>
     <y>0</y>
     <width>1299</width>
-    <height>709</height>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>E_Pastry</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="rs.qrc">
+    <normaloff>:/img/rs/logo.png</normaloff>:/img/rs/logo.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -90,80 +100,126 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="trie">
+     <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>980</x>
-        <y>110</y>
-        <width>211</width>
-        <height>61</height>
+        <x>900</x>
+        <y>50</y>
+        <width>331</width>
+        <height>461</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(170, 0, 0);
-border-radius: 30px;</string>
-      </property>
-      <property name="text">
-       <string>Tri</string>
-      </property>
-      <property name="icon">
-       <iconset resource="rs.qrc">
-        <normaloff>:/img/rs/trie.png</normaloff>:/img/rs/trie.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>60</width>
-        <height>60</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="cherchp">
-      <property name="geometry">
-       <rect>
-        <x>1010</x>
-        <y>310</y>
-        <width>171</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-      </property>
-      <property name="text">
+      <property name="title">
        <string/>
       </property>
-     </widget>
-     <widget class="QPushButton" name="cherchep">
-      <property name="geometry">
-       <rect>
-        <x>980</x>
-        <y>360</y>
-        <width>231</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>350</y>
+         <width>281</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
 color: rgb(255, 255, 255);
 background-color: rgb(170, 0, 0);
 border-radius: 30px;</string>
-      </property>
-      <property name="text">
-       <string>Chercher</string>
-      </property>
-      <property name="icon">
-       <iconset resource="rs.qrc">
-        <normaloff>:/img/rs/search.png</normaloff>:/img/rs/search.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>60</width>
-        <height>60</height>
-       </size>
-      </property>
+       </property>
+       <property name="text">
+        <string>envoyer un mail</string>
+       </property>
+       <property name="icon">
+        <iconset resource="rs.qrc">
+         <normaloff>:/img/rs/mailing.png</normaloff>:/img/rs/mailing.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="cherchep">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>210</y>
+         <width>221</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+       </property>
+       <property name="text">
+        <string>Chercher</string>
+       </property>
+       <property name="icon">
+        <iconset resource="rs.qrc">
+         <normaloff>:/img/rs/search.png</normaloff>:/img/rs/search.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="cherchp">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>160</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="text">
+        <string>tapez içi</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="trie">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>40</y>
+         <width>211</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+       </property>
+       <property name="text">
+        <string>Tri</string>
+       </property>
+       <property name="icon">
+        <iconset resource="rs.qrc">
+         <normaloff>:/img/rs/trie.png</normaloff>:/img/rs/trie.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="supprimerp_2">
@@ -747,8 +803,8 @@ border-radius: 30px;</string>
      <widget class="QToolButton" name="ajouterp_2">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>190</y>
+        <x>130</x>
+        <y>200</y>
         <width>181</width>
         <height>111</height>
        </rect>
@@ -827,8 +883,8 @@ font: 20pt &quot;MV Boli&quot;;
      <widget class="QToolButton" name="qrcode">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>400</y>
+        <x>480</x>
+        <y>410</y>
         <width>311</width>
         <height>101</height>
        </rect>
@@ -842,26 +898,6 @@ font: 20pt &quot;MV Boli&quot;;
       </property>
       <property name="text">
        <string>AFFICHAGE QR CODE</string>
-      </property>
-     </widget>
-     <widget class="QToolButton" name="qrcode_2">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>400</y>
-        <width>541</width>
-        <height>101</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-border-radius: 30px;
-background-color: rgb(170, 0, 0);
-font: 20pt &quot;MV Boli&quot;;
-</string>
-      </property>
-      <property name="text">
-       <string>AFFECTATION PRODUIT_FOURNISSEUR</string>
       </property>
      </widget>
      <widget class="QToolButton" name="toolButton_5">
@@ -1506,15 +1542,14 @@ color: rgb(255, 255, 255);</string>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>160</y>
+        <x>400</x>
+        <y>120</y>
         <width>491</width>
-        <height>491</height>
+        <height>481</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.869, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.36 rgba(28, 17, 145, 255), stop:0.6 rgba(126, 14, 81, 255), stop:0.75 rgba(234, 11, 11, 255), stop:0.79 rgba(244, 70, 5, 255), stop:0.86 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
-alternate-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.869, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.36 rgba(9, 0, 99, 235), stop:0.6 rgba(126, 14, 81, 255), stop:0.75 rgba(234, 11, 11, 233), stop:0.79 rgba(244, 70, 5, 255), stop:0.86 rgba(255, 136, 0, 247), stop:0.935 rgba(239, 236, 55, 240));</string>
+       <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.41206, y1:0.426, x2:0.558, y2:0.539773, stop:0 rgba(14, 8, 73, 255), stop:0.467337 rgba(9, 0, 99, 235), stop:0.6 rgba(126, 14, 81, 255), stop:0.79397 rgba(244, 144, 5, 255), stop:0.809045 rgba(234, 11, 11, 233), stop:0.859296 rgba(255, 136, 0, 247), stop:0.935 rgba(122, 55, 239, 240));</string>
       </property>
       <property name="title">
        <string/>
@@ -1854,6 +1889,368 @@ border-radius: 30px;</string>
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="mailing">
+     <widget class="QTableView" name="tableView_mailing">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>581</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 0, 0,80%);
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="frommaling">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>530</y>
+        <width>81</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="rs.qrc">
+        <normaloff>:/img/rs/retour.png</normaloff>:/img/rs/retour.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>65</width>
+        <height>65</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>50</y>
+        <width>581</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0.176, y1:0.284091, x2:0.98995, y2:0.977, stop:0 rgba(170, 0, 0, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>20</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Smtp-server :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="server">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>30</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>smtp.gmail.com</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="port">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>80</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>465</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>70</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Smtp-port :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="uname">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>130</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>epastry2020@gmail.com</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>120</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;mon Email :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="paswd">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>180</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="inputMethodHints">
+        <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
+       </property>
+       <property name="text">
+        <string>college159</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>170</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>mot de passe :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="rcpt">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>230</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_31">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>220</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>Email fournisseur :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="subject">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>280</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_32">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>270</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>Sujet :</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="file">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>330</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_33">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>320</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>Image ou fichier :</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="browseBtn">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>340</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Image</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>370</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(255, 255, 255,20%);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Message :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="sendBtn">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>220</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 15pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);
+border-radius: 30px;</string>
+       </property>
+       <property name="text">
+        <string>envoyer</string>
+       </property>
+       <property name="icon">
+        <iconset resource="rs.qrc">
+         <normaloff>:/img/rs/mailing.png</normaloff>:/img/rs/mailing.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>65</width>
+         <height>65</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="msg">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>380</y>
+         <width>381</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
    </widget>
    <widget class="QToolButton" name="start">
     <property name="geometry">
@@ -1953,6 +2350,11 @@ border-radius: 30px;</string>
      <bool>false</bool>
     </property>
    </widget>
+   <zorder>label</zorder>
+   <zorder>stackedWidget</zorder>
+   <zorder>horizontalSlider</zorder>
+   <zorder>start</zorder>
+   <zorder>stop</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
