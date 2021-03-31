@@ -87,17 +87,6 @@ void Gestion_categories_reclamations::on_tabWidget_categorie_4_currentChanged(in
 
 }
 
-void Gestion_categories_reclamations::on_pushButton_categorie_13_clicked()
-{
-    QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
-        player->setVolume(2000);
-        player->play();
-
-    QString rech =ui->lineEdit_categorie_17->text();
-    ui->tab_categorie->setModel(tmpcategorie.rechercher(rech));
-}
-
 
 void Gestion_categories_reclamations::on_pushButton_categorie_14_clicked()
 {
@@ -214,17 +203,6 @@ void Gestion_categories_reclamations::on_pushButton_3_clicked()
     }
 }
 
-void Gestion_categories_reclamations::on_pushButton_11_clicked()
-{
-    QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
-        player->setVolume(2000);
-        player->play();
-
-    QString rech =ui->rech_reclamation->text();
-    ui->tab_reclamation->setModel(tmpreclamation.rechercher(rech));
-}
-
 void Gestion_categories_reclamations::on_pushButton_12_clicked()
 {
     QMediaPlayer *player = new QMediaPlayer;
@@ -305,3 +283,16 @@ void Gestion_categories_reclamations::on_tabWidget_reclamation_3_currentChanged(
     ui->comboBox_reclamation_5->setModel(tmpreclamation.affecter_Categorie());
     ui->comboBox_reclamation_6->setModel(tmpreclamation.affecter_Client());
 }
+
+void Gestion_categories_reclamations::on_lineEdit_categorie_17_cursorPositionChanged(int arg1, int arg2)
+{
+    QString rech =ui->lineEdit_categorie_17->text();
+    ui->tab_categorie->setModel(tmpcategorie.rechercher(rech));
+}
+
+void Gestion_categories_reclamations::on_rech_reclamation_cursorPositionChanged(int arg1, int arg2)
+{
+    QString rech =ui->rech_reclamation->text();
+    ui->tab_reclamation->setModel(tmpreclamation.rechercher(rech));
+}
+

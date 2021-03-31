@@ -23,8 +23,6 @@ private slots:
 
     void on_tabWidget_categorie_4_currentChanged(int index);
 
-    void on_pushButton_categorie_13_clicked();
-
     void on_pushButton_categorie_14_clicked();
 
     void on_pushButton_categorie_7_clicked();
@@ -32,8 +30,6 @@ private slots:
     void on_bouton_ajout_reclamation_clicked();
 
     void on_pushButton_3_clicked();
-
-    void on_pushButton_11_clicked();
 
     void on_pushButton_12_clicked();
 
@@ -46,6 +42,10 @@ private slots:
     void on_tabWidget_categorie_reclamation_2_currentChanged(int index);
 
     void on_tabWidget_reclamation_3_currentChanged(int index);
+
+    void on_lineEdit_categorie_17_cursorPositionChanged(int arg1, int arg2);
+
+    void on_rech_reclamation_cursorPositionChanged(int arg1, int arg2);
 
 private:
     Ui::Gestion_categories_reclamations *ui;
