@@ -134,7 +134,7 @@ void gesempcong::on_ajoutemp_clicked()
     }
 
       }else QMessageBox::information(nullptr, QObject::tr("controle de saisie!"),
-                                        QObject::tr("verifier le nom ,le prenom ,et la fonction s'ils sont vides  .\n verifier le salaire s'il est nulle 0.\n  verifier l'age s'il dépasse 70 ou nulle .\n"), QMessageBox::Cancel);
+                                        QObject::tr(" verifier la saisie.\n"), QMessageBox::Cancel);
 
 
      }
@@ -279,7 +279,7 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
     }
 
   }else QMessageBox::information(nullptr, QObject::tr("controle de saisie!"),
-                                    QObject::tr(" verifier id du congé s'il est vide .\n  verifier duree si elle est nulle 0.\n  verifier datedeb si elle dépasse datefin .\n  verifier le type s'il est vide"), QMessageBox::Cancel);
+                                    QObject::tr("verifier la saisie"), QMessageBox::Cancel);
 
 
  }
