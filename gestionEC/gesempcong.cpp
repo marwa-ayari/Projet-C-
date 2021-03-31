@@ -86,7 +86,7 @@ void gesempcong::on_ajoutemp_clicked()
     QString matemp=ui->matricule ->text();
 
     QString congeemp="";
-    ui->dateemb->setMaxLength(20);
+
     QString dateemb=ui->dateemb->text();
         ui->nom->setMaxLength(15);
     QString nom=ui->nom->text();
@@ -100,16 +100,19 @@ void gesempcong::on_ajoutemp_clicked()
         ui->age->setValidator(rolll);
     int age=ui->age->text().toInt();
 
+
       float salaire=ui->salaire->text().toFloat();
 
 
 
+      if((nom!="")&&(prenom!="")&&(fonction!="")&&(age<70)&&(age>0)&&(salaire>0))
 
-
-
-
+          {
 
     Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
+
+
+
     if(E.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
@@ -117,7 +120,7 @@ void gesempcong::on_ajoutemp_clicked()
                 ui->matricule->setText("");
 
 
-                ui->dateemb->setText("");
+
                 ui->nom->setText("");
                 ui->prenom->setText("");
                 ui->fonction->setText("");
@@ -130,7 +133,11 @@ void gesempcong::on_ajoutemp_clicked()
                     QObject::tr("employé existe déja.\n"), QMessageBox::Cancel);
     }
 
-}
+      }else QMessageBox::information(nullptr, QObject::tr("controle de saisie!"),
+                                        QObject::tr("verifier le nom ,le prenom ,et la fonction s'ils sont vides  .\n verifier le salaire s'il est nulle 0.\n  verifier l'age s'il dépasse 70 ou nulle .\n"), QMessageBox::Cancel);
+
+
+     }
 
 
 
@@ -234,22 +241,26 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
     player->setVolume(2000);
     player->play();
 
-    QIntValidator *roll=new QIntValidator(1,50);
-   ui->duree->setValidator(roll);
-    int duree=ui->duree->text().toInt();
 
- ui->idc->setMaxLength(15);
+
+
+   int duree=ui->duree->text().toInt();
+
+
  QString idc=ui->idc->text();
-
- ui->type->setMaxLength(15);
  QString type=ui->type->text();
 
 
- QString datedeb=ui->datedeb->text();
- QString datefin=ui->datefin->text();
 
+ QString datedeb= ui->datedeb->date().toString("yyyy/MM/dd");
+  QString datefin= ui->datefin->date().toString("yyyy/MM/dd");
 
+  if((duree>0)&&(datefin>datedeb)&&(idc!="")&&(type!=""))
 
+     {
+
+       datedeb= ui->datedeb->text();
+        datefin= ui->datefin->text();
 
     Conges c(duree,idc,type,datedeb,datefin);
     if(c.ajouter()) {
@@ -259,8 +270,7 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
         ui->idc->setText("");
         ui->duree->setText("");
             ui->type->setText("");
-                ui->datedeb->setText("");
-                ui->datefin->setText("");
+
 
 
 }else{
@@ -268,13 +278,20 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
                     QObject::tr("congé existe déja.\n"), QMessageBox::Cancel);
     }
 
-}
+  }else QMessageBox::information(nullptr, QObject::tr("controle de saisie!"),
+                                    QObject::tr(" verifier id du congé s'il est vide .\n  verifier duree si elle est nulle 0.\n  verifier datedeb si elle dépasse datefin .\n  verifier le type s'il est vide"), QMessageBox::Cancel);
+
+
+ }
+
 
 void gesempcong::on_pushButton_modifierconges_clicked()
 {QMediaPlayer *player = new QMediaPlayer;
     player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
     player->setVolume(2000);
     player->play();
+
+
     QString idc=ui->idcm->currentText();
     int duree=ui->dureem->text().toInt();
     QString type=ui->typem->text();
@@ -386,6 +403,8 @@ void gesempcong::on_affecterbouton_clicked()
                                 ), QMessageBox::Cancel);
 
     }
+
+
 }
 
 void gesempcong::on_mmatricule_currentIndexChanged(const QString &arg1)
@@ -398,7 +417,7 @@ void gesempcong::on_mmatricule_currentIndexChanged(const QString &arg1)
         {
 
 
-           ui->mdateemb->setText(query.value(1).toString());
+           ui->mdateemb->setDate(query.value(1).toDate());
            ui->mnom->setText(query.value(2).toString());
            ui->mprenom->setText(query.value(3).toString());
            ui->mfonction->setText(query.value(4).toString());
@@ -422,8 +441,8 @@ void gesempcong::on_idcm_currentIndexChanged(const QString &arg1)
         {
            ui->dureem->setText(query.value(1).toString());
            ui->typem->setText(query.value(2).toString());
-          ui->datedebm->setText(query.value(3).toString());
-          ui->datefinm->setText(query.value(4).toString());
+          ui->datedebm->setDate(query.value(3).toDate());
+          ui->datefinm->setDate(query.value(4).toDate());
 
 
 
