@@ -34,7 +34,7 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
     float prix=ui->lineEdit_categorie_13->text().toFloat();
     QString system_date = QDateTime::currentDateTime().toString("yyyy/MM/dd");
 
-    if((prix>0)&&(system_date>=date_fab))
+    if((prix>0)&&(system_date>=date_fab)&&(nom!=""))
     {
         date_fab= ui->dateEdit_categorie_7->text();
         Categories catg(nom,date_fab,prix);
@@ -49,8 +49,8 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
                         QObject::tr("Cette catégorie existe déja.\n"), QMessageBox::Cancel);
         }
 
-    }else QMessageBox::information(nullptr, QObject::tr("ECHEC!!!"),
-                                   QObject::tr("le prix doit etre supérieure à 0 et la date ne doit pas dépasser la date d'aujourd'hui .\n"), QMessageBox::Cancel);
+    }else QMessageBox::information(nullptr, QObject::tr("Problème de saisie!"),
+                                   QObject::tr("le nom doit pas etre vide.\nle prix doit etre supérieure à 0.\nla date ne doit pas dépasser la date d'aujourd'hui .\n"), QMessageBox::Cancel);
 
 
 }
@@ -145,7 +145,7 @@ void Gestion_categories_reclamations::on_pushButton_categorie_7_clicked()
     }
 
     }else QMessageBox::information(nullptr, QObject::tr("ECHEC!!!"),
-                                   QObject::tr("le prix doit etre supérieure à 0 et la date ne doit pas dépasser la date d'aujourd'hui .\n"), QMessageBox::Cancel);
+                                   QObject::tr("le prix doit etre supérieure à 0.\nla date ne doit pas dépasser la date d'aujourd'hui .\n"), QMessageBox::Cancel);
 
 
 }
@@ -163,7 +163,7 @@ void Gestion_categories_reclamations::on_bouton_ajout_reclamation_clicked()
     QString date_rec= ui->date_reclamation->date().toString("yyyy/MM/dd");
     QString system_date = QDateTime::currentDateTime().toString("yyyy/MM/dd");
 
-    if(system_date>=date_rec)
+    if((system_date>=date_rec)&&(avis_c!=""))
     {
         date_rec= ui->date_reclamation->text();
     reclamations rec(nom_categ,id,date_rec,avis_c);
@@ -245,7 +245,7 @@ void Gestion_categories_reclamations::on_pushButton_2_clicked()
     QString date_rec= ui->dateEdit_reclamation_2->date().toString("yyyy/MM/dd");
     QString system_date = QDateTime::currentDateTime().toString("yyyy/MM/dd");
 
-    if(system_date>=date_rec)
+    if((system_date>=date_rec)&&(avis!=""))
     {
 
     date_rec= ui->dateEdit_reclamation_2->text();
