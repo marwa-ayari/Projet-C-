@@ -38,7 +38,7 @@
     <string notr="true">color:rgb(0, 167, 167);</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="ongletemp">
     <attribute name="title">
@@ -178,7 +178,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -187,22 +187,26 @@
       <widget class="QGroupBox" name="groupBox">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>30</y>
-         <width>751</width>
-         <height>411</height>
+         <x>50</x>
+         <y>20</y>
+         <width>841</width>
+         <height>471</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Lucida Calligraphy</family>
-         <pointsize>14</pointsize>
+         <pointsize>21</pointsize>
          <weight>75</weight>
          <bold>true</bold>
+         <underline>true</underline>
         </font>
        </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(200, 0, 150);
+        <string notr="true">color:rgb(255, 0, 127);
 </string>
        </property>
        <property name="title">
@@ -217,8 +221,8 @@
        <widget class="QLabel" name="label_7">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>150</y>
+          <x>30</x>
+          <y>280</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -236,8 +240,8 @@
        <widget class="QLabel" name="label_9">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>90</y>
+          <x>20</x>
+          <y>80</y>
           <width>271</width>
           <height>41</height>
          </rect>
@@ -255,8 +259,8 @@
        <widget class="QLabel" name="label_11">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>150</y>
+          <x>30</x>
+          <y>380</y>
           <width>231</width>
           <height>41</height>
          </rect>
@@ -274,8 +278,8 @@
        <widget class="QLabel" name="label_8">
         <property name="geometry">
          <rect>
-          <x>420</x>
-          <y>200</y>
+          <x>30</x>
+          <y>330</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -293,8 +297,8 @@
        <widget class="QLabel" name="label_13">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>200</y>
+          <x>30</x>
+          <y>180</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -315,16 +319,16 @@
         </property>
         <property name="geometry">
          <rect>
-          <x>280</x>
-          <y>320</y>
-          <width>161</width>
-          <height>51</height>
+          <x>530</x>
+          <y>260</y>
+          <width>181</width>
+          <height>61</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Lucida Calligraphy</family>
-          <pointsize>14</pointsize>
+          <pointsize>20</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -336,8 +340,8 @@
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:rgb(0, 168, 168)
-</string>
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.00423729 rgba(89, 190, 170, 255), stop:0.55 rgba(255, 0, 127, 255), stop:0.98 rgba(255, 0, 127, 255), stop:1 rgba(0, 0, 0, 0));
+color:rgb(85, 255, 255);</string>
         </property>
         <property name="text">
          <string>Ajouter</string>
@@ -346,8 +350,8 @@
        <widget class="QLabel" name="label_19">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>90</y>
+          <x>30</x>
+          <y>230</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -365,7 +369,7 @@
        <widget class="QLineEdit" name="matricule">
         <property name="geometry">
          <rect>
-          <x>290</x>
+          <x>280</x>
           <y>100</y>
           <width>113</width>
           <height>20</height>
@@ -375,8 +379,8 @@
        <widget class="QLineEdit" name="nom">
         <property name="geometry">
          <rect>
-          <x>580</x>
-          <y>150</y>
+          <x>280</x>
+          <y>290</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -385,8 +389,8 @@
        <widget class="QLineEdit" name="prenom">
         <property name="geometry">
          <rect>
-          <x>580</x>
-          <y>200</y>
+          <x>280</x>
+          <y>340</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -395,8 +399,8 @@
        <widget class="QLineEdit" name="salaire">
         <property name="geometry">
          <rect>
-          <x>580</x>
-          <y>90</y>
+          <x>280</x>
+          <y>240</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -405,8 +409,8 @@
        <widget class="QLineEdit" name="fonction">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>210</y>
+          <x>280</x>
+          <y>190</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -415,10 +419,10 @@
        <widget class="QLabel" name="label_20">
         <property name="geometry">
          <rect>
-          <x>280</x>
-          <y>250</y>
-          <width>171</width>
-          <height>31</height>
+          <x>30</x>
+          <y>130</y>
+          <width>201</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -434,8 +438,8 @@
        <widget class="QLineEdit" name="age">
         <property name="geometry">
          <rect>
-          <x>350</x>
-          <y>260</y>
+          <x>280</x>
+          <y>140</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -445,7 +449,7 @@
         <property name="geometry">
          <rect>
           <x>280</x>
-          <y>160</y>
+          <y>390</y>
           <width>110</width>
           <height>22</height>
          </rect>
@@ -506,8 +510,8 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -599,8 +603,8 @@
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -617,8 +621,8 @@
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -769,8 +773,8 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -862,8 +866,8 @@
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -880,8 +884,8 @@
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1032,8 +1036,8 @@
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1125,8 +1129,8 @@
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1143,8 +1147,8 @@
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1306,7 +1310,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
-color:rgb(255, 255, 0);
+color:rgb(170, 0, 0);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
@@ -1326,7 +1330,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="triemp">
        <property name="geometry">
         <rect>
-         <x>650</x>
+         <x>700</x>
          <y>0</y>
          <width>241</width>
          <height>61</height>
@@ -1338,8 +1342,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1431,8 +1435,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1449,8 +1453,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1601,8 +1605,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1694,8 +1698,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1712,8 +1716,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1864,8 +1868,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1957,8 +1961,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -1975,8 +1979,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -2138,7 +2142,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
-color:rgb(255, 255, 0);
+color:rgb(170, 0, 0);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
@@ -2180,25 +2184,46 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <attribute name="title">
        <string>Modifier</string>
       </attribute>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>-10</x>
+         <y>-10</y>
+         <width>1291</width>
+         <height>991</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../imagesQT/74-741363_macaron-background.jpg</pixmap>
+       </property>
+      </widget>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>20</y>
+         <x>30</x>
+         <y>40</y>
          <width>851</width>
-         <height>401</height>
+         <height>421</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Lucida Calligraphy</family>
-         <pointsize>14</pointsize>
+         <pointsize>21</pointsize>
          <weight>75</weight>
          <bold>true</bold>
+         <underline>true</underline>
+         <kerning>false</kerning>
         </font>
        </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(200, 0, 150);
+        <string notr="true">color:rgb(255, 0, 127);
 </string>
        </property>
        <property name="title">
@@ -2213,8 +2238,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_12">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>210</y>
+          <x>30</x>
+          <y>260</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -2233,9 +2258,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
-          <width>671</width>
-          <height>31</height>
+          <y>70</y>
+          <width>391</width>
+          <height>61</height>
          </rect>
         </property>
         <property name="font">
@@ -2248,14 +2273,14 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>matricule de l'employé pour modifier ses données</string>
+         <string>matricule de l'employé cible:</string>
         </property>
        </widget>
        <widget class="QLabel" name="label_15">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>120</y>
+          <x>30</x>
+          <y>170</y>
           <width>231</width>
           <height>31</height>
          </rect>
@@ -2276,8 +2301,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_16">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>240</y>
+          <x>30</x>
+          <y>290</y>
           <width>141</width>
           <height>31</height>
          </rect>
@@ -2295,8 +2320,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_17">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>180</y>
+          <x>30</x>
+          <y>230</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -2314,8 +2339,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_18">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>150</y>
+          <x>30</x>
+          <y>200</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -2333,16 +2358,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QPushButton" name="modifemp">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>310</y>
-          <width>151</width>
-          <height>61</height>
+          <x>550</x>
+          <y>230</y>
+          <width>181</width>
+          <height>71</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Lucida Calligraphy</family>
-          <pointsize>11</pointsize>
+          <pointsize>20</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -2351,10 +2376,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:rgb(0, 168, 168);
-
-
-color: rgb(132, 1, 64);</string>
+         <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.00423729 rgba(89, 190, 170, 255), stop:0.55 rgba(255, 0, 127, 255), stop:0.98 rgba(255, 0, 127, 255), stop:1 rgba(0, 0, 0, 0));
+color:rgb(85, 255, 255);</string>
         </property>
         <property name="text">
          <string>modifier</string>
@@ -2366,8 +2390,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="msalaire">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>190</y>
+          <x>290</x>
+          <y>240</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -2376,8 +2400,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="mnom">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>220</y>
+          <x>290</x>
+          <y>270</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -2386,8 +2410,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="mprenom">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>250</y>
+          <x>290</x>
+          <y>300</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -2396,8 +2420,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="mfonction">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>160</y>
+          <x>290</x>
+          <y>210</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -2406,8 +2430,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QComboBox" name="mmatricule">
         <property name="geometry">
          <rect>
-          <x>670</x>
-          <y>40</y>
+          <x>400</x>
+          <y>90</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -2416,8 +2440,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="mconge">
         <property name="geometry">
          <rect>
-          <x>570</x>
-          <y>200</y>
+          <x>290</x>
+          <y>370</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -2437,9 +2461,9 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLabel" name="label_22">
         <property name="geometry">
          <rect>
-          <x>590</x>
-          <y>160</y>
-          <width>141</width>
+          <x>30</x>
+          <y>360</y>
+          <width>91</width>
           <height>31</height>
          </rect>
         </property>
@@ -2456,8 +2480,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLineEdit" name="mage">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>280</y>
+          <x>290</x>
+          <y>330</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -2466,8 +2490,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLabel" name="label_21">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>270</y>
+          <x>30</x>
+          <y>320</y>
           <width>141</width>
           <height>31</height>
          </rect>
@@ -2485,32 +2509,14 @@ color: rgb(132, 1, 64);</string>
        <widget class="QDateEdit" name="mdateemb">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>120</y>
+          <x>290</x>
+          <y>170</y>
           <width>110</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>-260</x>
-         <y>0</y>
-         <width>1291</width>
-         <height>991</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../imagesQT/74-741363_macaron-background.jpg</pixmap>
-       </property>
-      </widget>
-      <zorder>label_4</zorder>
-      <zorder>groupBox_2</zorder>
      </widget>
      <widget class="QWidget" name="supprimeremp">
       <attribute name="title">
@@ -2519,8 +2525,8 @@ color: rgb(132, 1, 64);</string>
       <widget class="QLabel" name="label_photo_10">
        <property name="geometry">
         <rect>
-         <x>-730</x>
-         <y>-50</y>
+         <x>-290</x>
+         <y>0</y>
          <width>2091</width>
          <height>671</height>
         </rect>
@@ -2529,22 +2535,22 @@ color: rgb(132, 1, 64);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../imagesQT/4545.jpg</pixmap>
+        <pixmap>../Donuts_550796_3840x2160.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_3">
        <property name="geometry">
         <rect>
-         <x>250</x>
+         <x>90</x>
          <y>30</y>
-         <width>471</width>
-         <height>441</height>
+         <width>551</width>
+         <height>291</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Lucida Calligraphy</family>
-         <pointsize>18</pointsize>
+         <pointsize>24</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -2553,7 +2559,8 @@ color: rgb(132, 1, 64);</string>
         <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(85, 0, 127)</string>
+        <string notr="true">color:rgb(255, 0, 127);
+</string>
        </property>
        <property name="title">
         <string>supprimer un employé</string>
@@ -2577,8 +2584,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QLabel" name="label_30">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>110</y>
+          <x>110</x>
+          <y>50</y>
           <width>361</width>
           <height>71</height>
          </rect>
@@ -2594,7 +2601,7 @@ color: rgb(132, 1, 64);</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:rgb(85, 0, 127)</string>
+         <string notr="true">color:rgb(255, 0, 127)</string>
         </property>
         <property name="text">
          <string>matricule-employé</string>
@@ -2603,8 +2610,8 @@ color: rgb(132, 1, 64);</string>
        <widget class="QPushButton" name="suppemp">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>320</y>
+          <x>160</x>
+          <y>170</y>
           <width>171</width>
           <height>71</height>
          </rect>
@@ -2623,7 +2630,7 @@ color: rgb(132, 1, 64);</string>
         <property name="styleSheet">
          <string notr="true">
 
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648241 rgba(85, 0, 127, 255), stop:1 rgba(255, 255, 255, 255))</string>
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.00423729 rgba(0, 255, 255, 255), stop:0.55 rgba(0, 170, 255, 255), stop:0.98 rgba(255, 17, 140, 255), stop:1 rgba(0, 0, 0, 0))</string>
         </property>
         <property name="text">
          <string/>
@@ -2642,8 +2649,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
        <widget class="QComboBox" name="comboBoxempsup">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>200</y>
+          <x>170</x>
+          <y>120</y>
           <width>161</width>
           <height>31</height>
          </rect>
@@ -2655,81 +2662,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
       <attribute name="title">
        <string>affectation congé</string>
       </attribute>
-      <widget class="QComboBox" name="comboBoxconges_2">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>190</y>
-         <width>171</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_28">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>150</y>
-         <width>271</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Lucida Calligraphy</family>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:rgb(85, 0, 127)</string>
-       </property>
-       <property name="text">
-        <string>id_congé à affecter</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="mmatricule_2">
-       <property name="geometry">
-        <rect>
-         <x>130</x>
-         <y>70</y>
-         <width>161</width>
-         <height>22</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_31">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>691</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Lucida Calligraphy</family>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:rgb(85, 0, 127)</string>
-       </property>
-       <property name="text">
-        <string>matricule de l'employé pour lui affecter un congé</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_photo_11">
        <property name="geometry">
         <rect>
-         <x>-1100</x>
-         <y>-210</y>
+         <x>-1160</x>
+         <y>-80</y>
          <width>2981</width>
          <height>1081</height>
         </rect>
@@ -2741,37 +2678,144 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648
         <pixmap>../imagesQT/colorful-macarons-wallpaper-3554x1999_53.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QPushButton" name="affecterbouton">
+      <widget class="QGroupBox" name="groupBox_4">
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>340</y>
-         <width>221</width>
-         <height>71</height>
+         <x>90</x>
+         <y>70</y>
+         <width>691</width>
+         <height>431</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Lucida Calligraphy</family>
-         <pointsize>14</pointsize>
+         <pointsize>24</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
        <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
+        <string notr="true">color:rgb(255, 0, 127)</string>
+       </property>
+       <property name="title">
+        <string>Affectation congés</string>
+       </property>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>168</x>
+          <y>318</y>
+          <width>2101</width>
+          <height>2211</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../Documents/temp/macaron.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_31">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>100</y>
+          <width>411</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(85, 0, 127)</string>
+        </property>
+        <property name="text">
+         <string>matricule de l'employé </string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="mmatricule_2">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>110</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>190</y>
+          <width>371</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(85, 0, 127)</string>
+        </property>
+        <property name="text">
+         <string>id_congé à affecter</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxconges_2">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>200</y>
+          <width>161</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="affecterbouton">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>310</y>
+          <width>221</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>21</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
 color: rgb(74, 0, 111);</string>
-       </property>
-       <property name="text">
-        <string>affecter</string>
-       </property>
+        </property>
+        <property name="text">
+         <string>affecter</string>
+        </property>
+       </widget>
       </widget>
-      <zorder>label_photo_11</zorder>
-      <zorder>comboBoxconges_2</zorder>
-      <zorder>label_28</zorder>
-      <zorder>mmatricule_2</zorder>
-      <zorder>label_31</zorder>
-      <zorder>affecterbouton</zorder>
      </widget>
     </widget>
    </widget>
@@ -2798,32 +2842,48 @@ color: rgb(74, 0, 111);</string>
       <bool>true</bool>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="ajoutercong">
       <attribute name="title">
        <string>Ajouter</string>
       </attribute>
+      <widget class="QLabel" name="label_photo_16">
+       <property name="geometry">
+        <rect>
+         <x>-160</x>
+         <y>-40</y>
+         <width>1501</width>
+         <height>931</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Valentine's_Day_Sweets_Roses_Cupcake_Three_3_Heart_540910_1280x853.jpg</pixmap>
+       </property>
+      </widget>
       <widget class="QGroupBox" name="ajouteruncong">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>871</width>
-         <height>501</height>
+         <x>240</x>
+         <y>50</y>
+         <width>631</width>
+         <height>431</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Lucida Calligraphy</family>
-         <pointsize>14</pointsize>
+         <pointsize>20</pointsize>
          <weight>75</weight>
          <bold>true</bold>
+         <underline>true</underline>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(222, 0, 111);
-</string>
+        <string notr="true">color: rgb(170, 0, 127);</string>
        </property>
        <property name="title">
         <string>Ajouter un congé</string>
@@ -2834,11 +2894,11 @@ color: rgb(74, 0, 111);</string>
        <property name="checkable">
         <bool>false</bool>
        </property>
-       <widget class="QLabel" name="label_duree">
+       <widget class="QLabel" name="label_duree_3">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>260</y>
+          <x>50</x>
+          <y>160</y>
           <width>321</width>
           <height>51</height>
          </rect>
@@ -2853,11 +2913,11 @@ color: rgb(74, 0, 111);</string>
          <string>durée(nombre de jours)</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_id">
+       <widget class="QLabel" name="label_id_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>50</y>
+          <x>50</x>
+          <y>80</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -2868,15 +2928,18 @@ color: rgb(74, 0, 111);</string>
           <pointsize>15</pointsize>
          </font>
         </property>
+        <property name="toolTipDuration">
+         <number>5</number>
+        </property>
         <property name="text">
          <string>id_congé</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_datedeb">
+       <widget class="QLabel" name="label_datedeb_3">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>150</y>
+          <x>50</x>
+          <y>220</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -2891,13 +2954,13 @@ color: rgb(74, 0, 111);</string>
          <string>Date-début</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_type">
+       <widget class="QLabel" name="label_type_3">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>100</y>
+          <x>60</x>
+          <y>120</y>
           <width>171</width>
-          <height>31</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -2910,12 +2973,12 @@ color: rgb(74, 0, 111);</string>
          <string>type</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_datefin">
+       <widget class="QLabel" name="label_datefin_3">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>200</y>
-          <width>171</width>
+          <x>340</x>
+          <y>240</y>
+          <width>131</width>
           <height>31</height>
          </rect>
         </property>
@@ -2929,11 +2992,11 @@ color: rgb(74, 0, 111);</string>
          <string>Date-fin</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_ajouterconges">
+       <widget class="QPushButton" name="pushButton_ajouterconges_2">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>380</y>
+          <x>210</x>
+          <y>330</y>
           <width>151</width>
           <height>51</height>
          </rect>
@@ -2941,88 +3004,73 @@ color: rgb(74, 0, 111);</string>
         <property name="font">
          <font>
           <family>Lucida Calligraphy</family>
-          <pointsize>11</pointsize>
+          <pointsize>16</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));
 color: rgb(74, 0, 111);</string>
         </property>
         <property name="text">
          <string>ajouter</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="idc">
+       <widget class="QLineEdit" name="idc_2">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>50</y>
-          <width>113</width>
+          <x>370</x>
+          <y>90</y>
+          <width>131</width>
           <height>20</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="type">
+       <widget class="QLineEdit" name="type_2">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>100</y>
-          <width>113</width>
+          <x>370</x>
+          <y>130</y>
+          <width>131</width>
           <height>20</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="duree">
+       <widget class="QLineEdit" name="duree_2">
         <property name="geometry">
          <rect>
-          <x>360</x>
-          <y>280</y>
+          <x>370</x>
+          <y>170</y>
           <width>131</width>
           <height>21</height>
          </rect>
         </property>
        </widget>
-       <widget class="QDateEdit" name="datedeb">
+       <widget class="QDateEdit" name="datedeb_2">
         <property name="geometry">
          <rect>
-          <x>260</x>
-          <y>150</y>
+          <x>190</x>
+          <y>250</y>
           <width>110</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
-       <widget class="QDateEdit" name="datefin">
+       <widget class="QDateEdit" name="datefin_2">
         <property name="geometry">
          <rect>
-          <x>250</x>
-          <y>210</y>
+          <x>450</x>
+          <y>270</y>
           <width>110</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_photo_16">
-       <property name="geometry">
-        <rect>
-         <x>-80</x>
-         <y>-20</y>
-         <width>1501</width>
-         <height>931</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../imagesQT/mailingback.jpg</pixmap>
-       </property>
-      </widget>
-      <zorder>label_photo_16</zorder>
-      <zorder>ajouteruncong</zorder>
      </widget>
      <widget class="QWidget" name="affichercong">
       <attribute name="title">
@@ -3059,8 +3107,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3152,8 +3200,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3170,8 +3218,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3322,8 +3370,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3415,8 +3463,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3433,8 +3481,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3585,8 +3633,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3678,8 +3726,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3696,8 +3744,8 @@ color: rgb(74, 0, 111);</string>
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3859,7 +3907,7 @@ color: rgb(74, 0, 111);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
-color:rgb(255, 255, 0);
+color:rgb(170, 0, 0);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
@@ -3879,7 +3927,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QPushButton" name="tricong">
        <property name="geometry">
         <rect>
-         <x>690</x>
+         <x>730</x>
          <y>0</y>
          <width>211</width>
          <height>61</height>
@@ -3891,8 +3939,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -3984,8 +4032,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4002,8 +4050,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4154,8 +4202,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4247,8 +4295,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4265,8 +4313,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4417,8 +4465,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4510,8 +4558,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="Text">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4528,8 +4576,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
           <colorrole role="ButtonText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>255</red>
-             <green>255</green>
+             <red>170</red>
+             <green>0</green>
              <blue>0</blue>
             </color>
            </brush>
@@ -4691,7 +4739,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
-color:rgb(255, 255, 0);
+color:rgb(170, 0, 0);
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
        </property>
        <property name="text">
@@ -4733,26 +4781,42 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <attribute name="title">
        <string>Modifier</string>
       </attribute>
+      <widget class="QLabel" name="label_photo_17">
+       <property name="geometry">
+        <rect>
+         <x>-130</x>
+         <y>-70</y>
+         <width>1531</width>
+         <height>981</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Valentine's_Day_Sweets_Roses_Cupcake_Three_3_Heart_540910_1280x853.jpg</pixmap>
+       </property>
+      </widget>
       <widget class="QGroupBox" name="ajouteruncong_2">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>310</x>
          <y>30</y>
-         <width>871</width>
-         <height>501</height>
+         <width>541</width>
+         <height>451</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Lucida Calligraphy</family>
-         <pointsize>14</pointsize>
+         <pointsize>20</pointsize>
          <weight>75</weight>
          <bold>true</bold>
+         <underline>true</underline>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(222, 0, 111);
-</string>
+        <string notr="true">color: rgb(170, 0, 127);</string>
        </property>
        <property name="title">
         <string>modifier un congé</string>
@@ -4767,7 +4831,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>320</y>
+          <y>160</y>
           <width>321</width>
           <height>31</height>
          </rect>
@@ -4785,8 +4849,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_datedeb_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>220</y>
+          <x>10</x>
+          <y>210</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -4804,8 +4868,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_type_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>150</y>
+          <x>10</x>
+          <y>100</y>
           <width>171</width>
           <height>51</height>
          </rect>
@@ -4813,7 +4877,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <property name="font">
          <font>
           <family>Lucida Calligraphy</family>
-          <pointsize>16</pointsize>
+          <pointsize>15</pointsize>
          </font>
         </property>
         <property name="text">
@@ -4823,8 +4887,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QLabel" name="label_datefin_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>260</y>
+          <x>260</x>
+          <y>250</y>
           <width>171</width>
           <height>31</height>
          </rect>
@@ -4842,22 +4906,25 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        <widget class="QPushButton" name="pushButton_modifierconges">
         <property name="geometry">
          <rect>
-          <x>510</x>
-          <y>370</y>
-          <width>141</width>
+          <x>190</x>
+          <y>360</y>
+          <width>171</width>
           <height>51</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Lucida Calligraphy</family>
-          <pointsize>11</pointsize>
+          <pointsize>16</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));
 color: rgb(74, 0, 111);</string>
         </property>
         <property name="text">
@@ -4867,8 +4934,8 @@ color: rgb(74, 0, 111);</string>
        <widget class="QLineEdit" name="typem">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>170</y>
+          <x>340</x>
+          <y>110</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -4877,8 +4944,8 @@ color: rgb(74, 0, 111);</string>
        <widget class="QLineEdit" name="dureem">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>320</y>
+          <x>340</x>
+          <y>160</y>
           <width>113</width>
           <height>20</height>
          </rect>
@@ -4888,27 +4955,27 @@ color: rgb(74, 0, 111);</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>70</y>
-          <width>521</width>
-          <height>31</height>
+          <y>60</y>
+          <width>201</width>
+          <height>51</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Lucida Calligraphy</family>
-          <pointsize>16</pointsize>
+          <pointsize>15</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>id congé pour modifier ses données</string>
+         <string>id congé cible</string>
         </property>
        </widget>
        <widget class="QComboBox" name="idcm">
         <property name="geometry">
          <rect>
-          <x>530</x>
+          <x>340</x>
           <y>70</y>
-          <width>181</width>
+          <width>111</width>
           <height>22</height>
          </rect>
         </property>
@@ -4916,8 +4983,8 @@ color: rgb(74, 0, 111);</string>
        <widget class="QDateEdit" name="datedebm">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>220</y>
+          <x>140</x>
+          <y>250</y>
           <width>110</width>
           <height>22</height>
          </rect>
@@ -4926,32 +4993,14 @@ color: rgb(74, 0, 111);</string>
        <widget class="QDateEdit" name="datefinm">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>270</y>
+          <x>340</x>
+          <y>290</y>
           <width>110</width>
           <height>22</height>
          </rect>
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_photo_17">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1531</width>
-         <height>931</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../imagesQT/mailingback.jpg</pixmap>
-       </property>
-      </widget>
-      <zorder>label_photo_17</zorder>
-      <zorder>ajouteruncong_2</zorder>
      </widget>
      <widget class="QWidget" name="supprimercong">
       <attribute name="title">
@@ -4960,8 +5009,8 @@ color: rgb(74, 0, 111);</string>
       <widget class="QLabel" name="label_photo_4">
        <property name="geometry">
         <rect>
-         <x>-850</x>
-         <y>-390</y>
+         <x>-50</x>
+         <y>-320</y>
          <width>2021</width>
          <height>1031</height>
         </rect>
@@ -4970,16 +5019,16 @@ color: rgb(74, 0, 111);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../imagesQT/suppcongback.jpg</pixmap>
+        <pixmap>../cupcake-with-sparkler.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_6">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>30</y>
-         <width>451</width>
-         <height>391</height>
+         <x>490</x>
+         <y>40</y>
+         <width>421</width>
+         <height>361</height>
         </rect>
        </property>
        <property name="font">
@@ -4995,8 +5044,7 @@ color: rgb(74, 0, 111);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">
-color: rgb(0, 255, 127);
-
+color: rgb(255, 0, 127);
 </string>
        </property>
        <property name="title">
@@ -5021,8 +5069,8 @@ color: rgb(0, 255, 127);
        <widget class="QLabel" name="label_45">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>50</y>
+          <x>130</x>
+          <y>100</y>
           <width>171</width>
           <height>51</height>
          </rect>
@@ -5044,7 +5092,7 @@ color: rgb(0, 255, 127);
         <property name="geometry">
          <rect>
           <x>-190</x>
-          <y>40</y>
+          <y>50</y>
           <width>991</width>
           <height>481</height>
          </rect>
@@ -5059,9 +5107,9 @@ color: rgb(0, 255, 127);
        <widget class="QPushButton" name="pushButton_supprimerconges">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>240</y>
-          <width>161</width>
+          <x>140</x>
+          <y>270</y>
+          <width>151</width>
           <height>71</height>
          </rect>
         </property>
@@ -5080,8 +5128,7 @@ color: rgb(0, 255, 127);
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">
-background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.648241 rgba(0, 255, 127, 255), stop:1 rgba(255, 255, 255, 255))</string>
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(255, 19, 137, 164), stop:1 rgba(0, 255, 240, 82));</string>
         </property>
         <property name="text">
          <string/>
@@ -5100,8 +5147,8 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.6482
        <widget class="QComboBox" name="suppcong">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>120</y>
+          <x>140</x>
+          <y>160</y>
           <width>141</width>
           <height>41</height>
          </rect>
@@ -5123,10 +5170,10 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.6482
     <widget class="QPushButton" name="pushButton_recherchecong_9">
      <property name="geometry">
       <rect>
-       <x>-60</x>
-       <y>-10</y>
+       <x>-30</x>
+       <y>0</y>
        <width>1021</width>
-       <height>81</height>
+       <height>61</height>
       </rect>
      </property>
      <property name="palette">

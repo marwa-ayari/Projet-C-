@@ -235,7 +235,7 @@ void gesempcong::on_triemp_clicked()
 
 
 
-void gesempcong::on_pushButton_ajouterconges_clicked()
+void gesempcong::on_pushButton_ajouterconges_2_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
     player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
     player->setVolume(2000);
@@ -244,32 +244,32 @@ void gesempcong::on_pushButton_ajouterconges_clicked()
 
 
 
-   int duree=ui->duree->text().toInt();
+   int duree=ui->duree_2->text().toInt();
 
 
- QString idc=ui->idc->text();
- QString type=ui->type->text();
+ QString idc=ui->idc_2->text();
+ QString type=ui->type_2->text();
 
 
 
- QString datedeb= ui->datedeb->date().toString("yyyy/MM/dd");
-  QString datefin= ui->datefin->date().toString("yyyy/MM/dd");
+ QString datedeb= ui->datedeb_2->date().toString("yyyy/MM/dd");
+  QString datefin= ui->datefin_2->date().toString("yyyy/MM/dd");
 
   if((duree>0)&&(datefin>datedeb)&&(idc!="")&&(type!=""))
 
      {
 
-       datedeb= ui->datedeb->text();
-        datefin= ui->datefin->text();
+       datedeb= ui->datedeb_2->text();
+        datefin= ui->datefin_2->text();
 
     Conges c(duree,idc,type,datedeb,datefin);
     if(c.ajouter()) {
         QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
 
-        ui->idc->setText("");
-        ui->duree->setText("");
-            ui->type->setText("");
+        ui->idc_2->setText("");
+        ui->duree_2->setText("");
+            ui->type_2->setText("");
 
 
 
@@ -453,3 +453,6 @@ void gesempcong::on_idcm_currentIndexChanged(const QString &arg1)
     }
 
 }
+
+
+

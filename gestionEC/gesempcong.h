@@ -37,8 +37,7 @@ private slots:
  void on_pushButton_rechercheemp_clicked();
  void on_triemp_clicked();
 
- void on_pushButton_ajouterconges_clicked();
-
+ void on_pushButton_ajouterconges_2_clicked();
  void on_pushButton_modifierconges_clicked();
 
  void on_pushButton_supprimerconges_clicked();
@@ -64,6 +63,8 @@ private slots:
     void sendMail();
     void mailSent(QString);
     void browse();
+
+
 
 private:
     Ui::gesempcong *ui;
