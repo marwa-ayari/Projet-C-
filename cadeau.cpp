@@ -59,8 +59,8 @@ QSqlQueryModel * Cadeau::affiche2()
 
 model->setQuery("select * from cadeau");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id"));
-model->setHeaderData(1, Qt::Horizontal, QObject::tr("Catégorie"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("Points nécéssaires"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("CatÃ©gorie"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("Points nÃ©cÃ©ssaires"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("Nombre d'exemplaires"));
 
     return model;
@@ -139,5 +139,7 @@ QSqlQueryModel * Cadeau::chercher_categ(QString id)
     model->setQuery("select categorie from cadeau where id like '"+id+"%'");
     return model;
 }
+
+
 
 
