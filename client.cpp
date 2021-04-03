@@ -85,11 +85,11 @@ QSqlQueryModel * Client::afficher1()
 model->setQuery("select * from client");
 model->setHeaderData(0, Qt::Horizontal, QObject::tr("Matricule"));
 model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("PrÈnom"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("Pr√©nom"));
 model->setHeaderData(3, Qt::Horizontal, QObject::tr("Adresse"));
-model->setHeaderData(4, Qt::Horizontal, QObject::tr("TÈlÈphone"));
-model->setHeaderData(5, Qt::Horizontal, QObject::tr("Points fidelitÈ"));
-model->setHeaderData(6, Qt::Horizontal, QObject::tr("Cadeau affectÈ"));
+model->setHeaderData(4, Qt::Horizontal, QObject::tr("T√©l√©phone"));
+model->setHeaderData(5, Qt::Horizontal, QObject::tr("Points fidelit√©"));
+model->setHeaderData(6, Qt::Horizontal, QObject::tr("Cadeau affect√©"));
     return model;
 }
 QString Client::afficher_cadeauC(QString mat)
@@ -156,11 +156,11 @@ QSqlQueryModel * Client::tri_DESC()
     model->setQuery("select * from client ORDER BY pts DESC");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Matricule"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PrÈnom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Pr√©nom"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("Adresse"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("TÈlÈphone"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Points fidelitÈ"));
-    model->setHeaderData(6, Qt::Horizontal, QObject::tr("Cadeau affectÈ"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("T√©l√©phone"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Points fidelit√©"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("Cadeau affect√©"));
         return model;
 }
 QSqlQueryModel * Client::tri_ASC()
@@ -170,11 +170,11 @@ QSqlQueryModel * Client::tri_ASC()
     model->setQuery("select * from client ORDER BY pts ASC");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Matricule"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PrÈnom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Pr√©nom"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("Adresse"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("TÈlÈphone"));
-    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Points fidelitÈ"));
-    model->setHeaderData(6, Qt::Horizontal, QObject::tr("Cadeau affectÈ"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("T√©l√©phone"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Points fidelit√©"));
+    model->setHeaderData(6, Qt::Horizontal, QObject::tr("Cadeau affect√©"));
         return model;
 }
 QSqlQueryModel * Client::affecter_cadeau(QString mat)
