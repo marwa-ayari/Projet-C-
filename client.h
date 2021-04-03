@@ -10,6 +10,8 @@ public:
     Client();
     Client(QString,QString,QString,QString,QString,int,QString);
      Client(QString,QString,QString,QString,QString,int);
+     Client(QString);
+
    QString get_matricule();
     QString get_nom();
     QString get_prenom();
@@ -30,10 +32,12 @@ public:
     QSqlQueryModel * afficherorder1();
     QSqlQueryModel * recherche1(const QString&);
 QSqlQueryModel * modifier_liste_matricule();
-QSqlQueryModel * modifier_liste_id_cadeau();
+bool mettre_a_jour_pts(QString,QString);
 QString afficher_cadeauC(QString mat);
-QSqlQueryModel * tri();
+QSqlQueryModel * tri_ASC();
+QSqlQueryModel * tri_DESC();
     bool modifier1(QString);
+      bool modifier2(QString);
 int tester_affectation(QString);
 QSqlQueryModel *affecter_cadeau(QString);
 private:
