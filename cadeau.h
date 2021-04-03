@@ -15,13 +15,13 @@ public:
     int get_somme();
     void set_id(QString);
     void set_categorie(QString);
-
+bool mettre_a_jour_nb_exp(QString);
         void set_nb(int);
         void set_somme(int);
     bool ajouter2();
  bool supprimer2(QString);
  QSqlQueryModel * affiche2();
-
+QSqlQueryModel *  chercher_categ(QString);
     QSqlQueryModel * recherche2(const QString&);
 QSqlQueryModel * modifier_liste_id();
 
