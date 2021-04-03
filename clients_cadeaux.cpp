@@ -88,18 +88,7 @@ void clients_cadeaux::on_pushButton_ajouterCl_2_clicked()
 
        }
 
-else if(nom.contains(QRegExp("^[A-Za-z]+$"))==false)
-{
-   QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-               QObject::tr("faut nom"), QMessageBox::Ok);
 
-}
-    else if(prenom.contains(QRegExp("^[A-Za-z]+$"))==false)
-    {
-       QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                   QObject::tr("faut prenom"), QMessageBox::Ok);
-
-    }
     else if(tel.contains(QRegExp("^[0-9]+$"))==false)
     {
        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
@@ -214,18 +203,7 @@ void clients_cadeaux::on_pushButton_modifCl_2_clicked()
 
           }
 
-   else if(nom.contains(QRegExp("^[A-Za-z]+$"))==false)
-   {
-      QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                  QObject::tr("faut nom"), QMessageBox::Ok);
-
-   }
-       else if(prenom.contains(QRegExp("^[A-Za-z]+$"))==false)
-       {
-          QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                      QObject::tr("faut prenom"), QMessageBox::Ok);
-
-       }
+  
        else if(tel.contains(QRegExp("^[0-9]+$"))==false)
        {
           QMessageBox::critical(nullptr, QObject::tr("WARNING"),
@@ -575,11 +553,7 @@ void clients_cadeaux::on_pushButton_ajouterCa_3_clicked()
             QMessageBox::critical(nullptr, QObject::tr("WARNING"),
                         QObject::tr("id vide"), QMessageBox::Ok);
         }
-        else if(id.contains(QRegExp("^[A-Za-z-0-9]+-ch"))==false)
-        {
-            QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                        QObject::tr("id nom valide"), QMessageBox::Ok);
-        }
+       
                 else if(somme<20||somme>10000)
            {
                QMessageBox::critical(nullptr, QObject::tr("WARNING"),
