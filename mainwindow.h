@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 
-
-
+#include <QSound>
+#include <QPropertyAnimation>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -21,11 +21,20 @@ public:
 private slots:
 
 
-    void on_pushButton_clicked();
+
+
+
+
+    void on_pushButton_connecter_clicked();
+
+    void on_pushButton_off_clicked();
+
+    void on_pushButton_on_clicked();
 
 private:
     Ui::MainWindow *ui;
-
+    QSound *son;
+        QPropertyAnimation *animation;
 
 };
 #endif // MAINWINDOW_H
