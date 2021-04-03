@@ -14,45 +14,12 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>200</y>
-      <width>171</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(209, 159, 208);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(222, 122, 215, 255), stop:1 rgba(255, 255, 255, 255));
-font: 87 10pt &quot;Arial&quot;;</string>
-    </property>
-    <property name="text">
-     <string>  clients
-     et
- cadeaux</string>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../../../../images_projets/images.png</normaloff>../../../../images_projets/images.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>70</width>
-      <height>100</height>
-     </size>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>891</width>
+      <x>-960</x>
+      <y>-70</y>
+      <width>1771</width>
       <height>761</height>
      </rect>
     </property>
@@ -60,36 +27,202 @@ font: 87 10pt &quot;Arial&quot;;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../images_projets/-Donuts-colores-avec-5-glacages-_-r470.jpg</pixmap>
+     <pixmap>../../../../images_projets/cake-balls-4139984_1920.jpg</pixmap>
     </property>
    </widget>
-   <widget class="QScrollBar" name="verticalScrollBar">
+   <widget class="QPushButton" name="pushButton_on">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>0</y>
-      <width>20</width>
-      <height>581</height>
+      <x>730</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../images_projets/images (3).png</normaloff>../../../../images_projets/images (3).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>50</height>
+     </size>
     </property>
    </widget>
-   <widget class="QCalendarWidget" name="calendarWidget">
+   <widget class="QPushButton" name="pushButton_off">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>400</y>
-      <width>312</width>
-      <height>183</height>
+      <x>670</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
      </rect>
     </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../images_projets/images (4).png</normaloff>../../../../images_projets/images (4).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>50</height>
+     </size>
+    </property>
    </widget>
-   <zorder>label</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>verticalScrollBar</zorder>
-   <zorder>calendarWidget</zorder>
+   <widget class="QGroupBox" name="groupBox_ajout_Ca_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>631</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Calligraphy</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(0, 0, 127);
+
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 232, 69), stop:0.0753769 rgba(255, 170, 255, 69), stop:0.221106 rgba(255, 170, 255, 208), stop:0.351759 rgba(255, 192, 255, 0), stop:0.422111 rgba(255, 255, 255, 130), stop:0.437186 rgba(255, 170, 255, 145), stop:0.518717 rgba(255, 255, 255, 130), stop:0.527638 rgba(255, 170, 255, 69), stop:0.562814 rgba(255, 170, 255, 130), stop:1 rgba(255, 255, 0, 69));</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_login">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>110</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mdp">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>160</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Calligraphy</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 127);</string>
+     </property>
+     <property name="text">
+      <string>Mot de passe:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_login">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>100</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Calligraphy</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 127);</string>
+     </property>
+     <property name="text">
+      <string>Id utilisateur :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_mdp">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>170</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_connecter">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>430</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lucida Calligraphy</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+    </property>
+    <property name="text">
+     <string>Connecter</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../images_projets/images (1).png</normaloff>../../../../images_projets/images (1).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>303</number>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
