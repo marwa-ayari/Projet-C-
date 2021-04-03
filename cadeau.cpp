@@ -58,10 +58,10 @@ QSqlQueryModel * Cadeau::affiche2()
     QSqlQueryModel * model= new QSqlQueryModel();
 
 model->setQuery("select * from cadeau");
-model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
-model->setHeaderData(1, Qt::Horizontal, QObject::tr("CATEGORIE"));
-model->setHeaderData(2, Qt::Horizontal, QObject::tr("SOMME"));
-model->setHeaderData(3, Qt::Horizontal, QObject::tr("NB"));
+model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id"));
+model->setHeaderData(1, Qt::Horizontal, QObject::tr("Catégorie"));
+model->setHeaderData(2, Qt::Horizontal, QObject::tr("Points nécéssaires"));
+model->setHeaderData(3, Qt::Horizontal, QObject::tr("Nombre d'exemplaires"));
 
     return model;
 }
@@ -132,3 +132,12 @@ bool Cadeau::mettre_a_jour_nb_exp(QString id)
 
     return    query.exec();
 }
+QSqlQueryModel * Cadeau::chercher_categ(QString id)
+ {
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select categorie from cadeau where id like '"+id+"%'");
+    return model;
+}
+
+
