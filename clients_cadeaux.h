@@ -56,6 +56,8 @@ void on_pushButton_triCl_3_clicked();
 
 void on_pushButton_ajouterCa_3_clicked();
 
+void on_comboBox_affecCadeau_2_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::clients_cadeaux *ui;
 
