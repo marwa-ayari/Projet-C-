@@ -246,6 +246,9 @@ void clients_cadeaux::on_pushButton_modifCl_2_clicked()
                  QMessageBox::information(nullptr, QObject::tr("Modifier un client"),
                              QObject::tr("client modifié.\n"), QMessageBox::Cancel);
 
+
+
+
        }
        else
        {
@@ -499,11 +502,11 @@ int aff=tmpclient.tester_affectation(id);
    Client a(id_cadeau);
 Cadeau ca;
 Client ca2;
-   bool test=a.modifier2(id);
-    if(test)
-   { if (aff==0)
+   if (aff==0)
         {
-
+       bool test=a.modifier2(id);
+        if(test)
+       {
 bool test_mis_a_jour_nb=ca.mettre_a_jour_nb_exp(id_cadeau);
 bool test_mis_a_jour_pt=ca2.mettre_a_jour_pts(id,id_cadeau);
 if(test_mis_a_jour_pt&&test_mis_a_jour_nb)
@@ -520,14 +523,16 @@ else
         else
         {
             QMessageBox::critical(nullptr, QObject::tr("affecter un cadeau"),
-                              QObject::tr("Le client sélectionné a déjà gangé un cadeau !\n"), QMessageBox::Cancel);
+                              QObject::tr("Erreur d'affectation !\n"), QMessageBox::Cancel);
+
 }
 
     }
    else
    {
        QMessageBox::critical(nullptr, QObject::tr("affecter un cadeau"),
-                         QObject::tr("Erreur d'affectation !\n"), QMessageBox::Cancel);
+                         QObject::tr("Le client sélectionné a déjà gangé un cadeau !\n"), QMessageBox::Cancel);
+
    }
 
 
