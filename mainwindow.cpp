@@ -15,18 +15,15 @@ MainWindow::MainWindow(QWidget *parent)
           son->play();
           son->setLoops(20);
           setFixedSize(800,600);
-          animation = new QPropertyAnimation(ui->pushButton_connecter,"geometry");
-             animation->setDuration(20000);
-             animation->setStartValue(ui->pushButton_connecter->geometry());
-             animation->setEndValue(QRectF(200,300,70,70));
-
-             QEasingCurve curve;
-             curve.setType(QEasingCurve::OutBounce);
-             animation->setEasingCurve(curve);
-
-             animation->start();
-
-
+          setStyleSheet(" QPushButton {"
+                        "border-radius: 5px; "
+                        "border: 1.5px solid rgb(91,231,255); "
+                        "background-color: red; }"
+                        "QPushButton:pressed {"
+                        "border: 1.4px solid rgb(73,186,205); }"
+                        "QPushButton:hover {"
+                        "font-size: 16px;"
+                        "transition: 0.9s; }");
 
 }
 MainWindow::~MainWindow()
@@ -43,20 +40,19 @@ void MainWindow::on_pushButton_connecter_clicked()
         player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
         player->setVolume(2000);
         player->play();
-
+ ui->pushButton_connecter->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
             QString id = ui->lineEdit_login->text();
             QString mdp = ui->lineEdit_mdp->text();
 
-              /*     if((id ==  "Ben Amor")&&(mdp =="prop")) {*/
+                   if((id ==  "prop")&&(mdp =="prop")) {
         clients_cadeaux fenetre;
         fenetre.exec();
 
-                   /*else
-                   {
-                       QMessageBox::warning(this,"Connection", "Vérifier svp ");
+
                    }
 
-    */
+                   else
+                       QMessageBox::warning(this,"Connection", "VÃ©rifier svp ");
 
 }
 void MainWindow::on_pushButton_off_clicked()
@@ -64,7 +60,7 @@ void MainWindow::on_pushButton_off_clicked()
     player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
     player->setVolume(2000);
     player->play();
-
+ ui->pushButton_off->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
 
     son->stop();
 
@@ -76,6 +72,6 @@ void MainWindow::on_pushButton_on_clicked()
     player->setVolume(2000);
     player->play();
     son->play();
-
+ ui->pushButton_on->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
 
 }

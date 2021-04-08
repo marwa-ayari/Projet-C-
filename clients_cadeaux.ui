@@ -63,7 +63,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="tab_9">
       <attribute name="title">
@@ -1905,7 +1905,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab_15">
       <attribute name="title">
