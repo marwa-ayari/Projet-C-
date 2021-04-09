@@ -7,23 +7,119 @@
     <x>0</x>
     <y>0</y>
     <width>998</width>
-    <height>651</height>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>30</y>
+      <width>121</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0720339 rgba(153, 153, 153, 130), stop:1 rgba(255, 10, 164, 71))</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sonoff">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>50</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../imagesQT/sonof.png</normaloff>../imagesQT/sonof.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sonon">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>110</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../imagesQT/sonon.png</normaloff>../imagesQT/sonon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>-40</x>
+      <y>-170</y>
+      <width>1841</width>
+      <height>791</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../pink-cupcake-wallpaper-mural.jpg</pixmap>
+    </property>
+   </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>70</y>
+      <x>40</x>
+      <y>40</y>
       <width>641</width>
-      <height>491</height>
+      <height>471</height>
      </rect>
     </property>
     <property name="font">
@@ -40,7 +136,8 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(252, 168, 252);
+     <string notr="true">
+color: rgb(130, 0, 98);
 background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0720339 rgba(153, 153, 153, 130), stop:1 rgba(255, 10, 164, 71))</string>
     </property>
     <property name="title">
@@ -57,7 +154,7 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0720
       <rect>
        <x>60</x>
        <y>90</y>
-       <width>331</width>
+       <width>291</width>
        <height>31</height>
       </rect>
      </property>
@@ -119,8 +216,8 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0720
     <widget class="QPushButton" name="login">
      <property name="geometry">
       <rect>
-       <x>390</x>
-       <y>400</y>
+       <x>410</x>
+       <y>380</y>
        <width>181</width>
        <height>71</height>
       </rect>
@@ -128,121 +225,25 @@ background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0720
      <property name="font">
       <font>
        <family>Lucida Calligraphy</family>
-       <pointsize>14</pointsize>
+       <pointsize>21</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 0, 0, 92), stop:0.55 rgba(2, 125, 68, 108), stop:0.771186 rgba(152, 0, 0, 112), stop:1 rgba(0, 0, 0, 0));
-color:rgb(255, 170, 255);</string>
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 127, 142), stop:0.991525 rgba(233, 170, 255, 195));
+color: rgb(130, 0, 98);</string>
      </property>
      <property name="text">
       <string>login</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>-30</x>
-      <y>-20</y>
-      <width>1841</width>
-      <height>991</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../Macarons-framboise-scaled.jpg</pixmap>
-    </property>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>30</y>
-      <width>251</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0720339 rgba(153, 153, 153, 130), stop:1 rgba(255, 10, 164, 71))</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="sonoff">
-    <property name="geometry">
-     <rect>
-      <x>870</x>
-      <y>50</y>
-      <width>61</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../imagesQT/sonof.png</normaloff>../imagesQT/sonof.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>50</width>
-      <height>50</height>
-     </size>
-    </property>
-    <property name="default">
-     <bool>true</bool>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="sonon">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>50</y>
-      <width>71</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../imagesQT/sonon.png</normaloff>../imagesQT/sonon.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>50</width>
-      <height>50</height>
-     </size>
-    </property>
-    <property name="autoDefault">
-     <bool>true</bool>
-    </property>
-    <property name="default">
-     <bool>true</bool>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
    <zorder>label_4</zorder>
    <zorder>frame</zorder>
-   <zorder>groupBox_2</zorder>
    <zorder>sonoff</zorder>
    <zorder>sonon</zorder>
+   <zorder>groupBox_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

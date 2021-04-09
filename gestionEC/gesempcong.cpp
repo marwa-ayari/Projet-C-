@@ -114,7 +114,7 @@ void gesempcong::on_ajoutemp_clicked()
 
 
     if(E.ajouter()) {
-        QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
+        QMessageBox::information(nullptr, QObject::tr("ajouté!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
 
                 ui->matricule->setText("");
@@ -129,7 +129,7 @@ void gesempcong::on_ajoutemp_clicked()
 
 
 }else{
-        QMessageBox::information(nullptr, QObject::tr("ECHEC!!!"),
+        QMessageBox::information(nullptr, QObject::tr("Erreur!!!"),
                     QObject::tr("employé existe déja.\n"), QMessageBox::Cancel);
     }
 
@@ -197,6 +197,9 @@ void gesempcong::on_modifemp_clicked()
 
      float salaire=ui->msalaire->text().toFloat();
 
+     if((nom!="")&&(prenom!="")&&(fonction!="")&&(age<70)&&(age>0)&&(salaire>0))
+
+         {
 
    Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
     if(E.modifier(matemp))
@@ -204,13 +207,27 @@ void gesempcong::on_modifemp_clicked()
               QMessageBox::information(nullptr, QObject::tr("Modifier un employé"),
                           QObject::tr("employé modifie.\n"), QMessageBox::Cancel);
 
+              ui->matricule->setText("");
+
+
+
+              ui->mnom->setText("");
+              ui->mprenom->setText("");
+              ui->mfonction->setText("");
+              ui->msalaire->setText("");
+              ui->mage->setText("");
     }
     else
     {
         QMessageBox::critical(nullptr, QObject::tr("Modifier un employé"),
                           QObject::tr("Erreur !\n"), QMessageBox::Cancel);
     }
+}else QMessageBox::information(nullptr, QObject::tr("controle de saisie!"),
+                                QObject::tr(" verifier la saisie.\n"), QMessageBox::Cancel);
+
+
 }
+
 
 void gesempcong::on_pushButton_rechercheemp_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
@@ -264,7 +281,7 @@ void gesempcong::on_pushButton_ajouterconges_2_clicked()
 
     Conges c(duree,idc,type,datedeb,datefin);
     if(c.ajouter()) {
-        QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
+        QMessageBox::information(nullptr, QObject::tr("ajouté!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
 
         ui->idc_2->setText("");
@@ -274,7 +291,7 @@ void gesempcong::on_pushButton_ajouterconges_2_clicked()
 
 
 }else{
-        QMessageBox::information(nullptr, QObject::tr("ECHEC!!!"),
+        QMessageBox::information(nullptr, QObject::tr("erreur!!!"),
                     QObject::tr("congé existe déja.\n"), QMessageBox::Cancel);
     }
 
@@ -295,8 +312,16 @@ void gesempcong::on_pushButton_modifierconges_clicked()
     QString idc=ui->idcm->currentText();
     int duree=ui->dureem->text().toInt();
     QString type=ui->typem->text();
-    QString datedeb=ui->datedebm->text();
-    QString datefin=ui->datefinm->text();
+
+    QString datedeb= ui->datedebm->date().toString("yyyy/MM/dd");
+     QString datefin= ui->datefinm->date().toString("yyyy/MM/dd");
+
+     if((duree>0)&&(datefin>datedeb)&&(idc!="")&&(type!=""))
+
+        {
+
+          datedeb= ui->datedebm->text();
+           datefin= ui->datefinm->text();
 
 
     Conges c(duree,idc,type,datedeb,datefin);
@@ -304,7 +329,9 @@ void gesempcong::on_pushButton_modifierconges_clicked()
     {
               QMessageBox::information(nullptr, QObject::tr("Modifier un congé"),
                           QObject::tr("congé modifie.\n"), QMessageBox::Cancel);
-
+              ui->idc_2->setText("");
+              ui->dureem->setText("");
+                  ui->typem->setText("");
     }
     else
     {
@@ -312,7 +339,12 @@ void gesempcong::on_pushButton_modifierconges_clicked()
                           QObject::tr("Erreur !\n"), QMessageBox::Cancel);
     }
 
-}
+     }else QMessageBox::information(nullptr, QObject::tr("controle de saisie!"),
+                                       QObject::tr("verifier la saisie"), QMessageBox::Cancel);
+
+
+    }
+
 
 void gesempcong::on_pushButton_supprimerconges_clicked()
 {QMediaPlayer *player = new QMediaPlayer;
