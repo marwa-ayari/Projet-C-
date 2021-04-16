@@ -15,11 +15,11 @@ public:
     explicit Gestion(QWidget *parent = nullptr);
     ~Gestion();
 private slots:
-    void on_pushButton_clicked();
-
     void on_sonon_clicked();
 
     void on_sonoff_clicked();
+    void on_CATGREC_clicked();
+
 private:
     Ui::Gestion *ui;
     QSound *son;

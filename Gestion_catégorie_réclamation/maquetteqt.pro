@@ -1,5 +1,5 @@
 
-QT       += core gui sql
+QT       += core gui sql charts printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
 
@@ -16,7 +16,8 @@ SOURCES += \
     gestion_categories_reclamations.cpp \
     main.cpp \
     mainwindow.cpp \
-    reclamations.cpp
+    reclamations.cpp \
+    statistiquereclamations.cpp
 
 HEADERS += \
     categories.h \
@@ -24,7 +25,8 @@ HEADERS += \
     gestion.h \
     gestion_categories_reclamations.h \
     mainwindow.h \
-    reclamations.h
+    reclamations.h \
+    statistiquereclamations.h
 
 FORMS += \
     gestion.ui \

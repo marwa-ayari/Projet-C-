@@ -126,7 +126,7 @@ QSqlQueryModel * reclamations::affecter_Categorie()
 QSqlQueryModel * reclamations::affecter_Client()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
-    model->setQuery("select matricule from clients ");
+    model->setQuery("select matricule from client ");
 
         return model;
 }

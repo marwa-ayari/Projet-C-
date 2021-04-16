@@ -15,7 +15,7 @@ Gestion::~Gestion()
 {
     delete ui;
 }
-void Gestion::on_pushButton_clicked()
+void Gestion::on_CATGREC_clicked()
 {
     QMediaPlayer *player = new QMediaPlayer;
         player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
@@ -45,3 +45,5 @@ void Gestion::on_sonoff_clicked()
 
     son->stop();
 }
+
+

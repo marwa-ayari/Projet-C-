@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(85, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="categories">
     <attribute name="title">
@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_categorie_8">
       <attribute name="title">
@@ -645,7 +645,7 @@ color: rgb(85, 255, 255);
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_reclamation_3">
       <attribute name="title">
@@ -902,7 +902,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <x>20</x>
          <y>100</y>
          <width>461</width>
-         <height>221</height>
+         <height>281</height>
         </rect>
        </property>
       </widget>
@@ -946,6 +946,45 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
        <property name="pixmap">
         <pixmap>../../../../../../../../../../i/Sans titre-1.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>320</y>
+         <width>201</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Impression PDF</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../../../../../../../i/impressionpdf.png</normaloff>../../../../../../../../../../i/impressionpdf.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
        </property>
       </widget>
      </widget>
@@ -1303,6 +1342,22 @@ color: rgb(85, 255, 255);
       </widget>
       <zorder>label_reclamation_35</zorder>
       <zorder>groupBox_reclamation_3</zorder>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Statiqtique</string>
+      </attribute>
+      <widget class="QFrame" name="frame_reclamations">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>0</y>
+         <width>811</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout"/>
+      </widget>
      </widget>
     </widget>
    </widget>

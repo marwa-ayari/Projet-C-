@@ -9,6 +9,9 @@
 #include <QMediaPlayer>
 #include<QIntValidator>
 #include<QValidator>
+#include <QPrinter>
+#include <QPrintDialog>
+
 
 Gestion_categories_reclamations::Gestion_categories_reclamations(QWidget *parent) :
     QDialog(parent),
@@ -282,6 +285,8 @@ void Gestion_categories_reclamations::on_tabWidget_reclamation_3_currentChanged(
     ui->comboBox_reclamation_4->setModel(tmpreclamation.affecter_Client());
     ui->comboBox_reclamation_5->setModel(tmpreclamation.affecter_Categorie());
     ui->comboBox_reclamation_6->setModel(tmpreclamation.affecter_Client());
+    QChartView *chartview = new QChartView(tmpstatreclamation.afficher_piechart());
+        chartview->setParent(ui->frame_reclamations);
 }
 
 void Gestion_categories_reclamations::on_lineEdit_categorie_17_cursorPositionChanged(int arg1, int arg2)
@@ -296,3 +301,54 @@ void Gestion_categories_reclamations::on_rech_reclamation_cursorPositionChanged(
     ui->tab_reclamation->setModel(tmpreclamation.rechercher(rech));
 }
 
+
+void Gestion_categories_reclamations::on_pushButton_13_clicked()
+{
+    QString strStream;
+            QTextStream out(&strStream);
+            const int rowCount = ui->tab_reclamation->model()->rowCount();
+            const int columnCount =ui->tab_reclamation->model()->columnCount();
+
+            out <<  "<html>\n"
+                    "<head>\n"
+                    "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                    <<  QString("<title>%1</title>\n").arg("Reclamations")
+                    <<  "</head>\n"
+                    "<body background='C:/i/mac.jpeg'>\n"
+                        "<center><img src='C:/i/arc en ciel.jpg' width='300' height='300' ></center>\n"
+                        "<center><h1>Liste des reclamations</h1></center>"
+
+                        "<table border=1 align='center' width='70%' cellspacing=0 cellpadding=2 bgcolor=#FED5FF>\n";
+
+
+            // headers
+                out << "<thead><tr bgcolor=#F4B2F6>";
+                for (int column = 0; column < columnCount; column++)
+                    if (!ui->tab_reclamation->isColumnHidden(column))
+                        out << QString("<th>%1</th>").arg(ui->tab_reclamation->model()->headerData(column, Qt::Horizontal).toString());
+                out << "</tr></thead>\n";
+                // data table
+                   for (int row = 0; row < rowCount; row++) {
+                       out << "<tr>";
+                       for (int column = 0; column < columnCount; column++) {
+                           if (!ui->tab_reclamation->isColumnHidden(column)) {
+                               QString data = ui->tab_reclamation->model()->data(ui->tab_reclamation->model()->index(row, column)).toString().simplified();
+                               out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                           }
+                       }
+                       out << "</tr>\n";
+                   }
+                   out <<  "</table>\n"
+                       "</body>\n"
+                       "</html>\n";
+
+                   QTextDocument *document = new QTextDocument();
+                   document->setHtml(strStream);
+
+                   QPrinter printer;
+
+                   QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+                   if (dialog->exec() == QDialog::Accepted) {
+                       document->print(&printer);
+                }
+}

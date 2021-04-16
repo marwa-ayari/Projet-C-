@@ -2,6 +2,7 @@
 #define GESTION_CATEGORIES_RECLAMATIONS_H
 #include"categories.h"
 #include"reclamations.h"
+#include"statistiquereclamations.h"
 #include <QDialog>
 
 namespace Ui {
@@ -47,10 +48,13 @@ private slots:
 
     void on_rech_reclamation_cursorPositionChanged(int arg1, int arg2);
 
+    void on_pushButton_13_clicked();
+
 private:
     Ui::Gestion_categories_reclamations *ui;
     Categories tmpcategorie;
     reclamations tmpreclamation;
+    statistiqueReclamations tmpstatreclamation;
 };
 
 #endif // GESTION_CATEGORIES_RECLAMATIONS_H
