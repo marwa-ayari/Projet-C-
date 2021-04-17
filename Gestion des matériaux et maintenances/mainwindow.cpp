@@ -28,7 +28,7 @@ void MainWindow::on_seconnecter_clicked()
         gestion.setModal(true);
         gestion.exec();
 
-    }else QMessageBox::critical(nullptr, QObject::tr("Problèmd de sécurité"),
+    }else QMessageBox::critical(nullptr, QObject::tr("Problème de sécurité"),
                                 QObject::tr("Vérifiez vos coordonnées."), QMessageBox::Cancel);
 }
 

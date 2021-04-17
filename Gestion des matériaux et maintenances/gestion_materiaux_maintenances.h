@@ -49,6 +49,8 @@ private slots:
 
     void on_comboBox_maintenance_2_currentTextChanged(const QString &arg1);
 
+    void on_pushButton_maintenance_16_clicked();
+
 private:
     Ui::Gestion_materiaux_maintenances *ui;
     Materiaux tmpmateriel;

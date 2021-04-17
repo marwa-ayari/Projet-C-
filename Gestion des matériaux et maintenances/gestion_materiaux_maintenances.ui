@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(229, 148, 66);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="widget_materiel">
     <attribute name="title">
@@ -784,7 +784,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_maintenance_3">
       <attribute name="title">
@@ -1093,11 +1093,51 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </rect>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_maintenance_16">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>20</y>
+         <width>241</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Exportation pdf</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../tri.png</normaloff>../../tri.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>121</height>
+        </size>
+       </property>
+      </widget>
       <zorder>label_maintenance_52</zorder>
       <zorder>pushButton_maintenance_11</zorder>
       <zorder>pushButton_maintenance_15</zorder>
       <zorder>tableView_maintenance</zorder>
       <zorder>lineEdit_maintenance_5</zorder>
+      <zorder>pushButton_maintenance_16</zorder>
      </widget>
      <widget class="QWidget" name="tab_maintenance_6">
       <attribute name="title">

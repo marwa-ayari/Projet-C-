@@ -100,7 +100,7 @@ QSqlQueryModel * Maintenances::tri()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
-    model->setQuery("select * from Maintenances ORDER BY date_panne DESC");
+    model->setQuery("select * from Maintenances ORDER BY prix DESC");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Reference"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Date de panne desc"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix"));
