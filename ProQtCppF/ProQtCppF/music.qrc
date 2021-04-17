@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../../../Music/kpop/QSound</file>
+    </qresource>
+</RCC>
