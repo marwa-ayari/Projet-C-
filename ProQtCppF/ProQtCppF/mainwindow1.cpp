@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+/*#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "commande.h"
 #include"livraison.h"
@@ -10,7 +10,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-{
+{ QSound son;
     ui->setupUi(this);
     son = new QSound("../imagesQT/music.wav");
     son->play();
@@ -76,6 +76,6 @@ void MainWindow::on_sonon_clicked()
 void MainWindow::on_sonoff_clicked()
 {son->stop();
 
-}
+}*/
 
 

@@ -28,7 +28,7 @@ void Smtp::sendMail(const QString &from, const QString &to, const QString &subje
     message.append("From: " + from + "\n");
     message.append("Subject: " + subject + "\n");
 
-    //Let's intitiate multipart MIME with cutting boundary "frontier"
+
     message.append("MIME-Version: 1.0\n");
     message.append("Content-Type: multipart/mixed; boundary=frontier\n\n");
 
@@ -37,7 +37,6 @@ void Smtp::sendMail(const QString &from, const QString &to, const QString &subje
 
 
     message.append( "--frontier\n" );
-    //message.append( "Content-Type: text/html\n\n" );  //Uncomment this for HTML formating, coment the line below
     message.append( "Content-Type: text/plain\n\n" );
     message.append(body);
     message.append("\n\n");
@@ -77,7 +76,7 @@ void Smtp::sendMail(const QString &from, const QString &to, const QString &subje
     this->from = from;
     rcpt = to;
     state = Init;
-    socket->connectToHostEncrypted(host, port); //"smtp.gmail.com" and 465 for gmail TLS
+    socket->connectToHostEncrypted(host, port);
     if (!socket->waitForConnected(timeout)) {
          qDebug() << socket->errorString();
      }
@@ -120,7 +119,7 @@ void Smtp::readyRead()
 {
 
      qDebug() <<"readyRead";
-    // SMTP is line-oriented
+
 
     QString responseLine;
     do
@@ -137,32 +136,24 @@ void Smtp::readyRead()
 
     if ( state == Init && responseLine == "220" )
     {
-        // banner was okay, let's go on
+
         *t << "EHLO localhost" <<"\r\n";
         t->flush();
 
         state = HandShake;
     }
-    //No need, because I'm using socket->startClienEncryption() which makes the SSL handshake for you
-    /*else if (state == Tls && responseLine == "250")
-    {
-        // Trying AUTH
-        qDebug() << "STarting Tls";
-        *t << "STARTTLS" << "\r\n";
-        t->flush();
-        state = HandShake;
-    }*/
+
     else if (state == HandShake && responseLine == "250")
     {
         socket->startClientEncryption();
-        if(!socket->waitForEncrypted(timeout))
+         if(!socket->waitForEncrypted(timeout))
         {
             qDebug() << socket->errorString();
             state = Close;
         }
 
 
-        //Send EHLO once again but now encrypted
+
 
         *t << "EHLO localhost" << "\r\n";
         t->flush();
@@ -178,10 +169,8 @@ void Smtp::readyRead()
     }
     else if (state == User && responseLine == "334")
     {
-        //Trying User
+
         qDebug() << "Username";
-        //GMAIL is using XOAUTH2 protocol, which basically means that password and username has to be sent in base64 coding
-        //https://developers.google.com/gmail/xoauth2_protocol
         *t << QByteArray().append(user).toBase64()  << "\r\n";
         t->flush();
 
@@ -189,7 +178,7 @@ void Smtp::readyRead()
     }
     else if (state == Pass && responseLine == "334")
     {
-        //Trying pass
+
         qDebug() << "Pass";
         *t << QByteArray().append(pass).toBase64() << "\r\n";
         t->flush();
@@ -198,9 +187,7 @@ void Smtp::readyRead()
     }
     else if ( state == Mail && responseLine == "235" )
     {
-        // HELO response was okay (well, it has to be)
 
-        //Apperantly for Google it is mandatory to have MAIL FROM and RCPT email formated the following way -> <email@gmail.com>
         qDebug() << "MAIL FROM:<" << from << ">";
         *t << "MAIL FROM:<" << from << ">\r\n";
         t->flush();
@@ -208,7 +195,7 @@ void Smtp::readyRead()
     }
     else if ( state == Rcpt && responseLine == "250" )
     {
-        //Apperantly for Google it is mandatory to have MAIL FROM and RCPT email formated the following way -> <email@gmail.com>
+
         *t << "RCPT TO:<" << rcpt << ">\r\n"; //r
         t->flush();
         state = Data;
@@ -232,7 +219,7 @@ void Smtp::readyRead()
 
         *t << "QUIT\r\n";
         t->flush();
-        // here, we just close.
+
         state = Close;
         emit status( tr( "Message sent" ) );
     }
@@ -243,7 +230,7 @@ void Smtp::readyRead()
     }
     else
     {
-        // something broke.
+
         QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
         state = Close;
         emit status( tr( "Failed to send message" ) );

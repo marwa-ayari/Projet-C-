@@ -1764,7 +1764,7 @@ color: rgb(85, 255, 255);
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Subject:</string>
+       <string>objet</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_124">
@@ -1788,7 +1788,7 @@ color: rgb(85, 255, 255);
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Password:</string>
+       <string>mot de passe</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="port_2">
@@ -1831,10 +1831,10 @@ color: rgb(85, 255, 255);
      <widget class="QPlainTextEdit" name="msg_2">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>270</y>
-        <width>151</width>
-        <height>151</height>
+        <x>150</x>
+        <y>300</y>
+        <width>271</width>
+        <height>121</height>
        </rect>
       </property>
      </widget>
@@ -1859,7 +1859,7 @@ color: rgb(85, 255, 255);
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Server port:</string>
+       <string>port de serveur </string>
       </property>
      </widget>
      <widget class="QLabel" name="label_127">
@@ -1883,7 +1883,7 @@ color: rgb(85, 255, 255);
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Recipant to:</string>
+       <string>destinataire</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="uname_2">
@@ -1899,10 +1899,10 @@ color: rgb(85, 255, 255);
      <widget class="QLabel" name="label_128">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>280</y>
-        <width>76</width>
-        <height>33</height>
+        <x>30</x>
+        <y>250</y>
+        <width>231</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
@@ -1917,7 +1917,7 @@ color: rgb(85, 255, 255);
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Message:</string>
+       <string>Message/date de livraison</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="paswd_2">
@@ -1967,7 +1967,7 @@ color: rgb(85, 255, 255);
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Smtp-server:</string>
+       <string>serveur stmp</string>
       </property>
      </widget>
      <widget class="QPushButton" name="sendBtn_2">
@@ -1988,11 +1988,10 @@ color: rgb(85, 255, 255);
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
-color: rgb(74, 0, 111);</string>
+       <string notr="true">background-image:url(:/Downloads/smartshop2A18-gestion-employ-scong-s/gestionEC/resources/suppcongback.jpg)</string>
       </property>
       <property name="text">
-       <string>send</string>
+       <string>envoyer</string>
       </property>
      </widget>
      <widget class="QPushButton" name="browseBtn_2">
@@ -2005,11 +2004,10 @@ color: rgb(74, 0, 111);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));
-color: rgb(74, 0, 111);</string>
+       <string notr="true">background-image:url(:/Downloads/smartshop2A18-gestion-employ-scong-s/gestionEC/resources/suppcongback.jpg)</string>
       </property>
       <property name="text">
-       <string>Browse...</string>
+       <string>chercher</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="server_2">
@@ -2028,9 +2026,9 @@ color: rgb(74, 0, 111);</string>
      <widget class="QLineEdit" name="file_2">
       <property name="geometry">
        <rect>
-        <x>190</x>
+        <x>162</x>
         <y>230</y>
-        <width>173</width>
+        <width>201</width>
         <height>20</height>
        </rect>
       </property>
@@ -2069,7 +2067,7 @@ color: rgb(74, 0, 111);</string>
        <string notr="true">color:rgb(153, 0, 229)</string>
       </property>
       <property name="text">
-       <string>Username:</string>
+       <string>utilisateur</string>
       </property>
      </widget>
     </widget>
