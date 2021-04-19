@@ -43,6 +43,8 @@ private slots:
 
     void on_lineEdit_4_cursorPositionChanged(int arg1, int arg2);
 
+    void on_browseBtn_2_clicked();
+
 private:
     Ui::MainWindow *ui;
      Commande tmpcommande;

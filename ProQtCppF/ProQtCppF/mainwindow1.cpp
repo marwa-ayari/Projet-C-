@@ -1,43 +1,32 @@
-/*#include "mainwindow.h"
+/*#include "mainwindow1.h"
 #include "ui_mainwindow.h"
-#include "commande.h"
-#include"livraison.h"
+#include"mainwindow.h"
 
-#include <QtMultimedia/QSound>
-
-
-
+#include <QMediaPlayer>
+#include<QMessageBox>
+#include<QString>
+#include <QSound>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-{ QSound son;
+{
     ui->setupUi(this);
-    son = new QSound("../imagesQT/music.wav");
-    son->play();
-    son->setLoops(50);
-    setFixedSize(990,600);  //fixe la taille de la fenêtre
 
-    animation = new QPropertyAnimation(ui->login,"geometry");
-    animation->setDuration(8000);
-    animation->setStartValue(ui->login->geometry());
-    animation->setEndValue(QRectF(200,300,90,70));
-
-
-    QEasingCurve curve;
-    curve.setType(QEasingCurve::OutBounce);
-    animation->setEasingCurve(curve);
-    animation->start();
-
-
-
-
-
-
-
-
+       son = new QSound("C:/images_projets/music.wav");
+          son->play();
+          son->setLoops(20);
+          setFixedSize(800,600);
+          setStyleSheet(" QPushButton {"
+                        "border-radius: 5px; "
+                        "border: 1.5px solid rgb(91,231,255); "
+                        "background-color: red; }"
+                        "QPushButton:pressed {"
+                        "border: 1.4px solid rgb(73,186,205); }"
+                        "QPushButton:hover {"
+                        "font-size: 16px;"
+                        "transition: 0.9s; }");
 
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -46,36 +35,46 @@ MainWindow::~MainWindow()
 
 
 
-
-void MainWindow::on_login_clicked()
+void MainWindow::on_pushButton_connecter_clicked()
 {
-    QString username=ui->username->text();
-    QString password=ui->password->text();
-    if((username=="eya")&&(password=="eya"))
-    {
-        gesempcong gestion;
-        gestion.setModal(true);
-        gestion.exec();
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+ ui->pushButton_connecter->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+            QString id = ui->lineEdit_login->text();
+            QString mdp = ui->lineEdit_mdp->text();
 
-    }else QMessageBox::critical(nullptr, QObject::tr("acces refuse"),
-                                QObject::tr("Vérifiez vos coordonnées."), QMessageBox::Cancel);
-}
-
-
+                   if((id ==  "prop")&&(mdp =="prop")) {
+        MainWindow fenetre;
+        fenetre.exec();
 
 
+                   }
 
-
-
-
-void MainWindow::on_sonon_clicked()
-{ son->play();
+                   else
+                       QMessageBox::warning(this,"Connection", "Vérifier svp ");
 
 }
+void MainWindow::on_pushButton_off_clicked()
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+    player->setVolume(2000);
+    player->play();
+ ui->pushButton_off->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
 
-void MainWindow::on_sonoff_clicked()
-{son->stop();
+    son->stop();
 
-}*/
+}
 
+void MainWindow::on_pushButton_on_clicked()
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+    player->setVolume(2000);
+    player->play();
+    son->play();
+ ui->pushButton_on->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
 
+}
+
+*/

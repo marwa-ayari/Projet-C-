@@ -228,3 +228,4 @@ void MainWindow::on_lineEdit_20_cursorPositionChanged(int arg1, int arg2)
 
 
 
+
