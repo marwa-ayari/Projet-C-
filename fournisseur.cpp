@@ -31,11 +31,10 @@ bool fournisseur::ajouterf()
     return q.exec();
 
 }
-bool fournisseur::modifierf()
+bool fournisseur::modifierf(QString m)
 {
     QSqlQuery q;
-    q.prepare("update fournisseur set MATRICULE=:matricule, NOM=:nom,ADRESSE=:adresse,email=:email,tel=:tel  ");
-    q.bindValue(":matricule",matricule);
+    q.prepare("update fournisseur set  NOM=:nom,ADRESSE=:adresse,email=:email,tel=:tel where MATRICULE like '"+m+"' ");
     q.bindValue(":nom",nom);
     q.bindValue(":adresse",adresse);
     q.bindValue(":email",email);
@@ -53,6 +52,13 @@ QSqlQueryModel * fournisseur::afficherf()
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("n°tel"));
     return model;
 }
+QSqlQueryModel * fournisseur::affichercf()
+{
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("select MATRICULE from fournisseur");
+    return model;
+}
+
 bool fournisseur::supprimerf(QString m)
 {
     QSqlQuery query;

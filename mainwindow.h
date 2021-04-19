@@ -3,6 +3,11 @@
 #include "produit.h"
 #include "fournisseur.h"
 #include <QMainWindow>
+#include <QMediaPlayer>
+#include "smtp.h"
+#include <QtWidgets/QMessageBox>
+#include <QFileDialog>
+#include "stat_fournisseur.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,6 +21,9 @@ public:
     ~MainWindow();
 
 private slots:
+    void sendMail();
+    void mailSent(QString);
+    void browse();
     void on_toolButton_clicked();
 
     void on_pushButton_clicked();
@@ -77,9 +85,44 @@ private slots:
 
     void on_cherchep_clicked();
 
+
+    void on_pl_clicked();
+
+    void on_pushButton_modf_clicked();
+
+    void on_toolButton_MF_clicked();
+
+    void on_comboBox_mat_currentIndexChanged(const QString &arg1);
+
+    void on_fournisseurtable_activated(const QModelIndex &index);
+
+    void on_frommod_clicked();
+
+    void on_stop_clicked();
+
+    void on_start_clicked();
+
+    void on_horizontalSlider_sliderMoved(int position);
+
+    void on_pushButton_2_clicked();
+
+    void on_frommaling_clicked();
+
+
+    void on_cherchp_cursorPositionChanged(int arg1, int arg2);
+
+    void on_recherche_cursorPositionChanged(int arg1, int arg2);
+
+
+    void on_toolButton_6_clicked();
+
 private:
     Ui::MainWindow *ui;
     produit tabproduit;
     fournisseur tabfour;
+    QMediaPlayer* Player;
+    stat_fournisseur *stat_four;
+    QStringList files;
+
 };
 #endif // MAINWINDOW_H

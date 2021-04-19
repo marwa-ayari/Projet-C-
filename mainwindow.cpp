@@ -7,19 +7,74 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <QMediaPlayer>
+#include "connection.h"
+#include "stat_fournisseur.h"
 using namespace std;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+
+    connection c;
+    bool test=c.database();
+    if(test)
+    {
+        ui->conex->setText("BD Connecté   ");
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("database is not open"),
+                    QObject::tr("connection failed"), QMessageBox::Cancel);
+        ui->conex->setText("Connection");
+
+    }
+    Player = new QMediaPlayer(this);
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::browse()
+{
+    files.clear();
 
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void MainWindow::sendMail()
+{
+    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+
+void MainWindow::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
 
 void MainWindow::on_toolButton_clicked()
 {
@@ -73,9 +128,9 @@ void MainWindow::on_supprimerp_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
     ui->tableView->setModel(tabproduit.afficherp());
-    QSqlQueryModel *mod= new QSqlQueryModel();
+    /*QSqlQueryModel *mod= new QSqlQueryModel();
     mod->setQuery("select REF from PRODUIT ");
-    ui->comboBox->setModel(mod);
+    ui->comboBox->setModel(mod);*/
 }
 
 void MainWindow::on_pushButton_4_clicked()
@@ -150,22 +205,7 @@ void MainWindow::on_ajout_clicked()
     }
 }
 
-void MainWindow::on_supp_clicked()
-{
-    int ref=ui->comboBox->currentText().toInt();
-    if(tabproduit.supprmierp(ref))
-    {
-        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
-                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
-        ui->stackedWidget->setCurrentIndex(1);
 
-    }
-    else
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-    }
-}
 
 void MainWindow::on_produit_2_activated(const QModelIndex &index)
 {
@@ -220,7 +260,7 @@ void MainWindow::on_modif_clicked()
             ui->lineEdit_5->clear();
             ui->lineEdit_6->clear();
             ui->lineEdit_7->clear();
-            ui->stackedWidget->setCurrentIndex(0);
+            ui->stackedWidget->setCurrentIndex(4);
         }
         else
         {
@@ -337,9 +377,10 @@ void MainWindow::on_toolButton_SF_clicked()
 {
     ui->stackedWidget->setCurrentIndex(9);
     ui->tableView_3->setModel(tabfour.afficherf());
+    /*ui->comboBox_3->setModel(tabfour.affichercf());
     QSqlQueryModel *mod= new QSqlQueryModel();
     mod->setQuery("select MATRICULE from fournisseur ");
-    ui->comboBox_3->setModel(mod);
+    ui->comboBox_3->setModel(mod);*/
 
 }
 
@@ -350,16 +391,58 @@ void MainWindow::on_toolButton_8_clicked()
 
 void MainWindow::on_tableView_3_activated(const QModelIndex &index)
 {
-    QString val=ui->produit_2->model()->data(index).toString();
-    QSqlQueryModel *mod= new QSqlQueryModel();
-    mod->setQuery("select matricule from fournisseur WHERE matricule ='"+val+"'");
-    ui->comboBox_3->setModel(mod);
-
-
-
+    QString val=ui->tableView_3->model()->data(index).toString();
+    if(tabfour.supprimerf(val))
+    {
+        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
+                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
+        //ui->stackedWidget->setCurrentIndex(1);
+        ui->tableView_3->setModel(tabfour.afficherf());
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+    }
+    /*QSqlQuery q;
+    q.prepare("SELECT * FROM fournisseur WHERE MATRICULE = '"+val+"' OR NOM = '"+val+"' ");
+    if(q.exec())
+    {
+        while(q.next())
+        {
+            ui->comboBox_3->setCurrentText(q.value(0).toString());
+        }
+    }*/
+   qDebug() << val ;
 
 }
+void MainWindow::on_tableView_activated(const QModelIndex &index)
+{
+    int val=ui->tableView->model()->data(index).toInt();
+    if(tabproduit.supprmierp(val))
+    {
+        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
+                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
+        //ui->stackedWidget->setCurrentIndex(1);
+        ui->tableView->setModel(tabproduit.afficherp());
 
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+    }
+    /*QSqlQuery q;
+    q.prepare("SELECT * FROM PRODUIT WHERE REF = '"+val+"' OR NOM = '"+val+"' OR STOCK = '"+val+"' OR PRIX = '"+val+"' ");
+    if(q.exec())
+    {
+        while(q.next())
+        {
+            ui->comboBox->setCurrentText(q.value(0).toString());
+        }
+    }*/
+
+}
 void MainWindow::on_idmodif_currentIndexChanged(const QString &arg1)
 {
 
@@ -385,20 +468,7 @@ void MainWindow::on_idmodif_currentIndexChanged(const QString &arg1)
 
 }
 
-void MainWindow::on_tableView_activated(const QModelIndex &index)
-{
-    QString val=ui->tableView->model()->data(index).toString();
-    QSqlQuery q;
-    q.prepare("SELECT * FROM PRODUIT WHERE REF = '"+val+"' OR NOM = '"+val+"' OR STOCK = '"+val+"' OR PRIX = '"+val+"' ");
-    if(q.exec())
-    {
-        while(q.next())
-        {
-            ui->comboBox->setCurrentText(q.value(0).toString());
-        }
-    }
 
-}
 
 void MainWindow::on_toolButton_4_clicked()
 {
@@ -420,4 +490,218 @@ void MainWindow::on_cherchep_clicked()
 {
     QString ref=ui->cherchp->text();
     ui->produit_2->setModel(tabproduit.recherchep(ref));
+}
+
+void MainWindow::on_pl_clicked()
+{
+    QString login=ui->login->text();
+    QString pwd=ui->pwd->text();
+    int x=0;
+    QSqlQuery q;
+    if(login=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("login vide"), QMessageBox::Ok);
+        x++;
+    }
+    else if (pwd=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("mot de passe vide"), QMessageBox::Ok);
+        x++;
+    }
+    else if(x==0)
+    {
+        q.prepare("select LOGIN from COMPTE where LOGIN=:login AND PWD=:PWD ");
+        q.bindValue(":login",login);
+        q.bindValue(":PWD",pwd);
+        if(q.exec())
+        {   if(login=="admin"&&pwd=="admin")
+            {
+            QMessageBox::information(nullptr, QObject::tr("E_pastry"),
+                        QObject::tr("Bienvenue"), QMessageBox::Cancel);
+            ui->stackedWidget->setCurrentIndex(5);
+            }
+            else
+                QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                            QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+        }
+        else
+            QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                        QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+    }
+
+
+}
+
+
+void MainWindow::on_pushButton_modf_clicked()
+{
+    QString matricule =ui->comboBox_mat->currentText();
+    QString nom=ui->lineEdit_nf->text();
+    int tel=ui->lineEdit_numf->text().toInt();
+    QString adresse=ui->lineEdit_ad->text();
+    QString email=ui->lineEdit_mail->text();
+    int x=0;
+    string str_tel = to_string(tel);
+    string m = email.toStdString();
+    if(matricule=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("la matricule est vide"), QMessageBox::Ok);
+              x++;
+    }
+    else if(nom=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("le nom est vide"), QMessageBox::Ok);
+              x++;
+    }
+    else if(adresse=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("l'adress est vide"), QMessageBox::Ok);
+              x++;
+    }
+    else if(m.find("@gmail.com")== std:: string::npos)
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Email must end with @gmail.com"), QMessageBox::Ok);
+              x++;
+    }
+    else if(str_tel.length()!=8)
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Phone number must be composed of 8 numbers"), QMessageBox::Ok);
+              x++;
+    }
+    else if(x==0)
+    {
+        fournisseur f(matricule,nom,adresse,email,tel);
+        bool t=f.modifierf(matricule);
+        if(t)
+        {
+            QMessageBox::information(nullptr, QObject::tr("fournisseur ajouter"),
+                              QObject::tr("base de données mise à jour"), QMessageBox::Ok);
+            ui->lineEdit_nf->clear();
+            ui->lineEdit_numf->clear();
+            ui->lineEdit_ad->clear();
+            ui->lineEdit_mail->clear();
+            ui->stackedWidget->setCurrentIndex(6);
+        }
+        else
+        {
+            QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                        QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+        }
+    }
+
+}
+
+void MainWindow::on_toolButton_MF_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(11);
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("select MATRICULE from FOURNISSEUR");
+    ui->comboBox_mat->setModel(model);
+
+}
+
+void MainWindow::on_comboBox_mat_currentIndexChanged(const QString &arg1)
+{
+    QString val=ui->comboBox_mat->currentText();
+    QSqlQuery q;
+    q.prepare("select * from FOURNISSEUR where matricule = '"+val+"'");
+    if(q.exec())
+    {
+        while(q.next())
+        {
+            ui->lineEdit_nf->setText(q.value(1).toString());
+            ui->lineEdit_numf->setText(q.value(4).toString());
+            ui->lineEdit_ad->setText(q.value(2).toString());
+            ui->lineEdit_mail->setText(q.value(3).toString());
+
+        }
+    }
+
+}
+
+void MainWindow::on_fournisseurtable_activated(const QModelIndex &index)
+{
+    QString val=ui->fournisseurtable->model()->data(index).toString();
+    QSqlQuery q;
+    q.prepare("select * from FOURNISSEUR where matricule = '"+val+"'");
+    if(q.exec())
+    {
+        ui->stackedWidget->setCurrentIndex(11);
+        while(q.next())
+        {
+            ui->comboBox_mat->setCurrentText(q.value(0).toString());
+            ui->lineEdit_nf->setText(q.value(1).toString());
+            ui->lineEdit_numf->setText(q.value(4).toString());
+            ui->lineEdit_ad->setText(q.value(2).toString());
+            ui->lineEdit_mail->setText(q.value(3).toString());
+
+        }
+    }
+
+
+}
+
+void MainWindow::on_frommod_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+
+}
+
+void MainWindow::on_stop_clicked()
+{
+    Player->stop();
+}
+
+void MainWindow::on_start_clicked()
+{
+    Player->setMedia(QUrl::fromLocalFile("C:/Users/ASUS/Music/Kalash - Mwaka Moon ft. Damso.mp3"));
+    Player->play();
+    qDebug() << Player->errorString();
+}
+
+void MainWindow::on_horizontalSlider_sliderMoved(int position)
+{
+    Player->setVolume(position);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(12);
+    ui->tableView_mailing->setModel(tabproduit.mailing());
+
+}
+
+void MainWindow::on_frommaling_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+
+void MainWindow::on_cherchp_cursorPositionChanged(int arg1, int arg2)
+{
+    QString ref=ui->cherchp->text();
+    ui->produit_2->setModel(tabproduit.recherchep(ref));
+}
+
+void MainWindow::on_recherche_cursorPositionChanged(int arg1, int arg2)
+{
+    QString m=ui->recherche->text();
+    ui->fournisseurtable->setModel(tabfour.cherchef(m));
+}
+
+
+
+void MainWindow::on_toolButton_6_clicked()
+{
+
+        stat_four =new stat_fournisseur(this);
+           stat_four->show();
 }

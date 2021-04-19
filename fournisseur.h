@@ -28,8 +28,9 @@ public:
     void settel(int);
     bool ajouterf();
     QSqlQueryModel * afficherf();
+    QSqlQueryModel * affichercf();
     bool supprimerf(QString);
-    bool modifierf();
+    bool modifierf(QString);
     QSqlQueryModel * trief();
     QSqlQueryModel * cherchef(QString);
 

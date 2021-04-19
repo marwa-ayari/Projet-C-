@@ -88,6 +88,18 @@ QSqlQueryModel * produit::afficherp()
     model->setHeaderData(4, Qt::Horizontal, QObject::tr("matr_F"));
         return model;
 }
+QSqlQueryModel * produit::mailing()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("select f.nom,p.nom,p.stock,f.email from fournisseur f join produit p on (p.m_f=f.matricule) where stock<20 ");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr(" matricule   "));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("produit   "));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("STOCK "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("        E_mail          "));
+    return model;
+
+}
+
 
 bool produit::supprmierp(int ref)
 {
@@ -110,7 +122,7 @@ bool produit::modifierp(QString ref)
 QSqlQueryModel *produit::recherchep(QString ref)
 {
     QSqlQueryModel * model= new QSqlQueryModel();
-    model->setQuery("select * from PRODUIT where REF like '"+ref+"' OR NOM like '"+ref+"' ");
+    model->setQuery("select * from PRODUIT where REF like '"+ref+"' OR NOM like '"+ref+"'OR m_f like '%"+ref+"%' ");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("REF  "));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM  "));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("STOCK "));
