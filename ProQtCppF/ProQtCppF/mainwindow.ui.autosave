@@ -940,7 +940,7 @@ color: rgb(85, 255, 255);
        </font>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -2130,7 +2130,7 @@ color: rgb(85, 255, 255);
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:rgb(255, 85, 127)
+       <string notr="true">background-image: url(:/pastel-macarons.jpg)
 </string>
       </property>
       <property name="text">
@@ -2150,19 +2150,10 @@ color: rgb(85, 255, 255);
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">color:rgb(255, 85, 127)</string>
+       <string notr="true">background-image: url(:/pastel-macarons.jpg)</string>
       </property>
       <property name="text">
        <string>chercher</string>
-      </property>
-      <property name="autoDefault">
-       <bool>false</bool>
-      </property>
-      <property name="default">
-       <bool>false</bool>
-      </property>
-      <property name="flat">
-       <bool>false</bool>
       </property>
      </widget>
      <widget class="QLineEdit" name="server_2">
