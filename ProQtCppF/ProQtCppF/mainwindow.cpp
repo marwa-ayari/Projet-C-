@@ -1,8 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QComboBox>
+#include <QSpinBox>
+#include<QIntValidator>
+#include<QValidator>
 #include"commande.h"
 #include"livraison.h"
+#include"mailing.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
