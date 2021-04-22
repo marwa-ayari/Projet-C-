@@ -31,7 +31,6 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    mainwindow1.cpp \
     smtp.cpp
 
 HEADERS += \
@@ -39,12 +38,10 @@ HEADERS += \
     livraison.h \
         mainwindow.h \
     connection.h \
-    mainwindow1.h \
     smtp.h
 
 FORMS += \
-        mainwindow.ui \
-        mainwindow1.ui
+        mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
