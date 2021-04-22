@@ -54,6 +54,8 @@ private slots:
 
     void on_label_32_linkActivated(const QString &link);
 
+    void on_sendBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
      Commande tmpcommande;
