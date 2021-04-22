@@ -882,7 +882,7 @@ p, li { white-space: pre-wrap; }
        <string notr="true">color: rgb(85, 170, 255);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="widget">
        <attribute name="title">
@@ -2981,7 +2981,7 @@ background-image:rgb(255, 170, 255)</string>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-image:url(:/quelques-unes-des-patisseries-de-stephane-glacier_6220668.jpg)</string>
+         <string notr="true">background-image:url(:/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg)</string>
         </property>
         <property name="text">
          <string/>
