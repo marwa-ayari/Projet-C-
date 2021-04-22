@@ -3,6 +3,7 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
+QT       +=printsupport
 
 QT       += core gui sql network
 
@@ -27,19 +28,19 @@ CONFIG += c++11
 SOURCES += \
     commande.cpp \
     livraison.cpp \
-    mailing.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    mainwindow1.cpp
+    mainwindow1.cpp \
+    smtp.cpp
 
 HEADERS += \
     commande.h \
     livraison.h \
-    mailing.h \
         mainwindow.h \
     connection.h \
-    mainwindow1.h
+    mainwindow1.h \
+    smtp.h
 
 FORMS += \
         mainwindow.ui \
