@@ -43,11 +43,20 @@ private slots:
 
     void on_lineEdit_4_cursorPositionChanged(int arg1, int arg2);
 
-    void on_browseBtn_2_clicked();
+    void sendMail();
+    void mailSent(QString);
+    void browse();
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
 
 private:
     Ui::MainWindow *ui;
      Commande tmpcommande;
      Livraison tmplivraison;
+     QStringList files;
+
 };
 #endif // MAINWINDOW_H
