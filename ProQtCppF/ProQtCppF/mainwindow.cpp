@@ -270,25 +270,6 @@ void MainWindow::on_lineEdit_20_cursorPositionChanged(int arg1, int arg2)
 
 
 
-void MainWindow::on_pushButton_5_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(1);
-    QString utilisateur=ui->username->text();
-        QString mdp=ui->password->text();
-    MainWindow w;
-        if ((utilisateur=="eya")&&(mdp=="eya"))
-        {
-
-            //w.show();
-
-        }
-
-        else{ QMessageBox::critical(nullptr, QObject::tr("Problème de connexion"),
-                                          QObject::tr("Veuillez revérifier vos informations"), QMessageBox::Cancel);
-
-            hide();
-        }
-}
 
 void MainWindow::on_pushButton_8_clicked()
 {
