@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include"gestion_materiaux_maintenances.h"
+#include"securite.h"
 #include<QString>
 #include <QMessageBox>
 MainWindow::MainWindow(QWidget *parent)
@@ -40,4 +41,11 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     son->stop();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    securite fenetre_sec;
+    fenetre_sec.setModal(true);
+    fenetre_sec.exec();
 }
