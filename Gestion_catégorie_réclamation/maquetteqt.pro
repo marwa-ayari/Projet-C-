@@ -1,5 +1,6 @@
 
 QT       += core gui sql charts printsupport
+QT       += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
 
@@ -10,6 +11,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
     categories.cpp \
     connexion.cpp \
     gestion.cpp \
@@ -17,21 +19,25 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     reclamations.cpp \
+    securite.cpp \
     statistiquereclamations.cpp
 
 HEADERS += \
+    arduino.h \
     categories.h \
     connexion.h \
     gestion.h \
     gestion_categories_reclamations.h \
     mainwindow.h \
     reclamations.h \
+    securite.h \
     statistiquereclamations.h
 
 FORMS += \
     gestion.ui \
     gestion_categories_reclamations.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    securite.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

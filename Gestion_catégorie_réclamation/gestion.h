@@ -20,6 +20,8 @@ private slots:
     void on_sonoff_clicked();
     void on_CATGREC_clicked();
 
+    void on_pushButton_5_clicked();
+
 private:
     Ui::Gestion *ui;
     QSound *son;
