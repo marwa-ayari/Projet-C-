@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>securite</class>
+ <widget class="QDialog" name="securite">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>439</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion de la sécurité</string>
+  </property>
+  <widget class="QLabel" name="label_temperature">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>291</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 16pt 'Script MT Bold';background-color: rgb(0, 0, 127);color: rgb(255, 0, 0);
+</string>
+   </property>
+   <property name="text">
+    <string>   Veuillez patientez un moment...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-20</y>
+     <width>871</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../../../../../../../../i/sec.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_temperature_2">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>320</y>
+     <width>291</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 16pt 'Script MT Bold';background-color: rgb(0, 0, 127);color: rgb(255, 0, 0);
+</string>
+   </property>
+   <property name="text">
+    <string>   Veuillez patientez un moment...</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_temperature</zorder>
+  <zorder>label_temperature_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
