@@ -19,14 +19,19 @@ SOURCES += \
     connexion.cpp \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
+    gestion_materiaux_maintenances.cpp \
     jeu.cpp \
     mail.cpp \
     main.cpp \
+    maintenanceetat.cpp \
+    maintenances.cpp \
     mainwindow.cpp \
+    materiaux.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
     stat.cpp \
+    statistique.cpp \
     statistiquereclamations.cpp
 
 HEADERS += \
@@ -38,18 +43,25 @@ HEADERS += \
     connexion.h \
     gestion.h \
     gestion_categories_reclamations.h \
+    gestion_materiaux_maintenances.h \
     jeu.h \
     mail.h \
+    maintenanceetat.h \
+    maintenances.h \
     mainwindow.h \
+    materiaux.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
     stat.h \
+    statistique.h \
     statistiquereclamations.h
 
 FORMS += \
     gestion.ui \
     gestion_categories_reclamations.ui \
+    gestion_materiaux_maintenances.ui \
+    maintenanceetat.ui \
     mainwindow.ui \
     reclamationbar.ui \
     securite.ui \
@@ -61,3 +73,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    maquetteqt.pro.user

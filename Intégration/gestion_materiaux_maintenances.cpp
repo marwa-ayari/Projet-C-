@@ -11,7 +11,6 @@
 #include <QMediaPlayer>
 #include <QSystemTrayIcon>
 #include"maintenanceetat.h"
-#include"statusbar_maintenance.h"
 #include <QProgressBar>
 
 Gestion_materiaux_maintenances::Gestion_materiaux_maintenances(QWidget *parent) :

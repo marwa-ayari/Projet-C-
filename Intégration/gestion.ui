@@ -98,7 +98,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../../i/mac.jpeg</pixmap>
+    <pixmap>../../../../../../../../../../i/mac.jpeg</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
