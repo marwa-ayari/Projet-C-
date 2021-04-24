@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(229, 148, 66);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="widget_materiel">
     <attribute name="title">
@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab_materiel_8">
       <attribute name="title">
@@ -354,53 +354,30 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_materiel_13">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>250</y>
-         <width>321</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Lucida Calligraphy</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <italic>true</italic>
-         <bold>true</bold>
-         <underline>false</underline>
-         <strikeout>false</strikeout>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
-color: rgb(0, 0, 127);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
-       </property>
-       <property name="text">
-        <string>Recherche par réference</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../Sans titre-1.png</normaloff>../../Sans titre-1.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>100</width>
-         <height>121</height>
-        </size>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="lineEdit_materiel">
        <property name="geometry">
         <rect>
-         <x>390</x>
+         <x>660</x>
          <y>260</y>
          <width>151</width>
          <height>41</height>
         </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>240</y>
+         <width>121</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>Sans titre-1.png</pixmap>
        </property>
       </widget>
      </widget>
@@ -784,7 +761,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_maintenance_3">
       <attribute name="title">
@@ -944,6 +921,50 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          </rect>
         </property>
        </widget>
+       <widget class="QComboBox" name="comboBox_maintenance_4">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>240</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>non repare</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>repare</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>en cours</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_maintenance_15">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>230</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Etat</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QLabel" name="label_maintenance">
        <property name="geometry">
@@ -984,55 +1005,16 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <rect>
          <x>10</x>
          <y>20</y>
-         <width>511</width>
+         <width>581</width>
          <height>201</height>
         </rect>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_maintenance_11">
-       <property name="geometry">
-        <rect>
-         <x>510</x>
-         <y>290</y>
-         <width>341</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Lucida Calligraphy</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <italic>true</italic>
-         <bold>true</bold>
-         <underline>false</underline>
-         <strikeout>false</strikeout>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
-color: rgb(0, 0, 127);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
-       </property>
-       <property name="text">
-        <string>Recherche par référence</string>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../Sans titre-1.png</normaloff>../../Sans titre-1.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>100</width>
-         <height>121</height>
-        </size>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_maintenance_15">
        <property name="geometry">
         <rect>
-         <x>620</x>
-         <y>80</y>
+         <x>630</x>
+         <y>20</y>
          <width>211</width>
          <height>71</height>
         </rect>
@@ -1086,18 +1068,124 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <widget class="QLineEdit" name="lineEdit_maintenance_5">
        <property name="geometry">
         <rect>
-         <x>290</x>
-         <y>300</y>
+         <x>600</x>
+         <y>310</y>
          <width>171</width>
          <height>41</height>
         </rect>
        </property>
       </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>780</x>
+         <y>300</y>
+         <width>131</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>Sans titre-1.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_maintenance_16">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>110</y>
+         <width>231</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Impression pdf</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>121</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="status">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>310</y>
+         <width>471</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_maintenance_17">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>200</y>
+         <width>231</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Calcul Etat</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>stat.png</normaloff>stat.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>121</height>
+        </size>
+       </property>
+      </widget>
       <zorder>label_maintenance_52</zorder>
-      <zorder>pushButton_maintenance_11</zorder>
       <zorder>pushButton_maintenance_15</zorder>
       <zorder>tableView_maintenance</zorder>
       <zorder>lineEdit_maintenance_5</zorder>
+      <zorder>label</zorder>
+      <zorder>pushButton_maintenance_16</zorder>
+      <zorder>status</zorder>
+      <zorder>pushButton_maintenance_17</zorder>
      </widget>
      <widget class="QWidget" name="tab_maintenance_6">
       <attribute name="title">
@@ -1256,6 +1344,50 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
           <height>91</height>
          </rect>
         </property>
+       </widget>
+       <widget class="QLabel" name="label_maintenance_16">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>240</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Etat</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_maintenance_5">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>250</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>non repare</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>repare</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>en cours</string>
+         </property>
+        </item>
        </widget>
       </widget>
       <widget class="QLabel" name="label_maintenance_2">
