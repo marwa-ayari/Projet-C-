@@ -2,18 +2,19 @@
 #define GESEMPCONG_H
 
 #include"employes.h"
-
+#include "chat.h"
 #include <QPropertyAnimation>
 #include"conges.h"
 #include <QDialog>
-
 
 #include<QSound>
 #include <QPropertyAnimation>
 #include "smtp.h"
 #include <QtWidgets/QMessageBox>
 #include <QFileDialog>
-
+#include "arduino.h"
+#include"statemp.h"
+#include "server.h"
 
 namespace Ui {
 class gesempcong;
@@ -66,6 +67,17 @@ private slots:
 
 
 
+
+
+
+
+
+  void on_excel_clicked();
+
+  void on_statstemp_clicked();
+
+  void on_server_2_clicked();
+
 private:
     Ui::gesempcong *ui;
     Employes insemployes;
@@ -73,6 +85,9 @@ private:
     QStringList files;
     QSound *son;
     QPropertyAnimation *animation;
+    QByteArray data;
+    arduino A;
+
 
 
 

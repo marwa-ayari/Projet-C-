@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "employes.h"
 #include"gesempcong.h"
+#include"securritefume.h"
+
 
 
 
@@ -10,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    son = new QSound("../imagesQT/music.wav");
+    son = new QSound("../resources/music.wav");
     son->play();
     son->setLoops(50);
     setFixedSize(990,600);  //fixe la taille de la fenêtre
@@ -31,15 +33,13 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
-
-
-
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
 
 
 
@@ -77,3 +77,12 @@ void MainWindow::on_sonoff_clicked()
 }
 
 
+
+
+
+void MainWindow::on_arduinofenetrefume_clicked()
+{ securritefume *p = new securritefume();
+    p->setWindowModality(Qt::ApplicationModal);
+    p->show();
+
+}

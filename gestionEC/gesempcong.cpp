@@ -11,6 +11,16 @@
 #include<QIntValidator>
 #include<QValidator>
 #include<QMediaPlayer>
+#include <QSystemTrayIcon>
+#include "chat.h"
+#include "excel.h"
+#include "server.h"
+#include "statemp.h"
+
+
+
+
+
 
 
 gesempcong::gesempcong(QWidget *parent) :
@@ -22,19 +32,29 @@ gesempcong::gesempcong(QWidget *parent) :
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->exitBtn, SIGNAL(clicked()),this, SLOT(close()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+
+
+
     setFixedSize(990,600);  //fixe la taille de la fenêtre
 
     QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+        player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
         player->setVolume(2000);
         player->play();
 
       ;
+// arduino
+
+        }
 
 
 
-}
 
+
+
+
+
+// arduino
 void gesempcong::browse()
 {
     files.clear();
@@ -79,7 +99,7 @@ gesempcong::~gesempcong()
 void gesempcong::on_ajoutemp_clicked()
 {
     QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+        player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
         player->setVolume(2000);
         player->play();
           ui->matricule->setMaxLength(5);
@@ -114,6 +134,13 @@ void gesempcong::on_ajoutemp_clicked()
 
 
     if(E.ajouter()) {
+
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("stat.png"));
+
+                notifyIcon->showMessage("GESTION employes  ","employé Ajouté",QSystemTrayIcon::Information,15000);
+
         QMessageBox::information(nullptr, QObject::tr("ajouté!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
 
@@ -153,18 +180,26 @@ void gesempcong::on_tabWidget_employes_currentChanged(int index)
 
 
 
+
+
 }
 
 
 void gesempcong::on_suppemp_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
     Employes e1;
     e1.setmatemp(ui->comboBoxempsup->currentText());
     if(e1.supprimer(e1.getmatemp()))
-    {
+    { QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+        notifyIcon->show();
+        notifyIcon->setIcon(QIcon("C:/Users/EYA/Desktop/4545.jpg"));
+        notifyIcon->setVisible("C:/Users/EYA/Desktop/4545.jpg");
+
+        notifyIcon->showMessage("GESTION employes  ","employé supprimé",QSystemTrayIcon::Information,15000);
+
         QMessageBox::information(nullptr, QObject::tr("Supprimer un employé"),
                     QObject::tr("Suppression avec succés.\n" ), QMessageBox::Cancel);
 
@@ -182,7 +217,7 @@ void gesempcong::on_suppemp_clicked()
 
 void gesempcong::on_modifemp_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
@@ -203,7 +238,11 @@ void gesempcong::on_modifemp_clicked()
 
    Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
     if(E.modifier(matemp))
-    {
+    {QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+        notifyIcon->show();
+        notifyIcon->setIcon(QIcon("stat.png"));
+
+        notifyIcon->showMessage("GESTION employes  ","employé Ajouté",QSystemTrayIcon::Information,15000);
               QMessageBox::information(nullptr, QObject::tr("Modifier un employé"),
                           QObject::tr("employé modifie.\n"), QMessageBox::Cancel);
 
@@ -231,7 +270,7 @@ void gesempcong::on_modifemp_clicked()
 
 void gesempcong::on_pushButton_rechercheemp_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
        QString rech =ui->rechercheemp->text();
@@ -241,7 +280,7 @@ void gesempcong::on_pushButton_rechercheemp_clicked()
 
 void gesempcong::on_triemp_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
       ui->tableemp->setModel(insemployes.tri());
@@ -254,7 +293,7 @@ void gesempcong::on_triemp_clicked()
 
 void gesempcong::on_pushButton_ajouterconges_2_clicked()
 {  QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
@@ -281,6 +320,11 @@ void gesempcong::on_pushButton_ajouterconges_2_clicked()
 
     Conges c(duree,idc,type,datedeb,datefin);
     if(c.ajouter()) {
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("stat.png"));
+
+                notifyIcon->showMessage("GESTION employes  ","congé Ajouté",QSystemTrayIcon::Information,15000);
         QMessageBox::information(nullptr, QObject::tr("ajouté!!!"),
                     QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
 
@@ -304,7 +348,7 @@ void gesempcong::on_pushButton_ajouterconges_2_clicked()
 
 void gesempcong::on_pushButton_modifierconges_clicked()
 {QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
@@ -326,7 +370,11 @@ void gesempcong::on_pushButton_modifierconges_clicked()
 
     Conges c(duree,idc,type,datedeb,datefin);
     if(c.modifier())
-    {
+    {QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+        notifyIcon->show();
+        notifyIcon->setIcon(QIcon("stat.png"));
+
+        notifyIcon->showMessage("GESTION employes  ","congé modifié",QSystemTrayIcon::Information,15000);
               QMessageBox::information(nullptr, QObject::tr("Modifier un congé"),
                           QObject::tr("congé modifie.\n"), QMessageBox::Cancel);
               ui->idc_2->setText("");
@@ -348,14 +396,18 @@ void gesempcong::on_pushButton_modifierconges_clicked()
 
 void gesempcong::on_pushButton_supprimerconges_clicked()
 {QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
     Conges c;
     c.setidc(ui->suppcong->currentText());
     if(c.supprimer(c.getidc()))
-    {
+    {QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+        notifyIcon->show();
+        notifyIcon->setIcon(QIcon("stat.png"));
+
+        notifyIcon->showMessage("GESTION employes  ","congé supprimé",QSystemTrayIcon::Information,15000);
         QMessageBox::information(nullptr, QObject::tr("Supprimer un congé"),
                     QObject::tr("Suppression avec succés.\n" ), QMessageBox::Cancel);
 
@@ -385,7 +437,7 @@ void gesempcong::on_tabWidget_conges_currentChanged(int index)
 
 void gesempcong::on_recherchecong_clicked()
 { QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
@@ -396,7 +448,7 @@ void gesempcong::on_recherchecong_clicked()
 
 void gesempcong::on_tricong_clicked()
 {QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
@@ -416,7 +468,7 @@ void gesempcong::on_tricong_clicked()
 
 void gesempcong::on_affecterbouton_clicked()
 {QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl::fromLocalFile("../imagesQT//button.wav"));
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
     player->setVolume(2000);
     player->play();
 
@@ -487,4 +539,51 @@ void gesempcong::on_idcm_currentIndexChanged(const QString &arg1)
 }
 
 
+void gesempcong::on_statstemp_clicked()
+{
+    statemp *p = new statemp();
+    p->setWindowModality(Qt::ApplicationModal);
+    p->show();
+}
 
+
+void gesempcong::on_excel_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Excel file"), qApp->applicationDirPath (),
+                                                           tr("Excel Files (*.xls)"));
+           if (fileName.isEmpty())
+               return;
+
+           ExportExcelObject obj(fileName, "mydata", ui->tableemp);
+
+           //colums to export
+           obj.addField(0, "matemp", "char(20)");
+           obj.addField(1, "dateemb", "char(20)");
+           obj.addField(2, "nom", "char(20)");
+           obj.addField(3, "prenom", "char(20)");
+           obj.addField(4, "fonction", "char(20)");
+           obj.addField(5, "congeemp", "char(20)");
+           obj.addField(6, "salaire", "float");
+           obj.addField(7, "age", "int");
+
+
+
+           int retVal = obj.export2Excel();
+           if( retVal > 0)
+           {
+               QMessageBox::information(this, tr("Done"),
+                                        QString(tr("%1 records exported!")).arg(retVal)
+                                        );
+           }
+}
+
+
+
+
+void gesempcong::on_server_2_clicked()
+{
+    Server *p = new Server();
+    p->setWindowModality(Qt::ApplicationModal);
+    p->show();
+
+}
