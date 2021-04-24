@@ -2,7 +2,11 @@
 #include "ui_gestion.h"
 #include"gestion_categories_reclamations.h"
 #include "clients_cadeaux.h"
+<<<<<<< HEAD
 #include "gesempcong.h"
+=======
+#include"gestion_materiaux_maintenances.h"
+>>>>>>> b2404ad60cf8da66f827dd34e695029979e38878
 #include"securite.h"
 #include<QMediaPlayer>
 Gestion::Gestion(QWidget *parent) :
@@ -77,8 +81,20 @@ void Gestion::on_pushButton_BenAmor_clicked()
 
 }
 
+<<<<<<< HEAD
 void Gestion::on_eyakh_clicked()
 {
     gesempcong fenetre;
     fenetre.exec();
+=======
+void Gestion::on_pushButton_6_clicked()
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+        Gestion_materiaux_maintenances fenetre;
+        fenetre.exec();
+>>>>>>> b2404ad60cf8da66f827dd34e695029979e38878
 }

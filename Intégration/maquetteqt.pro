@@ -24,10 +24,14 @@ SOURCES += \
     gesempcong.cpp \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
+    gestion_materiaux_maintenances.cpp \
     jeu.cpp \
     mail.cpp \
     main.cpp \
+    maintenanceetat.cpp \
+    maintenances.cpp \
     mainwindow.cpp \
+    materiaux.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
@@ -35,7 +39,11 @@ SOURCES += \
     smtp.cpp \
     sslserver.cpp \
     stat.cpp \
+<<<<<<< HEAD
     statemp.cpp \
+=======
+    statistique.cpp \
+>>>>>>> b2404ad60cf8da66f827dd34e695029979e38878
     statistiquereclamations.cpp
 
 HEADERS += \
@@ -52,9 +60,13 @@ HEADERS += \
     gesempcong.h \
     gestion.h \
     gestion_categories_reclamations.h \
+    gestion_materiaux_maintenances.h \
     jeu.h \
     mail.h \
+    maintenanceetat.h \
+    maintenances.h \
     mainwindow.h \
+    materiaux.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
@@ -62,7 +74,11 @@ HEADERS += \
     smtp.h \
     sslserver.h \
     stat.h \
+<<<<<<< HEAD
     statemp.h \
+=======
+    statistique.h \
+>>>>>>> b2404ad60cf8da66f827dd34e695029979e38878
     statistiquereclamations.h
 
 FORMS += \
@@ -70,6 +86,8 @@ FORMS += \
     gesempcong.ui \
     gestion.ui \
     gestion_categories_reclamations.ui \
+    gestion_materiaux_maintenances.ui \
+    maintenanceetat.ui \
     mainwindow.ui \
     reclamationbar.ui \
     securite.ui \
@@ -83,3 +101,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    maquetteqt.pro.user
