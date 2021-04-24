@@ -420,4 +420,7 @@ ui->status->setValue(0);
 
      }
 
+<<<<<<< Gestion_materiaux_maintenances
 
+=======
+>>>>>>> local
