@@ -2,6 +2,7 @@
 #include "ui_gestion.h"
 #include"gestion_categories_reclamations.h"
 #include "clients_cadeaux.h"
+#include "gesempcong.h"
 #include"securite.h"
 #include<QMediaPlayer>
 Gestion::Gestion(QWidget *parent) :
@@ -74,4 +75,10 @@ void Gestion::on_pushButton_BenAmor_clicked()
         fenetre.exec();
 
 
+}
+
+void Gestion::on_eyakh_clicked()
+{
+    gesempcong fenetre;
+    fenetre.exec();
 }

@@ -14,9 +14,14 @@ SOURCES += \
     arduino.cpp \
     cadeau.cpp \
     categories.cpp \
+    chat.cpp \
     client.cpp \
     clients_cadeaux.cpp \
+    conges.cpp \
     connexion.cpp \
+    employes.cpp \
+    excel.cpp \
+    gesempcong.cpp \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
     jeu.cpp \
@@ -26,16 +31,25 @@ SOURCES += \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
+    server.cpp \
+    smtp.cpp \
+    sslserver.cpp \
     stat.cpp \
+    statemp.cpp \
     statistiquereclamations.cpp
 
 HEADERS += \
     arduino.h \
     cadeau.h \
     categories.h \
+    chat.h \
     client.h \
     clients_cadeaux.h \
+    conges.h \
     connexion.h \
+    employes.h \
+    excel.h \
+    gesempcong.h \
     gestion.h \
     gestion_categories_reclamations.h \
     jeu.h \
@@ -44,16 +58,24 @@ HEADERS += \
     reclamationbar.h \
     reclamations.h \
     securite.h \
+    server.h \
+    smtp.h \
+    sslserver.h \
     stat.h \
+    statemp.h \
     statistiquereclamations.h
 
 FORMS += \
+    chat.ui \
+    gesempcong.ui \
     gestion.ui \
     gestion_categories_reclamations.ui \
     mainwindow.ui \
     reclamationbar.ui \
     securite.ui \
+    server.ui \
     stat.ui \
+    statemp.ui \
     statistiquereclamations.ui\
     clients_cadeaux.ui \
 

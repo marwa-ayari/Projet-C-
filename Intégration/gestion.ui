@@ -101,7 +101,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
     <pixmap>../../../../../i/mac.jpeg</pixmap>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="eyakh">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -213,7 +213,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
   <zorder>sonon</zorder>
   <zorder>CATGREC</zorder>
   <zorder>sonoff</zorder>
-  <zorder>pushButton_2</zorder>
+  <zorder>eyakh</zorder>
   <zorder>pushButton_BenAmor</zorder>
   <zorder>pushButton_4</zorder>
   <zorder>pushButton_5</zorder>
