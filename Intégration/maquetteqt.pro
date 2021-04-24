@@ -40,11 +40,8 @@ SOURCES += \
     smtp.cpp \
     sslserver.cpp \
     stat.cpp \
-<<<<<<< HEAD
     statemp.cpp \
-=======
     statistique.cpp \
->>>>>>> b2404ad60cf8da66f827dd34e695029979e38878
     statistiquereclamations.cpp
 
 HEADERS += \
@@ -76,15 +73,13 @@ HEADERS += \
     smtp.h \
     sslserver.h \
     stat.h \
-<<<<<<< HEAD
     statemp.h \
-=======
     statistique.h \
->>>>>>> b2404ad60cf8da66f827dd34e695029979e38878
     statistiquereclamations.h
 
 FORMS += \
     chat.ui \
+    clients_cadeaux.ui \
     gesempcong.ui \
     gestion.ui \
     gestion_categories_reclamations.ui \
@@ -97,8 +92,7 @@ FORMS += \
     server.ui \
     stat.ui \
     statemp.ui \
-    statistiquereclamations.ui\
-    clients_cadeaux.ui \
+    statistiquereclamations.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -106,4 +100,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    maquetteqt.pro.user
+    maquetteqt.pro.user \
+    maquetteqt.pro.user.576aff2

@@ -7,12 +7,12 @@
 class Categories
 {
 private:
-    QString nom,date_fabrication;
+    QString nom,date_fabrication,date_peremption,nbr;
     float prix;
 
 public:
     Categories();
-    Categories(QString,QString,float);
+    Categories(QString,QString,float,QString,QString);
 
     QString get_Nom();
     QString get_Datefab();

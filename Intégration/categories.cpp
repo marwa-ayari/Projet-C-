@@ -7,11 +7,13 @@ nom="";
 date_fabrication="";
 prix=0;
 }
-Categories::Categories(QString nomc,QString date_fab,float prixx)
+Categories::Categories(QString nomc,QString date_fab,float prixx,QString d2,QString d3)
 {
     nom=nomc;
     date_fabrication=date_fab;
     prix=prixx;
+    date_peremption=d2;
+    nbr=d3;
 }
 
 
@@ -27,8 +29,8 @@ bool Categories::ajouter()
 {
 QSqlQuery query;
 QString prixx= QString::number(prix);
-query.prepare("INSERT INTO Categories (NOM_CATEGORIE, DATE_FAB, PRIX) "
-                    "VALUES ('"+nom+"', '"+date_fabrication+"', "+prixx+")");
+query.prepare("INSERT INTO Categories (NOM_CATEGORIE, DATE_FAB, PRIX, date_per) "
+                    "VALUES ('"+nom+"', '"+date_fabrication+"', "+prixx+" , '"+date_peremption+"' , '"+nbr+"')");
 return    query.exec();
 }
 
@@ -38,9 +40,12 @@ QSqlQueryModel * Categories::afficher()
     QSqlQueryModel * model= new QSqlQueryModel();
 
     model->setQuery("select * from CATEGORIES ");
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM_CATEGORIE"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("DATE_FAB"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIX "));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom de catégorie"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Date fabrication"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("date de péremtion "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Nombre "));
+
 
         return model;
 }
@@ -63,7 +68,7 @@ bool Categories::modifier()
 {
     QSqlQuery query;
     QString prixx= QString::number(prix);
-    query.prepare("UPDATE CATEGORIES set PRIX= "+prixx+" , DATE_FAB='"+date_fabrication+"' where NOM_CATEGORIE like '"+nom+"' ");
+    query.prepare("UPDATE CATEGORIES set PRIX= "+prixx+" , DATE_FAB='"+date_fabrication+"', DATE_per='"+date_peremption+"', nbr='"+nbr+"' where NOM_CATEGORIE like '"+nom+"' ");
     return    query.exec();
 }
 
@@ -88,9 +93,11 @@ QSqlQueryModel * Categories::tri()
     QSqlQueryModel * model= new QSqlQueryModel();
 
     model->setQuery("select * from CATEGORIES ORDER BY PRIX DESC");
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM_CATEGORIE"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("DATE_FAB"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRIX DESC"));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom de catégorie"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Date fabrication"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix descendant"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("date de péremtion "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Nombre "));
 
         return model;
 }

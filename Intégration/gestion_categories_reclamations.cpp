@@ -19,6 +19,7 @@ Gestion_categories_reclamations::Gestion_categories_reclamations(QWidget *parent
     ui(new Ui::Gestion_categories_reclamations)
 {
     ui->setupUi(this);
+    ui->status->setVisible(0);
 }
 
 Gestion_categories_reclamations::~Gestion_categories_reclamations()
@@ -36,12 +37,15 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
     QString nom= ui->lineEdit_categorie_12->text();
     QString date_fab= ui->dateEdit_categorie_7->date().toString("yyyy/MM/dd");
     float prix=ui->lineEdit_categorie_13->text().toFloat();
+    QString date_per= ui->dateEdit_categorie_8->date().toString("yyyy/MM/dd");
+    QString nbr= ui->lineEdit_categorie_14->text();
     QString system_date = QDateTime::currentDateTime().toString("yyyy/MM/dd");
 
-    if((prix>0)&&(system_date>=date_fab)&&(nom!=""))
+    if((prix>0)&&(system_date>=date_fab)&&(nom!="")&&(nbr!="")&&(nbr!="0")&&(date_fab<date_per))
     {
         date_fab= ui->dateEdit_categorie_7->text();
-        Categories catg(nom,date_fab,prix);
+        date_fab= ui->dateEdit_categorie_8->text();
+        Categories catg(nom,date_fab,prix,date_per,nbr);
         if(catg.ajouter()) {
             QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                         QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
@@ -88,7 +92,7 @@ void Gestion_categories_reclamations::on_tabWidget_categorie_4_currentChanged(in
     ui->tab_categorie->setModel(tmpcategorie.afficher());
     ui->comboBox_categorie_modifi->setModel(tmpcategorie.modifier_aff_id());
     ui->comboBox_categorie_sup->setModel(tmpcategorie.modifier_aff_id());
-
+    ui->status->setVisible(0);
 }
 
 
@@ -129,12 +133,15 @@ void Gestion_categories_reclamations::on_pushButton_categorie_7_clicked()
     QString nom= ui->comboBox_categorie_modifi->currentText();
     QString date_fab= ui->dateEdit_categorie_2->date().toString("yyyy/MM/dd");
     float prix=ui->lineEdit_categorie_5->text().toFloat();
+    QString date_per= ui->dateEdit_categorie_9->date().toString("yyyy/MM/dd");
+    QString nbr= ui->lineEdit_categorie_15->text();
     QString system_date = QDateTime::currentDateTime().toString("yyyy/MM/dd");
-    if((prix>0)&&(system_date>=date_fab))
+    if((prix>0)&&(system_date>=date_fab)&&(nbr!="")&&(nbr!="0")&&(date_fab<date_per))
     {
     date_fab= ui->dateEdit_categorie_2->text();
+    date_per= ui->dateEdit_categorie_9->text();
 
-    Categories catg(nom,date_fab,prix);
+    Categories catg(nom,date_fab,prix,date_per,nbr);
 
     if(catg.modifier())
     {
@@ -181,8 +188,8 @@ void Gestion_categories_reclamations::on_bouton_ajout_reclamation_clicked()
         //Notification pour la reclamation
         QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
                 notifyIcon->show();
-                notifyIcon->setIcon(QIcon("C:/Users/EYA/Desktop/4545.jpg"));
-                notifyIcon->setVisible("C:/Users/EYA/Desktop/4545.jpg");
+                notifyIcon->setIcon(QIcon(" "));
+                notifyIcon->setVisible(" ");
 
                 notifyIcon->showMessage("Nouvelle réclamation ajoutée","Veuillez traiter cette réclamation",QSystemTrayIcon::Information,15000);
 
@@ -378,4 +385,31 @@ void Gestion_categories_reclamations::on_pushButton_14_clicked()
     reclamationBar bar;
     bar.setModal(true);
     bar.exec();
+}
+
+void Gestion_categories_reclamations::on_tab_categorie_doubleClicked(const QModelIndex &index)
+{
+    int ligne=ui->tab_categorie->currentIndex().row();
+
+    QString date_fab =ui->tab_categorie->model()->data(ui->tab_categorie->model()->index(ligne,1)).toString();
+    QString date_per =ui->tab_categorie->model()->data(ui->tab_categorie->model()->index(ligne,3)).toString();
+    ui->status->setVisible(1);
+
+    QDate date_f(date_fab.mid(6,4).toInt(),date_fab.mid(3,2).toInt(),date_fab.mid(0,2).toInt());
+
+
+    QDate date_p(date_per.mid(6,4).toInt(),date_per.mid(3,2).toInt(),date_per.mid(0,2).toInt());
+
+
+    QDate sys = QDate::currentDate();
+
+
+    if(sys.daysTo(date_p)<=0) ui->status->setValue(0);
+    else {
+        //ui->status->colorCount();
+        int value=((sys.daysTo(date_p))*100/(date_f.daysTo(date_p)));
+        ui->status->setValue(value);
+    }
+
+
 }

@@ -52,6 +52,8 @@ private slots:
 
     void on_pushButton_14_clicked();
 
+    void on_tab_categorie_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::Gestion_categories_reclamations *ui;
     Categories tmpcategorie;
