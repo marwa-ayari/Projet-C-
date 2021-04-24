@@ -20,12 +20,8 @@ SOURCES += \
     mainwindow.cpp \
     materiaux.cpp \
     securite.cpp \
-<<<<<<< Gestion_materiaux_maintenances
-    statistique.cpp
-=======
     statistique.cpp \
     statusbar_maintenance.cpp
->>>>>>> local
 
 HEADERS += \
     arduino.h \
@@ -36,15 +32,6 @@ HEADERS += \
     mainwindow.h \
     materiaux.h \
     securite.h \
-<<<<<<< Gestion_materiaux_maintenances
-    statistique.h
-
-FORMS += \
-    gestion_materiaux_maintenances.ui \
-    maintenanceetat.ui \
-    mainwindow.ui \
-    securite.ui
-=======
     statistique.h \
     statusbar_maintenance.h
 
@@ -52,7 +39,6 @@ FORMS += \
     gestion_materiaux_maintenances.ui \
     mainwindow.ui \
     statusbar_maintenance.ui
->>>>>>> local
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
