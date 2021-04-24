@@ -16,6 +16,7 @@
 #include"statemp.h"
 #include "server.h"
 
+
 namespace Ui {
 class gesempcong;
 }

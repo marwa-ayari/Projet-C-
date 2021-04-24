@@ -10,6 +10,7 @@ namespace Ui {
   class Server;
 }
 
+
 class Server : public QMainWindow
 {
   Q_OBJECT

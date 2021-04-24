@@ -10,6 +10,7 @@ class statemp;
 
 class statemp : public QDialog
 {
+
     Q_OBJECT
 
 public:

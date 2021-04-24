@@ -10,6 +10,7 @@ void SslServer::incomingConnection(int socketDescriptor)
     addPendingConnection (serverSocket);
   }
   else
+
   {
     delete serverSocket;
   }

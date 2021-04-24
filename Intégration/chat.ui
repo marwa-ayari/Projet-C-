@@ -8,7 +8,8 @@
     <y>0</y>
     <width>827</width>
     <height>485</height>
-   </rect>
+   </rect>  
+
   </property>
   <property name="windowTitle">
    <string>QSsl Chat Client</string>

@@ -14,6 +14,7 @@ int ExportExcelObject::export2Excel()
         return -1;
     }
 
+
     QSqlDatabase db = QSqlDatabase::addDatabase("QODBC", "excelexport");
     if(!db.isValid())
     {

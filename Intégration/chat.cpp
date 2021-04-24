@@ -6,7 +6,8 @@
 chat::chat(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::chat)
-{
+{ 
+
   ui->setupUi(this);
 
   // Check for SSL support.  If SSL support is not available, show a

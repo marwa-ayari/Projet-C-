@@ -23,6 +23,7 @@
 
 
 
+
 gesempcong::gesempcong(QWidget *parent) :
     QDialog(parent),
 

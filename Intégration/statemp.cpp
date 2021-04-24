@@ -24,6 +24,7 @@ QT_CHARTS_USE_NAMESPACE
 statemp::statemp(QWidget *parent) :
 
 
+
     ui(new Ui::statemp)
 {
     ui->setupUi(this);

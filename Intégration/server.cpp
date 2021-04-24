@@ -12,6 +12,7 @@ Server::Server(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Server)
 {
+
   ui->setupUi(this);
 
   // Check for SSL support.  If SSL support is not available, show a

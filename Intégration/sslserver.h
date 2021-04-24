@@ -14,4 +14,5 @@ public:
   virtual void incomingConnection(int socketDescriptor);
 };
 
+
 #endif // SSLSERVER_H

@@ -12,6 +12,7 @@ Smtp::Smtp( const QString &user, const QString &pass, const QString &host, int p
     connect(socket, SIGNAL(disconnected()), this,SLOT(disconnected()));
 
 
+
     this->user = user;
     this->pass = pass;
 

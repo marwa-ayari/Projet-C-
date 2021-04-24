@@ -15,6 +15,7 @@ Conges::Conges()
 
 
 
+
 }
 
 Conges::Conges(int duree,QString idc,QString type ,QString datedeb ,QString datefin)
