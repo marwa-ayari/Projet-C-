@@ -7,12 +7,13 @@ Maintenances::Maintenances()
     date_panne="";
     prix=0;
 }
-Maintenances::Maintenances(QString ch1,QString ch2,float n,QString ch3)
+Maintenances::Maintenances(QString ch1,QString ch2,float n,QString ch3,QString etatt)
 {
     reference=ch1;
     date_panne=ch2;
     prix=n;
     description=ch3;
+    etat=etatt;
 }
 
 
@@ -38,13 +39,9 @@ bool Maintenances::ajouter()
 {
 QSqlQuery query;
 QString prix_reparation= QString::number(prix);
-query.prepare("INSERT INTO Maintenances (reference,description,date_panne,prix) "
-                    "VALUES (:reference,:description,:date_panne,:prix)");
+query.prepare("INSERT INTO Maintenances (reference,description,date_panne,prix,etat) "
+                    "VALUES ('"+reference+"','"+description+"','"+date_panne+"',"+prix_reparation+",'"+etat+"')");
 
-query.bindValue(":reference", reference);
-query.bindValue(":prix", prix_reparation);
-query.bindValue(":description", description);
-query.bindValue(":date_panne", date_panne);
 return    query.exec();
 }
 
@@ -55,9 +52,10 @@ QSqlQueryModel * Maintenances::afficher()
 
     model->setQuery("select * from Maintenances ");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Reference"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Date d'panne"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Date panne"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix "));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("description "));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Description "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Etat "));
     return model;
 }
 
@@ -69,12 +67,17 @@ bool Maintenances::supprimer(QString refer)
 }
 
 
-
+QSqlQuery Maintenances::recuperer_Modification(QString ref)
+{
+    QSqlQuery query;
+    query.prepare("select * from Maintenances where reference ='"+ref+"'");
+    return    query;
+}
 bool Maintenances::modifier()
 {
     QSqlQuery query;
     QString prix_reparation= QString::number(prix);
-    query.prepare("UPDATE Maintenances set description='"+description+"' ,PRIX= "+prix_reparation +" , date_panne='"+date_panne+"' where reference like '"+reference+"' ");
+    query.prepare("UPDATE Maintenances set description='"+description+"' ,PRIX= "+prix_reparation +" , date_panne='"+date_panne+"' , etat='"+etat+"'  where reference like '"+reference+"' ");
     return    query.exec();
 }
 QSqlQueryModel * Maintenances::affectation_liste_materiaux()
@@ -99,11 +102,12 @@ QSqlQueryModel * Maintenances::tri()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
-    model->setQuery("select * from Maintenances ORDER BY date_panne DESC");
+    model->setQuery("select * from Maintenances ORDER BY prix DESC");
     model->setHeaderData(0, Qt::Horizontal, QObject::tr("Reference"));
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("Date de panne desc"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("Prix"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("Description "));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Etat "));
 
     return model;
 }

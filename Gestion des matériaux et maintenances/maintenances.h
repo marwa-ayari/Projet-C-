@@ -7,12 +7,12 @@
 class Maintenances
 {
 private:
-    QString reference,description,date_panne;
+    QString reference,description,date_panne,etat;
     float prix;
 
 public:
     Maintenances();
-    Maintenances(QString,QString,float,QString);
+    Maintenances(QString,QString,float,QString,QString);
 
     QString get_Reference();
     QString get_Description();
@@ -30,6 +30,8 @@ public:
     QSqlQueryModel * liste_Maintenances();
     bool supprimer(QString);
     bool modifier();
+    QSqlQuery recuperer_Modification(QString);
+
 
 
     QSqlQueryModel * rechercher(QString);

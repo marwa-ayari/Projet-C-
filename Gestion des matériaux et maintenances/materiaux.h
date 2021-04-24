@@ -31,6 +31,7 @@ public:
     QSqlQueryModel * liste_materiaux();
     bool supprimer(QString);
     bool modifier();
+    QSqlQuery recuperer_Modification(QString);
 
 
     QSqlQueryModel * rechercher(QString);

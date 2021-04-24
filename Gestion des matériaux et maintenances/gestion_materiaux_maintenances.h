@@ -45,6 +45,21 @@ private slots:
 
     void on_pushButton_maintenance_7_clicked();
 
+    void on_comboBox_materiel_1_currentIndexChanged(const QString &arg1);
+
+    void on_comboBox_maintenance_2_currentTextChanged(const QString &arg1);
+
+    void on_pushButton_maintenance_16_clicked();
+
+    void on_lineEdit_materiel_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_maintenance_5_cursorPositionChanged(int arg1, int arg2);
+
+    void on_pushButton_maintenance_17_clicked();
+
+    void on_tableView_maintenance_doubleClicked(const QModelIndex &index);
+
+
 private:
     Ui::Gestion_materiaux_maintenances *ui;
     Materiaux tmpmateriel;
