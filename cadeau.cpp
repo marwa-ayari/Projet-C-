@@ -1,4 +1,4 @@
-#include "cadeau.h"
+﻿#include "cadeau.h"
 #include "client.h"
 #include <QString>
 #include <QDebug>
@@ -95,6 +95,7 @@ QSqlQueryModel * Cadeau::recherche2(const QString& categorie)
        model->setQuery("select * from cadeau where categorie LIKE '"+categorie+"%'" );
        return model;
 }
+
 QSqlQueryModel * Cadeau::tri2()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
@@ -139,7 +140,32 @@ QSqlQueryModel * Cadeau::chercher_categ(QString id)
     model->setQuery("select categorie from cadeau where id like '"+id+"%'");
     return model;
 }
+int Cadeau::verifier_notif(QString type )
+{   QSqlQuery query;
+    query.prepare("select *  from cadeau ca  where(categorie = :type AND nb=0)");
+    query.bindValue(":type", type);
 
+ query.exec();
+    int total = 0;
+    while (query.next()) {
+      total++;
+    }
+return total;
+
+}
+int Cadeau::verifier_affJeu(QString id )
+{   QSqlQuery query;
+    query.prepare("select *  from cadeau ca join jeu j on(ca.id = j.idc) where (ca.id=:id)");
+    query.bindValue(":id", id);
+
+ query.exec();
+    int total = 0;
+    while (query.next()) {
+      total++;
+    }
+return total;
+
+}
 
 
 

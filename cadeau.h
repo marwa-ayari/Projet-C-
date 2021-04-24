@@ -3,6 +3,7 @@
 #include<QString>
 #include<QSqlQuery>
 #include<QSqlQueryModel>
+#include "jeu.h"
 class Cadeau
 {
 public:
@@ -28,6 +29,8 @@ QSqlQueryModel * modifier_liste_id();
 QSqlQueryModel * tri2();
     bool modifier2(QString);
  int  calculer(QString);
+int verifier_notif(QString);
+int verifier_affJeu(QString );
 private:
     QString categorie,id;
     int nb,somme;
