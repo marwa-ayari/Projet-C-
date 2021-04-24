@@ -35,6 +35,7 @@ SOURCES += \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
+    securritefume.cpp \
     server.cpp \
     smtp.cpp \
     sslserver.cpp \
@@ -70,6 +71,7 @@ HEADERS += \
     reclamationbar.h \
     reclamations.h \
     securite.h \
+    securritefume.h \
     server.h \
     smtp.h \
     sslserver.h \
@@ -91,6 +93,7 @@ FORMS += \
     mainwindow.ui \
     reclamationbar.ui \
     securite.ui \
+    securritefume.ui \
     server.ui \
     stat.ui \
     statemp.ui \
