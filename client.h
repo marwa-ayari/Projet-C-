@@ -1,6 +1,6 @@
 #ifndef CLIENT_H
 #define CLIENT_H
-
+#include "jeu.h"
 #include<QString>
 #include<QSqlQuery>
 #include<QSqlQueryModel>
@@ -40,6 +40,9 @@ QSqlQueryModel * tri_DESC();
       bool modifier2(QString);
 int tester_affectation(QString);
 QSqlQueryModel *affecter_cadeau(QString);
+int verifier_affJeuCl1(QString );
+int verifier_affJeuCl2(QString );
+QSqlQueryModel *rechercheFidele();
 private:
     QString nom,prenom,adresse,tel,matricule,id_cadeau;
     int pts;

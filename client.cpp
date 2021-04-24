@@ -1,4 +1,4 @@
-#include "client.h"
+﻿#include "client.h"
 #include <QString>
 #include <QDebug>
 Client::Client()
@@ -210,4 +210,37 @@ bool Client::mettre_a_jour_pts(QString matricule,QString id)
 query.bindValue(":id",id);
 
     return    query.exec();
+}
+int Client::verifier_affJeuCl1(QString matricule )
+{   QSqlQuery query;
+    query.prepare("select *  from client cl join jeu j on(cl.matricule = j.mat1) where (cl.matricule=:matricule)");
+    query.bindValue(":matricule", matricule);
+
+ query.exec();
+    int total = 0;
+    while (query.next()) {
+      total++;
+    }
+return total;
+
+}
+int Client::verifier_affJeuCl2(QString matricule )
+{   QSqlQuery query;
+    query.prepare("select *  from client cl join jeu j on(cl.matricule = j.mat2) where (cl.matricule=:matricule)");
+    query.bindValue(":matricule", matricule);
+
+ query.exec();
+    int total = 0;
+    while (query.next()) {
+      total++;
+    }
+return total;
+
+}
+QSqlQueryModel * Client::rechercheFidele()
+{
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+       model->setQuery("select * from client where pts=(select Max(pts) from client) " );
+       return model;
 }
