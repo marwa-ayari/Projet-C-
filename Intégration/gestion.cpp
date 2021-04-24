@@ -1,6 +1,7 @@
 #include "gestion.h"
 #include "ui_gestion.h"
 #include"gestion_categories_reclamations.h"
+#include "clients_cadeaux.h"
 #include"securite.h"
 #include<QMediaPlayer>
 Gestion::Gestion(QWidget *parent) :
@@ -58,4 +59,19 @@ void Gestion::on_pushButton_5_clicked()
 
 securite fenetre;
 fenetre.exec();
+}
+
+
+
+void Gestion::on_pushButton_BenAmor_clicked()
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+        clients_cadeaux fenetre;
+        fenetre.exec();
+
+
 }

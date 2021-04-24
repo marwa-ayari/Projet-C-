@@ -2,37 +2,49 @@
 QT       += core gui sql charts printsupport
 QT       += serialport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets multimedia multimediawidgets
 
 CONFIG += c++11
-
+QT +=network
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
     arduino.cpp \
+    cadeau.cpp \
     categories.cpp \
+    client.cpp \
+    clients_cadeaux.cpp \
     connexion.cpp \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
+    jeu.cpp \
+    mail.cpp \
     main.cpp \
     mainwindow.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
+    stat.cpp \
     statistiquereclamations.cpp
 
 HEADERS += \
     arduino.h \
+    cadeau.h \
     categories.h \
+    client.h \
+    clients_cadeaux.h \
     connexion.h \
     gestion.h \
     gestion_categories_reclamations.h \
+    jeu.h \
+    mail.h \
     mainwindow.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
+    stat.h \
     statistiquereclamations.h
 
 FORMS += \
@@ -41,7 +53,9 @@ FORMS += \
     mainwindow.ui \
     reclamationbar.ui \
     securite.ui \
-    statistiquereclamations.ui
+    stat.ui \
+    statistiquereclamations.ui\
+    clients_cadeaux.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
