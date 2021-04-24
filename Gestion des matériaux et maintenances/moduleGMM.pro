@@ -15,6 +15,7 @@ SOURCES += \
     connexion.cpp \
     gestion_materiaux_maintenances.cpp \
     main.cpp \
+    maintenanceetat.cpp \
     maintenances.cpp \
     mainwindow.cpp \
     materiaux.cpp \
@@ -25,6 +26,7 @@ HEADERS += \
     arduino.h \
     connexion.h \
     gestion_materiaux_maintenances.h \
+    maintenanceetat.h \
     maintenances.h \
     mainwindow.h \
     materiaux.h \
@@ -33,6 +35,7 @@ HEADERS += \
 
 FORMS += \
     gestion_materiaux_maintenances.ui \
+    maintenanceetat.ui \
     mainwindow.ui \
     securite.ui
 

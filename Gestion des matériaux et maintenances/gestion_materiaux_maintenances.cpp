@@ -9,11 +9,24 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QMediaPlayer>
+#include <QSystemTrayIcon>
+#include"maintenanceetat.h"
+#include"statusbar_maintenance.h"
+#include <QProgressBar>
+
 Gestion_materiaux_maintenances::Gestion_materiaux_maintenances(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Gestion_materiaux_maintenances)
 {
     ui->setupUi(this);
+    QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+            notifyIcon->show();
+            notifyIcon->setIcon(QIcon("E:\arcmaher.png"));
+            notifyIcon->setVisible("E:\arcmaher.png");
+            notifyIcon->showMessage("Ajout nouvelle Maintenance  ","maintenance ajoutée",QSystemTrayIcon::Information,15000);
+
+            ui->status->setVisible(0);
+
 }
 
 Gestion_materiaux_maintenances::~Gestion_materiaux_maintenances()
@@ -75,13 +88,7 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_17_clicked()
 
 void Gestion_materiaux_maintenances::on_pushButton_materiel_13_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("C:/Users/dell/Desktop/2eme année/2eme semestre/Projet C++/button.mp3"));
-        player->setVolume(2000);
-        player->play();
 
-    QString recherche =ui->lineEdit_materiel->text();
-    ui->tableView_materiel_2->setModel(tmpmateriel.rechercher(recherche));
 }
 
 void Gestion_materiaux_maintenances::on_pushButton_materiel_8_clicked()
@@ -170,7 +177,8 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_clicked()
     QString description= ui->lineEdit_maintenance_6->text();
     QString date_panne= ui->dateEdit_maintenance->text();
     float prix=ui->lineEdit_maintenance->text().toFloat();
-    Maintenances maintenance(reference,date_panne,prix,description);
+    QString etat=ui->comboBox_maintenance_4->currentText();
+    Maintenances maintenance(reference,date_panne,prix,description,etat);
     if(prix>0)
     {
     if(maintenance.ajouter()) {
@@ -179,7 +187,15 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_clicked()
         ui->lineEdit_maintenance_6->setText("");
         ui->lineEdit_maintenance->setText("");
 
-}else{
+        //Notification pour la reclamation
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("1"));
+                notifyIcon->setVisible("1");
+                notifyIcon->showMessage("Ajout nouvelle Maintenance  ","maintenance ajoutée",QSystemTrayIcon::Information,15000);
+
+}
+    else{
         QMessageBox::information(nullptr, QObject::tr("Ajout maintenance"),
                     QObject::tr("Echec de l'ajout . Cette maintenance existe déja."), QMessageBox::Cancel);
     }
@@ -193,7 +209,7 @@ void Gestion_materiaux_maintenances::on_tabWidget_maintenance_3_currentChanged(i
     ui->tableView_maintenance->setModel(tmpmaintenance.afficher());
     ui->comboBox_maintenance_2->setModel(tmpmaintenance.liste_Maintenances());
     ui->comboBox_maintenance_3->setModel(tmpmaintenance.liste_Maintenances());
-
+    ui->status->setVisible(0);
     QChartView *chartview = new QChartView(tmpstat.afficher_statistique());
     chartview->setParent(ui->statistique_frame);
 
@@ -212,13 +228,7 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_15_clicked()
 
 void Gestion_materiaux_maintenances::on_pushButton_maintenance_11_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl::fromLocalFile("C:/Users/dell/Desktop/2eme année/2eme semestre/Projet C++/button.mp3"));
-        player->setVolume(2000);
-        player->play();
 
-    QString recherche =ui->lineEdit_maintenance_5->text();
-    ui->tableView_maintenance->setModel(tmpmaintenance.rechercher(recherche));
 }
 
 void Gestion_materiaux_maintenances::on_pushButton_maintenance_2_clicked()
@@ -232,7 +242,8 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_2_clicked()
     QString description= ui->lineEdit_maintenance_7->text();
     QString date_panne= ui->dateEdit_maintenance_2->text();
     float prix=ui->lineEdit_maintenance_3->text().toFloat();
-    Maintenances maintenance(reference,date_panne,prix,description);
+    QString etat=ui->comboBox_maintenance_5->currentText();
+    Maintenances maintenance(reference,date_panne,prix,description,etat);
     if(prix>0)
     {
     if(maintenance.modifier())
@@ -311,9 +322,9 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_16_clicked()
                         <<  QString("<title>%1</title>\n").arg("Maintenances")
                         <<  "</head>\n"
                         "<body background='C:/0.png'>\n"
-                            "<center><img src='C:/0.png' width='700' height='500' ></center>"
-                            "<center><h1>Liste des Maintenances</h1></center>"
-                            "<table border=1 align='center' width='65%'bgcolor=#CEF6E3>\n";
+                            "<center><img src='E:/arcmaher.png' width='300' height='300' ></center>"
+                            "<center><h2>Liste des Maintenances</h2></center>"
+                            "<table border=1 align='center' width='65%'bgcolor=#33DFFF>\n";
 
 
                 // headers
@@ -334,6 +345,9 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_16_clicked()
                            out << "</tr>\n";
                        }
                        out <<  "</table>\n"
+
+                      "<h5>Adresse mail : pastry.shop2A18@gmail.com</h5>"
+                       "<h5>Numero fixe : 71255369</h5>"
                            "</body>\n"
                            "</html>\n";
 
@@ -347,3 +361,63 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_16_clicked()
                            document->print(&printer);
                     }
 }
+
+void Gestion_materiaux_maintenances::on_lineEdit_materiel_cursorPositionChanged(int arg1, int arg2)
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/Users/dell/Desktop/2eme année/2eme semestre/Projet C++/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+    QString recherche =ui->lineEdit_materiel->text();
+    ui->tableView_materiel_2->setModel(tmpmateriel.rechercher(recherche));
+}
+
+void Gestion_materiaux_maintenances::on_lineEdit_maintenance_5_cursorPositionChanged(int arg1, int arg2)
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/Users/dell/Desktop/2eme année/2eme semestre/Projet C++/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+    QString recherche =ui->lineEdit_maintenance_5->text();
+    ui->tableView_maintenance->setModel(tmpmaintenance.rechercher(recherche));
+}
+
+void Gestion_materiaux_maintenances::on_pushButton_maintenance_17_clicked()
+{
+    maintenanceEtat fen;
+    fen.setModal(true);
+    fen.exec();
+}
+
+void Gestion_materiaux_maintenances::on_tableView_maintenance_doubleClicked(const QModelIndex &index)
+{
+
+     int ligne=ui->tableView_maintenance->currentIndex().row();
+    /* QString reference =ui->tableView_maintenance->model()->data(ui->tableView_maintenance->model()->index(ligne,0)).toString();
+     qDebug()<< reference;
+     QString date_panne =ui->tableView_maintenance->model()->data(ui->tableView_maintenance->model()->index(ligne,1)).toString();
+     qDebug()<< date_panne;*/
+     QString etat =ui->tableView_maintenance->model()->data(ui->tableView_maintenance->model()->index(ligne,4)).toString();
+     qDebug()<< etat;
+   /*  QString date_recuperation =ui->tableView_maintenance->model()->data(ui->tableView_maintenance->model()->index(ligne,5)).toString();
+     qDebug()<< date_recuperation;*/
+
+     ui->status->setVisible(1);
+
+     if(etat=="repare")
+     {
+         //barsatus kolha 5adhra
+         ui->status->setValue(100);
+
+     }
+     else if(etat=="non repare"){
+         //mise a jour status bar
+ui->status->setValue(0);
+
+     }else ui->status->setValue(50);
+
+     }
+
+
