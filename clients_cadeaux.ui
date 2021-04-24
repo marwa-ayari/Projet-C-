@@ -41,13 +41,13 @@
     <string notr="true">color: rgb(85, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
-   <widget class="QWidget" name="widget_2">
+   <widget class="QWidget" name="widget_3">
     <attribute name="title">
      <string>Clients</string>
     </attribute>
-    <widget class="QTabWidget" name="tabWidget_2">
+    <widget class="QTabWidget" name="tabWidget_5">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -65,14 +65,14 @@
      <property name="currentIndex">
       <number>3</number>
      </property>
-     <widget class="QWidget" name="tab_9">
+     <widget class="QWidget" name="tab_11">
       <attribute name="title">
        <string>Ajouter</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_ajoutCl_2">
+      <widget class="QGroupBox" name="groupBox_ajoutCl_5">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>80</x>
          <y>70</y>
          <width>641</width>
          <height>351</height>
@@ -105,7 +105,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QLabel" name="prenom_ajout_2">
+       <widget class="QLabel" name="prenom_ajout_3">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -133,7 +133,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_nom_ajout_2">
+       <widget class="QLineEdit" name="lineEdit_nom_ajout_3">
         <property name="geometry">
          <rect>
           <x>460</x>
@@ -143,7 +143,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="Nom_ajout_3">
+       <widget class="QLabel" name="Nom_ajout_4">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -166,7 +166,7 @@ border-color: rgb(170, 0, 255);</string>
          <string>Nom:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="tele_ajout_2">
+       <widget class="QLabel" name="tele_ajout_3">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -185,7 +185,7 @@ border-color: rgb(170, 0, 255);</string>
          <string>Numéro téléphone:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="Adresse_ajout_2">
+       <widget class="QLabel" name="Adresse_ajout_3">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -204,7 +204,7 @@ border-color: rgb(170, 0, 255);</string>
          <string>Adresse:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_prenom_ajout_2">
+       <widget class="QLineEdit" name="lineEdit_prenom_ajout_3">
         <property name="geometry">
          <rect>
           <x>460</x>
@@ -214,7 +214,7 @@ border-color: rgb(170, 0, 255);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_tel_ajout_2">
+       <widget class="QLineEdit" name="lineEdit_tel_ajout_3">
         <property name="geometry">
          <rect>
           <x>460</x>
@@ -224,7 +224,7 @@ border-color: rgb(170, 0, 255);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_adresse_ajout_2">
+       <widget class="QLineEdit" name="lineEdit_adresse_ajout_3">
         <property name="geometry">
          <rect>
           <x>460</x>
@@ -234,7 +234,7 @@ border-color: rgb(170, 0, 255);</string>
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="Matricule_ajout_4">
+       <widget class="QLabel" name="Matricule_ajout_5">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -257,7 +257,7 @@ border-color: rgb(170, 0, 255);</string>
          <string>Matricule:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_cin_ajout_2">
+       <widget class="QLineEdit" name="lineEdit_cin_ajout_3">
         <property name="geometry">
          <rect>
           <x>460</x>
@@ -268,7 +268,7 @@ border-color: rgb(170, 0, 255);</string>
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="pushButton_ajouterCl_2">
+      <widget class="QPushButton" name="pushButton_ajouterCl_3">
        <property name="geometry">
         <rect>
          <x>350</x>
@@ -313,11 +313,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <number>303</number>
        </property>
       </widget>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="label_4">
        <property name="geometry">
         <rect>
-         <x>-630</x>
-         <y>0</y>
+         <x>-640</x>
+         <y>-10</y>
          <width>1451</width>
          <height>891</height>
         </rect>
@@ -326,18 +326,18 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../images_projets/macarons-5148496_1920.jpg</pixmap>
+        <pixmap>../../../../Users/youta/Downloads/macarons-5148496_1920.jpg</pixmap>
        </property>
       </widget>
-      <zorder>label_3</zorder>
-      <zorder>groupBox_ajoutCl_2</zorder>
-      <zorder>pushButton_ajouterCl_2</zorder>
+      <zorder>label_4</zorder>
+      <zorder>groupBox_ajoutCl_5</zorder>
+      <zorder>pushButton_ajouterCl_3</zorder>
      </widget>
-     <widget class="QWidget" name="tab_clients_2">
+     <widget class="QWidget" name="tab_clients_4">
       <attribute name="title">
        <string>Afficher</string>
       </attribute>
-      <widget class="QLabel" name="label_37">
+      <widget class="QLabel" name="label_40">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -353,7 +353,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <pixmap>../../../../images_projets/macarons-5148503_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_triCl_2">
+      <widget class="QPushButton" name="pushButton_triCl_4">
        <property name="geometry">
         <rect>
          <x>340</x>
@@ -398,7 +398,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <number>303</number>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_rechCl_3">
+      <widget class="QPushButton" name="pushButton_rechCl_5">
        <property name="geometry">
         <rect>
          <x>690</x>
@@ -441,7 +441,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <number>303</number>
        </property>
       </widget>
-      <widget class="QTableView" name="tableView_2">
+      <widget class="QTableView" name="tableView_4">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -454,7 +454,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <string notr="true">color: rgb(0, 0, 127);</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_rech_nom">
+      <widget class="QLineEdit" name="lineEdit_rech_nom_2">
        <property name="geometry">
         <rect>
          <x>530</x>
@@ -467,11 +467,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <string notr="true">color: rgb(0, 0, 127);</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_triCl_3">
+      <widget class="QPushButton" name="pushButton_triCl_5">
        <property name="geometry">
         <rect>
          <x>340</x>
-         <y>440</y>
+         <y>430</y>
          <width>131</width>
          <height>41</height>
         </rect>
@@ -512,12 +512,57 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <number>303</number>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_pdf_2">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>480</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/pdf_icone.png</normaloff>../../../../images_projets/pdf_icone.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
      </widget>
-     <widget class="QWidget" name="tab_12">
+     <widget class="QWidget" name="tab_20">
       <attribute name="title">
        <string>Modifier</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_modifCl_2">
+      <widget class="QGroupBox" name="groupBox_modifCl_4">
        <property name="geometry">
         <rect>
          <x>70</x>
@@ -541,7 +586,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QLabel" name="label_pt_fid_modif_2">
+       <widget class="QLabel" name="label_pt_fid_modif_3">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -1362,7 +1407,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string>Points fidélité</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_nom_modif_2">
+       <widget class="QLineEdit" name="lineEdit_nom_modif_3">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1372,7 +1417,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_prenom_modif_2">
+       <widget class="QLabel" name="label_prenom_modif_3">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -1391,7 +1436,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string>Prénom:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_nom_modif_2">
+       <widget class="QLabel" name="label_nom_modif_3">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -1410,7 +1455,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string>Nom:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_prenom_modif_2">
+       <widget class="QLineEdit" name="lineEdit_prenom_modif_3">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1420,7 +1465,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_adresse_modif_2">
+       <widget class="QLabel" name="label_adresse_modif_3">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -1439,7 +1484,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string>Adresse:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_tel_modif_2">
+       <widget class="QLabel" name="label_tel_modif_3">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -1458,7 +1503,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string>Numéro téléphone:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_adresse_modif_2">
+       <widget class="QLineEdit" name="lineEdit_adresse_modif_3">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1468,7 +1513,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_tel_modif_2">
+       <widget class="QLineEdit" name="lineEdit_tel_modif_3">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1478,7 +1523,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_client_2">
+       <widget class="QComboBox" name="comboBox_client_3">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1488,7 +1533,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="lineEdit_7">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1499,7 +1544,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_44">
+      <widget class="QLabel" name="label_46">
        <property name="geometry">
         <rect>
          <x>-400</x>
@@ -1515,7 +1560,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
         <pixmap>../../../../images_projets/background-3837107_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_modifCl_2">
+      <widget class="QPushButton" name="pushButton_modifCl_4">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -1560,15 +1605,15 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <number>303</number>
        </property>
       </widget>
-      <zorder>label_44</zorder>
-      <zorder>groupBox_modifCl_2</zorder>
-      <zorder>pushButton_modifCl_2</zorder>
+      <zorder>label_46</zorder>
+      <zorder>groupBox_modifCl_4</zorder>
+      <zorder>pushButton_modifCl_4</zorder>
      </widget>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="tab_5">
       <attribute name="title">
        <string>Affecter cadeau</string>
       </attribute>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="label_5">
        <property name="geometry">
         <rect>
          <x>-10</x>
@@ -1584,7 +1629,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <pixmap>../../../../images_projets/macarons-5148503_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QGroupBox" name="groupBox_modifCl_3">
+      <widget class="QGroupBox" name="groupBox_modifCl_5">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -1608,7 +1653,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QComboBox" name="comboBox_Matclient">
+       <widget class="QComboBox" name="comboBox_Matclient_2">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -1618,7 +1663,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_cadeauCl_3">
+       <widget class="QLabel" name="label_cadeauCl_4">
         <property name="geometry">
          <rect>
           <x>80</x>
@@ -1640,7 +1685,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string>Cadeau:</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_affecCadeau_2">
+       <widget class="QComboBox" name="comboBox_affecCadeau_3">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1650,7 +1695,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label_14">
         <property name="geometry">
          <rect>
           <x>-4</x>
@@ -1663,7 +1708,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string/>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_categorie">
+       <widget class="QComboBox" name="comboBox_categorie_2">
         <property name="geometry">
          <rect>
           <x>390</x>
@@ -1676,13 +1721,13 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
-       <zorder>label_2</zorder>
-       <zorder>comboBox_Matclient</zorder>
-       <zorder>label_cadeauCl_3</zorder>
-       <zorder>comboBox_affecCadeau_2</zorder>
-       <zorder>comboBox_categorie</zorder>
+       <zorder>label_14</zorder>
+       <zorder>comboBox_Matclient_2</zorder>
+       <zorder>label_cadeauCl_4</zorder>
+       <zorder>comboBox_affecCadeau_3</zorder>
+       <zorder>comboBox_categorie_2</zorder>
       </widget>
-      <widget class="QPushButton" name="pushButton_modifCl_3">
+      <widget class="QPushButton" name="pushButton_modifCl_5">
        <property name="geometry">
         <rect>
          <x>350</x>
@@ -1728,11 +1773,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="tab_13">
+     <widget class="QWidget" name="tab_21">
       <attribute name="title">
        <string>Supprimer</string>
       </attribute>
-      <widget class="QLabel" name="label_47">
+      <widget class="QLabel" name="label_51">
        <property name="geometry">
         <rect>
          <x>-340</x>
@@ -1748,7 +1793,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <pixmap>../../../../images_projets/macarons-5148496_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QGroupBox" name="groupBox_suppCl_2">
+      <widget class="QGroupBox" name="groupBox_suppCl_4">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -1784,7 +1829,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QLabel" name="label_48">
+       <widget class="QLabel" name="label_52">
         <property name="geometry">
          <rect>
           <x>168</x>
@@ -1797,10 +1842,10 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>macaron.jpg</pixmap>
+         <pixmap>../../../../Users/youta/Documents/Clients_cadeaux/macaron.jpg</pixmap>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_suppCl_2">
+       <widget class="QComboBox" name="comboBox_suppCl_3">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -1810,7 +1855,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="Nom_ajout_6">
+       <widget class="QLabel" name="Nom_ajout_7">
         <property name="geometry">
          <rect>
           <x>100</x>
@@ -1834,7 +1879,7 @@ border-color: rgb(170, 0, 255);</string>
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="pushButton_suppCl_2">
+      <widget class="QPushButton" name="pushButton_suppCl_3">
        <property name="geometry">
         <rect>
          <x>350</x>
@@ -1879,17 +1924,14 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <number>303</number>
        </property>
       </widget>
-      <zorder>label_47</zorder>
-      <zorder>pushButton_suppCl_2</zorder>
-      <zorder>groupBox_suppCl_2</zorder>
      </widget>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_14">
+   <widget class="QWidget" name="tab_22">
     <attribute name="title">
      <string>Cadeaux</string>
     </attribute>
-    <widget class="QTabWidget" name="tabWidget_4">
+    <widget class="QTabWidget" name="tabWidget_6">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -1905,13 +1947,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>2</number>
      </property>
-     <widget class="QWidget" name="tab_15">
+     <widget class="QWidget" name="tab_23">
       <attribute name="title">
        <string>Ajouter</string>
       </attribute>
-      <widget class="QLabel" name="label_49">
+      <widget class="QLabel" name="label_53">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -1927,7 +1969,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
         <pixmap>../../../../images_projets/macaron-4701984_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QGroupBox" name="groupBox_ajout_Ca_2">
+      <widget class="QGroupBox" name="groupBox_ajout_Ca_3">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -1963,7 +2005,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QLabel" name="label_exp_ajout_2">
+       <widget class="QLabel" name="label_exp_ajout_3">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -1991,7 +2033,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <bool>false</bool>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_categ_ajout_2">
+       <widget class="QLineEdit" name="lineEdit_categ_ajout_3">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -2001,7 +2043,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_categ_ajout_2">
+       <widget class="QLabel" name="label_categ_ajout_5">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -2023,7 +2065,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string>Catégorie:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_somme_ajout_2">
+       <widget class="QLabel" name="label_somme_ajout_3">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -2042,7 +2084,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string>Somme points:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_categ_ajout_3">
+       <widget class="QLabel" name="label_categ_ajout_6">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -2064,7 +2106,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string>Id:</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_2">
+       <widget class="QComboBox" name="comboBox_4">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -2074,7 +2116,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="lineEdit_8">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -2084,7 +2126,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="lineEdit_9">
         <property name="geometry">
          <rect>
           <x>430</x>
@@ -2095,7 +2137,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="pushButton_ajouterCa_3">
+      <widget class="QPushButton" name="pushButton_ajouterCa_4">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -2141,11 +2183,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="tab_16">
+     <widget class="QWidget" name="tab_24">
       <attribute name="title">
        <string>Afficher</string>
       </attribute>
-      <widget class="QLabel" name="label_28">
+      <widget class="QLabel" name="label_29">
        <property name="geometry">
         <rect>
          <x>-310</x>
@@ -2161,7 +2203,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <pixmap>../../../../images_projets/muffins-5271450_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QTableView" name="tableView">
+      <widget class="QTableView" name="tableView_5">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -2177,7 +2219,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <number>140</number>
        </attribute>
       </widget>
-      <widget class="QPushButton" name="pushButton_triCa_2">
+      <widget class="QPushButton" name="pushButton_triCa_3">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -2222,7 +2264,7 @@ color: rgb(0, 0, 127);
         <number>303</number>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_statCa_2">
+      <widget class="QPushButton" name="pushButton_statCa_3">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -2267,7 +2309,7 @@ color: rgb(0, 0, 127);
         <number>303</number>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_rechCa_2">
+      <widget class="QPushButton" name="pushButton_rechCa_3">
        <property name="geometry">
         <rect>
          <x>700</x>
@@ -2310,7 +2352,7 @@ color: rgb(0, 0, 127);
         <number>303</number>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="lineEdit_10">
        <property name="geometry">
         <rect>
          <x>570</x>
@@ -2323,12 +2365,57 @@ color: rgb(0, 0, 127);
         <string notr="true">color: rgb(0, 0, 127);</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_notif_2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>440</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(253, 204, 106, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 127);
+</string>
+       </property>
+       <property name="text">
+        <string>Notifcation</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/notif.png</normaloff>../../../../images_projets/notif.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
      </widget>
-     <widget class="QWidget" name="tab_17">
+     <widget class="QWidget" name="tab_25">
       <attribute name="title">
        <string>Modifier</string>
       </attribute>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="label_17">
        <property name="geometry">
         <rect>
          <x>-30</x>
@@ -2344,7 +2431,7 @@ color: rgb(0, 0, 127);
         <pixmap>../../../../images_projets/macaron-4701985_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QGroupBox" name="groupBox_modiCa_2">
+      <widget class="QGroupBox" name="groupBox_modiCa_3">
        <property name="geometry">
         <rect>
          <x>90</x>
@@ -2369,7 +2456,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QLabel" name="label_somme_modif_2">
+       <widget class="QLabel" name="label_somme_modif_3">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -3064,7 +3151,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string>Somme points:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_exp_modif_2">
+       <widget class="QLabel" name="label_exp_modif_3">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -3083,7 +3170,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string>Nombre d'exemplaires:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_cate_modif_2">
+       <widget class="QLabel" name="label_cate_modif_3">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -3102,7 +3189,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string>Catégorie:</string>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_Cadeau_2">
+       <widget class="QComboBox" name="comboBox_Cadeau_3">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -3112,7 +3199,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox_3">
+       <widget class="QComboBox" name="comboBox_5">
         <property name="geometry">
          <rect>
           <x>400</x>
@@ -3122,7 +3209,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_5">
+       <widget class="QLineEdit" name="lineEdit_11">
         <property name="geometry">
          <rect>
           <x>400</x>
@@ -3132,7 +3219,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_6">
+       <widget class="QLineEdit" name="lineEdit_12">
         <property name="geometry">
          <rect>
           <x>400</x>
@@ -3143,7 +3230,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="pushButton_modifCa_2">
+      <widget class="QPushButton" name="pushButton_modifCa_3">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -3189,11 +3276,11 @@ color: rgb(0, 0, 127);
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="tab_18">
+     <widget class="QWidget" name="tab_26">
       <attribute name="title">
        <string>Supprimer</string>
       </attribute>
-      <widget class="QLabel" name="label_38">
+      <widget class="QLabel" name="label_41">
        <property name="geometry">
         <rect>
          <x>-520</x>
@@ -3209,7 +3296,7 @@ color: rgb(0, 0, 127);
         <pixmap>../../../../images_projets/macarons-4818704_1920.jpg</pixmap>
        </property>
       </widget>
-      <widget class="QGroupBox" name="groupBox_suppCa_2">
+      <widget class="QGroupBox" name="groupBox_suppCa_4">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -3246,7 +3333,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
        <property name="title">
         <string/>
        </property>
-       <widget class="QLabel" name="label_61">
+       <widget class="QLabel" name="label_62">
         <property name="geometry">
          <rect>
           <x>168</x>
@@ -3259,10 +3346,10 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>macaron.jpg</pixmap>
+         <pixmap>../../../../Users/youta/Documents/Clients_cadeaux/macaron.jpg</pixmap>
         </property>
        </widget>
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="comboBox_6">
         <property name="geometry">
          <rect>
           <x>370</x>
@@ -3272,7 +3359,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
          </rect>
         </property>
        </widget>
-       <widget class="QLabel" name="label_categ_ajout_4">
+       <widget class="QLabel" name="label_categ_ajout_7">
         <property name="geometry">
          <rect>
           <x>50</x>
@@ -3295,7 +3382,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="pushButton_suppCa_2">
+      <widget class="QPushButton" name="pushButton_suppCa_3">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -3340,6 +3427,1265 @@ color: rgb(0, 0, 127);
         <number>303</number>
        </property>
       </widget>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>Mail</string>
+      </attribute>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>-20</x>
+         <y>0</y>
+         <width>1031</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../images_projets/macaron-4701986_1920.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_suppCa_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>751</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>8</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 127);
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 192, 86, 255), stop:0.39196 rgba(170, 255, 255, 69), stop:0.447236 rgba(255, 243, 198, 255), stop:0.452261 rgba(249, 255, 255, 131), stop:0.502513 rgba(255, 255, 255, 130), stop:0.562814 rgba(255, 188, 75, 255), stop:0.59799 rgba(255, 170, 255, 69), stop:0.648241 rgba(255, 235, 182, 255));</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>50</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Expéditeur:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>80</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mot de passe:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>140</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Sujet:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>200</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Message:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="uname_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>50</y>
+          <width>431</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="paswd_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>80</y>
+          <width>431</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="rcpt_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>110</y>
+          <width>431</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="subject_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>140</y>
+          <width>431</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="msg_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>200</y>
+          <width>431</width>
+          <height>81</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>110</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Destinataire:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="exitBtn_2">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>370</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(253, 204, 106, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 127);
+</string>
+        </property>
+        <property name="text">
+         <string>Annuler</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../images_projets/error.png</normaloff>../../../../images_projets/error.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeatDelay">
+         <number>303</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="sendBtn_2">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>320</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>8</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(253, 204, 106, 255), stop:1 rgba(255, 255, 255, 255));
+color: rgb(0, 0, 127);
+</string>
+        </property>
+        <property name="text">
+         <string>Envoyer</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../images_projets/loading.gif</normaloff>../../../../images_projets/loading.gif</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoRepeatDelay">
+         <number>303</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="browseBtn_2">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>170</y>
+          <width>81</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Parcourir...</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="file_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>170</y>
+          <width>341</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>170</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pièce jointe:</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <attribute name="title">
+     <string>Jeu Concours</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>801</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Calligraphy</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tab_27">
+      <attribute name="title">
+       <string>Ajouter</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_ajoutCl_6">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>60</y>
+         <width>641</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 127);
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 232, 69), stop:0.0753769 rgba(255, 170, 255, 69), stop:0.221106 rgba(255, 170, 255, 208), stop:0.351759 rgba(255, 192, 255, 0), stop:0.422111 rgba(255, 85, 255, 130), stop:0.437186 rgba(255, 170, 255, 145), stop:0.518717 rgba(255, 170, 255, 130), stop:0.527638 rgba(255, 170, 255, 69), stop:0.562814 rgba(255, 170, 255, 130), stop:1 rgba(255, 255, 0, 69));</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="date_deb_ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Date début:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="openExternalLinks">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mat2_ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>110</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+border-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Matricule client 2:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="datefin_ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>210</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Date fin:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="principe_ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>330</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Règle de jeu:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mat1_ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>60</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+border-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Matricule client 1 :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="cadeau_ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>260</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cadeau:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_client1_3">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>70</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_client2_3">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>120</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_cadeau_3">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>270</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="idJ_ajout_3">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>10</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+border-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Id jeu :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_idJeu_2">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>20</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_datefin_2">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>220</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_datedeb_2">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>170</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_3">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>310</y>
+          <width>121</width>
+          <height>101</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>-960</x>
+         <y>0</y>
+         <width>1801</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../images_projets/cake-balls-4139984_1920.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_ajouterJeu_2">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>500</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/add.png</normaloff>../../../../images_projets/add.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
+      <zorder>label_25</zorder>
+      <zorder>groupBox_ajoutCl_6</zorder>
+      <zorder>pushButton_ajouterJeu_2</zorder>
+     </widget>
+     <widget class="QWidget" name="tab_clients_5">
+      <attribute name="title">
+       <string>Afficher</string>
+      </attribute>
+      <widget class="QLabel" name="label_42">
+       <property name="geometry">
+        <rect>
+         <x>-490</x>
+         <y>-230</y>
+         <width>1291</width>
+         <height>881</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../images_projets/cake-balls-4139984_1920.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_rechCl_6">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>110</y>
+         <width>61</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/business_management_discovery_search_focus_research-512.png</normaloff>../../../../images_projets/business_management_discovery_search_focus_research-512.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tableView_6">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>170</y>
+         <width>721</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_rech_type_2">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>130</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(0, 0, 127);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_triJeu_2">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>400</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Tri </string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/tri_91.png</normaloff>../../../../images_projets/tri_91.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_28">
+      <attribute name="title">
+       <string>Modifier</string>
+      </attribute>
+      <widget class="QLabel" name="label_54">
+       <property name="geometry">
+        <rect>
+         <x>-980</x>
+         <y>0</y>
+         <width>1771</width>
+         <height>541</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../images_projets/cake-balls-4139984_1920.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_modifjeu_2">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>490</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/63-512.webp</normaloff>../../../../images_projets/63-512.webp</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_ajoutCl_7">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>641</width>
+         <height>401</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 127);
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 232, 69), stop:0.0753769 rgba(255, 170, 255, 69), stop:0.221106 rgba(255, 170, 255, 208), stop:0.351759 rgba(255, 192, 255, 0), stop:0.422111 rgba(255, 85, 255, 130), stop:0.437186 rgba(255, 170, 255, 145), stop:0.518717 rgba(255, 170, 255, 130), stop:0.527638 rgba(255, 170, 255, 69), stop:0.562814 rgba(255, 170, 255, 130), stop:1 rgba(255, 255, 0, 69));</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="date_deb_modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>160</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Date début:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+        <property name="openExternalLinks">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mat2_modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>110</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+border-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Matricule client 2:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="datefin_modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>210</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Date fin:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="principe_modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>310</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Règle de jeu:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mat1_modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>60</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+border-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Matricule client 1 :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="cadeau_modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>260</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Cadeau:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_client1_4">
+        <property name="geometry">
+         <rect>
+          <x>458</x>
+          <y>70</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_client2_4">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>120</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_cadeau_4">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>260</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_idjeu_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>131</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_datedeb2_2">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>170</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_datefin2_2">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>210</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_4">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>310</y>
+          <width>121</width>
+          <height>71</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_8">
+      <attribute name="title">
+       <string>Supprimer</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_suppCl_5">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>110</y>
+         <width>651</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 127);
+background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 170, 232, 69), stop:0.0753769 rgba(255, 170, 255, 69), stop:0.221106 rgba(255, 170, 255, 208), stop:0.351759 rgba(255, 192, 255, 0), stop:0.422111 rgba(255, 85, 255, 130), stop:0.437186 rgba(255, 170, 255, 145), stop:0.518717 rgba(255, 170, 255, 130), stop:0.527638 rgba(255, 170, 255, 69), stop:0.562814 rgba(255, 170, 255, 130), stop:1 rgba(255, 255, 0, 69));</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QLabel" name="label_55">
+        <property name="geometry">
+         <rect>
+          <x>168</x>
+          <y>318</y>
+          <width>2101</width>
+          <height>2211</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../../Users/youta/Documents/Clients_cadeaux/macaron.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_suppjeu_2">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>120</y>
+          <width>121</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="idj_supprimer_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>110</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Lucida Calligraphy</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 127);
+border-color: rgb(170, 0, 255);</string>
+        </property>
+        <property name="text">
+         <string>Id jeu:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButton_suppjeu_2">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>430</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Lucida Calligraphy</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <italic>true</italic>
+         <bold>true</bold>
+         <underline>false</underline>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:0, stop:0.919598 rgba(255, 0, 111, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(235, 148, 61, 255));
+color: rgb(0, 0, 127);
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../images_projets/téléchargement.png</normaloff>../../../../images_projets/téléchargement.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeatDelay">
+        <number>303</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>-930</x>
+         <y>0</y>
+         <width>1871</width>
+         <height>531</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../images_projets/cake-balls-4139984_1920.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_26</zorder>
+      <zorder>groupBox_suppCl_5</zorder>
+      <zorder>pushButton_suppjeu_2</zorder>
      </widget>
     </widget>
    </widget>

@@ -22,13 +22,13 @@ statistiques::statistiques(QWidget *parent) :
     //  ui->setupUi(this) ;
 
       QBarSet *set0 = new QBarSet("Chocolat");
-      QBarSet *set1 = new QBarSet("Bande d'achat");
+      QBarSet *set1 = new QBarSet("Bon d'achat");
       QBarSet *set2 = new QBarSet("Accessoires cuisine");
 
 
 
       *set0 <<  c.calculer("Chocolat")<< 0 << 0;
-      *set1 << 0 << c.calculer("Bande d'achat") << 0;
+      *set1 << 0 << c.calculer("Bon d'achat") << 0;
       *set2 << 0 << 0 << c.calculer("Accessoires cuisine");
 
       QBarSeries *series = new QBarSeries();
@@ -43,7 +43,7 @@ statistiques::statistiques(QWidget *parent) :
 
       QStringList categories;
       categories << "Chocolat"
-                 << "Bande d'achat"
+                 << "Bon d'achat"
                  << "Accessoires cuisine";
 
       QBarCategoryAxis *axis = new QBarCategoryAxis();
