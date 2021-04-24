@@ -32,7 +32,7 @@ border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../../../../../../../../i/on.png</normaloff>../../../../../../../../../../i/on.png</iconset>
+     <normaloff>../../../../../i/on.png</normaloff>../../../../../i/on.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -76,7 +76,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../../../../../../../../i/off.png</normaloff>../../../../../../../../../../i/off.png</iconset>
+     <normaloff>../../../../../i/off.png</normaloff>../../../../../i/off.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -98,7 +98,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../../../../../../../../i/mac.jpeg</pixmap>
+    <pixmap>../../../../../i/mac.jpeg</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
@@ -119,7 +119,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
     <string>Employés et Congés</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_BenAmor">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -134,7 +134,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
 </string>
    </property>
    <property name="text">
-    <string>Client et Cadeaux</string>
+    <string>Clients, Cadeaux et Jeux</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
@@ -214,7 +214,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
   <zorder>CATGREC</zorder>
   <zorder>sonoff</zorder>
   <zorder>pushButton_2</zorder>
-  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_BenAmor</zorder>
   <zorder>pushButton_4</zorder>
   <zorder>pushButton_5</zorder>
   <zorder>pushButton_6</zorder>

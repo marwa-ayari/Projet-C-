@@ -22,6 +22,10 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+
+
+    void on_pushButton_BenAmor_clicked();
+
 private:
     Ui::Gestion *ui;
     QSound *son;
