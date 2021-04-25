@@ -77,7 +77,7 @@ void gesempcong::browse()
 
 void gesempcong::sendMail()
 {
-    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    smtp* smtp = new smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )

@@ -2,9 +2,7 @@
 #include "ui_gestion.h"
 #include"gestion_categories_reclamations.h"
 #include "clients_cadeaux.h"
-
 #include "gesempcong.h"
-
 #include"gestion_materiaux_maintenances.h"
 
 #include"securite.h"
@@ -29,8 +27,8 @@ void Gestion::on_CATGREC_clicked()
         player->setVolume(2000);
         player->play();
 
-Gestion_categories_reclamations fenetre;
-fenetre.exec();
+        Gestion_categories_reclamations fenetre;
+        fenetre.exec();
 }
 
 void Gestion::on_sonon_clicked()
@@ -40,7 +38,7 @@ void Gestion::on_sonon_clicked()
         player->setVolume(2000);
         player->play();
 
-    son->play();
+        son->play();
 }
 
 void Gestion::on_sonoff_clicked()
@@ -50,7 +48,7 @@ void Gestion::on_sonoff_clicked()
         player->setVolume(2000);
         player->play();
 
-    son->stop();
+        son->stop();
 }
 
 
@@ -62,8 +60,8 @@ void Gestion::on_pushButton_5_clicked()
         player->setVolume(2000);
         player->play();
 
-securite fenetre;
-fenetre.exec();
+        securite fenetre;
+        fenetre.exec();
 }
 
 
@@ -84,8 +82,13 @@ void Gestion::on_pushButton_BenAmor_clicked()
 
 void Gestion::on_eyakh_clicked()
 {
-    gesempcong fenetre;
-    fenetre.exec();
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+        gesempcong fenetre;
+        fenetre.exec();
 }
 void Gestion::on_pushButton_6_clicked()
 {
