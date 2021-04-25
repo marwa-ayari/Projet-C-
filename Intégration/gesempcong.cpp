@@ -77,13 +77,13 @@ void gesempcong::browse()
 
 void gesempcong::sendMail()
 {
-    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
-    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+    smtp* Smtp = new smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    connect(Smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
-        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+        Smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
     else
-        smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+        Smtp->sendMail(ui->uname->text(), ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
 }
 
 void gesempcong::mailSent(QString status)

@@ -17,15 +17,15 @@
 
 
 
-class Smtp : public QObject
+class smtp : public QObject
 {
     Q_OBJECT
 
 
 public:
-    Smtp( const QString &user, const QString &pass,
+    smtp( const QString &user, const QString &pass,
           const QString &host, int port = 465, int timeout = 30000 );
-    ~Smtp();
+    ~smtp();
 
     void sendMail( const QString &from, const QString &to,
                    const QString &subject, const QString &body,
