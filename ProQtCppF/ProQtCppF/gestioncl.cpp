@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "gestioncl.h"
+#include "ui_gestioncl.h"
 #include <QMessageBox>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
@@ -10,7 +10,7 @@
 #include<QFileDialog>
 #include"commande.h"
 #include"livraison.h"
-#include"smtp.h"
+#include"eemailing.h"
 #include<QtPrintSupport/QPrinter>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -285,13 +285,18 @@ void MainWindow::on_pushButton_8_clicked()
                          <<  QString("<title>%1</title>\n").arg("strTitle")
                          <<  "</head>\n"
                          "<body bgcolor=#E7E7E7 link=#5000A1>\n"
+"<img src='C:/Users/AAAAA/Pictures/capture.png'></img>"
+                            "<h1 style=\"text-align: left;\"><strong> ****Epastry****""</strong></h1>"
 
-                            "<h1 style=\"text-align: center;\"><strong> ********Liste Des Commandes******** "+TT+"</strong></h1>"
+"<center>  Liste Des Commandes en "+TT+"</center>"
+
                         //     "<align='right'> " << datefich << "</align>"
                          "<center></br><table border=3 cellspacing=1 cellpadding=2>\n";
 
                      // headers
+
                      out << "<thead><tr bgcolor=#FFF9F6> <th>Numero</th>";
+                     out<<"<cellspacing=10 cellpadding=3>";
                      for (int column = 0; column < columnCount; column++)
                          if (!ui->tableView->isColumnHidden(column))
                              out << QString("<th>%1</th>").arg(ui->tableView->model()->headerData(column, Qt::Horizontal).toString());
@@ -299,6 +304,7 @@ void MainWindow::on_pushButton_8_clicked()
 
                      // data table
                      for (int row = 0; row < rowCount; row++) {
+
                          out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
                          for (int column = 0; column < columnCount; column++) {
                              if (!ui->tableView->isColumnHidden(column)) {

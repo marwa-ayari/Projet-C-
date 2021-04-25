@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "gestioncl.h"
 #include <QApplication>
 #include <QMessageBox>
 #include <QDebug>

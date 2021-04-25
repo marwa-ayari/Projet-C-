@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef GESTIONCL_H
+#define GESTIONCL_H
 #include"commande.h"
 #include <QMainWindow>
 #include "livraison.h"
@@ -63,4 +63,4 @@ private:
      QStringList files;
 
 };
-#endif // MAINWINDOW_H
+#endif // GESTIONCL_H

@@ -27,21 +27,21 @@ CONFIG += c++11
 
 SOURCES += \
     commande.cpp \
+    eemailing.cpp \
+    gestioncl.cpp \
     livraison.cpp \
         main.cpp \
-        mainwindow.cpp \
-    connection.cpp \
-    smtp.cpp
+    connection.cpp
 
 HEADERS += \
     commande.h \
+    eemailing.h \
+    gestioncl.h \
     livraison.h \
-        mainwindow.h \
-    connection.h \
-    smtp.h
+    connection.h
 
 FORMS += \
-        mainwindow.ui
+    gestioncl.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

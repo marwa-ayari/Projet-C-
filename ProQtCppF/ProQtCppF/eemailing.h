@@ -1,5 +1,5 @@
- #ifndef SMTP_H
-#define SMTP_H
+#ifndef EEMAILING_H
+#define EEMAILING_H
 
 
 #include <QtNetwork/QAbstractSocket>
