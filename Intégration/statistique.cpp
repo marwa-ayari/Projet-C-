@@ -18,11 +18,10 @@ QChart* statistique::afficher_statistique()
    }
    }else QMessageBox::information(nullptr, QObject::tr("stat erreur"),
                                  QObject::tr("stat error.\n"), QMessageBox::Cancel);
-   series->setPieSize(0.7);
+   series->setPieSize(0.6);
    QChart *chart = new QChart();
    chart->addSeries(series);
    chart->setTitle("Statistique des maintenances par type de matériaux");
    return chart;
-//   QChartView *chartview = new QChartView(chart);
-//   chartview->setParent(ui->statistique_frame);
+
 }

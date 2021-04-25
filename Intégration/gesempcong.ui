@@ -9,7 +9,6 @@
     <width>946</width>
     <height>579</height>
    </rect>
-
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
@@ -43,7 +42,7 @@
 color: rgb(255, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="ongletemp">
     <attribute name="title">
@@ -368,33 +367,17 @@ color: rgb(255, 170, 255);</string>
       <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 170, 255, 66), stop:0.991525 rgba(255, 170, 183, 51))</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
        <string>Ajouter</string>
       </attribute>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>-170</x>
-         <y>-380</y>
-         <width>1551</width>
-         <height>1181</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../resources/Valentine's_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
-       </property>
-      </widget>
       <widget class="QGroupBox" name="groupBox">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>30</y>
+         <x>50</x>
+         <y>80</y>
          <width>841</width>
          <height>361</height>
         </rect>
@@ -663,6 +646,24 @@ color: rgb(255, 180, 203);</string>
         </property>
        </widget>
       </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>-180</x>
+         <y>-530</y>
+         <width>1551</width>
+         <height>1181</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_5</zorder>
+      <zorder>groupBox</zorder>
      </widget>
      <widget class="QWidget" name="afficheremp">
       <attribute name="title">
@@ -671,9 +672,9 @@ color: rgb(255, 180, 203);</string>
       <widget class="QPushButton" name="pushButton_rechercheemp">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>661</width>
+         <x>20</x>
+         <y>10</y>
+         <width>561</width>
          <height>61</height>
         </rect>
        </property>
@@ -1241,7 +1242,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../resources/f6fcx.png</normaloff>../resources/f6fcx.png</iconset>
+         <normaloff>../../../../../../../../../../resources/f6fcx.png</normaloff>../../../../../../../../../../resources/f6fcx.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1253,9 +1254,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <widget class="QPushButton" name="triemp">
        <property name="geometry">
         <rect>
-         <x>680</x>
-         <y>0</y>
-         <width>271</width>
+         <x>30</x>
+         <y>90</y>
+         <width>231</width>
          <height>61</height>
         </rect>
        </property>
@@ -1823,7 +1824,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../resources/sqc.png</normaloff>../resources/sqc.png</iconset>
+         <normaloff>../../../../../../../../../../resources/sqc.png</normaloff>../../../../../../../../../../resources/sqc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1835,7 +1836,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <widget class="QTableView" name="tableemp">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>80</x>
          <y>160</y>
          <width>781</width>
          <height>261</height>
@@ -1845,8 +1846,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <widget class="QLineEdit" name="rechercheemp">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>60</y>
+         <x>640</x>
+         <y>10</y>
          <width>221</width>
          <height>61</height>
         </rect>
@@ -1870,15 +1871,15 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="statstemp">
        <property name="geometry">
         <rect>
-         <x>250</x>
-         <y>80</y>
-         <width>291</width>
+         <x>360</x>
+         <y>90</y>
+         <width>251</width>
          <height>51</height>
         </rect>
        </property>
@@ -1902,7 +1903,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>resources/stat.png</normaloff>resources/stat.png</iconset>
+         <normaloff>../../../../../../../../../../resources/stat.png</normaloff>../../../../../../../../../../resources/stat.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1917,9 +1918,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <widget class="QPushButton" name="excel">
        <property name="geometry">
         <rect>
-         <x>590</x>
-         <y>80</y>
-         <width>311</width>
+         <x>660</x>
+         <y>90</y>
+         <width>261</width>
          <height>51</height>
         </rect>
        </property>
@@ -1943,7 +1944,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../kisspng-microsoft-excel-computer-icons-template-microsoft-excel-icon-5b28fd7dae3864.0006166915294129897136.jpg</normaloff>../kisspng-microsoft-excel-computer-icons-template-microsoft-excel-icon-5b28fd7dae3864.0006166915294129897136.jpg</iconset>
+         <normaloff>../../../../../../../../../../resources/edfc.png</normaloff>../../../../../../../../../../resources/edfc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1964,22 +1965,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <attribute name="title">
        <string>Modifier</string>
       </attribute>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>-250</y>
-         <width>1291</width>
-         <height>991</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../resources/Valentine's_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
-       </property>
-      </widget>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
@@ -2297,6 +2282,24 @@ color: rgb(255, 180, 203);</string>
         </property>
        </widget>
       </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>-260</x>
+         <y>-310</y>
+         <width>1291</width>
+         <height>991</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_4</zorder>
+      <zorder>groupBox_2</zorder>
      </widget>
      <widget class="QWidget" name="supprimeremp">
       <attribute name="title">
@@ -2315,7 +2318,7 @@ color: rgb(255, 180, 203);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/6861388-cupcake-wallpaper.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/6861388-cupcake-wallpaper.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_3">
@@ -2419,7 +2422,7 @@ color:rgb(225, 150, 225);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../resources/pbs.png</normaloff>../resources/pbs.png</iconset>
+          <normaloff>../../../../../../../../../../resources/pbs.png</normaloff>../../../../../../../../../../resources/pbs.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -2457,7 +2460,7 @@ color:rgb(225, 150, 225);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/thumb-1920-417983.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/thumb-1920-417983.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_4">
@@ -2613,7 +2616,7 @@ color:rgb(225, 150, 225);</string>
        <x>-10</x>
        <y>0</y>
        <width>991</width>
-       <height>541</height>
+       <height>561</height>
       </rect>
      </property>
      <property name="font">
@@ -2626,7 +2629,7 @@ color:rgb(225, 150, 225);</string>
       <bool>false</bool>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="ajoutercong">
       <attribute name="title">
@@ -2635,8 +2638,8 @@ color:rgb(225, 150, 225);</string>
       <widget class="QLabel" name="label_photo_16">
        <property name="geometry">
         <rect>
-         <x>-130</x>
-         <y>-40</y>
+         <x>-180</x>
+         <y>-390</y>
          <width>1501</width>
          <height>931</height>
         </rect>
@@ -2645,14 +2648,14 @@ color:rgb(225, 150, 225);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/Valentine's_Day_Sweets_Roses_Cupcake_Three_3_Heart_540910_1280x853.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="ajouteruncong">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>40</y>
+         <x>190</x>
+         <y>30</y>
          <width>631</width>
          <height>431</height>
         </rect>
@@ -2864,25 +2867,25 @@ color:rgb(106, 0, 0);</string>
       <widget class="QLabel" name="label_photo_9">
        <property name="geometry">
         <rect>
-         <x>-210</x>
-         <y>-10</y>
+         <x>-230</x>
+         <y>-350</y>
          <width>1281</width>
-         <height>571</height>
+         <height>901</height>
         </rect>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="recherchecong">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>401</width>
+         <x>20</x>
+         <y>10</y>
+         <width>351</width>
          <height>61</height>
         </rect>
        </property>
@@ -3447,7 +3450,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../resources/f6fcx.png</normaloff>../resources/f6fcx.png</iconset>
+         <normaloff>../../../../../../../../../../resources/f6fcx.png</normaloff>../../../../../../../../../../resources/f6fcx.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -3460,7 +3463,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        <property name="geometry">
         <rect>
          <x>650</x>
-         <y>0</y>
+         <y>10</y>
          <width>291</width>
          <height>61</height>
         </rect>
@@ -4026,7 +4029,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../resources/sqc.png</normaloff>../resources/sqc.png</iconset>
+         <normaloff>../../../../../../../../../../resources/sqc.png</normaloff>../../../../../../../../../../resources/sqc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4038,8 +4041,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <widget class="QLineEdit" name="edit_recherchecong">
        <property name="geometry">
         <rect>
-         <x>400</x>
-         <y>0</y>
+         <x>390</x>
+         <y>10</y>
          <width>151</width>
          <height>61</height>
         </rect>
@@ -4063,8 +4066,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <widget class="QLabel" name="label_photo_17">
        <property name="geometry">
         <rect>
-         <x>-130</x>
-         <y>-70</y>
+         <x>0</x>
+         <y>-290</y>
          <width>1531</width>
          <height>981</height>
         </rect>
@@ -4073,7 +4076,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/Valentine's_Day_Sweets_Roses_Cupcake_Three_3_Heart_540910_1280x853.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/cupcake-with-sparkler.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="ajouteruncong_2">
@@ -4400,7 +4403,7 @@ color:rgb(106, 0, 0);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../resources/pbs.png</normaloff>../resources/pbs.png</iconset>
+          <normaloff>../../../../../../../../../../resources/pbs.png</normaloff>../../../../../../../../../../resources/pbs.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -4438,7 +4441,7 @@ color:rgb(106, 0, 0);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../resources/771686_food-bakery-chocolate-sweet-hd-wallpaper-high-resolution_1600x1024_h.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/771686_food-bakery-chocolate-sweet-hd-wallpaper-high-resolution_1600x1024_h.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_photo_4</zorder>
@@ -5285,8 +5288,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
     <widget class="QLabel" name="label_photo_5">
      <property name="geometry">
       <rect>
-       <x>-70</x>
-       <y>-10</y>
+       <x>-130</x>
+       <y>-370</y>
        <width>2021</width>
        <height>1031</height>
       </rect>
@@ -5295,7 +5298,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../resources/Macarons-framboise-scaled.jpg</pixmap>
+      <pixmap>../../../../../../../../../../resources/pink-cupcake-wallpaper-mural.jpg</pixmap>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
@@ -5584,22 +5587,6 @@ color: rgb(74, 0, 111);</string>
     <attribute name="title">
      <string>chat</string>
     </attribute>
-    <widget class="QLabel" name="label_photo_13">
-     <property name="geometry">
-      <rect>
-       <x>-60</x>
-       <y>0</y>
-       <width>1281</width>
-       <height>571</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
-     </property>
-    </widget>
     <widget class="QGroupBox" name="groupBox_5">
      <property name="geometry">
       <rect>
@@ -5675,6 +5662,24 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       </property>
      </widget>
     </widget>
+    <widget class="QLabel" name="label_photo_13">
+     <property name="geometry">
+      <rect>
+       <x>-200</x>
+       <y>-300</y>
+       <width>1461</width>
+       <height>991</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../../../../../../resources/Coffee_Donuts_Cup_530805_1280x853.jpg</pixmap>
+     </property>
+    </widget>
+    <zorder>label_photo_13</zorder>
+    <zorder>groupBox_5</zorder>
    </widget>
   </widget>
  </widget>
