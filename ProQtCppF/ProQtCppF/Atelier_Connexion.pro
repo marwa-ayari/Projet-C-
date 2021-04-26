@@ -3,6 +3,10 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
+QT       += core gui charts
+
+
+
 QT       +=printsupport
 
 QT       += core gui sql network
@@ -31,17 +35,20 @@ SOURCES += \
     gestioncl.cpp \
     livraison.cpp \
         main.cpp \
-    connection.cpp
+    connection.cpp \
+    stat.cpp
 
 HEADERS += \
     commande.h \
     eemailing.h \
     gestioncl.h \
     livraison.h \
-    connection.h
+    connection.h \
+    stat.h
 
 FORMS += \
-    gestioncl.ui
+    gestioncl.ui \
+    stat.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -882,7 +882,7 @@ p, li { white-space: pre-wrap; }
        <string notr="true">color: rgb(85, 170, 255);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="widget">
        <attribute name="title">
@@ -904,7 +904,7 @@ p, li { white-space: pre-wrap; }
          </font>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_8">
          <attribute name="title">
@@ -1255,6 +1255,32 @@ font: 75 18pt &quot;MS Shell Dlg 2&quot;;
            <string>PDF</string>
           </property>
          </widget>
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="geometry">
+           <rect>
+            <x>500</x>
+            <y>320</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>stati</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="geometry">
+           <rect>
+            <x>810</x>
+            <y>330</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>noti</string>
+          </property>
+         </widget>
          <zorder>label_14</zorder>
          <zorder>pushButton_14</zorder>
          <zorder>tableView</zorder>
@@ -1262,6 +1288,8 @@ font: 75 18pt &quot;MS Shell Dlg 2&quot;;
          <zorder>label_15</zorder>
          <zorder>label_50</zorder>
          <zorder>pushButton_8</zorder>
+         <zorder>pushButton_5</zorder>
+         <zorder>pushButton_10</zorder>
         </widget>
         <widget class="QWidget" name="tab_10">
          <attribute name="title">
@@ -1652,7 +1680,7 @@ background-image:rgb(255, 170, 255)</string>
          </font>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">

@@ -124,3 +124,33 @@ QSqlQueryModel * Commande::affecter_categorie()
 
         return model;
 }
+
+
+
+int Commande::calculerr(QString typeCom) {
+      QSqlQuery query;
+
+      query.prepare("select * from commande where ( NOM_CATEGORI = :typeCom)");
+      query.bindValue(":type", typeCom);
+
+   query.exec();
+      int total = 0;
+      while (query.next()) {
+        total++;
+      }
+return total;}
+
+
+int Commande::verifier_notifi(QString type )
+{   QSqlQuery query;
+    query.prepare("select *  from commande NOM_CATEGORI  where(categories = :type AND nb=0)");
+    query.bindValue(":type", type);
+
+ query.exec();
+    int total = 0;
+    while (query.next()) {
+      total++;
+    }
+return total;
+
+}

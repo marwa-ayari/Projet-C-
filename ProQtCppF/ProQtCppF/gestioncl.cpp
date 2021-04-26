@@ -13,6 +13,26 @@
 #include"eemailing.h"
 #include<QtPrintSupport/QPrinter>
 
+#include"stat.h"
+
+
+#include<QPixmap>
+#include <QPropertyAnimation>
+#include <QTextDocument>
+#include <QTextStream>
+#include <QFile>
+#include <QPrintDialog>
+#include <QPrinter>
+#include<QSystemTrayIcon>
+#include <QtGui>
+
+
+
+
+
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -356,3 +376,50 @@ void MainWindow::on_pushButton_9_clicked()
 
 
 
+
+void MainWindow::on_pushButton_5_clicked()
+{
+
+        int res;
+                statistiques w(this);
+                w.setWindowTitle("Statistiques des categories");
+
+                res = w.exec();
+                qDebug() << res;
+                if (res == QDialog::Rejected)
+                  return;
+}
+
+void MainWindow::on_pushButton_10_clicked()
+{
+
+      ui->pushButton_10->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+
+       int verif =tmpcommande.verifier_notifi("salee");
+      int verif1 =tmpcommande.verifier_notifi("gateaux");
+      int verif2 =tmpcommande.verifier_notifi("croissant");
+       if(verif!=0)
+        {
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+
+
+                notifyIcon->showMessage("Gestion commande ","Un des cadeaux de la catégorie chocolat est terminée",QSystemTrayIcon::Information,15000);
+        }
+       if(verif1!=0)
+        {
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+
+
+                notifyIcon->showMessage("Gestion commande ","Un des cadeaux de la catégorie bon d'achat est terminée",QSystemTrayIcon::Information,15000);
+        }
+       if(verif2!=0)
+        {
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+
+
+                notifyIcon->showMessage("Gestion commande ","Un des cadeaux de la  catégorie accessoires cuisine est terminée",QSystemTrayIcon::Information,15000);
+        }
+}

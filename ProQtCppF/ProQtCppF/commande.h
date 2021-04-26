@@ -3,7 +3,7 @@
 #include<QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
+#include"stat.h"
 class Commande
 {
 public:
@@ -28,6 +28,10 @@ public:
      QSqlQueryModel * affecter_commande();
      QSqlQueryModel * affecter_categorie();
 
+
+
+      int  calculerr(QString);
+      int verifier_notifi(QString);
 
 private:
     QString nom_cat,nom_cl;

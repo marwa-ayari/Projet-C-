@@ -3,6 +3,7 @@
 #include"commande.h"
 #include <QMainWindow>
 #include "livraison.h"
+#include "stat.h"
 
 
 namespace Ui { class MainWindow; }
@@ -55,6 +56,11 @@ private slots:
     void on_label_32_linkActivated(const QString &link);
 
     void on_sendBtn_clicked();
+
+
+
+    void on_pushButton_10_clicked();
+
 
 private:
     Ui::MainWindow *ui;
