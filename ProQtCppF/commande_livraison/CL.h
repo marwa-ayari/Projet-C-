@@ -25,7 +25,8 @@
 #include <QPrintDialog>
 #include <QPrinter>
 #include<QSystemTrayIcon>
-
+#include<QMediaPlayer>
+#include<QSound>
 
 
 
@@ -93,6 +94,7 @@ private:
     Commande tmpcommande;
     Livraison tmplivraison;
     QStringList files;
+    QMediaPlayer musicAdd;
 
 };
 
