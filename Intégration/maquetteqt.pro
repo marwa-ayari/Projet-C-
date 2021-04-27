@@ -11,12 +11,14 @@ QT +=network
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CL.cpp \
     arduino.cpp \
     cadeau.cpp \
     categories.cpp \
     chat.cpp \
     client.cpp \
     clients_cadeaux.cpp \
+    commande.cpp \
     conges.cpp \
     connexion.cpp \
     employes.cpp \
@@ -26,7 +28,9 @@ SOURCES += \
     gestion_categories_reclamations.cpp \
     gestion_materiaux_maintenances.cpp \
     jeu.cpp \
+    livraison.cpp \
     mail.cpp \
+    mailCl.cpp \
     main.cpp \
     maintenanceetat.cpp \
     maintenances.cpp \
@@ -40,17 +44,20 @@ SOURCES += \
     smtp.cpp \
     sslserver.cpp \
     stat.cpp \
+    statCm.cpp \
     statemp.cpp \
     statistique.cpp \
     statistiquereclamations.cpp
 
 HEADERS += \
+    CL.h \
     arduino.h \
     cadeau.h \
     categories.h \
     chat.h \
     client.h \
     clients_cadeaux.h \
+    commande.h \
     conges.h \
     connexion.h \
     employes.h \
@@ -60,7 +67,9 @@ HEADERS += \
     gestion_categories_reclamations.h \
     gestion_materiaux_maintenances.h \
     jeu.h \
+    livraison.h \
     mail.h \
+    mailCl.h \
     maintenanceetat.h \
     maintenances.h \
     mainwindow.h \
@@ -73,11 +82,13 @@ HEADERS += \
     smtp.h \
     sslserver.h \
     stat.h \
+    statCm.h \
     statemp.h \
     statistique.h \
     statistiquereclamations.h
 
 FORMS += \
+    CL.ui \
     chat.ui \
     clients_cadeaux.ui \
     gesempcong.ui \
@@ -91,6 +102,7 @@ FORMS += \
     securritefume.ui \
     server.ui \
     stat.ui \
+    statCm.ui \
     statemp.ui \
     statistiquereclamations.ui
 
@@ -100,5 +112,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    commande_livraison.pro.user \
+    commande_livraison.pro.user.044f71f \
     maquetteqt.pro.user \
+    maquetteqt.pro.user.3203d7d \
     maquetteqt.pro.user.576aff2
+
+SUBDIRS += \
+    commande_livraison.pro

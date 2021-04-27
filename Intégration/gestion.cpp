@@ -4,7 +4,7 @@
 #include "clients_cadeaux.h"
 #include "gesempcong.h"
 #include"gestion_materiaux_maintenances.h"
-
+#include"CL.h"
 #include"securite.h"
 #include<QMediaPlayer>
 Gestion::Gestion(QWidget *parent) :
@@ -100,4 +100,15 @@ void Gestion::on_pushButton_6_clicked()
         Gestion_materiaux_maintenances fenetre;
         fenetre.exec();
 
+}
+
+void Gestion::on_pushButton_4_clicked()
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+        gestionCl fenetre;
+        fenetre.exec();
 }
