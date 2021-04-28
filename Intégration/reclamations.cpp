@@ -74,6 +74,13 @@ bool reclamations::supprimer(QString nom,QString id)
 }
  return false;
 }
+bool reclamations::supprimertaitee()
+{
+    QSqlQuery query;
+    query.prepare("Delete from RECLAMATIONS where (Etat like 'Traitee')  ");
+    return query.exec();
+
+}
 bool reclamations::modifier()
 {
     QSqlQuery query,test;
@@ -116,6 +123,7 @@ QSqlQueryModel *reclamations::tri()
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM_CATEGORIE"));
     model->setHeaderData(2, Qt::Horizontal, QObject::tr("DATE_REC"));
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("AVIS"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("ETAT"));
 
         return model;
 }

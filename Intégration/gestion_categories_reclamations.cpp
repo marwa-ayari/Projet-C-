@@ -413,3 +413,22 @@ void Gestion_categories_reclamations::on_tab_categorie_doubleClicked(const QMode
 
 
 }
+
+void Gestion_categories_reclamations::on_pushButton_4_clicked()
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/i/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+    if(tmpreclamation.supprimertaitee())
+    {
+        QMessageBox::information(nullptr, QObject::tr("Supprimer les réclamations Taitées"),
+                    QObject::tr("Suppression avec succés.\n"), QMessageBox::Cancel);
+    }
+    else
+    { QMessageBox::critical(nullptr, QObject::tr("Pas de réclamations traitées"),
+                    QObject::tr("erreur.\n"), QMessageBox::Cancel);
+
+    }
+}
