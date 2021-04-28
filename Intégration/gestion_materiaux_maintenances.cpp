@@ -18,11 +18,6 @@ Gestion_materiaux_maintenances::Gestion_materiaux_maintenances(QWidget *parent) 
     ui(new Ui::Gestion_materiaux_maintenances)
 {
     ui->setupUi(this);
-    QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
-            notifyIcon->show();
-            notifyIcon->setIcon(QIcon("E:\arcmaher.png"));
-            notifyIcon->setVisible("E:\arcmaher.png");
-            notifyIcon->showMessage("Ajout nouvelle Maintenance  ","maintenance ajoutée",QSystemTrayIcon::Information,15000);
 
             ui->status->setVisible(0);
 

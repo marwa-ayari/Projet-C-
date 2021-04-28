@@ -112,8 +112,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    commande_livraison.pro.user \
-    commande_livraison.pro.user.044f71f \
     maquetteqt.pro.user \
     maquetteqt.pro.user.3203d7d \
     maquetteqt.pro.user.576aff2
