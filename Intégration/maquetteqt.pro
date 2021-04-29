@@ -1,4 +1,5 @@
 
+
 QT       += core gui sql charts printsupport
 QT       += serialport
 
@@ -11,7 +12,6 @@ QT +=network
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    BitBuffer.cpp \
     CL.cpp \
     QrCode.cpp \
     QrSegment.cpp \
@@ -58,7 +58,6 @@ SOURCES += \
     statistiquereclamations.cpp
 
 HEADERS += \
-    BitBuffer.hpp \
     CL.h \
     QrCode.hpp \
     QrSegment.hpp \
@@ -137,4 +136,5 @@ DISTFILES += \
     maquetteqt.pro.user.576aff2
 
 SUBDIRS += \
+    commande_livraison.pro \
     commande_livraison.pro
