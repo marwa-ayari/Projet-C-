@@ -82,9 +82,6 @@ private slots:
 
 
 
-     void on_lineEdit_3_cursorPositionChanged(int arg1, int arg2);
-
-     void on_pushButton_9_clicked();
 
      void on_label_4_linkActivated(const QString &link);
 

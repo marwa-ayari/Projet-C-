@@ -13,8 +13,6 @@ QT +=network
 
 SOURCES += \
     CL.cpp \
-    QrCode.cpp \
-    QrSegment.cpp \
     arduino.cpp \
     cadeau.cpp \
     categories.cpp \
@@ -26,12 +24,10 @@ SOURCES += \
     connexion.cpp \
     employes.cpp \
     excel.cpp \
-    fournisseur.cpp \
     gesempcong.cpp \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
     gestion_materiaux_maintenances.cpp \
-    gestion_produit_fournisseur.cpp \
     jeu.cpp \
     livraison.cpp \
     mail.cpp \
@@ -41,26 +37,29 @@ SOURCES += \
     maintenances.cpp \
     mainwindow.cpp \
     materiaux.cpp \
-    produit.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
-    securritefume.cpp \
     server.cpp \
     smtp.cpp \
-    smtphakim.cpp \
     sslserver.cpp \
     stat.cpp \
     statCm.cpp \
-    stat_fournisseur.cpp \
     statemp.cpp \
     statistique.cpp \
-    statistiquereclamations.cpp
+    statistiquereclamations.cpp\
+    stat_fournisseur.cpp \
+      produit.cpp \
+    fournisseur.cpp \
+    QrCode.cpp \
+        QrSegment.cpp \
+     gestion_produit_fournisseur.cpp \
+     smtphakim.cpp \
+     BitBuffer.cpp
+
 
 HEADERS += \
     CL.h \
-    QrCode.hpp \
-    QrSegment.hpp \
     arduino.h \
     cadeau.h \
     categories.h \
@@ -72,12 +71,10 @@ HEADERS += \
     connexion.h \
     employes.h \
     excel.h \
-    fournisseur.h \
     gesempcong.h \
     gestion.h \
     gestion_categories_reclamations.h \
     gestion_materiaux_maintenances.h \
-    gestion_produit_fournisseur.h \
     jeu.h \
     livraison.h \
     mail.h \
@@ -86,21 +83,25 @@ HEADERS += \
     maintenances.h \
     mainwindow.h \
     materiaux.h \
-    produit.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
-    securritefume.h \
     server.h \
     smtp.h \
-    smtphakim.h \
     sslserver.h \
     stat.h \
     statCm.h \
-    stat_fournisseur.h \
     statemp.h \
     statistique.h \
-    statistiquereclamations.h
+    statistiquereclamations.h\
+    smtphakim.h \
+     stat_fournisseur.h \
+   produit.h \
+    fournisseur.h \
+   gestion_produit_fournisseur.h \
+   QrCode.hpp \
+       QrSegment.hpp \
+       BitBuffer.hpp
 
 FORMS += \
     CL.ui \
@@ -110,18 +111,18 @@ FORMS += \
     gestion.ui \
     gestion_categories_reclamations.ui \
     gestion_materiaux_maintenances.ui \
-    gestion_produit_fournisseur.ui \
     maintenanceetat.ui \
     mainwindow.ui \
     reclamationbar.ui \
     securite.ui \
-    securritefume.ui \
     server.ui \
     stat.ui \
     statCm.ui \
-    stat_fournisseur.ui \
     statemp.ui \
-    statistiquereclamations.ui
+    statistiquereclamations.ui\
+    gestion_produit_fournisseur.ui \
+       stat_fournisseur.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

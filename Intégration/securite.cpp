@@ -17,6 +17,7 @@ securite::securite(QWidget *parent) :
           }
           QObject::connect(Arduino.getserial(),SIGNAL(readyRead()),this,SLOT(update_temperature()));
 DataAsString="";
+//QObject::connect(Arduino.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
           //fin arduino
 }
 void securite::update_temperature()
@@ -63,6 +64,29 @@ void securite::update_temperature()
 
 
 }
+void securite::update_label()
+{
+
+    data=Arduino.read_from_arduino();
+    if (data=="0"){
+
+       ui->green->setText(" pas de danger");
+       ui->red->setText("");}
+    else if (data=="1")
+     { ui->red->setText("  il y'a une fuite de gaz");
+    ui->green->setText("");}
+
+}
+
+
+
+
+void securite::on_resolution_clicked()
+{
+     Arduino.write_to_arduino("0");
+}
+
+
 
 
 securite::~securite()
