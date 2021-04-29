@@ -16,6 +16,8 @@ public:
     ~securite();
 private slots:
     void update_temperature();
+    void update_label();
+    void on_resolution_clicked();
 
 private:
     Ui::securite *ui;

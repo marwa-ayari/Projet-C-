@@ -4,6 +4,7 @@
 #include "clients_cadeaux.h"
 #include "gesempcong.h"
 #include"gestion_materiaux_maintenances.h"
+#include"gestion_produit_fournisseur.h"
 #include"CL.h"
 #include"securite.h"
 #include<QMediaPlayer>
@@ -110,5 +111,16 @@ void Gestion::on_pushButton_4_clicked()
         player->play();
 
         gestionCl fenetre;
+        fenetre.exec();
+}
+
+void Gestion::on_pushButton_7_clicked()
+{
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+
+        gestion_produit_fournisseur fenetre;
         fenetre.exec();
 }

@@ -163,7 +163,7 @@ void Server::handshakeComplete()
 void Server::sslErrors(const QList<QSslError> &errors)
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(sender());
-  //assert(socket);
+ // assert(socket);
 
   QString errorStrings;
   foreach (QSslError error, errors)
