@@ -11,7 +11,10 @@ QT +=network
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    BitBuffer.cpp \
     CL.cpp \
+    QrCode.cpp \
+    QrSegment.cpp \
     arduino.cpp \
     cadeau.cpp \
     categories.cpp \
@@ -23,10 +26,12 @@ SOURCES += \
     connexion.cpp \
     employes.cpp \
     excel.cpp \
+    fournisseur.cpp \
     gesempcong.cpp \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
     gestion_materiaux_maintenances.cpp \
+    gestion_produit_fournisseur.cpp \
     jeu.cpp \
     livraison.cpp \
     mail.cpp \
@@ -36,21 +41,27 @@ SOURCES += \
     maintenances.cpp \
     mainwindow.cpp \
     materiaux.cpp \
+    produit.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
     securritefume.cpp \
     server.cpp \
     smtp.cpp \
+    smtphakim.cpp \
     sslserver.cpp \
     stat.cpp \
     statCm.cpp \
+    stat_fournisseur.cpp \
     statemp.cpp \
     statistique.cpp \
     statistiquereclamations.cpp
 
 HEADERS += \
+    BitBuffer.hpp \
     CL.h \
+    QrCode.hpp \
+    QrSegment.hpp \
     arduino.h \
     cadeau.h \
     categories.h \
@@ -62,10 +73,12 @@ HEADERS += \
     connexion.h \
     employes.h \
     excel.h \
+    fournisseur.h \
     gesempcong.h \
     gestion.h \
     gestion_categories_reclamations.h \
     gestion_materiaux_maintenances.h \
+    gestion_produit_fournisseur.h \
     jeu.h \
     livraison.h \
     mail.h \
@@ -74,15 +87,18 @@ HEADERS += \
     maintenances.h \
     mainwindow.h \
     materiaux.h \
+    produit.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
     securritefume.h \
     server.h \
     smtp.h \
+    smtphakim.h \
     sslserver.h \
     stat.h \
     statCm.h \
+    stat_fournisseur.h \
     statemp.h \
     statistique.h \
     statistiquereclamations.h
@@ -95,6 +111,7 @@ FORMS += \
     gestion.ui \
     gestion_categories_reclamations.ui \
     gestion_materiaux_maintenances.ui \
+    gestion_produit_fournisseur.ui \
     maintenanceetat.ui \
     mainwindow.ui \
     reclamationbar.ui \
@@ -103,6 +120,7 @@ FORMS += \
     server.ui \
     stat.ui \
     statCm.ui \
+    stat_fournisseur.ui \
     statemp.ui \
     statistiquereclamations.ui
 
