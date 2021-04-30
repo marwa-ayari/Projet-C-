@@ -59,10 +59,16 @@ private slots:
 
     void on_tableView_maintenance_doubleClicked(const QModelIndex &index);
 
+    void sendMail();
+    void mailSent(QString);
+    void browse();
+
 
 private:
     Ui::Gestion_materiaux_maintenances *ui;
     Materiaux tmpmateriel;
+    QStringList files;
+
     Maintenances tmpmaintenance;
     statistique tmpstat;
 };

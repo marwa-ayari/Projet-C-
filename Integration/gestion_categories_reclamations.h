@@ -18,6 +18,9 @@ public:
     ~Gestion_categories_reclamations();
 
 private slots:
+    void sendMail();
+    void mailSent(QString);
+    void browse();
     void on_pushButton_categorie_4_clicked();
 
     void on_pushButton_categorie_6_clicked();
@@ -58,6 +61,8 @@ private slots:
 
 private:
     Ui::Gestion_categories_reclamations *ui;
+    QStringList files;
+
     Categories tmpcategorie;
     reclamations tmpreclamation;
     statistiqueReclamations tmpstatreclamation;
