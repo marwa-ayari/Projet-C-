@@ -56,7 +56,8 @@ SOURCES += \
         QrSegment.cpp \
      gestion_produit_fournisseur.cpp \
      smtphakim.cpp \
-     BitBuffer.cpp
+     BitBuffer.cpp\
+     traiterimage.cpp
 
 
 HEADERS += \
@@ -103,7 +104,8 @@ HEADERS += \
    gestion_produit_fournisseur.h \
    QrCode.hpp \
        QrSegment.hpp \
-       BitBuffer.hpp
+       BitBuffer.hpp\
+       traiterimage.h
 
 FORMS += \
     CL.ui \
