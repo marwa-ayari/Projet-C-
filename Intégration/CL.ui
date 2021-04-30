@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>-10</x>
-     <y>20</y>
+     <y>0</y>
      <width>931</width>
      <height>481</height>
     </rect>
@@ -320,7 +320,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../ProQtCppF/tri.png</normaloff>../ProQtCppF/tri.png</iconset>
+         <normaloff>../../../../../../../../../../i/tri.png</normaloff>../../../../../../../../../../i/tri.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -443,7 +443,7 @@ font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../Pictures/i/macaron.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/4545.jpg</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_36">
@@ -695,6 +695,9 @@ background-image:rgb(255, 170, 255)</string>
        <property name="text">
         <string/>
        </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../../../resources/Cupcake_Roses_Pearl_Cake_Pink_color_514470_1280x853.jpg</pixmap>
+       </property>
       </widget>
       <widget class="QLabel" name="label_32">
        <property name="geometry">
@@ -776,7 +779,7 @@ background-image:rgb(255, 170, 255)</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../Downloads/poubelle.png</normaloff>../../../../Downloads/poubelle.png</iconset>
+          <normaloff>../../../../../../../../../../resources/pbs.png</normaloff>../../../../../../../../../../resources/pbs.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -856,17 +859,17 @@ background-image:rgb(255, 170, 255)</string>
       <widget class="QLabel" name="label_43">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>1261</width>
-         <height>601</height>
+         <x>-350</x>
+         <y>-260</y>
+         <width>1441</width>
+         <height>791</height>
         </rect>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_43</zorder>
@@ -904,7 +907,7 @@ background-image:rgb(255, 170, 255)</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>-60</y>
+         <y>-70</y>
          <width>921</width>
          <height>461</height>
         </rect>
@@ -927,7 +930,7 @@ background-image:rgb(255, 170, 255)</string>
        <widget class="QGroupBox" name="groupBox_7">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>70</y>
           <width>721</width>
           <height>391</height>
@@ -1128,17 +1131,17 @@ background-image:rgb(255, 170, 255)</string>
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>-64</x>
-         <y>-10</y>
-         <width>911</width>
-         <height>431</height>
+         <x>-360</x>
+         <y>-230</y>
+         <width>1301</width>
+         <height>701</height>
         </rect>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
        </property>
       </widget>
       <zorder>label</zorder>
@@ -1152,7 +1155,7 @@ background-image:rgb(255, 170, 255)</string>
        <property name="geometry">
         <rect>
          <x>-70</x>
-         <y>-30</y>
+         <y>10</y>
          <width>981</width>
          <height>461</height>
         </rect>
@@ -1161,7 +1164,7 @@ background-image:rgb(255, 170, 255)</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../Downloads/893983.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/74-741363_macaron-background.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_12">
@@ -1194,7 +1197,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../Downloads/tri.png</normaloff>../../../../Downloads/tri.png</iconset>
+         <normaloff>../../../../../../../../../../i/tri.png</normaloff>../../../../../../../../../../i/tri.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1515,6 +1518,9 @@ background-image:rgb(255, 170, 255)</string>
        <property name="text">
         <string/>
        </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../../../resources/Cupcake_Roses_Pearl_Cake_Pink_color_514470_1280x853.jpg</pixmap>
+       </property>
       </widget>
       <widget class="QLabel" name="label_6">
        <property name="geometry">
@@ -1593,7 +1599,7 @@ background-image:rgb(255, 170, 255)</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../Downloads/poubelle.png</normaloff>../../../../Downloads/poubelle.png</iconset>
+          <normaloff>../../../../../../../../../../resources/pbs.png</normaloff>../../../../../../../../../../resources/pbs.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1660,17 +1666,17 @@ background-image:rgb(255, 170, 255)</string>
       <widget class="QLabel" name="label_17">
        <property name="geometry">
         <rect>
-         <x>-10</x>
-         <y>-30</y>
+         <x>-440</x>
+         <y>-170</y>
          <width>1321</width>
-         <height>591</height>
+         <height>871</height>
         </rect>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_17</zorder>
@@ -2189,8 +2195,8 @@ background-color:rgb(255, 196, 250)</string>
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>0</y>
+       <x>-370</x>
+       <y>-140</y>
        <width>1281</width>
        <height>631</height>
       </rect>
@@ -2199,7 +2205,7 @@ background-color:rgb(255, 196, 250)</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
+      <pixmap>../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg</pixmap>
      </property>
     </widget>
     <zorder>label_18</zorder>

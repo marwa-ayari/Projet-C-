@@ -142,4 +142,5 @@ SUBDIRS += \
 
 RESOURCES += \
     rs.qrc \
+    rs.qrc \
     rs.qrc
