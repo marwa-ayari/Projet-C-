@@ -44,7 +44,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;
 font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -54,7 +54,7 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
+       <y>40</y>
        <width>291</width>
        <height>91</height>
       </rect>
@@ -67,23 +67,24 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
       <string>   Veuillez patientez un moment...</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_temperature_2">
+    <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>300</y>
-       <width>291</width>
-       <height>91</height>
+       <x>0</x>
+       <y>-110</y>
+       <width>1061</width>
+       <height>611</height>
       </rect>
      </property>
-     <property name="styleSheet">
-      <string notr="true">font: 75 16pt 'Script MT Bold';background-color: rgb(0, 0, 127);color: rgb(255, 0, 0);
-</string>
-     </property>
      <property name="text">
-      <string>   Veuillez patientez un moment...</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../../../../../../i/sec.png</pixmap>
      </property>
     </widget>
+    <zorder>label_3</zorder>
+    <zorder>label_temperature</zorder>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">

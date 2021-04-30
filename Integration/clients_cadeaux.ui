@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Gestion des clients , cadeaux et jeu concours</string>
   </property>
   <widget class="QTabWidget" name="clients_cadeaux2">
    <property name="geometry">

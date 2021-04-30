@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Gestion des employés et des congés</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 170, 255, 66), stop:0.991525 rgba(255, 170, 183, 51))</string>
