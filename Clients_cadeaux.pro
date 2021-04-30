@@ -18,7 +18,8 @@ SOURCES += \
     mail.cpp \
      main.cpp \
     mainwindow.cpp \
-    stat.cpp
+    stat.cpp\
+       traiterimage.cpp
 
 HEADERS += \
     Connexion.h \
@@ -28,7 +29,8 @@ HEADERS += \
     jeu.h \
     mail.h \
     mainwindow.h \
-    stat.h
+    stat.h\
+       traiterimage.h
 
 FORMS += \
  clients_cadeaux.ui \
