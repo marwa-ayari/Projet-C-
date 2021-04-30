@@ -174,6 +174,10 @@ public:
     QGroupBox *groupBox_5;
     QPushButton *server_2;
     QLabel *label_photo_13;
+    QWidget *tab_4;
+    QTableView *hist;
+    QPushButton *pushButton;
+    QLabel *label_photo_14;
 
     void setupUi(QDialog *gesempcong)
     {
@@ -384,7 +388,7 @@ public:
         label_5 = new QLabel(ajouteremp);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(-180, -530, 1551, 1181));
-        label_5->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg")));
+        label_5->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg")));
         tabWidget_employes->addTab(ajouteremp, QString());
         label_5->raise();
         groupBox->raise();
@@ -534,7 +538,7 @@ public:
         pushButton_rechercheemp->setStyleSheet(QLatin1String("color: rgb(255, 170, 255);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));"));
         QIcon icon;
-        icon.addFile(QStringLiteral("../../../../../../../../../../resources/f6fcx.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral("../../../../../resources/f6fcx.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_rechercheemp->setIcon(icon);
         pushButton_rechercheemp->setIconSize(QSize(100, 121));
         triemp = new QPushButton(afficheremp);
@@ -663,7 +667,7 @@ public:
         triemp->setStyleSheet(QLatin1String("color: rgb(255, 170, 255);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));"));
         QIcon icon1;
-        icon1.addFile(QStringLiteral("../../../../../../../../../../resources/sqc.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral("../../../../../resources/sqc.png"), QSize(), QIcon::Normal, QIcon::Off);
         triemp->setIcon(icon1);
         triemp->setIconSize(QSize(100, 121));
         tableemp = new QTableView(afficheremp);
@@ -678,7 +682,7 @@ public:
         QFont font7;
         font7.setPointSize(1);
         label_photo_12->setFont(font7);
-        label_photo_12->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg")));
+        label_photo_12->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg")));
         statstemp = new QPushButton(afficheremp);
         statstemp->setObjectName(QStringLiteral("statstemp"));
         statstemp->setGeometry(QRect(360, 90, 251, 51));
@@ -687,7 +691,7 @@ public:
         statstemp->setStyleSheet(QLatin1String("color: rgb(255, 170, 255);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));"));
         QIcon icon2;
-        icon2.addFile(QStringLiteral("../../../../../../../../../../resources/stat.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QStringLiteral("../../../../../resources/stat.png"), QSize(), QIcon::Normal, QIcon::Off);
         statstemp->setIcon(icon2);
         statstemp->setIconSize(QSize(63, 68));
         statstemp->setAutoDefault(true);
@@ -704,7 +708,7 @@ public:
         excel->setStyleSheet(QLatin1String("color: rgb(255, 170, 255);\n"
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));"));
         QIcon icon3;
-        icon3.addFile(QStringLiteral("../../../../../../../../../../resources/edfc.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QStringLiteral("../../../../../resources/edfc.png"), QSize(), QIcon::Normal, QIcon::Off);
         excel->setIcon(icon3);
         excel->setIconSize(QSize(46, 46));
         tabWidget_employes->addTab(afficheremp, QString());
@@ -808,7 +812,7 @@ public:
         label_4 = new QLabel(modifieremp);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(-260, -310, 1291, 991));
-        label_4->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg")));
+        label_4->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg")));
         tabWidget_employes->addTab(modifieremp, QString());
         label_4->raise();
         groupBox_2->raise();
@@ -817,7 +821,7 @@ public:
         label_photo_10 = new QLabel(supprimeremp);
         label_photo_10->setObjectName(QStringLiteral("label_photo_10"));
         label_photo_10->setGeometry(QRect(-600, -40, 2091, 671));
-        label_photo_10->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/6861388-cupcake-wallpaper.jpg")));
+        label_photo_10->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/6861388-cupcake-wallpaper.jpg")));
         groupBox_3 = new QGroupBox(supprimeremp);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         groupBox_3->setGeometry(QRect(20, 60, 531, 371));
@@ -864,7 +868,7 @@ public:
 "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(170, 247, 255, 224), stop:0.991525 rgba(255, 170, 170, 195));\n"
 "color:rgb(225, 150, 225);"));
         QIcon icon4;
-        icon4.addFile(QStringLiteral("../../../../../../../../../../resources/pbs.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QStringLiteral("../../../../../resources/pbs.png"), QSize(), QIcon::Normal, QIcon::Off);
         suppemp->setIcon(icon4);
         suppemp->setIconSize(QSize(100, 121));
         comboBoxempsup = new QComboBox(groupBox_3);
@@ -876,7 +880,7 @@ public:
         label_photo_11 = new QLabel(tab_2);
         label_photo_11->setObjectName(QStringLiteral("label_photo_11"));
         label_photo_11->setGeometry(QRect(-340, 0, 2981, 1081));
-        label_photo_11->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/thumb-1920-417983.jpg")));
+        label_photo_11->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/thumb-1920-417983.jpg")));
         groupBox_4 = new QGroupBox(tab_2);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
         groupBox_4->setGeometry(QRect(240, 20, 541, 431));
@@ -940,7 +944,7 @@ public:
         label_photo_16 = new QLabel(ajoutercong);
         label_photo_16->setObjectName(QStringLiteral("label_photo_16"));
         label_photo_16->setGeometry(QRect(-180, -390, 1501, 931));
-        label_photo_16->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg")));
+        label_photo_16->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg")));
         ajouteruncong = new QGroupBox(ajoutercong);
         ajouteruncong->setObjectName(QStringLiteral("ajouteruncong"));
         ajouteruncong->setGeometry(QRect(190, 30, 631, 431));
@@ -1004,7 +1008,7 @@ public:
         label_photo_9 = new QLabel(affichercong);
         label_photo_9->setObjectName(QStringLiteral("label_photo_9"));
         label_photo_9->setGeometry(QRect(-230, -350, 1281, 901));
-        label_photo_9->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg")));
+        label_photo_9->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg")));
         recherchecong = new QPushButton(affichercong);
         recherchecong->setObjectName(QStringLiteral("recherchecong"));
         recherchecong->setGeometry(QRect(20, 10, 351, 61));
@@ -1261,7 +1265,7 @@ public:
         label_photo_17 = new QLabel(modifiercong);
         label_photo_17->setObjectName(QStringLiteral("label_photo_17"));
         label_photo_17->setGeometry(QRect(0, -290, 1531, 981));
-        label_photo_17->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/cupcake-with-sparkler.jpg")));
+        label_photo_17->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/cupcake-with-sparkler.jpg")));
         ajouteruncong_2 = new QGroupBox(modifiercong);
         ajouteruncong_2->setObjectName(QStringLiteral("ajouteruncong_2"));
         ajouteruncong_2->setGeometry(QRect(260, 20, 621, 451));
@@ -1360,7 +1364,7 @@ public:
         label_photo_4 = new QLabel(supprimercong);
         label_photo_4->setObjectName(QStringLiteral("label_photo_4"));
         label_photo_4->setGeometry(QRect(-20, -270, 2021, 1031));
-        label_photo_4->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/771686_food-bakery-chocolate-sweet-hd-wallpaper-high-resolution_1600x1024_h.jpg")));
+        label_photo_4->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/771686_food-bakery-chocolate-sweet-hd-wallpaper-high-resolution_1600x1024_h.jpg")));
         tabWidget_conges->addTab(supprimercong, QString());
         label_photo_4->raise();
         groupBox_6->raise();
@@ -1529,7 +1533,7 @@ public:
         label_photo_5 = new QLabel(tab);
         label_photo_5->setObjectName(QStringLiteral("label_photo_5"));
         label_photo_5->setGeometry(QRect(-130, -370, 2021, 1031));
-        label_photo_5->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/pink-cupcake-wallpaper-mural.jpg")));
+        label_photo_5->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/pink-cupcake-wallpaper-mural.jpg")));
         layoutWidget = new QWidget(tab);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
         layoutWidget->setGeometry(QRect(70, 70, 791, 461));
@@ -1726,14 +1730,36 @@ public:
         label_photo_13 = new QLabel(tab_3);
         label_photo_13->setObjectName(QStringLiteral("label_photo_13"));
         label_photo_13->setGeometry(QRect(-200, -300, 1461, 991));
-        label_photo_13->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Coffee_Donuts_Cup_530805_1280x853.jpg")));
+        label_photo_13->setPixmap(QPixmap(QString::fromUtf8("../../../../../resources/Coffee_Donuts_Cup_530805_1280x853.jpg")));
         onglet_emp_cong->addTab(tab_3, QString());
         label_photo_13->raise();
         groupBox_5->raise();
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
+        hist = new QTableView(tab_4);
+        hist->setObjectName(QStringLiteral("hist"));
+        hist->setGeometry(QRect(50, 50, 551, 391));
+        pushButton = new QPushButton(tab_4);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(720, 130, 151, 51));
+        QFont font24;
+        font24.setPointSize(16);
+        pushButton->setFont(font24);
+        pushButton->setStyleSheet(QLatin1String("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 158, 255, 255), stop:1 rgba(195, 0, 255, 255));\n"
+"color: rgb(74, 0, 111);"));
+        label_photo_14 = new QLabel(tab_4);
+        label_photo_14->setObjectName(QStringLiteral("label_photo_14"));
+        label_photo_14->setGeometry(QRect(-40, 10, 1281, 571));
+        label_photo_14->setFont(font7);
+        label_photo_14->setPixmap(QPixmap(QString::fromUtf8("../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg")));
+        onglet_emp_cong->addTab(tab_4, QString());
+        label_photo_14->raise();
+        hist->raise();
+        pushButton->raise();
 
         retranslateUi(gesempcong);
 
-        onglet_emp_cong->setCurrentIndex(2);
+        onglet_emp_cong->setCurrentIndex(4);
         tabWidget_employes->setCurrentIndex(0);
         tabWidget_conges->setCurrentIndex(0);
 
@@ -1838,6 +1864,9 @@ public:
         server_2->setText(QApplication::translate("gesempcong", "activer le serveur de E-pastry", Q_NULLPTR));
         label_photo_13->setText(QString());
         onglet_emp_cong->setTabText(onglet_emp_cong->indexOf(tab_3), QApplication::translate("gesempcong", "chat", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("gesempcong", "historique", Q_NULLPTR));
+        label_photo_14->setText(QString());
+        onglet_emp_cong->setTabText(onglet_emp_cong->indexOf(tab_4), QApplication::translate("gesempcong", "historique", Q_NULLPTR));
     } // retranslateUi
 
 };

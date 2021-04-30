@@ -155,7 +155,7 @@ public:
         gestionCl->resize(851, 478);
         tabWidget_2 = new QTabWidget(gestionCl);
         tabWidget_2->setObjectName(QStringLiteral("tabWidget_2"));
-        tabWidget_2->setGeometry(QRect(-10, 20, 931, 481));
+        tabWidget_2->setGeometry(QRect(-10, 0, 931, 481));
         QFont font;
         font.setFamily(QStringLiteral("Lucida Calligraphy"));
         font.setPointSize(15);
@@ -233,6 +233,7 @@ public:
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(-110, 0, 1051, 441));
         label_2->setStyleSheet(QStringLiteral("background-image:url(:/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg)"));
+        label_2->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Cupcake_Roses_Pearl_Cake_Pink_color_514470_1280x853.jpg")));
         label_12 = new QLabel(tab_8);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setGeometry(QRect(20, 20, 47, 61));
@@ -264,7 +265,7 @@ public:
 "font: 14pt \"MS Shell Dlg 2\";\n"
 ""));
         QIcon icon;
-        icon.addFile(QStringLiteral("../ProQtCppF/tri.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral("../../../../../../../../../../i/tri.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_14->setIcon(icon);
         pushButton_14->setIconSize(QSize(100, 121));
         tableView = new QTableView(tab_9);
@@ -307,7 +308,7 @@ public:
         label_14 = new QLabel(tab_9);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setGeometry(QRect(-40, -250, 2281, 2751));
-        label_14->setPixmap(QPixmap(QString::fromUtf8("../../Pictures/i/macaron.jpg")));
+        label_14->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/4545.jpg")));
         label_36 = new QLabel(tab_9);
         label_36->setObjectName(QStringLiteral("label_36"));
         label_36->setGeometry(QRect(500, 180, 61, 61));
@@ -376,6 +377,7 @@ public:
         label_16->setObjectName(QStringLiteral("label_16"));
         label_16->setGeometry(QRect(-80, -80, 1201, 611));
         label_16->setStyleSheet(QStringLiteral("background-image:url(:/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg)"));
+        label_16->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Cupcake_Roses_Pearl_Cake_Pink_color_514470_1280x853.jpg")));
         label_32 = new QLabel(tab_10);
         label_32->setObjectName(QStringLiteral("label_32"));
         label_32->setGeometry(QRect(10, 0, 931, 511));
@@ -403,7 +405,7 @@ public:
         pushButton_6->setStyleSheet(QLatin1String("color: rgb(255, 80, 97);\n"
 "background-image:rgb(255, 170, 255)"));
         QIcon icon1;
-        icon1.addFile(QStringLiteral("../../../../Downloads/poubelle.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral("../../../../../../../../../../resources/pbs.png"), QSize(), QIcon::Normal, QIcon::Off);
         pushButton_6->setIcon(icon1);
         pushButton_6->setIconSize(QSize(150, 150));
         label_45 = new QLabel(groupBox_6);
@@ -424,8 +426,8 @@ public:
         label_42->setPixmap(QPixmap(QString::fromUtf8("../../Pictures/i/poubelle.png")));
         label_43 = new QLabel(tab_11);
         label_43->setObjectName(QStringLiteral("label_43"));
-        label_43->setGeometry(QRect(0, 0, 1261, 601));
-        label_43->setPixmap(QPixmap(QString::fromUtf8("../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
+        label_43->setGeometry(QRect(-350, -260, 1441, 791));
+        label_43->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
         tabWidget_4->addTab(tab_11, QString());
         label_43->raise();
         groupBox_6->raise();
@@ -440,13 +442,13 @@ public:
         tab_3->setObjectName(QStringLiteral("tab_3"));
         groupBox = new QGroupBox(tab_3);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(20, -60, 921, 461));
+        groupBox->setGeometry(QRect(20, -70, 921, 461));
         groupBox->setFont(font2);
         groupBox->setStyleSheet(QLatin1String("color: rgb(255, 80, 97);\n"
 ""));
         groupBox_7 = new QGroupBox(groupBox);
         groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
-        groupBox_7->setGeometry(QRect(0, 70, 721, 391));
+        groupBox_7->setGeometry(QRect(10, 70, 721, 391));
         groupBox_7->setFont(font2);
         groupBox_7->setStyleSheet(QLatin1String("color: rgb(255, 80, 97);\n"
 ""));
@@ -499,8 +501,8 @@ public:
         lineEdit_2->setMaxLength(5);
         label = new QLabel(tab_3);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(-64, -10, 911, 431));
-        label->setPixmap(QPixmap(QString::fromUtf8("../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
+        label->setGeometry(QRect(-360, -230, 1301, 701));
+        label->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
         tabWidget_3->addTab(tab_3, QString());
         label->raise();
         groupBox->raise();
@@ -508,8 +510,8 @@ public:
         tab_5->setObjectName(QStringLiteral("tab_5"));
         label_27 = new QLabel(tab_5);
         label_27->setObjectName(QStringLiteral("label_27"));
-        label_27->setGeometry(QRect(-70, -30, 981, 461));
-        label_27->setPixmap(QPixmap(QString::fromUtf8("../../../../Downloads/893983.jpg")));
+        label_27->setGeometry(QRect(-70, 10, 981, 461));
+        label_27->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/74-741363_macaron-background.jpg")));
         pushButton_12 = new QPushButton(tab_5);
         pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
         pushButton_12->setGeometry(QRect(560, 260, 231, 81));
@@ -517,9 +519,7 @@ public:
         pushButton_12->setStyleSheet(QLatin1String("background-color:rgb(255, 179, 245);\n"
 "color:rgb(96, 96, 144);\n"
 "font: 14pt \"MS Shell Dlg 2\";"));
-        QIcon icon2;
-        icon2.addFile(QStringLiteral("../../../../Downloads/tri.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_12->setIcon(icon2);
+        pushButton_12->setIcon(icon);
         pushButton_12->setIconSize(QSize(100, 121));
         tableView_2 = new QTableView(tab_5);
         tableView_2->setObjectName(QStringLiteral("tableView_2"));
@@ -613,6 +613,7 @@ public:
         label_20->setObjectName(QStringLiteral("label_20"));
         label_20->setGeometry(QRect(-20, 0, 921, 521));
         label_20->setStyleSheet(QStringLiteral("background-image:url(:/1484065617_22184.jpg)"));
+        label_20->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Cupcake_Roses_Pearl_Cake_Pink_color_514470_1280x853.jpg")));
         label_6 = new QLabel(tab_6);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setGeometry(QRect(-4, 0, 901, 621));
@@ -653,8 +654,8 @@ public:
         combols->setGeometry(QRect(100, 140, 101, 22));
         label_17 = new QLabel(tab_7);
         label_17->setObjectName(QStringLiteral("label_17"));
-        label_17->setGeometry(QRect(-10, -30, 1321, 591));
-        label_17->setPixmap(QPixmap(QString::fromUtf8("../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
+        label_17->setGeometry(QRect(-440, -170, 1321, 871));
+        label_17->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
         tabWidget_3->addTab(tab_7, QString());
         label_17->raise();
         groupBox_3->raise();
@@ -797,8 +798,8 @@ public:
 "background-color:rgb(255, 196, 250)"));
         label_18 = new QLabel(tab);
         label_18->setObjectName(QStringLiteral("label_18"));
-        label_18->setGeometry(QRect(10, 0, 1281, 631));
-        label_18->setPixmap(QPixmap(QString::fromUtf8("../../Pictures/i/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
+        label_18->setGeometry(QRect(-370, -140, 1281, 631));
+        label_18->setPixmap(QPixmap(QString::fromUtf8("../../../../../../../../../../resources/Alinka-Shemeluyk_Sweets_YkxmSWdYdw.jpg")));
         tabWidget_2->addTab(tab, QString());
         label_18->raise();
         label_123->raise();
@@ -823,8 +824,8 @@ public:
 
         retranslateUi(gestionCl);
 
-        tabWidget_2->setCurrentIndex(1);
-        tabWidget_4->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(0);
+        tabWidget_4->setCurrentIndex(1);
         tabWidget_3->setCurrentIndex(0);
 
 

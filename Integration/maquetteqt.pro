@@ -37,6 +37,7 @@ SOURCES += \
     maintenances.cpp \
     mainwindow.cpp \
     materiaux.cpp \
+    projeth.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
@@ -83,6 +84,7 @@ HEADERS += \
     maintenances.h \
     mainwindow.h \
     materiaux.h \
+    projeth.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
