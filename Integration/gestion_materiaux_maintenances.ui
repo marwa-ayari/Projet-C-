@@ -1586,7 +1586,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
          <x>150</x>
          <y>10</y>
          <width>601</width>
-         <height>341</height>
+         <height>421</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout"/>
