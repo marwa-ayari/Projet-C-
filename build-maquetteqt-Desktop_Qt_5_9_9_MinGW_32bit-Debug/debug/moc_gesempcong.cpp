@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../Intégration/gesempcong.h"
+#include "../../Integration/gesempcong.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_gesempcong_t {
-    QByteArrayData data[25];
-    char stringdata0[535];
+    QByteArrayData data[26];
+    char stringdata0[557];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -55,7 +55,8 @@ QT_MOC_LITERAL(20, 461, 8), // "mailSent"
 QT_MOC_LITERAL(21, 470, 6), // "browse"
 QT_MOC_LITERAL(22, 477, 16), // "on_excel_clicked"
 QT_MOC_LITERAL(23, 494, 20), // "on_statstemp_clicked"
-QT_MOC_LITERAL(24, 515, 19) // "on_server_2_clicked"
+QT_MOC_LITERAL(24, 515, 19), // "on_server_2_clicked"
+QT_MOC_LITERAL(25, 535, 21) // "on_pushButton_clicked"
 
     },
     "gesempcong\0on_ajoutemp_clicked\0\0"
@@ -72,7 +73,8 @@ QT_MOC_LITERAL(24, 515, 19) // "on_server_2_clicked"
     "on_mmatricule_currentIndexChanged\0"
     "arg1\0on_idcm_currentIndexChanged\0"
     "sendMail\0mailSent\0browse\0on_excel_clicked\0"
-    "on_statstemp_clicked\0on_server_2_clicked"
+    "on_statstemp_clicked\0on_server_2_clicked\0"
+    "on_pushButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -82,7 +84,7 @@ static const uint qt_meta_data_gesempcong[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      21,   14, // methods
+      22,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -90,27 +92,28 @@ static const uint qt_meta_data_gesempcong[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  119,    2, 0x08 /* Private */,
-       3,    1,  120,    2, 0x08 /* Private */,
-       5,    0,  123,    2, 0x08 /* Private */,
-       6,    0,  124,    2, 0x08 /* Private */,
-       7,    0,  125,    2, 0x08 /* Private */,
-       8,    0,  126,    2, 0x08 /* Private */,
-       9,    0,  127,    2, 0x08 /* Private */,
-      10,    0,  128,    2, 0x08 /* Private */,
-      11,    0,  129,    2, 0x08 /* Private */,
-      12,    1,  130,    2, 0x08 /* Private */,
-      13,    0,  133,    2, 0x08 /* Private */,
-      14,    0,  134,    2, 0x08 /* Private */,
-      15,    0,  135,    2, 0x08 /* Private */,
-      16,    1,  136,    2, 0x08 /* Private */,
-      18,    1,  139,    2, 0x08 /* Private */,
-      19,    0,  142,    2, 0x08 /* Private */,
-      20,    1,  143,    2, 0x08 /* Private */,
-      21,    0,  146,    2, 0x08 /* Private */,
-      22,    0,  147,    2, 0x08 /* Private */,
-      23,    0,  148,    2, 0x08 /* Private */,
-      24,    0,  149,    2, 0x08 /* Private */,
+       1,    0,  124,    2, 0x08 /* Private */,
+       3,    1,  125,    2, 0x08 /* Private */,
+       5,    0,  128,    2, 0x08 /* Private */,
+       6,    0,  129,    2, 0x08 /* Private */,
+       7,    0,  130,    2, 0x08 /* Private */,
+       8,    0,  131,    2, 0x08 /* Private */,
+       9,    0,  132,    2, 0x08 /* Private */,
+      10,    0,  133,    2, 0x08 /* Private */,
+      11,    0,  134,    2, 0x08 /* Private */,
+      12,    1,  135,    2, 0x08 /* Private */,
+      13,    0,  138,    2, 0x08 /* Private */,
+      14,    0,  139,    2, 0x08 /* Private */,
+      15,    0,  140,    2, 0x08 /* Private */,
+      16,    1,  141,    2, 0x08 /* Private */,
+      18,    1,  144,    2, 0x08 /* Private */,
+      19,    0,  147,    2, 0x08 /* Private */,
+      20,    1,  148,    2, 0x08 /* Private */,
+      21,    0,  151,    2, 0x08 /* Private */,
+      22,    0,  152,    2, 0x08 /* Private */,
+      23,    0,  153,    2, 0x08 /* Private */,
+      24,    0,  154,    2, 0x08 /* Private */,
+      25,    0,  155,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -130,6 +133,7 @@ static const uint qt_meta_data_gesempcong[] = {
     QMetaType::Void, QMetaType::QString,   17,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -165,6 +169,7 @@ void gesempcong::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 18: _t->on_excel_clicked(); break;
         case 19: _t->on_statstemp_clicked(); break;
         case 20: _t->on_server_2_clicked(); break;
+        case 21: _t->on_pushButton_clicked(); break;
         default: ;
         }
     }
@@ -195,13 +200,13 @@ int gesempcong::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 21)
+        if (_id < 22)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 21;
+        _id -= 22;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 21)
+        if (_id < 22)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 21;
+        _id -= 22;
     }
     return _id;
 }

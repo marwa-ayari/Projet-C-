@@ -15,6 +15,7 @@
 #include "arduino.h"
 #include"statemp.h"
 #include "server.h"
+#include "projeth.h"
 
 
 namespace Ui {
@@ -78,6 +79,7 @@ private slots:
   void on_statstemp_clicked();
 
   void on_server_2_clicked();
+   void on_pushButton_clicked();
 
 private:
     Ui::gesempcong *ui;
@@ -88,6 +90,7 @@ private:
     QPropertyAnimation *animation;
     QByteArray data;
     arduino A;
+    projeth tmph;
 
 
 
