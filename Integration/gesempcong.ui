@@ -367,7 +367,7 @@ color: rgb(255, 170, 255);</string>
       <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 170, 255, 66), stop:0.991525 rgba(255, 170, 183, 51))</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -377,7 +377,7 @@ color: rgb(255, 170, 255);</string>
        <property name="geometry">
         <rect>
          <x>50</x>
-         <y>80</y>
+         <y>10</y>
          <width>841</width>
          <height>361</height>
         </rect>
@@ -650,7 +650,7 @@ color: rgb(255, 180, 203);</string>
        <property name="geometry">
         <rect>
          <x>-180</x>
-         <y>-530</y>
+         <y>-410</y>
          <width>1551</width>
          <height>1181</height>
         </rect>
@@ -659,7 +659,7 @@ color: rgb(255, 180, 203);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_5</zorder>
@@ -1242,7 +1242,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../resources/f6fcx.png</normaloff>../../../../../resources/f6fcx.png</iconset>
+         <normaloff>../../../../../../../../../../resources/f6fcx.png</normaloff>../../../../../../../../../../resources/f6fcx.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1824,7 +1824,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../resources/sqc.png</normaloff>../../../../../resources/sqc.png</iconset>
+         <normaloff>../../../../../../../../../../resources/sqc.png</normaloff>../../../../../../../../../../resources/sqc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1857,9 +1857,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        <property name="geometry">
         <rect>
          <x>-280</x>
-         <y>0</y>
+         <y>-100</y>
          <width>1281</width>
-         <height>571</height>
+         <height>681</height>
         </rect>
        </property>
        <property name="font">
@@ -1871,7 +1871,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="statstemp">
@@ -1903,7 +1903,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../resources/stat.png</normaloff>../../../../../resources/stat.png</iconset>
+         <normaloff>../../../../../../../../../../resources/stat.png</normaloff>../../../../../../../../../../resources/stat.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1944,7 +1944,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../resources/edfc.png</normaloff>../../../../../resources/edfc.png</iconset>
+         <normaloff>../../../../../../../../../../resources/edfc.png</normaloff>../../../../../../../../../../resources/edfc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1988,7 +1988,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
         <bool>false</bool>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:rgb(225, 150, 225);
+        <string notr="true">color: rgb(0, 0, 127);
+color: rgb(255, 170, 255);
 
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(170, 85, 255, 4), stop:0.550847 rgba(158, 0, 255, 22), stop:0.766949 rgba(150, 0, 255, 28), stop:0.995763 rgba(126, 0, 170, 37));</string>
        </property>
@@ -2143,7 +2144,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));
-color: rgb(255, 180, 203);</string>
+
+color: rgb(255, 170, 255);</string>
         </property>
         <property name="text">
          <string>modifier</string>
@@ -2285,7 +2287,7 @@ color: rgb(255, 180, 203);</string>
       <widget class="QLabel" name="label_4">
        <property name="geometry">
         <rect>
-         <x>-260</x>
+         <x>-250</x>
          <y>-310</y>
          <width>1291</width>
          <height>991</height>
@@ -2295,7 +2297,7 @@ color: rgb(255, 180, 203);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_4</zorder>
@@ -2318,7 +2320,7 @@ color: rgb(255, 180, 203);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/6861388-cupcake-wallpaper.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/6861388-cupcake-wallpaper.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_3">
@@ -2422,7 +2424,7 @@ color:rgb(225, 150, 225);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../resources/pbs.png</normaloff>../../../../../resources/pbs.png</iconset>
+          <normaloff>../../../../../../../../../../resources/pbs.png</normaloff>../../../../../../../../../../resources/pbs.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -2460,7 +2462,7 @@ color:rgb(225, 150, 225);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/thumb-1920-417983.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/thumb-1920-417983.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_4">
@@ -2629,33 +2631,17 @@ color:rgb(225, 150, 225);</string>
       <bool>false</bool>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="ajoutercong">
       <attribute name="title">
        <string>Ajouter</string>
       </attribute>
-      <widget class="QLabel" name="label_photo_16">
-       <property name="geometry">
-        <rect>
-         <x>-180</x>
-         <y>-390</y>
-         <width>1501</width>
-         <height>931</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../../../../../resources/Valentine_s_Day_Sweets_Cake_Roses_Cupcake_Wood_540623_1920x1080.jpg</pixmap>
-       </property>
-      </widget>
       <widget class="QGroupBox" name="ajouteruncong">
        <property name="geometry">
         <rect>
-         <x>190</x>
-         <y>30</y>
+         <x>310</x>
+         <y>40</y>
          <width>631</width>
          <height>431</height>
         </rect>
@@ -2859,6 +2845,24 @@ color:rgb(106, 0, 0);</string>
         </property>
        </widget>
       </widget>
+      <widget class="QLabel" name="label_photo_18">
+       <property name="geometry">
+        <rect>
+         <x>-40</x>
+         <y>-310</y>
+         <width>1531</width>
+         <height>981</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../../../resources/cupcake-with-sparkler.jpg</pixmap>
+       </property>
+      </widget>
+      <zorder>label_photo_18</zorder>
+      <zorder>ajouteruncong</zorder>
      </widget>
      <widget class="QWidget" name="affichercong">
       <attribute name="title">
@@ -2867,8 +2871,8 @@ color:rgb(106, 0, 0);</string>
       <widget class="QLabel" name="label_photo_9">
        <property name="geometry">
         <rect>
-         <x>-230</x>
-         <y>-350</y>
+         <x>-250</x>
+         <y>-220</y>
          <width>1281</width>
          <height>901</height>
         </rect>
@@ -2877,7 +2881,7 @@ color:rgb(106, 0, 0);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/Cupcake_Candles_Three_3_Heart_567997_1280x833.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="recherchecong">
@@ -3450,7 +3454,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../resources/f6fcx.png</normaloff>../../../../../resources/f6fcx.png</iconset>
+         <normaloff>../../../../../../../../../../resources/f6fcx.png</normaloff>../../../../../../../../../../resources/f6fcx.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4029,7 +4033,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../resources/sqc.png</normaloff>../../../../../resources/sqc.png</iconset>
+         <normaloff>../../../../../../../../../../resources/sqc.png</normaloff>../../../../../../../../../../resources/sqc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -4076,7 +4080,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/cupcake-with-sparkler.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/cupcake-with-sparkler.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="ajouteruncong_2">
@@ -4403,7 +4407,7 @@ color:rgb(106, 0, 0);</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../resources/pbs.png</normaloff>../../../../../resources/pbs.png</iconset>
+          <normaloff>../../../../../../../../../../resources/pbs.png</normaloff>../../../../../../../../../../resources/pbs.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -4441,7 +4445,7 @@ color:rgb(106, 0, 0);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../resources/771686_food-bakery-chocolate-sweet-hd-wallpaper-high-resolution_1600x1024_h.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/771686_food-bakery-chocolate-sweet-hd-wallpaper-high-resolution_1600x1024_h.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_photo_4</zorder>
@@ -5288,8 +5292,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
     <widget class="QLabel" name="label_photo_5">
      <property name="geometry">
       <rect>
-       <x>-130</x>
-       <y>-370</y>
+       <x>-1080</x>
+       <y>30</y>
        <width>2021</width>
        <height>1031</height>
       </rect>
@@ -5298,7 +5302,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../../../resources/pink-cupcake-wallpaper-mural.jpg</pixmap>
+      <pixmap>../../../../../../../../../../resources/Macarons-framboise-scaled.jpg</pixmap>
      </property>
     </widget>
     <widget class="QWidget" name="layoutWidget">
@@ -5590,10 +5594,10 @@ color: rgb(74, 0, 111);</string>
     <widget class="QGroupBox" name="groupBox_5">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>60</y>
-       <width>851</width>
-       <height>441</height>
+       <x>140</x>
+       <y>50</y>
+       <width>711</width>
+       <height>321</height>
       </rect>
      </property>
      <property name="font">
@@ -5610,12 +5614,10 @@ color: rgb(74, 0, 111);</string>
       <bool>false</bool>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:rgb(225, 150, 225);
-
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(170, 85, 255, 4), stop:0.550847 rgba(158, 0, 255, 22), stop:0.766949 rgba(150, 0, 255, 28), stop:0.995763 rgba(126, 0, 170, 37));</string>
+      <string notr="true">color: rgb(170, 0, 127);</string>
      </property>
      <property name="title">
-      <string>activer le serveur de epastry et aller vers le chat </string>
+      <string>  activer le serveur de epastry et aller vers le chat </string>
      </property>
      <property name="flat">
       <bool>false</bool>
@@ -5626,10 +5628,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
      <widget class="QPushButton" name="server_2">
       <property name="geometry">
        <rect>
-        <x>140</x>
+        <x>130</x>
         <y>100</y>
-        <width>561</width>
-        <height>91</height>
+        <width>461</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="font">
@@ -5644,8 +5646,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 170, 255);
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0635593 rgba(170, 0, 127, 164), stop:1 rgba(255, 214, 0, 82));</string>
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0100503 rgba(252, 222, 204, 255), stop:0.0502513 rgba(254, 223, 175, 255), stop:0.211055 rgba(246, 189, 237, 255), stop:0.487437 rgba(249, 162, 183, 255), stop:0.753769 rgba(206, 122, 218, 255), stop:1 rgba(170, 128, 185, 255));
+color: rgb(170, 0, 127);</string>
       </property>
       <property name="text">
        <string>activer le serveur de E-pastry</string>
@@ -5665,8 +5667,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
     <widget class="QLabel" name="label_photo_13">
      <property name="geometry">
       <rect>
-       <x>-200</x>
-       <y>-300</y>
+       <x>-260</x>
+       <y>-150</y>
        <width>1461</width>
        <height>991</height>
       </rect>
@@ -5675,7 +5677,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.063
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../../../resources/Coffee_Donuts_Cup_530805_1280x853.jpg</pixmap>
+      <pixmap>../../../../../../../../../../resources/Coffee_Donuts_Cup_530805_1280x853.jpg</pixmap>
      </property>
     </widget>
     <zorder>label_photo_13</zorder>
@@ -5735,7 +5737,7 @@ color: rgb(74, 0, 111);</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
+      <pixmap>../../../../../../../../../../resources/food-party-cake-bakery-chocolate-black-cupcakes-cup-sweet-de.jpg</pixmap>
      </property>
     </widget>
     <zorder>label_photo_14</zorder>
