@@ -120,7 +120,7 @@ QSqlQueryModel * Commande::affecter_commande()
 QSqlQueryModel * Commande::affecter_categorie()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
-    model->setQuery("select NOM_CATEGORI from categories");
+    model->setQuery("select NOM_CATEGORIE from categories");
 
         return model;
 }

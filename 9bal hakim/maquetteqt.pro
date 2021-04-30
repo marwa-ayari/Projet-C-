@@ -37,6 +37,7 @@ SOURCES += \
     maintenances.cpp \
     mainwindow.cpp \
     materiaux.cpp \
+    projeth.cpp \
     reclamationbar.cpp \
     reclamations.cpp \
     securite.cpp \
@@ -55,7 +56,8 @@ SOURCES += \
         QrSegment.cpp \
      gestion_produit_fournisseur.cpp \
      smtphakim.cpp \
-     BitBuffer.cpp
+     BitBuffer.cpp\
+     traiterimage.cpp
 
 
 HEADERS += \
@@ -83,6 +85,7 @@ HEADERS += \
     maintenances.h \
     mainwindow.h \
     materiaux.h \
+    projeth.h \
     reclamationbar.h \
     reclamations.h \
     securite.h \
@@ -101,7 +104,8 @@ HEADERS += \
    gestion_produit_fournisseur.h \
    QrCode.hpp \
        QrSegment.hpp \
-       BitBuffer.hpp
+       BitBuffer.hpp\
+       traiterimage.h
 
 FORMS += \
     CL.ui \

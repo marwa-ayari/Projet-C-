@@ -1,4 +1,4 @@
-#include "connexion.h"
+﻿#include "connexion.h"
 
 Connexion::Connexion()
 {
@@ -13,7 +13,7 @@ db.setUserName("marwa");//inserer nom de l'utilisateur
 db.setPassword("marwa");//inserer mot de passe de cet utilisateur
 
 
-                         /*db.setDatabaseName("projet_2A");
+                       /* db.setDatabaseName("projet_2A");
                          db.setUserName("Eya");//inserer nom de l'utilisateur
                          db.setPassword("eya");//inserer mot de passe de cet utilisateur*/
 

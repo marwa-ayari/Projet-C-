@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>609</width>
-    <height>408</height>
+    <width>607</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>540</x>
-     <y>310</y>
+     <y>360</y>
      <width>61</width>
      <height>41</height>
     </rect>
@@ -32,7 +32,7 @@ border-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../../../i/on.png</normaloff>../../../../../i/on.png</iconset>
+     <normaloff>../../../../../../../../../../i/on.png</normaloff>../../../../../../../../../../i/on.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -63,7 +63,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
    <property name="geometry">
     <rect>
      <x>540</x>
-     <y>360</y>
+     <y>410</y>
      <width>61</width>
      <height>41</height>
     </rect>
@@ -76,7 +76,7 @@ font: 75 13pt &quot;Script MT Bold&quot;;
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../../../../../i/off.png</normaloff>../../../../../i/off.png</iconset>
+     <normaloff>../../../../../../../../../../i/off.png</normaloff>../../../../../../../../../../i/off.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -158,9 +158,9 @@ font: 75 13pt &quot;Script MT Bold&quot;;
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>230</x>
      <y>270</y>
-     <width>81</width>
+     <width>131</width>
      <height>51</height>
     </rect>
    </property>

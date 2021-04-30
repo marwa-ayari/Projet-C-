@@ -42,7 +42,7 @@
 color: rgb(255, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>4</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="ongletemp">
     <attribute name="title">
@@ -2417,10 +2417,10 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
         <property name="styleSheet">
          <string notr="true">
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(170, 247, 255, 224), stop:0.991525 rgba(255, 170, 170, 195));
-color:rgb(225, 150, 225);</string>
+color: rgb(0, 170, 255);</string>
         </property>
         <property name="text">
-         <string/>
+         <string>supprimer</string>
         </property>
         <property name="icon">
          <iconset>

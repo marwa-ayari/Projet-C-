@@ -126,7 +126,7 @@ void Server::checkFileStatus()
 void Server::acceptConnection()
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(server.nextPendingConnection());
-  //assert(socket);
+  assert(socket);
 
   // QSslSocket emits the encrypted() signal after the encrypted connection is established
   connect(socket, SIGNAL(encrypted()), this, SLOT(handshakeComplete()));
@@ -147,7 +147,7 @@ void Server::acceptConnection()
 void Server::handshakeComplete()
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(sender());
-  //assert(socket);
+  assert(socket);
 
   connect(socket, SIGNAL(disconnected()), this, SLOT(connectionClosed()));
   connect(socket, SIGNAL(readyRead()), this, SLOT(receiveMessage()));
@@ -163,7 +163,7 @@ void Server::handshakeComplete()
 void Server::sslErrors(const QList<QSslError> &errors)
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(sender());
- // assert(socket);
+  assert(socket);
 
   QString errorStrings;
   foreach (QSslError error, errors)
@@ -185,7 +185,7 @@ void Server::sslErrors(const QList<QSslError> &errors)
 void Server::receiveMessage()
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(sender());
-  //assert(socket);
+  assert(socket);
 
   if (socket->canReadLine())
   {
@@ -211,7 +211,7 @@ void Server::receiveMessage()
 void Server::connectionClosed()
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(sender());
-  //assert(socket);
+  assert(socket);
 
   ui->logTextEdit->append(QString("[%1] Connection from %2:%3 closed: %4")
                           .arg(QDateTime::currentDateTime().toString("hh:mm:ss.zzz ap"))
@@ -226,7 +226,7 @@ void Server::connectionClosed()
 void Server::connectionFailure()
 {
   QSslSocket *socket = dynamic_cast<QSslSocket *>(sender());
-  //assert(socket);
+  assert(socket);
 
   ui->logTextEdit->append(QString("[%1] Connection from %2:%3 failed: %4")
                           .arg(QDateTime::currentDateTime().toString("hh:mm:ss.zzz ap"))

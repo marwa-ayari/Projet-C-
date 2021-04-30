@@ -23,6 +23,8 @@
 #include"QPdfWriter"
 #include<QSystemTrayIcon>
 #include <QtGui>
+#include<QMediaPlayer>
+#include<QFileDialog>
 clients_cadeaux::clients_cadeaux(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::clients_cadeaux)
@@ -36,9 +38,11 @@ clients_cadeaux::clients_cadeaux(QWidget *parent)
     ui->comboBox_5->addItem("Accessoires cuisine");
     connect(ui->sendBtn_2, SIGNAL(clicked()),this, SLOT(sendMail()));
        connect(ui->exitBtn_2, SIGNAL(clicked()),this, SLOT(close()));
+       mMediaPlayer = new QMediaPlayer(this);
+
+
 
 }
-
 clients_cadeaux::~clients_cadeaux()
 {
     delete ui;
@@ -307,6 +311,7 @@ void clients_cadeaux::on_tabWidget_5_currentChanged(int index)
                "QPushButton:hover {"
                "font-size: 16px;"
                "transition: 0.9s; }");
+
 
 
 
@@ -1113,7 +1118,575 @@ void clients_cadeaux::on_pushButton_triJeu_2_clicked()
          ui->tableView_6->setModel(tmpjeu.triDESC());
 }
 
+void clients_cadeaux::loadImage()
+{
+
+    QSize size(ui->imageLabel_2->width(), ui->imageLabel_2->height());
+    QImage image2 = image1.scaled(size, Qt::KeepAspectRatio);
+
+    ui->imageLabel_2->setPixmap(QPixmap::fromImage(image2));
+
+
+}
+// ouvrir une  image
+void clients_cadeaux::ouvrir()
+{
+
+    fileName = QFileDialog::getOpenFileName(this, "Ouvrir un fichier...", QString());
+
+    if (!fileName.isEmpty()) {
+        QImage image(fileName);
+        image1=image;
+        m_chemin=fileName;
+        if (image1.isNull()) {
+            QMessageBox::information(this, "MainWindow ",
+                                     tr("ne peut pas etre charge").arg(fileName));
+            return;
+        }
+        int fact=image1.depth()/8;
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+        this->loadImage();
+    }
+}
 
 
 
 
+
+
+void clients_cadeaux::on_pushButton_clicked()
+{
+
+    fileName = QFileDialog::getOpenFileName(this, "Ouvrir un fichier...", QString());
+
+    if (!fileName.isEmpty()) {
+        QImage image(fileName);
+        image1=image;
+        m_chemin=fileName;
+        if (image1.isNull()) {
+            QMessageBox::information(this, "MainWindow ",
+                                     tr("ne peut pas etre charge.").arg(fileName));
+            return;
+        }
+        int fact=image1.depth()/8;
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+        this->loadImage();
+    }
+}
+
+void clients_cadeaux::on_vtgradientAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+
+    int fact=image1.depth()/8;
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+    im1->normex(fact);
+    im1->transfertx();
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_hrgradientAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+
+    int fact=image1.depth()/8;
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+    im1->normey(fact);
+    im1->transferty();
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_initialiserAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+
+    QImage image(fileName);
+    image1=image;
+    m_chemin=fileName;
+
+    this->loadImage();
+}
+
+void clients_cadeaux::on_inversionfilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    meth=8;
+
+    int fact=image1.depth()/8;
+    if( im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+
+    this->show();
+
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+    im1->inversion(fact);
+    im1->transfert_to_qim(&(this->image1));
+
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_rgbtolumAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    meth=1;
+
+    int fact=image1.depth()/8;
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+    if(fact==4)
+    { im1->rgb_to_lum(fact);}
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();;
+}
+
+void clients_cadeaux::on_gaussianfilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+
+    meth=0;
+    int fact=image1.depth()/8;
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+    im1->gaussian(fact);
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_binarisationfilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    if (aa>255 ||aa<0 )
+    {
+        aa=50;
+    }
+    if ( bb>255 ||bb<0)
+    {
+        bb=100;
+    }
+    meth=5;
+
+
+    int fact=image1.depth()/8;
+
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+
+    this->show();
+
+    this->image1=this->image1.copy();
+    this->image2=this->image1;
+
+    im1->transfert_to_exim(&(this->image1));
+    im1->binarisation(fact,aa,255);;
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_binaristionIntervallefilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    if ( aa>255 ||aa<0 )
+    {
+        aa=50;
+    }
+    if (bb>255 ||bb<0)
+    {
+        bb=100;
+    }
+    meth=7;
+
+
+
+    int fact=image1.depth()/8;
+
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+
+    this->image1=this->image1.copy();
+    this->image2=this->image1;
+
+    im1->transfert_to_exim(&(this->image1));
+
+    im1->mediane(fact,3);
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_seuilageIntervallefilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    if ( aa>255 ||aa<0 )
+    {
+        aa=50;
+    }
+    if ( bb>255 ||bb<0)
+    {
+        bb=100;
+    }
+    meth=6;
+
+    int fact=image1.depth()/8;
+
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+
+    im1->moyenneur(fact);
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_fenetragefilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+
+    if ( aa>255 ||aa<0 )
+    {
+        aa=50;
+    }
+    if ( bb>255 ||bb<0)
+    {
+        bb=100;
+    }
+
+    meth=3;
+
+    int fact=image1.depth()/8;
+
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+
+    this->image1=this->image1.copy();
+    this->image2=this->image1;
+
+    im1->transfert_to_exim(&(this->image1));
+    im1->fenetrage(fact,aa,bb,255,1);
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_seuillagefilterAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    if ( aa>255 ||aa<0 )
+    {
+        aa=50;
+    }
+    if ( bb>255 ||bb<0)
+    {
+        bb=100;
+    }
+    meth=4;
+
+    int fact=image1.depth()/8;
+
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+
+    this->image1=this->image1.copy();
+    this->image2=this->image1;
+
+
+    im1->transfert_to_exim(&(this->image1));
+    im1->seuillage(fact,aa,1);
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+void clients_cadeaux::on_borderdetectAct_clicked()
+{
+    if (image1.isNull()) {
+        QMessageBox::information(this, "MainWindow ",
+                                 "Veuillez charger une image!!!,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
+                                 "  selectionner une image");
+        return;
+    }
+    meth=2;
+
+    int fact=image1.depth()/8;
+    if(im1->isNULL())
+    {
+        im1=new TraiterImage(image1.height(),fact*image1.width());
+    }
+
+    this->show();
+    this->image1=this->image1.copy();
+    im1->transfert_to_exim(&(this->image1));
+    im1->normex(fact);
+    im1->normey(fact);
+    im1->norme(fact);
+    im1->transfert_to_qim(&(this->image1));
+    this->loadImage();
+    this->repaint();
+}
+
+
+void clients_cadeaux::on_pushButton_2_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this,"ouvrir");
+        if (filename.isEmpty())
+        {return;}
+        mMediaPlayer->setMedia(QUrl::fromLocalFile(filename));
+        mMediaPlayer->setVolume(ui->volume->value());
+        on_play_clicked();
+}
+
+void clients_cadeaux::on_play_clicked()
+{
+     mMediaPlayer->play();
+}
+
+void clients_cadeaux::on_pause_clicked()
+{
+      mMediaPlayer->pause();
+}
+
+void clients_cadeaux::on_stop_clicked()
+{
+      mMediaPlayer->stop();
+}
+
+void clients_cadeaux::on_mute_clicked()
+{
+    if(ui->mute->text()=="muet"){
+       mMediaPlayer->setMuted(true);
+       ui->mute->setText("normal");
+       }else {mMediaPlayer->setMuted(false);
+           ui->mute->setText("muet");
+       }
+}
+
+void clients_cadeaux::on_volume_valueChanged(int value)
+{
+     mMediaPlayer->setVolume(value);
+}
+
+void clients_cadeaux::on_enregistrer_clicked()
+{
+    QString chemin = QFileDialog::getSaveFileName(this, "Enregistrer le fichier", m_chemin,"Image (*.jpeg)");
+       QFile file(chemin);
+       if(!file.open(QIODevice::WriteOnly))
+           return;
+       QImage im1=this->image1;
+       QString extension=  QFileInfo(chemin).suffix();
+       im1.save(chemin, extension. toLatin1());
+}
+
+void clients_cadeaux::on_Imprimer_clicked()
+{
+    Q_ASSERT(ui->imageLabel_2->pixmap());
+    #ifndef QT_NO_PRINTER
+        QPrintDialog dialog(&printer, this);
+
+        if (dialog.exec()) {
+            QPainter painter(&printer);
+            QRect rect = painter.viewport();
+            QSize size = ui->imageLabel_2->pixmap()->size();
+            size.scale(rect.size(), Qt::KeepAspectRatio);
+            painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
+            painter.setWindow(ui->imageLabel_2->pixmap()->rect());
+            painter.drawPixmap(0, 0, *ui->imageLabel_2->pixmap());
+        }
+    #endif
+}
+
+void clients_cadeaux::on_modifier_clicked()
+{
+    QSize size((ui->imageLabel_2->width())*3, (ui->imageLabel_2->height())*2);
+    QImage image2 = image1.scaled(size, Qt::KeepAspectRatio);
+
+    ui->label_40->setPixmap(QPixmap::fromImage(image2));
+}
+
+void clients_cadeaux::on_pushButton_pdf_cadeau_clicked()
+{
+    QString categorie =ui->lineEdit_10->text();
+      ui->tableView_5->setModel(tmpcadeau.recherche2(categorie));
+    QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Export PDF", QString(), "*.pdf");
+    QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl::fromLocalFile("C:/images_projets/button.mp3"));
+        player->setVolume(2000);
+        player->play();
+       ui->pushButton_pdf_2->setStyleSheet(QString::fromUtf8("background-color: #de1c58;"));
+ QString system_date = QDateTime::currentDateTime().toString("yyyy/MM/dd");
+             QString strStream;
+                       QTextStream out(&strStream);
+                       const int rowCount = ui->tableView_5->model()->rowCount();
+                       const int columnCount = ui->tableView_5->model()->columnCount();
+
+                       out <<  "<html>\n"
+                       "<head>\n"
+
+                                        "<meta Content=\"Text/html; charset=Windows-1251\">\n"
+                                        <<  QString("<title %1 </title>\n").arg("strTitle")
+                                        <<  "</head> \n"
+                                        "<body bgcolor=#ffaa7f link=#5000A0 >\n"
+
+                                        "<align='right'> " << system_date << "</align>"
+
+                                        "<center> <img src='C:/images_projets/logo.png'></img></br><H1>E-pastry</H1></br><H2>Categorie cible</H2></br><table border=1 cellspacing=0 cellpadding=2>\n";
+
+                       // headers
+                       out << "<thead><tr bgcolor=#ca8963> <th>Numero</th>";
+                       out<<"<cellspacing=10 cellpadding=3>";
+                       for (int column = 0; column < columnCount; column++)
+                           if (!ui->tableView_4->isColumnHidden(column))
+                               out << QString("<th>%1</th>").arg(ui->tableView_5->model()->headerData(column, Qt::Horizontal).toString());
+                       out << "</tr></thead>\n";
+
+                       // data table
+                       for (int row = 0; row < rowCount; row++) {
+                           out << "<tr> <td bkcolor=0>" << row+1 <<"</td>";
+                           for (int column = 0; column < columnCount; column++) {
+                               if (!ui->tableView_5->isColumnHidden(column)) {
+                                   QString data = ui->tableView_5->model()->data(ui->tableView_5->model()->index(row, column)).toString().simplified();
+                                   out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                               }
+                           }
+                           out << "</tr>\n";
+                       }
+                    "</body>\n"
+                                        "</html>\n";
+                                if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".pdf"); }
+
+
+                               QPrinter printer (QPrinter::PrinterResolution);
+                                printer.setOutputFormat(QPrinter::PdfFormat);
+                               printer.setPaperSize(QPrinter::A4);
+                              printer.setOutputFileName(fileName);
+
+                               QTextDocument doc;
+                                doc.setHtml(strStream);
+                                doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
+                                doc.print(&printer);
+                               }

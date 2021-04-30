@@ -49,6 +49,15 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
         if(catg.ajouter()) {
             QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
                         QObject::tr("Ajout effectuer avec succés.\n" ), QMessageBox::Cancel);
+
+            QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                    notifyIcon->show();
+                    notifyIcon->setIcon(QIcon(" "));
+                    notifyIcon->setVisible(" ");
+
+                    notifyIcon->showMessage("Nouvelle réclamation ajoutée","Veuillez traiter cette réclamation",QSystemTrayIcon::Information,15000);
+
+
             ui->lineEdit_categorie_12->setText("");
             ui->lineEdit_categorie_13->setText("");
 
@@ -338,7 +347,7 @@ void Gestion_categories_reclamations::on_pushButton_13_clicked()
                     <<  QString("<title>%1</title>\n").arg("Reclamations")
                     <<  "</head>\n"
                     "<body background='C:/i/mac.jpeg'>\n"
-                        "<center><img src='C:/i/arc.png' width='300' height='300' ></center>\n"
+                        "<center><img src='C:/i/capture.png' width='300' height='300' ></center>\n"
                         "<center><h2>Liste des reclamations</h2></center>"
 
                         "<table border=1 align='center' width='70%' cellspacing=0 cellpadding=2 bgcolor=#FED5FF>\n";

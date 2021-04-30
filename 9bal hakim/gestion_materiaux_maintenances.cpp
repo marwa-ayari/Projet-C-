@@ -56,6 +56,12 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_16_clicked()
         ui->lineEdit_materiel_15->setText("");
         ui->lineEdit_materiel_17->setText("");
 
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("E:\arcmaher.png"));
+                notifyIcon->setVisible("E:\arcmaher.png");
+                notifyIcon->showMessage("Ajout nouvelle Maintenance  ","maintenance ajoutée",QSystemTrayIcon::Information,15000);
+
 }else{
         QMessageBox::information(nullptr, QObject::tr("Ajout matériel"),
                     QObject::tr("Echec de l'ajout . Ce matériel existe déja."), QMessageBox::Cancel);
@@ -321,7 +327,7 @@ void Gestion_materiaux_maintenances::on_pushButton_maintenance_16_clicked()
                         <<  QString("<title>%1</title>\n").arg("Maintenances")
                         <<  "</head>\n"
                         "<body background='C:/0.png'>\n"
-                            "<center><img src='E:/arcmaher.png' width='300' height='300' ></center>"
+                            "<center><img src='C:/i/arc.png' width='300' height='300' ></center>"
                             "<center><h2>Liste des Maintenances</h2></center>"
                             "<table border=1 align='center' width='65%'bgcolor=#33DFFF>\n";
 
