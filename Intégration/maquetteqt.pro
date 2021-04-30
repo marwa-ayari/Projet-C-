@@ -139,3 +139,7 @@ DISTFILES += \
 SUBDIRS += \
     commande_livraison.pro \
     commande_livraison.pro
+
+RESOURCES += \
+    rs.qrc \
+    rs.qrc

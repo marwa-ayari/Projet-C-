@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(85, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="widget">
     <attribute name="title">
@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_8">
       <attribute name="title">
@@ -246,6 +246,9 @@ background-image:rgb(255, 170, 255)</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../../../resources/Cupcake_Roses_Pearl_Cake_Pink_color_514470_1280x853.jpg</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_12">
