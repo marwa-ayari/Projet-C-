@@ -263,7 +263,9 @@ void gesempcong::on_modifemp_clicked()
    Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
 
     if(E.modifier(matemp))
-    { QDate d = QDate::currentDate() ;
+    {
+        srand (time(NULL));
+        QDate d = QDate::currentDate() ;
         QString datee =d.toString("dd / MM / yyyy ") ;
         QString fn="modification employes" ;
        QString nom1 = ui->modifemp->text();

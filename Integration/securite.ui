@@ -44,7 +44,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;
 font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -147,8 +147,8 @@ font: 75 26pt &quot;MS Shell Dlg 2&quot;;</string>
     <widget class="QPushButton" name="resolution">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>290</y>
+       <x>60</x>
+       <y>300</y>
        <width>151</width>
        <height>51</height>
       </rect>
@@ -172,7 +172,7 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../../images_projets/reg.jpg</normaloff>../../../../../images_projets/reg.jpg</iconset>
+       <normaloff>../../../../../../../../../../images_projets/reg.jpg</normaloff>../../../../../../../../../../images_projets/reg.jpg</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -194,7 +194,7 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../../../images_projets/gazF.jpg</pixmap>
+      <pixmap>../../../../../../../../../../images_projets/gazF.jpg</pixmap>
      </property>
     </widget>
     <zorder>label_2</zorder>
