@@ -21,15 +21,15 @@ statCl::statCl(QWidget *parent) :
 {
 
 
-      QBarSet *set0 = new QBarSet("salee");
-      QBarSet *set1 = new QBarSet("gateaux");
-      QBarSet *set2 = new QBarSet("croissant");
+      QBarSet *set0 = new QBarSet("popola");
+      QBarSet *set1 = new QBarSet("bibi");
+      QBarSet *set2 = new QBarSet("polapopo");
 
 
 
-      *set0 << y.calculerr("salee")<< 0 << 0;
-      *set1 << 0 << y.calculerr("gateaux") << 0;
-      *set2 << 0 << 0 << y.calculerr("croissant");
+      *set0 << y.calculerr("popola")<< 0 << 0;
+      *set1 << 0 << y.calculerr("bibi") << 0;
+      *set2 << 0 << 0 << y.calculerr("polapopo");
 
       QBarSeries *series = new QBarSeries();
       series->append(set0);
@@ -42,20 +42,26 @@ statCl::statCl(QWidget *parent) :
       chart->setAnimationOptions(QChart::SeriesAnimations);
 
       QStringList categories;
-      categories << "salee"
-                 << "gateaux"
-                 << "croissant";
+      categories << "popola"
+                 << "bibi"
+                 << "polapopo";
 
-      QBarCategoryAxis *axis = new QBarCategoryAxis();
-      axis->append(categories);
-      chart->createDefaultAxes();
-      chart->setAxisX(axis, series);
+      QBarCategoryAxis *axisX = new QBarCategoryAxis();
+      axisX->append(categories);
+      chart->addAxis(axisX, Qt::AlignBottom);
+      series->attachAxis(axisX);
+
+      QValueAxis *axisY = new QValueAxis();
+      axisY->setRange(0,8);
+      chart->addAxis(axisY, Qt::AlignLeft);
+      series->attachAxis(axisY);
 
       chart->legend()->setVisible(true);
       chart->legend()->setAlignment(Qt::AlignBottom);
 
       QChartView *chartview = new QChartView(chart);
       chartview->setRenderHint(QPainter::Antialiasing);
+
       QGridLayout *mainLayout = new QGridLayout;
       mainLayout->addWidget(chartview, 1, 1);
       setLayout(mainLayout);

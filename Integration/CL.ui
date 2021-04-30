@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(85, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="widget">
     <attribute name="title">
@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_8">
       <attribute name="title">
@@ -434,7 +434,7 @@ font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
        <property name="geometry">
         <rect>
          <x>-40</x>
-         <y>-250</y>
+         <y>-930</y>
          <width>2281</width>
          <height>2751</height>
         </rect>
@@ -443,7 +443,7 @@ font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../../../../../resources/4545.jpg</pixmap>
+        <pixmap>../../../../../../../../../../resources/74-741363_macaron-background.jpg</pixmap>
        </property>
       </widget>
       <widget class="QLabel" name="label_36">
@@ -897,7 +897,7 @@ background-image:rgb(255, 170, 255)</string>
       </font>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">

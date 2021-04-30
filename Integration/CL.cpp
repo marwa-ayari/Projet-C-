@@ -88,10 +88,18 @@ void gestionCl::on_pushButton_4_clicked()
               ui->comboCommande_2->setModel(tmpcommande.affecter_commande());
               ui->comboCommande->setModel(tmpcommande.affecter_commande());
 
+              musicAdd.setMedia(QUrl("C:/i/ajout succe.mp3"));
+                                  musicAdd.play();
+
               ui->tableView->setModel(tmpcommande.afficher());//refresh
         QMessageBox::information(nullptr, QObject::tr("Ajouter une commande"),
                           QObject::tr("Commande ajoutée.\n"
                                       "Click Cancel to exit."), QMessageBox::Cancel);
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("E:\arcmaher.png"));
+                notifyIcon->setVisible("E:\arcmaher.png");
+                notifyIcon->showMessage("Ajout nouvelle Commande  ","commande ajoutée",QSystemTrayIcon::Information,15000);
 
         }
           else
@@ -108,6 +116,9 @@ void  gestionCl::on_pushButton_6_clicked()
     bool test=tmpcommande.supprimer(id_com);
     if(test)
     {ui->tableView->setModel(tmpcommande.afficher());//refresh
+
+        musicAdd.setMedia(QUrl("C:/i/supp succe.mp3"));
+                            musicAdd.play();
         QMessageBox::information(nullptr, QObject::tr("Supprimer une commande"),
                     QObject::tr("commande supprimée.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
@@ -133,6 +144,9 @@ void  gestionCl::on_pushButton_7_clicked()
 
         if(test)
         {
+
+            musicAdd.setMedia(QUrl("C:/i/modif succe.mp3"));
+                                musicAdd.play();
             QMessageBox::information(nullptr, QObject::tr("modifier une commande"),
                               QObject::tr("commande modifiee.\n"
                                           "Click Cancel to exit."), QMessageBox::Cancel);
@@ -164,9 +178,17 @@ void  gestionCl::on_pushButton_clicked()
       ui->comboLiv->setModel(tmpcommande.affecter_Livraison());
       ui->combols->setModel(tmpcommande.affecter_Livraison());
       ui->combolk->setModel(tmpcommande.affecter_Livraison());
+
+      musicAdd.setMedia(QUrl("C:/i/ajout succe.mp3"));
+                          musicAdd.play();
 QMessageBox::information(nullptr, QObject::tr("Ajouter une livraison"),
                   QObject::tr("Livraison ajoutée.\n"
                               "Click Cancel to exit."), QMessageBox::Cancel);
+QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+        notifyIcon->show();
+        notifyIcon->setIcon(QIcon("E:\arcmaher.png"));
+        notifyIcon->setVisible("E:\arcmaher.png");
+        notifyIcon->showMessage("Ajout nouvelle Livraison","Livraison ajoutée",QSystemTrayIcon::Information,15000);
 
 }
   else
@@ -189,6 +211,9 @@ void  gestionCl::on_pushButton_2_clicked()
 
         if(test)
         {
+
+            musicAdd.setMedia(QUrl("C:/i/modif succe.mp3"));
+                                musicAdd.play();
             QMessageBox::information(nullptr, QObject::tr("modifie une livraison"),
                               QObject::tr("Livraison modifiee.\n"
                                           "Click Cancel to exit."), QMessageBox::Cancel);
@@ -209,6 +234,9 @@ void  gestionCl::on_pushButton_3_clicked()
     bool test=tmplivraison.supprimer(num_l);
     if(test)
     {ui->tableView_2->setModel(tmplivraison.afficher());//refresh
+
+        musicAdd.setMedia(QUrl("C:/i/supp succe.mp3"));
+                            musicAdd.play();
         QMessageBox::information(nullptr, QObject::tr("Supprimer une livraison"),
                     QObject::tr("livraison supprimée.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
