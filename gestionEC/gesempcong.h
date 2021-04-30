@@ -15,6 +15,7 @@
 #include "arduino.h"
 #include"statemp.h"
 #include "server.h"
+#include "projeth.h"
 
 namespace Ui {
 class gesempcong;
@@ -78,6 +79,10 @@ private slots:
 
   void on_server_2_clicked();
 
+  void on_pushButton_clicked();
+
+
+
 private:
     Ui::gesempcong *ui;
     Employes insemployes;
@@ -88,7 +93,7 @@ private:
     QByteArray data;
     arduino A;
 
-
+projeth tmph;
 
 
 

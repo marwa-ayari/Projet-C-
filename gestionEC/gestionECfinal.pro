@@ -22,6 +22,7 @@ SOURCES += \
     gesempcong.cpp \
     main.cpp \
     mainwindow.cpp \
+    projeth.cpp \
     securritefume.cpp \
     server.cpp \
     smtp.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     excel.h \
     gesempcong.h \
     mainwindow.h \
+    projeth.h \
     securritefume.h \
     server.h \
     smtp.h \

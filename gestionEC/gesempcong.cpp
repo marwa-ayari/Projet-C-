@@ -123,17 +123,25 @@ void gesempcong::on_ajoutemp_clicked()
 
       float salaire=ui->salaire->text().toFloat();
 
-
+      srand (time(NULL));
+                QDate d = QDate::currentDate() ;
+                 QString datee =d.toString("dd / MM / yyyy ") ;
+                 QString fn="ajout employes " ;
+                QString nom1 = ui->ajoutemp->text();
+              projeth pp(nom1,datee,fn) ;
+              bool test1=pp.ajoutehis() ;
 
       if((nom!="")&&(prenom!="")&&(fonction!="")&&(age<70)&&(age>0)&&(salaire>0))
 
-          {
+        {
 
     Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
 
 
 
     if(E.ajouter()) {
+
+
 
         QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
                 notifyIcon->show();
@@ -192,13 +200,25 @@ void gesempcong::on_suppemp_clicked()
     player->play();
     Employes e1;
     e1.setmatemp(ui->comboBoxempsup->currentText());
+
+
     if(e1.supprimer(e1.getmatemp()))
-    { QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+    {
+        srand (time(NULL));
+                QDate d = QDate::currentDate() ;
+                 QString datee =d.toString("dd / MM / yyyy ") ;
+                 QString fn="suppression employes" ;
+                QString nom1 = ui->suppemp->text();
+              projeth pp(nom1,datee,fn) ;
+              bool test1=pp.ajoutehis() ;
+
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
         notifyIcon->show();
         notifyIcon->setIcon(QIcon("C:/Users/EYA/Desktop/4545.jpg"));
         notifyIcon->setVisible("C:/Users/EYA/Desktop/4545.jpg");
 
         notifyIcon->showMessage("GESTION employes  ","employé supprimé",QSystemTrayIcon::Information,15000);
+
 
         QMessageBox::information(nullptr, QObject::tr("Supprimer un employé"),
                     QObject::tr("Suppression avec succés.\n" ), QMessageBox::Cancel);
@@ -231,20 +251,33 @@ void gesempcong::on_modifemp_clicked()
     int age=ui->mage->text().toInt();
 
      float salaire=ui->msalaire->text().toFloat();
+     srand (time(NULL));
+             QDate d = QDate::currentDate() ;
+              QString datee =d.toString("dd / MM / yyyy ") ;
+              QString fn="suppression employes" ;
+             QString nom1 = ui->modifemp->text();
+           projeth pp(nom1,datee,fn) ;
+           bool test1=pp.ajoutehis() ;
 
      if((nom!="")&&(prenom!="")&&(fonction!="")&&(age<70)&&(age>0)&&(salaire>0))
+
 
          {
 
    Employes E(matemp,congeemp,dateemb,nom,prenom,fonction,salaire,age);
+
     if(E.modifier(matemp))
-    {QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+    {
+
+
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
         notifyIcon->show();
         notifyIcon->setIcon(QIcon("stat.png"));
 
-        notifyIcon->showMessage("GESTION employes  ","employé Ajouté",QSystemTrayIcon::Information,15000);
+        notifyIcon->showMessage("GESTION employes  ","employé modifié",QSystemTrayIcon::Information,15000);
               QMessageBox::information(nullptr, QObject::tr("Modifier un employé"),
                           QObject::tr("employé modifie.\n"), QMessageBox::Cancel);
+
 
               ui->matricule->setText("");
 
@@ -255,6 +288,7 @@ void gesempcong::on_modifemp_clicked()
               ui->mfonction->setText("");
               ui->msalaire->setText("");
               ui->mage->setText("");
+
     }
     else
     {
@@ -310,6 +344,7 @@ void gesempcong::on_pushButton_ajouterconges_2_clicked()
 
  QString datedeb= ui->datedeb_2->date().toString("yyyy/MM/dd");
   QString datefin= ui->datefin_2->date().toString("yyyy/MM/dd");
+
 
   if((duree>0)&&(datefin>datedeb)&&(idc!="")&&(type!=""))
 
@@ -476,7 +511,13 @@ void gesempcong::on_affecterbouton_clicked()
     e1.setmatemp(ui->mmatricule_2->currentText());
     e1.setcongeemp(ui->comboBoxconges_2->currentText());
     if(e1.affecter(e1.getmatemp()))
-    {
+    {srand (time(NULL));
+        QDate d = QDate::currentDate() ;
+         QString datee =d.toString("dd / MM / yyyy ") ;
+         QString fn="affectation employes" ;
+        QString nom1 = ui->affecterbouton->text();
+      projeth pp(nom1,datee,fn) ;
+      bool test1=pp.ajoutehis() ;
         QMessageBox::information(nullptr, QObject::tr("affecter un employé"),
                     QObject::tr("affectation avec succés.\n" ), QMessageBox::Cancel);
 
@@ -540,7 +581,10 @@ void gesempcong::on_idcm_currentIndexChanged(const QString &arg1)
 
 
 void gesempcong::on_statstemp_clicked()
-{
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
+    player->setVolume(2000);
+    player->play();
     statemp *p = new statemp();
     p->setWindowModality(Qt::ApplicationModal);
     p->show();
@@ -548,7 +592,10 @@ void gesempcong::on_statstemp_clicked()
 
 
 void gesempcong::on_excel_clicked()
-{
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
+    player->setVolume(2000);
+    player->play();
     QString fileName = QFileDialog::getSaveFileName(this, tr("Excel file"), qApp->applicationDirPath (),
                                                            tr("Excel Files (*.xls)"));
            if (fileName.isEmpty())
@@ -581,9 +628,22 @@ void gesempcong::on_excel_clicked()
 
 
 void gesempcong::on_server_2_clicked()
-{
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
+    player->setVolume(2000);
+    player->play();
     Server *p = new Server();
     p->setWindowModality(Qt::ApplicationModal);
     p->show();
 
 }
+
+void gesempcong::on_pushButton_clicked()
+{QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl::fromLocalFile("../resources/button.wav"));
+    player->setVolume(2000);
+    player->play();
+    ui->hist->setModel(tmph.afficherhis()) ;
+        ui->hist->setModel(tmph.afficherhis());//refresh
+}
+

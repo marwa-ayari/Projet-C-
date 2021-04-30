@@ -196,4 +196,3 @@ QSqlQuery Employes::recuperer(QString matemp)
     return query;
 }
 
-
