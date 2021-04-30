@@ -1140,7 +1140,7 @@ void clients_cadeaux::ouvrir()
         m_chemin=fileName;
         if (image1.isNull()) {
             QMessageBox::information(this, "MainWindow ",
-                                     tr("ne peut pas �tre charg�e.").arg(fileName));
+                                     tr("ne peut pas etre charge").arg(fileName));
             return;
         }
         int fact=image1.depth()/8;
@@ -1165,7 +1165,7 @@ void clients_cadeaux::on_pushButton_clicked()
         m_chemin=fileName;
         if (image1.isNull()) {
             QMessageBox::information(this, "MainWindow ",
-                                     tr("ne peut pas �tre charg�e.").arg(fileName));
+                                     tr("ne peut pas etre charge.").arg(fileName));
             return;
         }
         int fact=image1.depth()/8;
@@ -1179,7 +1179,7 @@ void clients_cadeaux::on_vtgradientAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1189,8 +1189,7 @@ void clients_cadeaux::on_vtgradientAct_clicked()
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    // MainWindow *w = new MainWindow();
-    this->setWindowTitle(tr("Filtre Gradient vertical"));
+
     this->show();
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
@@ -1206,7 +1205,7 @@ void clients_cadeaux::on_hrgradientAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1216,7 +1215,7 @@ void clients_cadeaux::on_hrgradientAct_clicked()
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    this->setWindowTitle(tr(" Filtre Gradient horizontal"));
+
     this->show();
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
@@ -1232,7 +1231,7 @@ void clients_cadeaux::on_initialiserAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1249,7 +1248,7 @@ void clients_cadeaux::on_inversionfilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1260,11 +1259,10 @@ void clients_cadeaux::on_inversionfilterAct_clicked()
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    // MainWindow* w =new MainWindow();
-    this->setWindowTitle(tr("Inversion de l'image"));
-    //w->m_chemin=m_chemin;
+
+
     this->show();
-    //w->image1=this->image1;
+
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
     im1->inversion(fact);
@@ -1279,7 +1277,7 @@ void clients_cadeaux::on_rgbtolumAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1290,7 +1288,7 @@ void clients_cadeaux::on_rgbtolumAct_clicked()
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    this->setWindowTitle(tr(" Couleur vers la luminance"));
+
     this->show();
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
@@ -1306,7 +1304,7 @@ void clients_cadeaux::on_gaussianfilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1317,7 +1315,7 @@ void clients_cadeaux::on_gaussianfilterAct_clicked()
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    this->setWindowTitle(tr("Filtre Gaussien"));
+
     this->show();
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
@@ -1332,7 +1330,7 @@ void clients_cadeaux::on_binarisationfilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1348,19 +1346,18 @@ void clients_cadeaux::on_binarisationfilterAct_clicked()
 
 
     int fact=image1.depth()/8;
-    //    int a=50, L=255;
+
     if(im1->isNULL())
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    //MainWindow* w =new MainWindow();
-    this->setWindowTitle(tr("Binarisation"));
-    //w->m_chemin=m_chemin;
+
+
     this->show();
-    //w->image1=this->image1;
+
     this->image1=this->image1.copy();
     this->image2=this->image1;
-    // binarisationfilter_load();
+
     im1->transfert_to_exim(&(this->image1));
     im1->binarisation(fact,aa,255);;
     im1->transfert_to_qim(&(this->image1));
@@ -1373,7 +1370,7 @@ void clients_cadeaux::on_binaristionIntervallefilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1390,21 +1387,19 @@ void clients_cadeaux::on_binaristionIntervallefilterAct_clicked()
 
 
     int fact=image1.depth()/8;
-    //    int a=50,b=100,L=255;
+
     if(im1->isNULL())
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    // MainWindow* w =new MainWindow();
-    // w->setWindowTitle(tr("Binarisation par intervalle"));
-    //w->m_chemin=m_chemin;
+
     this->show();
-    //w->image1=this->image1;
+
     this->image1=this->image1.copy();
     this->image2=this->image1;
-    //    binaristionIntervallefilter_load();
+
     im1->transfert_to_exim(&(this->image1));
-    //    im1->binarisation_par_intervalle(fact,aa,bb,255);
+
     im1->mediane(fact,3);
     im1->transfert_to_qim(&(this->image1));
     this->loadImage();
@@ -1416,7 +1411,7 @@ void clients_cadeaux::on_seuilageIntervallefilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1431,20 +1426,17 @@ void clients_cadeaux::on_seuilageIntervallefilterAct_clicked()
     meth=6;
 
     int fact=image1.depth()/8;
-    //    int a=50,b=100,L=255;
-    //    double teta=1;
+
     if(im1->isNULL())
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    //MainWindow* w =new MainWindow();
-    this->setWindowTitle(tr("Seuillage par  intervalle"));
-    // w->m_chemin=m_chemin;
+
     this->show();
-    //w->image1=this->image1;
+
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
-    //     im1->seuillage_par_intervalle(fact,aa,bb,255,1);
+
     im1->moyenneur(fact);
     im1->transfert_to_qim(&(this->image1));
     this->loadImage();
@@ -1456,7 +1448,7 @@ void clients_cadeaux::on_fenetragefilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1473,21 +1465,17 @@ void clients_cadeaux::on_fenetragefilterAct_clicked()
     meth=3;
 
     int fact=image1.depth()/8;
-    //      int a=50,b=100,L=255;
-    //      double teta=1;
 
     if(im1->isNULL())
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    //MainWindow* w =new MainWindow();
-    this->setWindowTitle(tr("Fenetrage"));
-    //w->m_chemin=m_chemin;
+
     this->show();
-    // w->image1=this->image1;
+
     this->image1=this->image1.copy();
     this->image2=this->image1;
-    // fenetragefilter_load();
+
     im1->transfert_to_exim(&(this->image1));
     im1->fenetrage(fact,aa,bb,255,1);
     im1->transfert_to_qim(&(this->image1));
@@ -1500,7 +1488,7 @@ void clients_cadeaux::on_seuillagefilterAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1515,20 +1503,17 @@ void clients_cadeaux::on_seuillagefilterAct_clicked()
     meth=4;
 
     int fact=image1.depth()/8;
-    //    int a=50;
-    //    double teta=1;
+
     if(im1->isNULL())
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    this->setWindowTitle(tr("Seuillage"));
-    //w->m_chemin=m_chemin;
+
     this->show();
-    //w->image1=this->image1;
 
     this->image1=this->image1.copy();
     this->image2=this->image1;
-    //  seuillagefilter_load();
+
 
     im1->transfert_to_exim(&(this->image1));
     im1->seuillage(fact,aa,1);
@@ -1542,7 +1527,7 @@ void clients_cadeaux::on_borderdetectAct_clicked()
     if (image1.isNull()) {
         QMessageBox::information(this, "MainWindow ",
                                  "Veuillez charger une image!!!,"
-                                 "pour ouvrir une image, aller dans le menu fichier->ouvrir,"
+                                 "pour ouvrir une image, clicker sur le bouton ouvrir image,"
                                  "  selectionner une image");
         return;
     }
@@ -1553,7 +1538,7 @@ void clients_cadeaux::on_borderdetectAct_clicked()
     {
         im1=new TraiterImage(image1.height(),fact*image1.width());
     }
-    this->setWindowTitle(tr(" Detecter les contours"));
+
     this->show();
     this->image1=this->image1.copy();
     im1->transfert_to_exim(&(this->image1));
