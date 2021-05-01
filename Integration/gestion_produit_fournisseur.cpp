@@ -19,8 +19,8 @@
 #include"QPdfWriter"
 #include "stat_fournisseur.h"
 #include "QrCode.hpp"
-using namespace std;
 
+using namespace std;
 gestion_produit_fournisseur::gestion_produit_fournisseur(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::gestion_produit_fournisseur)
@@ -32,10 +32,18 @@ gestion_produit_fournisseur::gestion_produit_fournisseur(QWidget *parent)
     initStatusBar();
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
+    connection c;
+    bool test=c.database();
+    if(!test)
+
+    {
+        QMessageBox::critical(nullptr, QObject::tr("database is not open"),
+                    QObject::tr("connection failed"), QMessageBox::Cancel);
 
 
+    }
     Player = new QMediaPlayer(this);
-    ui->stackedWidget->setCurrentIndex(4);
+    //ui->stackedWidget->setCurrentIndex(4);
     int ret= ard.connect_arduino();
     switch(ret)
     {case(0):
@@ -47,8 +55,11 @@ gestion_produit_fournisseur::gestion_produit_fournisseur(QWidget *parent)
      case(-1):
         qDebug()<<"arduino is no available ";
         break;
-
     }
+    ui->tabWidget_2->setCurrentIndex(0);
+    ui->comboBox_2->setModel(tabproduit.affecter_fournisseur());
+
+
     QObject::connect(ard.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()) );
 }
 
@@ -56,6 +67,7 @@ gestion_produit_fournisseur::~gestion_produit_fournisseur()
 {
     delete ui;
 }
+
 // ===================================
 //			Qt Slots
 // ===================================
@@ -220,14 +232,14 @@ void gestion_produit_fournisseur::update_label()
    qDebug() << retour;
 ui->tableView_4->setModel(tabproduit.recherchep(retour));
      //if(((retour !="Error: not a valid qrcode") ||(retour !="Error: not a v") ||(retour !="alid qrcode") ) && (retour == "1 QR-codes found:\r\n") )
-         if(retour !="Error: not a valid qrcode")
+    /*     if(retour !="Error: not a valid qrcode")
     {
          ui->update_arduino->setText(retour);
     ui->tableView_4->setModel(tabproduit.recherchep(retour));
     qDebug() << retour;
     }
     //else (ui->update_arduino->setText(retour));
-
+*/
      //ui->tableView_4->setModel(tabproduit.recherchep(retour));
   ui->update_arduino->setText("attendez s'il vous plaît");
 }
@@ -253,7 +265,7 @@ void gestion_produit_fournisseur::browse()
 
 void gestion_produit_fournisseur::sendMail()
 {
-    Smtphakim* smtp = new Smtphakim(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
@@ -268,34 +280,13 @@ void gestion_produit_fournisseur::mailSent(QString status)
         QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
 }
 
-void gestion_produit_fournisseur::on_toolButton_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-}
 
-void gestion_produit_fournisseur::on_pushButton_clicked()
+void gestion_produit_fournisseur::on_tabWidget_2_currentChanged(int index)
 {
-    ui->stackedWidget->setCurrentIndex(4);
-
-}
-
-void gestion_produit_fournisseur::on_affficherp_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(0);
     ui->produit_2->setModel(tabproduit.afficherp());
-
-}
-
-void gestion_produit_fournisseur::on_pushButton_3_clicked()//trie
-{
-    ui->fournisseurtable->setModel(tabfour.trief());
-}
-
-
-
-void gestion_produit_fournisseur::on_mofidifierp_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->tableView->setModel(tabproduit.afficherp());
+    ui->tableView_2->setModel(tabproduit.afficherp());
+    ui->tableView_mailing->setModel(tabproduit.mailing());
     QString ref=ui->idmodif->currentText();
     QSqlQueryModel *mod= new QSqlQueryModel();
     mod->setQuery("select REF from PRODUIT ");
@@ -312,42 +303,15 @@ void gestion_produit_fournisseur::on_mofidifierp_clicked()
             ui->comboBox_4->setCurrentText(q.value(4).toString());
         }
     }
-
-
 }
 
-void gestion_produit_fournisseur::on_supprimerp_clicked()
+void gestion_produit_fournisseur::on_tabWidget_3_currentChanged(int index)
 {
-    ui->stackedWidget->setCurrentIndex(1);
-    ui->tableView->setModel(tabproduit.afficherp());
-    /*QSqlQueryModel *mod= new QSqlQueryModel();
-    mod->setQuery("select REF from PRODUIT ");
-    ui->comboBox->setModel(mod);*/
-}
-
-void gestion_produit_fournisseur::on_pushButton_4_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-
-}
-
-void gestion_produit_fournisseur::on_ajouterp_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(3);
-    ui->comboBox_2->setModel(tabproduit.affecter_fournisseur());
-
-}
-
-void gestion_produit_fournisseur::on_toolButton_3_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-
-}
-
-void gestion_produit_fournisseur::on_retourfromaf_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-
+    ui->fournisseurtable->setModel(tabfour.afficherf());
+    QSqlQueryModel * model = new QSqlQueryModel();
+    model->setQuery("select MATRICULE from FOURNISSEUR");
+    ui->comboBox_mat->setModel(model);
+    ui->tableView_3->setModel(tabfour.afficherf());
 }
 
 void gestion_produit_fournisseur::on_ajout_clicked()
@@ -386,7 +350,6 @@ void gestion_produit_fournisseur::on_ajout_clicked()
             ui->lineEdit_nom->clear();
             ui->lineEdit_prix->clear();
             ui->lineEdit_stock->clear();
-            ui->stackedWidget->setCurrentIndex(4);
             QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
                     notifyIcon->show();
                     notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
@@ -401,61 +364,6 @@ void gestion_produit_fournisseur::on_ajout_clicked()
 
         }
     }
-}
-
-
-
-void gestion_produit_fournisseur::on_produit_2_activated(const QModelIndex &index)
-{
-    QString val=ui->produit_2->model()->data(index).toString();
-    QSqlQuery q;
-    q.prepare("SELECT * FROM PRODUIT WHERE REF = '"+val+"' OR NOM = '"+val+"' OR STOCK = '"+val+"' OR PRIX = '"+val+"' ");
-    if(q.exec())
-    {
-        while(q.next())
-        {   QSqlQueryModel *mod= new QSqlQueryModel();
-            mod->setQuery("select REF from PRODUIT WHERE REF ='"+val+"' ");
-            ui->idmodif->setModel(mod);
-            ui->stackedWidget->setCurrentIndex(2);
-            ui->lineEdit_5->setText(q.value(1).toString());
-            ui->lineEdit_6->setText(q.value(2).toString());
-            ui->lineEdit_7->setText(q.value(3).toString());
-            ui->comboBox_4->setCurrentText(q.value(4).toString());
-        }
-    }
-
-
-}
-void gestion_produit_fournisseur::on_tableView_4_activated(const QModelIndex &index)
-{
-    int test=0;
-    QString nom;
-    int ref=ui->tableView_4->model()->data(index).toInt();
-    QSqlQuery query;
-    query.prepare("select STOCK,NOM from PRODUIT where REF = :ref  ");
-     query.bindValue(":ref",ref);
-    if(query.exec())
-    {
-        while(query.next())
-        {
-
-            test=query.value(0).toInt();
-            nom=query.value(1).toString();
-
-        }
-    }
-    if (test > 10 )
-    {
-        ard.write_to_arduino("stock s'uffisant");
-        qDebug()<< test;
-    }
-    else
-    {
-        ard.write_to_arduino("non pas de stock");
-        qDebug()<< test;
-    }
-
-
 }
 
 void gestion_produit_fournisseur::on_modif_clicked()
@@ -489,7 +397,6 @@ void gestion_produit_fournisseur::on_modif_clicked()
             ui->lineEdit_5->clear();
             ui->lineEdit_6->clear();
             ui->lineEdit_7->clear();
-            ui->stackedWidget->setCurrentIndex(4);
             QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
                     notifyIcon->show();
                     notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
@@ -511,9 +418,72 @@ void gestion_produit_fournisseur::on_modif_clicked()
 
 }
 
+void gestion_produit_fournisseur::on_tableView_activated(const QModelIndex &index)
+{
+    int val=ui->tableView->model()->data(index).toInt();
+    if(tabproduit.supprmierp(val))
+    {
+        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
+                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
+        //ui->stackedWidget->setCurrentIndex(1);
+        ui->tableView->setModel(tabproduit.afficherp());
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
+                notifyIcon->setVisible("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png");
+
+                notifyIcon->showMessage("GESTION produit ","produit supprimer",QSystemTrayIcon::Information,15000);
+
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+    }
+}
+
+void gestion_produit_fournisseur::on_produit_2_activated(const QModelIndex &index)
+{
+    QString val=ui->produit_2->model()->data(index).toString();
+    QSqlQuery q;
+    q.prepare("SELECT * FROM PRODUIT WHERE REF = '"+val+"' OR NOM = '"+val+"' OR STOCK = '"+val+"' OR PRIX = '"+val+"' ");
+    if(q.exec())
+    {
+        while(q.next())
+        {   QSqlQueryModel *mod= new QSqlQueryModel();
+            mod->setQuery("select REF from PRODUIT WHERE REF ='"+val+"' ");
+            ui->idmodif->setModel(mod);
+            ui->tabWidget_2->setCurrentIndex(1);
+            ui->lineEdit_5->setText(q.value(1).toString());
+            ui->lineEdit_6->setText(q.value(2).toString());
+            ui->lineEdit_7->setText(q.value(3).toString());
+            ui->comboBox_4->setCurrentText(q.value(4).toString());
+        }
+    }
+}
+
 void gestion_produit_fournisseur::on_trie_clicked()
 {
     ui->produit_2->setModel(tabproduit.triep());
+}
+
+void gestion_produit_fournisseur::on_cherchp_cursorPositionChanged(int arg1, int arg2)
+{
+    QString ref=ui->cherchp->text();
+    ui->produit_2->setModel(tabproduit.recherchep(ref));
+}
+
+void gestion_produit_fournisseur::on_cherchep_clicked()
+{
+    QString m=ui->recherche->text();
+    ui->fournisseurtable->setModel(tabfour.cherchef(m));
+}
+
+void gestion_produit_fournisseur::on_pushButton_2_clicked()
+{
+    ui->tableView_mailing->setModel(tabproduit.mailing());
+    ui->tabWidget_2->setCurrentIndex(4);
+
 }
 
 void gestion_produit_fournisseur::on_ajoutf_clicked()
@@ -586,305 +556,6 @@ void gestion_produit_fournisseur::on_ajoutf_clicked()
 
 }
 
-void gestion_produit_fournisseur::on_toolButton_AF_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(7);
-}
-
-void gestion_produit_fournisseur::on_toolButton_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(6);
-
-}
-
-void gestion_produit_fournisseur::on_toolButton_fromajoutf_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(6);
-
-}
-
-void gestion_produit_fournisseur::on_toolButton_AFF_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(8);
-    ui->fournisseurtable->setModel(tabfour.afficherf());
-}
-
-void gestion_produit_fournisseur::on_toolButton_7_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(6);
-}
-
-void gestion_produit_fournisseur::on_toolButton_SF_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(9);
-    ui->tableView_3->setModel(tabfour.afficherf());
-    /*ui->comboBox_3->setModel(tabfour.affichercf());
-    QSqlQueryModel *mod= new QSqlQueryModel();
-    mod->setQuery("select MATRICULE from fournisseur ");
-    ui->comboBox_3->setModel(mod);*/
-
-}
-
-void gestion_produit_fournisseur::on_toolButton_8_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(6);
-}
-
-void gestion_produit_fournisseur::on_tableView_3_activated(const QModelIndex &index)
-{
-    QString val=ui->tableView_3->model()->data(index).toString();
-    if(tabfour.supprimerf(val))
-    {
-        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
-                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
-        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
-                notifyIcon->show();
-                notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
-                notifyIcon->setVisible("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png");
-
-                notifyIcon->showMessage("GESTION produit ","produit supprimer",QSystemTrayIcon::Information,15000);
-        //ui->stackedWidget->setCurrentIndex(1);
-        ui->tableView_3->setModel(tabfour.afficherf());
-    }
-    else
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-    }
-    /*QSqlQuery q;
-    q.prepare("SELECT * FROM fournisseur WHERE MATRICULE = '"+val+"' OR NOM = '"+val+"' ");
-    if(q.exec())
-    {
-        while(q.next())
-        {
-            ui->comboBox_3->setCurrentText(q.value(0).toString());
-        }
-    }*/
-   qDebug() << val ;
-
-}
-void gestion_produit_fournisseur::on_tableView_activated(const QModelIndex &index)
-{
-    int val=ui->tableView->model()->data(index).toInt();
-    if(tabproduit.supprmierp(val))
-    {
-        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
-                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
-        //ui->stackedWidget->setCurrentIndex(1);
-        ui->tableView->setModel(tabproduit.afficherp());
-        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
-                notifyIcon->show();
-                notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
-                notifyIcon->setVisible("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png");
-
-                notifyIcon->showMessage("GESTION produit ","produit supprimer",QSystemTrayIcon::Information,15000);
-
-    }
-    else
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-    }
-    /*QSqlQuery q;
-    q.prepare("SELECT * FROM PRODUIT WHERE REF = '"+val+"' OR NOM = '"+val+"' OR STOCK = '"+val+"' OR PRIX = '"+val+"' ");
-    if(q.exec())
-    {
-        while(q.next())
-        {
-            ui->comboBox->setCurrentText(q.value(0).toString());
-        }
-    }*/
-
-}
-void gestion_produit_fournisseur::on_idmodif_currentIndexChanged(const QString &arg1)
-{
-
-    QString val=ui->idmodif->currentText();
-    QSqlQuery q;
-    q.prepare("select * from produit where ref='"+val+"'");
-    if(q.exec())
-    {
-        while(q.next())
-        {
-            ui->lineEdit_5->setText(q.value(1).toString());
-            ui->lineEdit_6->setText(q.value(2).toString());
-            ui->lineEdit_7->setText(q.value(3).toString());
-            ui->comboBox_4->setCurrentText(q.value(4).toString());
-        }
-    }
-    else
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-    }
-
-
-}
-
-
-
-void gestion_produit_fournisseur::on_toolButton_4_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(5);
-}
-
-void gestion_produit_fournisseur::on_toolButton_5_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(5);
-}
-
-void gestion_produit_fournisseur::on_rech_clicked()
-{
-    QString m=ui->recherche->text();
-    ui->fournisseurtable->setModel(tabfour.cherchef(m));
-}
-
-void gestion_produit_fournisseur::on_cherchep_clicked()
-{
-    QString ref=ui->cherchp->text();
-    ui->produit_2->setModel(tabproduit.recherchep(ref));
-}
-
-void gestion_produit_fournisseur::on_pl_clicked()
-{
-    QString login=ui->login->text();
-    QString pwd=ui->pwd->text();
-    int x=0;
-    QSqlQuery q;
-    if(login=="")
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("login vide"), QMessageBox::Ok);
-        x++;
-    }
-    else if (pwd=="")
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("mot de passe vide"), QMessageBox::Ok);
-        x++;
-    }
-    else if(x==0)
-    {
-        q.prepare("select LOGIN from COMPTE where LOGIN=:login AND PWD=:PWD ");
-        q.bindValue(":login",login);
-        q.bindValue(":PWD",pwd);
-        if(q.exec())
-        {   if(login=="admin"&&pwd=="admin")
-            {
-            QMessageBox::information(nullptr, QObject::tr("E_pastry"),
-                        QObject::tr("Bienvenue"), QMessageBox::Cancel);
-            ui->stackedWidget->setCurrentIndex(5);
-            }
-            else
-                QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                            QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-        }
-        else
-            QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                        QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-    }
-
-
-}
-
-
-void gestion_produit_fournisseur::on_pushButton_modf_clicked()
-{
-    QString matricule =ui->comboBox_mat->currentText();
-    QString nom=ui->lineEdit_nf->text();
-    int tel=ui->lineEdit_numf->text().toInt();
-    QString adresse=ui->lineEdit_ad->text();
-    QString email=ui->lineEdit_mail->text();
-    int x=0;
-    string str_tel = to_string(tel);
-    string m = email.toStdString();
-    if(matricule=="")
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("la matricule est vide"), QMessageBox::Ok);
-              x++;
-    }
-    else if(nom=="")
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("le nom est vide"), QMessageBox::Ok);
-              x++;
-    }
-    else if(adresse=="")
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("l'adress est vide"), QMessageBox::Ok);
-              x++;
-    }
-    else if(m.find("@gmail.com")== std:: string::npos)
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("Email must end with @gmail.com"), QMessageBox::Ok);
-              x++;
-    }
-    else if(str_tel.length()!=8)
-    {
-        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                    QObject::tr("Phone number must be composed of 8 numbers"), QMessageBox::Ok);
-              x++;
-    }
-    else if(x==0)
-    {
-        fournisseur f(matricule,nom,adresse,email,tel);
-        bool t=f.modifierf(matricule);
-        if(t)
-        {
-            QMessageBox::information(nullptr, QObject::tr("fournisseur ajouter"),
-                              QObject::tr("base de données mise à jour"), QMessageBox::Ok);
-            ui->lineEdit_nf->clear();
-            ui->lineEdit_numf->clear();
-            ui->lineEdit_ad->clear();
-            ui->lineEdit_mail->clear();
-            ui->stackedWidget->setCurrentIndex(6);
-            QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
-                    notifyIcon->show();
-                    notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
-                    notifyIcon->setVisible("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png");
-
-                    notifyIcon->showMessage("GESTION fournisseur ","fournisseur ajoute",QSystemTrayIcon::Information,15000);
-        }
-        else
-        {
-            QMessageBox::critical(nullptr, QObject::tr("WARNING"),
-                        QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
-        }
-    }
-
-}
-
-void gestion_produit_fournisseur::on_toolButton_MF_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(11);
-    QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("select MATRICULE from FOURNISSEUR");
-    ui->comboBox_mat->setModel(model);
-
-}
-
-void gestion_produit_fournisseur::on_comboBox_mat_currentIndexChanged(const QString &arg1)
-{
-    QString val=ui->comboBox_mat->currentText();
-    QSqlQuery q;
-    q.prepare("select * from FOURNISSEUR where matricule = '"+val+"'");
-    if(q.exec())
-    {
-        while(q.next())
-        {
-            ui->lineEdit_nf->setText(q.value(1).toString());
-            ui->lineEdit_numf->setText(q.value(4).toString());
-            ui->lineEdit_ad->setText(q.value(2).toString());
-            ui->lineEdit_mail->setText(q.value(3).toString());
-
-        }
-    }
-
-}
-
 void gestion_produit_fournisseur::on_fournisseurtable_activated(const QModelIndex &index)
 {
     QString val=ui->fournisseurtable->model()->data(index).toString();
@@ -892,7 +563,7 @@ void gestion_produit_fournisseur::on_fournisseurtable_activated(const QModelInde
     q.prepare("select * from FOURNISSEUR where matricule = '"+val+"'");
     if(q.exec())
     {
-        ui->stackedWidget->setCurrentIndex(11);
+        //ui->stackedWidget->setCurrentIndex(11);
         while(q.next())
         {
             ui->comboBox_mat->setCurrentText(q.value(0).toString());
@@ -907,47 +578,9 @@ void gestion_produit_fournisseur::on_fournisseurtable_activated(const QModelInde
 
 }
 
-void gestion_produit_fournisseur::on_frommod_clicked()
+void gestion_produit_fournisseur::on_pushButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(6);
-
-}
-
-void gestion_produit_fournisseur::on_stop_clicked()
-{
-    Player->stop();
-}
-
-void gestion_produit_fournisseur::on_start_clicked()
-{
-    Player->setMedia(QUrl::fromLocalFile("C:/Users/ASUS/Music/Kalash - Mwaka Moon ft. Damso.mp3"));
-    Player->play();
-    qDebug() << Player->errorString();
-}
-
-void gestion_produit_fournisseur::on_horizontalSlider_sliderMoved(int position)
-{
-    Player->setVolume(position);
-}
-
-void gestion_produit_fournisseur::on_pushButton_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(12);
-    ui->tableView_mailing->setModel(tabproduit.mailing());
-
-}
-
-void gestion_produit_fournisseur::on_frommaling_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(0);
-}
-
-
-
-void gestion_produit_fournisseur::on_cherchp_cursorPositionChanged(int arg1, int arg2)
-{
-    QString ref=ui->cherchp->text();
-    ui->produit_2->setModel(tabproduit.recherchep(ref));
+    ui->fournisseurtable->setModel(tabfour.trief());
 }
 
 void gestion_produit_fournisseur::on_recherche_cursorPositionChanged(int arg1, int arg2)
@@ -956,48 +589,11 @@ void gestion_produit_fournisseur::on_recherche_cursorPositionChanged(int arg1, i
     ui->fournisseurtable->setModel(tabfour.cherchef(m));
 }
 
-
-
-void gestion_produit_fournisseur::on_toolButton_6_clicked()
+void gestion_produit_fournisseur::on_rech_clicked()
 {
-
-        stat_four =new stat_fournisseur(this);
-           stat_four->show();
+    QString m=ui->recherche->text();
+    ui->fournisseurtable->setModel(tabfour.cherchef(m));
 }
-
-void gestion_produit_fournisseur::on_toolButton_9_clicked()
-{
-QString link="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
-QDesktopServices::openUrl(QUrl(link));
-}
-
-void gestion_produit_fournisseur::on_qrcode_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(13);
-}
-
-void gestion_produit_fournisseur::on_pushButton_5_clicked()
-{
-    openFile();
-}
-
-void gestion_produit_fournisseur::on_pushButton_6_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(14);
-    ui->tableView_2->setModel(tabproduit.afficherp());
-}
-
-void gestion_produit_fournisseur::on_pushButton_7_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-}
-
-void gestion_produit_fournisseur::on_pushButton_8_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-}
-
-
 
 void gestion_produit_fournisseur::on_pushButton_9_clicked()
 {
@@ -1058,10 +654,204 @@ void gestion_produit_fournisseur::on_pushButton_9_clicked()
                                       ui->fournisseurtable->setModel(tabfour.afficherf());
 }
 
+void gestion_produit_fournisseur::on_pushButton_modf_clicked()
+{
+    QString matricule =ui->comboBox_mat->currentText();
+    QString nom=ui->lineEdit_nf->text();
+    int tel=ui->lineEdit_numf->text().toInt();
+    QString adresse=ui->lineEdit_ad->text();
+    QString email=ui->lineEdit_mail->text();
+    int x=0;
+    string str_tel = to_string(tel);
+    string m = email.toStdString();
+    if(matricule=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("la matricule est vide"), QMessageBox::Ok);
+              x++;
+    }
+    else if(nom=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("le nom est vide"), QMessageBox::Ok);
+              x++;
+    }
+    else if(adresse=="")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("l'adress est vide"), QMessageBox::Ok);
+              x++;
+    }
+    else if(m.find("@gmail.com")== std:: string::npos)
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Email must end with @gmail.com"), QMessageBox::Ok);
+              x++;
+    }
+    else if(str_tel.length()!=8)
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Phone number must be composed of 8 numbers"), QMessageBox::Ok);
+              x++;
+    }
+    else if(x==0)
+    {
+        fournisseur f(matricule,nom,adresse,email,tel);
+        bool t=f.modifierf(matricule);
+        if(t)
+        {
+            QMessageBox::information(nullptr, QObject::tr("fournisseur ajouter"),
+                              QObject::tr("base de données mise à jour"), QMessageBox::Ok);
+            ui->lineEdit_nf->clear();
+            ui->lineEdit_numf->clear();
+            ui->lineEdit_ad->clear();
+            ui->lineEdit_mail->clear();
+            //ui->stackedWidget->setCurrentIndex(6);
+            QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                    notifyIcon->show();
+                    notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
+                    notifyIcon->setVisible("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png");
 
+                    notifyIcon->showMessage("GESTION fournisseur ","fournisseur ajoute",QSystemTrayIcon::Information,15000);
+        }
+        else
+        {
+            QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                        QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+        }
+    }
 
+}
 
-void gestion_produit_fournisseur::on_pushButton_10_clicked()
+void gestion_produit_fournisseur::on_tableView_3_activated(const QModelIndex &index)
+{
+    QString val=ui->tableView_3->model()->data(index).toString();
+    if(tabfour.supprimerf(val))
+    {
+        QMessageBox::information(nullptr, QObject::tr("produit supprimer"),
+                          QObject::tr("base de données mise à jour"), QMessageBox::Ok);
+        QSystemTrayIcon *notifyIcon = new QSystemTrayIcon;
+                notifyIcon->show();
+                notifyIcon->setIcon(QIcon("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png"));
+                notifyIcon->setVisible("C:/Users/ASUS/OneDrive/Desktop/QT/My work/rs/logo.png");
+
+                notifyIcon->showMessage("GESTION produit ","produit supprimer",QSystemTrayIcon::Information,15000);
+        //ui->stackedWidget->setCurrentIndex(1);
+        ui->tableView_3->setModel(tabfour.afficherf());
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+    }
+   qDebug() << val ;
+
+}
+
+void gestion_produit_fournisseur::on_toolButton_6_clicked()
+{
+    stat_four =new stat_fournisseur(this);
+       stat_four->show();
+}
+
+void gestion_produit_fournisseur::on_toolButton_9_clicked()
+{
+    QString link="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+    QDesktopServices::openUrl(QUrl(link));
+}
+
+void gestion_produit_fournisseur::on_tableView_4_activated(const QModelIndex &index)
+{
+    int test=0;
+    QString nom;
+    int ref=ui->tableView_4->model()->data(index).toInt();
+    QSqlQuery query;
+    query.prepare("select STOCK,NOM from PRODUIT where REF = :ref  ");
+     query.bindValue(":ref",ref);
+    if(query.exec())
+    {
+        while(query.next())
+        {
+
+            test=query.value(0).toInt();
+            nom=query.value(1).toString();
+
+        }
+    }
+    if (test > 10 )
+    {
+        ard.write_arduino("stock s'uffisant");
+        qDebug()<< test;
+    }
+    else
+    {
+        ard.write_arduino("non pas de stock");
+        qDebug()<< test;
+    }
+}
+
+void gestion_produit_fournisseur::on_comboBox_mat_currentIndexChanged(const QString &arg1)
+{
+    QString val=ui->comboBox_mat->currentText();
+    QSqlQuery q;
+    q.prepare("select * from FOURNISSEUR where matricule = '"+val+"'");
+    if(q.exec())
+    {
+        while(q.next())
+        {
+            ui->lineEdit_nf->setText(q.value(1).toString());
+            ui->lineEdit_numf->setText(q.value(4).toString());
+            ui->lineEdit_ad->setText(q.value(2).toString());
+            ui->lineEdit_mail->setText(q.value(3).toString());
+
+        }
+    }
+}
+
+void gestion_produit_fournisseur::on_idmodif_currentIndexChanged(const QString &arg1)
+{
+    QString val=ui->idmodif->currentText();
+    QSqlQuery q;
+    q.prepare("select * from produit where ref='"+val+"'");
+    if(q.exec())
+    {
+        while(q.next())
+        {
+            ui->lineEdit_5->setText(q.value(1).toString());
+            ui->lineEdit_6->setText(q.value(2).toString());
+            ui->lineEdit_7->setText(q.value(3).toString());
+            ui->comboBox_4->setCurrentText(q.value(4).toString());
+        }
+    }
+    else
+    {
+        QMessageBox::critical(nullptr, QObject::tr("WARNING"),
+                    QObject::tr("Veuillez réessayer"), QMessageBox::Ok);
+    }
+}
+void gestion_produit_fournisseur::on_stop_clicked()
+{
+    Player->stop();
+}
+
+void gestion_produit_fournisseur::on_start_clicked()
+{
+    Player->setMedia(QUrl::fromLocalFile("C:/Users/ASUS/Music/Kalash - Mwaka Moon ft. Damso.mp3"));
+    Player->play();
+    qDebug() << Player->errorString();
+}
+
+void gestion_produit_fournisseur::on_horizontalSlider_sliderMoved(int position)
+{
+    Player->setVolume(position);
+}
+
+void gestion_produit_fournisseur::on_pushButton_5_clicked()
+{
+    openFile();
+}
+
+void gestion_produit_fournisseur::on_pushButton_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName((QWidget* )0, "Export PDF", QString(), "*.pdf");
 
@@ -1117,5 +907,5 @@ void gestion_produit_fournisseur::on_pushButton_10_clicked()
                                     doc.setHtml(strStream);
                                     doc.setPageSize(printer.pageRect().size()); // This is necessary if you want to hide the page number
                                     doc.print(&printer);
-                                      ui->produit_2->setModel(tabfour.afficherf());
+                                      ui->produit_2->setModel(tabproduit.afficherp());
 }
