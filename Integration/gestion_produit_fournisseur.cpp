@@ -17,6 +17,7 @@
 #include <QFile>
 #include <QFileDialog>
 #include"QPdfWriter"
+#include "connection.h"
 #include "stat_fournisseur.h"
 #include "QrCode.hpp"
 
