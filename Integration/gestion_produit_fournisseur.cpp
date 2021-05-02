@@ -7,6 +7,7 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include "smtphakim.h"
 #include "arduino.h"
 #include <QMediaPlayer>
 #include <QSystemTrayIcon>
@@ -17,7 +18,6 @@
 #include <QFile>
 #include <QFileDialog>
 #include"QPdfWriter"
-#include "connection.h"
 #include "stat_fournisseur.h"
 #include "QrCode.hpp"
 
@@ -33,16 +33,7 @@ gestion_produit_fournisseur::gestion_produit_fournisseur(QWidget *parent)
     initStatusBar();
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
-    connection c;
-    bool test=c.database();
-    if(!test)
 
-    {
-        QMessageBox::critical(nullptr, QObject::tr("database is not open"),
-                    QObject::tr("connection failed"), QMessageBox::Cancel);
-
-
-    }
     Player = new QMediaPlayer(this);
     //ui->stackedWidget->setCurrentIndex(4);
     int ret= ard.connect_arduino();
@@ -266,7 +257,7 @@ void gestion_produit_fournisseur::browse()
 
 void gestion_produit_fournisseur::sendMail()
 {
-    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    Smtphakim* smtp = new Smtphakim(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
@@ -781,12 +772,12 @@ void gestion_produit_fournisseur::on_tableView_4_activated(const QModelIndex &in
     }
     if (test > 10 )
     {
-        ard.write_arduino("stock s'uffisant");
+        ard.write_to_arduino("stock s'uffisant");
         qDebug()<< test;
     }
     else
     {
-        ard.write_arduino("non pas de stock");
+        ard.write_to_arduino("non pas de stock");
         qDebug()<< test;
     }
 }

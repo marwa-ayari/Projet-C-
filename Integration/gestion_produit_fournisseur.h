@@ -99,7 +99,7 @@ private:
     QMediaPlayer* Player;
     stat_fournisseur *stat_four;
     QStringList files;
-    Arduino ard;
+    arduino ard;
     QByteArray data;
     // Default Qt ui class
     //Ui::QRplusplusClass ui;
