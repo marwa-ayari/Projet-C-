@@ -17,9 +17,9 @@
 #include <QFile>
 #include <QFileDialog>
 #include"QPdfWriter"
-#include "connection.h"
 #include "stat_fournisseur.h"
 #include "QrCode.hpp"
+
 
 using namespace std;
 gestion_produit_fournisseur::gestion_produit_fournisseur(QWidget *parent)
@@ -31,19 +31,9 @@ gestion_produit_fournisseur::gestion_produit_fournisseur(QWidget *parent)
     initPushButton();
     initColorComboBox();
     initStatusBar();
-    connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
-    connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
-    connection c;
-    bool test=c.database();
-    if(!test)
+       connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+       connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
-    {
-        QMessageBox::critical(nullptr, QObject::tr("database is not open"),
-                    QObject::tr("connection failed"), QMessageBox::Cancel);
-
-
-    }
-    Player = new QMediaPlayer(this);
     //ui->stackedWidget->setCurrentIndex(4);
     int ret= ard.connect_arduino();
     switch(ret)
@@ -266,7 +256,7 @@ void gestion_produit_fournisseur::browse()
 
 void gestion_produit_fournisseur::sendMail()
 {
-    Smtp* smtp = new Smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
+    smtp* smtp = new smtp(ui->uname->text(), ui->paswd->text(), ui->server->text(), ui->port->text().toInt());
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )

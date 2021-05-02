@@ -28,6 +28,7 @@ SOURCES += \
     gestion.cpp \
     gestion_categories_reclamations.cpp \
     gestion_materiaux_maintenances.cpp \
+    gestion_produit_fournisseur.cpp \
     jeu.cpp \
     livraison.cpp \
     mail.cpp \
@@ -54,7 +55,6 @@ SOURCES += \
     fournisseur.cpp \
     QrCode.cpp \
         QrSegment.cpp \
-     gestion_produit_fournisseur.cpp \
      smtphakim.cpp \
      BitBuffer.cpp\
      traiterimage.cpp
@@ -77,6 +77,7 @@ HEADERS += \
     gestion.h \
     gestion_categories_reclamations.h \
     gestion_materiaux_maintenances.h \
+    gestion_produit_fournisseur.h \
     jeu.h \
     livraison.h \
     mail.h \
@@ -101,7 +102,6 @@ HEADERS += \
      stat_fournisseur.h \
    produit.h \
     fournisseur.h \
-   gestion_produit_fournisseur.h \
    QrCode.hpp \
        QrSegment.hpp \
        BitBuffer.hpp\
@@ -115,6 +115,7 @@ FORMS += \
     gestion.ui \
     gestion_categories_reclamations.ui \
     gestion_materiaux_maintenances.ui \
+    gestion_produit_fournisseur.ui \
     maintenanceetat.ui \
     mainwindow.ui \
     reclamationbar.ui \
@@ -124,7 +125,6 @@ FORMS += \
     statCm.ui \
     statemp.ui \
     statistiquereclamations.ui\
-    gestion_produit_fournisseur.ui \
        stat_fournisseur.ui
 
 

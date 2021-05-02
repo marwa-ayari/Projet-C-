@@ -4,7 +4,7 @@
 #include "clients_cadeaux.h"
 #include "gesempcong.h"
 #include"gestion_materiaux_maintenances.h"
-#include"gestion_produit_fournisseur.h"
+//#include"gestion_produit_fournisseur.h"
 #include"CL.h"
 #include"securite.h"
 #include<QMediaPlayer>
@@ -121,6 +121,6 @@ void Gestion::on_pushButton_7_clicked()
         player->setVolume(2000);
         player->play();
 
-        gestion_produit_fournisseur fenetre;
-        fenetre.exec();
+        //gestion_produit_fournisseur fenetre;
+        //fenetre.exec();
 }
