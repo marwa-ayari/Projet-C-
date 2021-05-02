@@ -866,7 +866,7 @@ void gestion_produit_fournisseur::on_pushButton_clicked()
 
                                             "<align='right'> " << system_date << "</align>"
 
-                                            "<center> <img src='C:/Users/ASUS/OneDrive/Desktop/cours/expl/gestion_produit_fournisseur/rs/logo.png'></img></br><H1>E-pastry</H1></br><H2> Fournisseur </H2 <hr> <table  border-collapse: collapse; cellspacing=0 cellpadding=2>\n";
+                                            "<center> <img src='C:/i/capture.png'></img></br><H1>E-pastry</H1></br><H2> Fournisseur </H2 <hr> <table  border-collapse: collapse; cellspacing=0 cellpadding=2>\n";
 
                            // headers
                            out << "<thead><tr bgcolor=#f0f0f0 text-align: center;> <th>Numero</th>";
