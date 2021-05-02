@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab_categorie_8">
       <attribute name="title">
@@ -246,7 +246,7 @@ border-color: rgb(170, 0, 255);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_categorie_4">
@@ -295,7 +295,7 @@ color: rgb(74, 0, 111);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/893983.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/893983.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_categorie_14">
@@ -328,7 +328,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../../Downloads/tri.png</normaloff>../../../../../../Downloads/tri.png</iconset>
+         <normaloff>../../../../../../../../../../i/tri.png</normaloff>../../../../../../../../../../i/tri.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -440,7 +440,7 @@ color: rgb(170, 0, 255);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_categorie_5">
@@ -713,7 +713,7 @@ color: rgb(85, 255, 255);
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../Downloads/poubelle.png</normaloff>../../../../../../Downloads/poubelle.png</iconset>
+          <normaloff>../../../../../../../../../../i/poubelle.png</normaloff>../../../../../../../../../../i/poubelle.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -767,7 +767,7 @@ color: rgb(85, 255, 255);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_categorie_46</zorder>
@@ -795,7 +795,7 @@ color: rgb(85, 255, 255);
       </font>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="tab_reclamation_3">
       <attribute name="title">
@@ -999,7 +999,7 @@ color: rgb(85, 255, 255);
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="bouton_ajout_reclamation">
@@ -1048,7 +1048,7 @@ color: rgb(132, 1, 64);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/893983.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/893983.jpg</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_12">
@@ -1081,7 +1081,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
        </property>
        <property name="icon">
         <iconset>
-         <normaloff>../../../../../../Downloads/tri.png</normaloff>../../../../../../Downloads/tri.png</iconset>
+         <normaloff>../../../../../../../../../../i/tri.png</normaloff>../../../../../../../../../../i/tri.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -1448,7 +1448,7 @@ color: rgb(132, 1, 64);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/155296947_507314950275690_225535330781415924_n.jpg</pixmap>
        </property>
       </widget>
       <zorder>label_reclamation_6</zorder>
@@ -1472,7 +1472,7 @@ color: rgb(132, 1, 64);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../../../Downloads/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
+        <pixmap>../../../../../../../../../../i/154381946_1831634480335042_4446684979299693543_n.jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_reclamation_3">
@@ -1566,7 +1566,7 @@ color: rgb(85, 255, 255);
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../Downloads/poubelle.png</normaloff>../../../../../../Downloads/poubelle.png</iconset>
+          <normaloff>../../../../../../../../../../i/poubelle.png</normaloff>../../../../../../../../../../i/poubelle.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1687,7 +1687,7 @@ color: rgb(85, 255, 255);
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../../../../Downloads/poubelle.png</normaloff>../../../../../../Downloads/poubelle.png</iconset>
+          <normaloff>../../../../../../../../../../i/poubelle.png</normaloff>../../../../../../../../../../i/poubelle.png</iconset>
         </property>
         <property name="iconSize">
          <size>

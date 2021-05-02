@@ -54,7 +54,7 @@
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>6</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="AJOuter">
       <attribute name="title">
@@ -1653,7 +1653,7 @@ color: rgb(255, 255, 255);</string>
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_5">
       <attribute name="title">
@@ -2019,6 +2019,13 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;
         <string/>
        </property>
       </widget>
+      <zorder>groupBox</zorder>
+      <zorder>label_23</zorder>
+      <zorder>pushButton_3</zorder>
+      <zorder>rech</zorder>
+      <zorder>recherche</zorder>
+      <zorder>pushButton_9</zorder>
+      <zorder>fournisseurtable</zorder>
      </widget>
      <widget class="QWidget" name="tab_9">
       <attribute name="title">
