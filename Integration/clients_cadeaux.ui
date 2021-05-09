@@ -41,7 +41,7 @@
     <string notr="true">color: rgb(85, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="widget_3">
     <attribute name="title">

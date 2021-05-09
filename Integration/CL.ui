@@ -57,7 +57,7 @@
       </font>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_8">
       <attribute name="title">
@@ -897,7 +897,7 @@ background-image:rgb(255, 170, 255)</string>
       </font>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
@@ -1849,6 +1849,9 @@ background-image:rgb(255, 170, 255)</string>
      <property name="styleSheet">
       <string notr="true">background-color:rgb(255, 226, 247)</string>
      </property>
+     <property name="text">
+      <string>epastry2020@gmail.com</string>
+     </property>
     </widget>
     <widget class="QLabel" name="label_128">
      <property name="geometry">
@@ -1888,6 +1891,9 @@ background-image:rgb(255, 170, 255)</string>
      </property>
      <property name="inputMask">
       <string/>
+     </property>
+     <property name="text">
+      <string>college159</string>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Password</enum>

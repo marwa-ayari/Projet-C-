@@ -304,10 +304,10 @@ void  gestionCl::on_pushButton_8_clicked()
                          <<  QString("<title>%1</title>\n").arg("strTitle")
                          <<  "</head>\n"
                          "<body bgcolor=#E7E7E7 link=#5000A1>\n"
-"<center><img src='C:/i/capture.png'></img></center>"
-                            "<center><h1 style=\"text-align: left;\"><strong> E-pastry""</strong></h1></center>"
+                         "<center><img src='C:/i/capture.png'></img></center>"
+                         "<center><h1><strong> E-pastry </strong></h1></center>"
 
-"<center>  Liste Des Commandes en "+TT+"</center>"
+                         "<center>  Liste Des Commandes en "+TT+"</center>"
 
                         //     "<align='right'> " << datefich << "</align>"
                          "<center></br><table border=3 cellspacing=1 cellpadding=2>\n";

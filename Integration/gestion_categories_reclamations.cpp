@@ -50,7 +50,7 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
     if((prix>0)&&(system_date>=date_fab)&&(nom!="")&&(nbr!="")&&(nbr!="0")&&(date_fab<date_per))
     {
         date_fab= ui->dateEdit_categorie_7->text();
-        date_fab= ui->dateEdit_categorie_8->text();
+        date_per= ui->dateEdit_categorie_8->text();
         Categories catg(nom,date_fab,prix,date_per,nbr);
         if(catg.ajouter()) {
             QMessageBox::information(nullptr, QObject::tr("BRAVO!!!"),
@@ -61,7 +61,7 @@ void Gestion_categories_reclamations::on_pushButton_categorie_4_clicked()
                     notifyIcon->setIcon(QIcon(" "));
                     notifyIcon->setVisible(" ");
 
-                    notifyIcon->showMessage("Nouvelle réclamation ajoutée","Veuillez traiter cette réclamation",QSystemTrayIcon::Information,15000);
+                    notifyIcon->showMessage("Nouvelle Catégorie ajoutée","Veuillez voir le délai de validité",QSystemTrayIcon::Information,15000);
 
 
             ui->lineEdit_categorie_12->setText("");
@@ -353,7 +353,7 @@ void Gestion_categories_reclamations::on_pushButton_13_clicked()
                     <<  QString("<title>%1</title>\n").arg("Reclamations")
                     <<  "</head>\n"
                     "<body background='C:/i/mac.jpeg'>\n"
-                        "<center><img src='C:/i/capture.png' width='300' height='300' ></center>\n"
+                        "<center><img src='C:/i/arc.png' width='300' height='300' ></center>\n"
                         "<center><h2>Liste des reclamations</h2></center>"
 
                         "<table border=1 align='center' width='70%' cellspacing=0 cellpadding=2 bgcolor=#FED5FF>\n";

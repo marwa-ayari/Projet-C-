@@ -29,7 +29,7 @@ bool Categories::ajouter()
 {
 QSqlQuery query;
 QString prixx= QString::number(prix);
-query.prepare("INSERT INTO Categories (NOM_CATEGORIE, DATE_FAB, PRIX, date_per) "
+query.prepare("INSERT INTO Categories (NOM_CATEGORIE, DATE_FAB, PRIX, date_per, nbr) "
                     "VALUES ('"+nom+"', '"+date_fabrication+"', "+prixx+" , '"+date_peremption+"' , '"+nbr+"')");
 return    query.exec();
 }

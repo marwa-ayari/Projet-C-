@@ -42,7 +42,7 @@
 color: rgb(255, 170, 255);</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="ongletemp">
     <attribute name="title">
@@ -367,7 +367,7 @@ color: rgb(255, 170, 255);</string>
       <string notr="true">background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 170, 255, 66), stop:0.991525 rgba(255, 170, 183, 51))</string>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="ajouteremp">
       <attribute name="title">
@@ -2631,7 +2631,7 @@ color:rgb(225, 150, 225);</string>
       <bool>false</bool>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="ajoutercong">
       <attribute name="title">
@@ -5395,7 +5395,11 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLineEdit" name="uname"/>
+         <widget class="QLineEdit" name="uname">
+          <property name="text">
+           <string>epastry2020@gmail.com</string>
+          </property>
+         </widget>
         </item>
         <item row="3" column="0">
          <widget class="QLabel" name="label_6">
@@ -5419,6 +5423,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
          <widget class="QLineEdit" name="paswd">
           <property name="inputMask">
            <string/>
+          </property>
+          <property name="text">
+           <string>college159</string>
           </property>
           <property name="echoMode">
            <enum>QLineEdit::Password</enum>

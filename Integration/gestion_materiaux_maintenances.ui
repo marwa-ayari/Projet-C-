@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>937</width>
-    <height>487</height>
+    <width>907</width>
+    <height>478</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@
     <string notr="true">color: rgb(229, 148, 66);</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="widget_materiel">
     <attribute name="title">
@@ -292,7 +292,7 @@
       <widget class="QLabel" name="label_materiel_36">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>0</x>
          <y>-10</y>
          <width>981</width>
          <height>461</height>
@@ -778,7 +778,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.010
       </font>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_maintenance_3">
       <attribute name="title">
@@ -987,7 +987,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
        <property name="geometry">
         <rect>
          <x>-20</x>
-         <y>-100</y>
+         <y>-70</y>
          <width>961</width>
          <height>511</height>
         </rect>

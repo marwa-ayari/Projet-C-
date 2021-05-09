@@ -58,7 +58,7 @@ void Gestion_materiaux_maintenances::on_pushButton_materiel_16_clicked()
                 notifyIcon->show();
                 notifyIcon->setIcon(QIcon("E:\arcmaher.png"));
                 notifyIcon->setVisible("E:\arcmaher.png");
-                notifyIcon->showMessage("Ajout nouvelle Maintenance  ","maintenance ajoutée",QSystemTrayIcon::Information,15000);
+                notifyIcon->showMessage("Ajout nouveau matériel  ","matériel ajoutée",QSystemTrayIcon::Information,15000);
 
 }else{
         QMessageBox::information(nullptr, QObject::tr("Ajout matériel"),

@@ -43,7 +43,7 @@ void securite::update_temperature()
            //WRITE TO ARDUINO
 
            //on change la couleur si data >=21 :rouge sinon bleu
-            if( DataAsString >="22")
+            if( DataAsString >="21")
             {
                 ui->label_temperature->setStyleSheet("QLabel {font: 75 16pt 'Script MT Bold';background-color: rgb(255, 0, 0);color: rgb(0, 0, 127);}");
                 //WRITE TO ARDUINO allumer led rouge
